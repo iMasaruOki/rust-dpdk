@@ -1,17 +1,18 @@
 [package]
-
 name = "rust-dpdk"
-version = "0.0.1"
-authors = ["Robert Clipsham <robert@octarineparrot.com>"]
+version = "0.0.2"
+authors = ["Robert Clipsham <robert@octarineparrot.com>",
+	   "Masaru OKI" <oki@pontonetworks.com>]
 homepage = "http://dpdk.org/"
-repository = "https://github.com/libpnet/rust-dpdk"
+repository = "https://github.com/iMasaruOki/rust-dpdk"
 license = "BSD-3-Clause"
-description = "Bindings to Intel DPDK: Data Plane Development Kit"
+description = "Bindings to DPDK: Data Plane Development Kit"
 readme = "README.md"
 keywords = ["networking", "packet", "bindings"]
+build = "build.rs"
 
-#[build-dependencies.rust-bindgen]
-#git = "https://github.com/crabtw/rust-bindgen.git"
-#
-#[build-dependencies]
-#regex = "*"
+[dependencies]
+libc = "0.2"
+
+[build-dependencies]
+bindgen = "0.29.0"

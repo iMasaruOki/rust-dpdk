@@ -1,22 +1,18 @@
 # rust-dpdk
 
-Rust bindings to [Intel's DPDK](http://dpdk.org/), currently at version 1.8.0.
+Rust bindings to [DPDK](http://dpdk.org/), currently at version 17.08.
 
 ## Building
 
 To generate the bindings from scratch, use:
 
 ```
-make BINDGEN=<bindgen> EXTRA_ARGS=<args>
+env RTE_SDK=path_to_dpdk_top cargo build
 ```
-
-The BINDGEN and EXTRA_ARGS parameters are optional, and may be used to specify
-the path to the `bindgen` binary, and replace some of the arguments passed to
-`bindgen` (include paths etc) respectively.
 
 To use within your own project, use:
 
 ```
 [dependencies.rust-dpdk]
-git = "https://github.com/libpnet/rust-dpdk.git"
+git = "https://github.com/iMasaruOki/rust-dpdk.git"
 ```
