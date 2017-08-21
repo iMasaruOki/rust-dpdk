@@ -2,7 +2,7 @@
 name = "rust-dpdk"
 version = "0.0.2"
 authors = ["Robert Clipsham <robert@octarineparrot.com>",
-	   "Masaru OKI" <oki@pontonetworks.com>]
+	   "Masaru OKI <oki@pontonetworks.com>"]
 homepage = "http://dpdk.org/"
 repository = "https://github.com/iMasaruOki/rust-dpdk"
 license = "BSD-3-Clause"
