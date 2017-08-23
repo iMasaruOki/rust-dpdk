@@ -2,6 +2,7 @@ extern crate bindgen;
 
 use std::env;
 use std::path::PathBuf;
+use std::process::Command;
 
 fn main() {
     println!("cargo:rustc-link-lib=dpdk");
@@ -14,4 +15,12 @@ fn main() {
     bindings
         .write_to_file(out_path.join("dpdk.rs"))
         .expect("Cooudn't write bindings");
+    let mut child = Command::new("perl")
+        .arg("-pi")
+        .arg("-e")
+        .arg("s/(^.*link_name.*per_lcore__)/    #[thread_local]\n$1/")
+        .arg(out_path.join("dpdk.rs").as_os_str())
+        .spawn()
+        .expect("failed to execute perl");
+    let exitcode = child.wait();
 }
