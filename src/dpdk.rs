@@ -10686,10 +10686,12 @@ extern "C" {
     pub static mut lcore_config: [lcore_config; 128usize];
 }
 extern "C" {
+    #[thread_local]
     #[link_name = "per_lcore__lcore_id"]
     pub static mut per_lcore__lcore_id: ::std::os::raw::c_uint;
 }
 extern "C" {
+    #[thread_local]
     #[link_name = "per_lcore__cpuset"]
     pub static mut per_lcore__cpuset: cpu_set_t;
 }
@@ -11173,6 +11175,7 @@ fn bindgen_test_layout_rte_mem_config() {
                 , stringify ! ( mem_cfg_addr ) ));
 }
 extern "C" {
+    #[thread_local]
     #[link_name = "per_lcore__rte_errno"]
     pub static mut per_lcore__rte_errno: ::std::os::raw::c_int;
 }
