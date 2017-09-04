@@ -57,6 +57,13 @@ impl <T> ::std::fmt::Debug for __BindgenUnionField<T> {
         fmt.write_str("__BindgenUnionField")
     }
 }
+impl <T> ::std::hash::Hash for __BindgenUnionField<T> {
+    fn hash<H: ::std::hash::Hasher>(&self, _state: &mut H) { }
+}
+impl <T> ::std::cmp::PartialEq for __BindgenUnionField<T> {
+    fn eq(&self, _other: &__BindgenUnionField<T>) -> bool { true }
+}
+impl <T> ::std::cmp::Eq for __BindgenUnionField<T> { }
 pub const _STDINT_H: ::std::os::raw::c_uint = 1;
 pub const _FEATURES_H: ::std::os::raw::c_uint = 1;
 pub const _DEFAULT_SOURCE: ::std::os::raw::c_uint = 1;
@@ -2454,17 +2461,17 @@ impl Clone for _IO_FILE {
 pub type FILE = _IO_FILE;
 pub type __FILE = _IO_FILE;
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Copy)]
 pub struct __mbstate_t {
     pub __count: ::std::os::raw::c_int,
     pub __value: __mbstate_t__bindgen_ty_1,
 }
 #[repr(C)]
-#[derive(Debug, Copy)]
-pub struct __mbstate_t__bindgen_ty_1 {
-    pub __wch: __BindgenUnionField<::std::os::raw::c_uint>,
-    pub __wchb: __BindgenUnionField<[::std::os::raw::c_char; 4usize]>,
-    pub bindgen_union_field: u32,
+#[derive(Copy)]
+pub union __mbstate_t__bindgen_ty_1 {
+    pub __wch: ::std::os::raw::c_uint,
+    pub __wchb: [::std::os::raw::c_char; 4usize],
+    _bindgen_union_align: u32,
 }
 #[test]
 fn bindgen_test_layout___mbstate_t__bindgen_ty_1() {
@@ -2511,7 +2518,7 @@ impl Clone for __mbstate_t {
     fn clone(&self) -> Self { *self }
 }
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Copy)]
 pub struct _G_fpos_t {
     pub __pos: __off_t,
     pub __state: __mbstate_t,
@@ -2537,7 +2544,7 @@ impl Clone for _G_fpos_t {
     fn clone(&self) -> Self { *self }
 }
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Copy)]
 pub struct _G_fpos64_t {
     pub __pos: __off64_t,
     pub __state: __mbstate_t,
@@ -3246,11 +3253,11 @@ pub type fsblkcnt_t = __fsblkcnt_t;
 pub type fsfilcnt_t = __fsfilcnt_t;
 pub type pthread_t = ::std::os::raw::c_ulong;
 #[repr(C)]
-#[derive(Debug, Copy)]
-pub struct pthread_attr_t {
-    pub __size: __BindgenUnionField<[::std::os::raw::c_char; 56usize]>,
-    pub __align: __BindgenUnionField<::std::os::raw::c_long>,
-    pub bindgen_union_field: [u64; 7usize],
+#[derive(Copy)]
+pub union pthread_attr_t {
+    pub __size: [::std::os::raw::c_char; 56usize],
+    pub __align: ::std::os::raw::c_long,
+    _bindgen_union_align: [u64; 7usize],
 }
 #[test]
 fn bindgen_test_layout_pthread_attr_t() {
@@ -3302,12 +3309,12 @@ impl Clone for __pthread_internal_list {
 }
 pub type __pthread_list_t = __pthread_internal_list;
 #[repr(C)]
-#[derive(Debug, Copy)]
-pub struct pthread_mutex_t {
-    pub __data: __BindgenUnionField<pthread_mutex_t___pthread_mutex_s>,
-    pub __size: __BindgenUnionField<[::std::os::raw::c_char; 40usize]>,
-    pub __align: __BindgenUnionField<::std::os::raw::c_long>,
-    pub bindgen_union_field: [u64; 5usize],
+#[derive(Copy)]
+pub union pthread_mutex_t {
+    pub __data: pthread_mutex_t___pthread_mutex_s,
+    pub __size: [::std::os::raw::c_char; 40usize],
+    pub __align: ::std::os::raw::c_long,
+    _bindgen_union_align: [u64; 5usize],
 }
 #[repr(C)]
 #[derive(Debug, Copy)]
@@ -3409,11 +3416,11 @@ impl Clone for pthread_mutex_t {
     fn clone(&self) -> Self { *self }
 }
 #[repr(C)]
-#[derive(Debug, Copy)]
-pub struct pthread_mutexattr_t {
-    pub __size: __BindgenUnionField<[::std::os::raw::c_char; 4usize]>,
-    pub __align: __BindgenUnionField<::std::os::raw::c_int>,
-    pub bindgen_union_field: u32,
+#[derive(Copy)]
+pub union pthread_mutexattr_t {
+    pub __size: [::std::os::raw::c_char; 4usize],
+    pub __align: ::std::os::raw::c_int,
+    _bindgen_union_align: u32,
 }
 #[test]
 fn bindgen_test_layout_pthread_mutexattr_t() {
@@ -3437,12 +3444,12 @@ impl Clone for pthread_mutexattr_t {
     fn clone(&self) -> Self { *self }
 }
 #[repr(C)]
-#[derive(Debug, Copy)]
-pub struct pthread_cond_t {
-    pub __data: __BindgenUnionField<pthread_cond_t__bindgen_ty_1>,
-    pub __size: __BindgenUnionField<[::std::os::raw::c_char; 48usize]>,
-    pub __align: __BindgenUnionField<::std::os::raw::c_longlong>,
-    pub bindgen_union_field: [u64; 6usize],
+#[derive(Copy)]
+pub union pthread_cond_t {
+    pub __data: pthread_cond_t__bindgen_ty_1,
+    pub __size: [::std::os::raw::c_char; 48usize],
+    pub __align: ::std::os::raw::c_longlong,
+    _bindgen_union_align: [u64; 6usize],
 }
 #[repr(C)]
 #[derive(Debug, Copy)]
@@ -3543,11 +3550,11 @@ impl Clone for pthread_cond_t {
     fn clone(&self) -> Self { *self }
 }
 #[repr(C)]
-#[derive(Debug, Copy)]
-pub struct pthread_condattr_t {
-    pub __size: __BindgenUnionField<[::std::os::raw::c_char; 4usize]>,
-    pub __align: __BindgenUnionField<::std::os::raw::c_int>,
-    pub bindgen_union_field: u32,
+#[derive(Copy)]
+pub union pthread_condattr_t {
+    pub __size: [::std::os::raw::c_char; 4usize],
+    pub __align: ::std::os::raw::c_int,
+    _bindgen_union_align: u32,
 }
 #[test]
 fn bindgen_test_layout_pthread_condattr_t() {
@@ -3572,12 +3579,12 @@ impl Clone for pthread_condattr_t {
 pub type pthread_key_t = ::std::os::raw::c_uint;
 pub type pthread_once_t = ::std::os::raw::c_int;
 #[repr(C)]
-#[derive(Debug, Copy)]
-pub struct pthread_rwlock_t {
-    pub __data: __BindgenUnionField<pthread_rwlock_t__bindgen_ty_1>,
-    pub __size: __BindgenUnionField<[::std::os::raw::c_char; 56usize]>,
-    pub __align: __BindgenUnionField<::std::os::raw::c_long>,
-    pub bindgen_union_field: [u64; 7usize],
+#[derive(Copy)]
+pub union pthread_rwlock_t {
+    pub __data: pthread_rwlock_t__bindgen_ty_1,
+    pub __size: [::std::os::raw::c_char; 56usize],
+    pub __align: ::std::os::raw::c_long,
+    _bindgen_union_align: [u64; 7usize],
 }
 #[repr(C)]
 #[derive(Debug, Copy)]
@@ -3709,11 +3716,11 @@ impl Clone for pthread_rwlock_t {
     fn clone(&self) -> Self { *self }
 }
 #[repr(C)]
-#[derive(Debug, Copy)]
-pub struct pthread_rwlockattr_t {
-    pub __size: __BindgenUnionField<[::std::os::raw::c_char; 8usize]>,
-    pub __align: __BindgenUnionField<::std::os::raw::c_long>,
-    pub bindgen_union_field: u64,
+#[derive(Copy)]
+pub union pthread_rwlockattr_t {
+    pub __size: [::std::os::raw::c_char; 8usize],
+    pub __align: ::std::os::raw::c_long,
+    _bindgen_union_align: u64,
 }
 #[test]
 fn bindgen_test_layout_pthread_rwlockattr_t() {
@@ -3738,11 +3745,11 @@ impl Clone for pthread_rwlockattr_t {
 }
 pub type pthread_spinlock_t = ::std::os::raw::c_int;
 #[repr(C)]
-#[derive(Debug, Copy)]
-pub struct pthread_barrier_t {
-    pub __size: __BindgenUnionField<[::std::os::raw::c_char; 32usize]>,
-    pub __align: __BindgenUnionField<::std::os::raw::c_long>,
-    pub bindgen_union_field: [u64; 4usize],
+#[derive(Copy)]
+pub union pthread_barrier_t {
+    pub __size: [::std::os::raw::c_char; 32usize],
+    pub __align: ::std::os::raw::c_long,
+    _bindgen_union_align: [u64; 4usize],
 }
 #[test]
 fn bindgen_test_layout_pthread_barrier_t() {
@@ -3765,11 +3772,11 @@ impl Clone for pthread_barrier_t {
     fn clone(&self) -> Self { *self }
 }
 #[repr(C)]
-#[derive(Debug, Copy)]
-pub struct pthread_barrierattr_t {
-    pub __size: __BindgenUnionField<[::std::os::raw::c_char; 4usize]>,
-    pub __align: __BindgenUnionField<::std::os::raw::c_int>,
-    pub bindgen_union_field: u32,
+#[derive(Copy)]
+pub union pthread_barrierattr_t {
+    pub __size: [::std::os::raw::c_char; 4usize],
+    pub __align: ::std::os::raw::c_int,
+    _bindgen_union_align: u32,
 }
 #[test]
 fn bindgen_test_layout_pthread_barrierattr_t() {
@@ -3878,6 +3885,7 @@ impl Clone for sockaddr {
     fn clone(&self) -> Self { *self }
 }
 #[repr(C)]
+#[derive(Copy)]
 pub struct sockaddr_storage {
     pub ss_family: sa_family_t,
     pub __ss_padding: [::std::os::raw::c_char; 118usize],
@@ -3904,6 +3912,9 @@ fn bindgen_test_layout_sockaddr_storage() {
                 const _ as usize } , 120usize , concat ! (
                 "Alignment of field: " , stringify ! ( sockaddr_storage ) ,
                 "::" , stringify ! ( __ss_align ) ));
+}
+impl Clone for sockaddr_storage {
+    fn clone(&self) -> Self { *self }
 }
 pub const MSG_OOB: _bindgen_ty_1 = _bindgen_ty_1::MSG_OOB;
 pub const MSG_PEEK: _bindgen_ty_1 = _bindgen_ty_1::MSG_PEEK;
@@ -4004,7 +4015,7 @@ impl Clone for msghdr {
     fn clone(&self) -> Self { *self }
 }
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug)]
 pub struct cmsghdr {
     pub cmsg_len: usize,
     pub cmsg_level: ::std::os::raw::c_int,
@@ -4017,9 +4028,6 @@ fn bindgen_test_layout_cmsghdr() {
                "Size of: " , stringify ! ( cmsghdr ) ));
     assert_eq! (::std::mem::align_of::<cmsghdr>() , 8usize , concat ! (
                 "Alignment of " , stringify ! ( cmsghdr ) ));
-}
-impl Clone for cmsghdr {
-    fn clone(&self) -> Self { *self }
 }
 extern "C" {
     pub fn __cmsg_nxthdr(__mhdr: *mut msghdr, __cmsg: *mut cmsghdr)
@@ -4200,6 +4208,7 @@ impl Clone for in_addr {
     fn clone(&self) -> Self { *self }
 }
 #[repr(C)]
+#[derive(Copy)]
 pub struct ip_opts {
     pub ip_dst: in_addr,
     pub ip_opts: [::std::os::raw::c_char; 40usize],
@@ -4220,6 +4229,9 @@ fn bindgen_test_layout_ip_opts() {
                 usize } , 4usize , concat ! (
                 "Alignment of field: " , stringify ! ( ip_opts ) , "::" ,
                 stringify ! ( ip_opts ) ));
+}
+impl Clone for ip_opts {
+    fn clone(&self) -> Self { *self }
 }
 #[repr(C)]
 #[derive(Debug, Copy)]
@@ -4416,17 +4428,17 @@ pub enum _bindgen_ty_6 {
     IPPORT_USERRESERVED = 5000,
 }
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Copy)]
 pub struct in6_addr {
     pub __in6_u: in6_addr__bindgen_ty_1,
 }
 #[repr(C)]
-#[derive(Debug, Copy)]
-pub struct in6_addr__bindgen_ty_1 {
-    pub __u6_addr8: __BindgenUnionField<[u8; 16usize]>,
-    pub __u6_addr16: __BindgenUnionField<[u16; 8usize]>,
-    pub __u6_addr32: __BindgenUnionField<[u32; 4usize]>,
-    pub bindgen_union_field: [u32; 4usize],
+#[derive(Copy)]
+pub union in6_addr__bindgen_ty_1 {
+    pub __u6_addr8: [u8; 16usize],
+    pub __u6_addr16: [u16; 8usize],
+    pub __u6_addr32: [u32; 4usize],
+    _bindgen_union_align: [u32; 4usize],
 }
 #[test]
 fn bindgen_test_layout_in6_addr__bindgen_ty_1() {
@@ -4517,7 +4529,7 @@ impl Clone for sockaddr_in {
     fn clone(&self) -> Self { *self }
 }
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Copy)]
 pub struct sockaddr_in6 {
     pub sin6_family: sa_family_t,
     pub sin6_port: in_port_t,
@@ -4619,7 +4631,7 @@ impl Clone for ip_mreq_source {
     fn clone(&self) -> Self { *self }
 }
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Copy)]
 pub struct ipv6_mreq {
     pub ipv6mr_multiaddr: in6_addr,
     pub ipv6mr_interface: ::std::os::raw::c_uint,
@@ -4645,6 +4657,7 @@ impl Clone for ipv6_mreq {
     fn clone(&self) -> Self { *self }
 }
 #[repr(C)]
+#[derive(Copy)]
 pub struct group_req {
     pub gr_interface: u32,
     pub gr_group: sockaddr_storage,
@@ -4666,7 +4679,11 @@ fn bindgen_test_layout_group_req() {
                 "Alignment of field: " , stringify ! ( group_req ) , "::" ,
                 stringify ! ( gr_group ) ));
 }
+impl Clone for group_req {
+    fn clone(&self) -> Self { *self }
+}
 #[repr(C)]
+#[derive(Copy)]
 pub struct group_source_req {
     pub gsr_interface: u32,
     pub gsr_group: sockaddr_storage,
@@ -4693,6 +4710,9 @@ fn bindgen_test_layout_group_source_req() {
                 const _ as usize } , 136usize , concat ! (
                 "Alignment of field: " , stringify ! ( group_source_req ) ,
                 "::" , stringify ! ( gsr_source ) ));
+}
+impl Clone for group_source_req {
+    fn clone(&self) -> Self { *self }
 }
 #[repr(C)]
 #[derive(Debug, Copy)]
@@ -4739,6 +4759,7 @@ impl Clone for ip_msfilter {
     fn clone(&self) -> Self { *self }
 }
 #[repr(C)]
+#[derive(Copy)]
 pub struct group_filter {
     pub gf_interface: u32,
     pub gf_group: sockaddr_storage,
@@ -4777,6 +4798,9 @@ fn bindgen_test_layout_group_filter() {
                 as usize } , 144usize , concat ! (
                 "Alignment of field: " , stringify ! ( group_filter ) , "::" ,
                 stringify ! ( gf_slist ) ));
+}
+impl Clone for group_filter {
+    fn clone(&self) -> Self { *self }
 }
 extern "C" {
     pub fn ntohl(__netlong: u32) -> u32;
@@ -5144,6 +5168,7 @@ pub enum rdline_status {
     RDLINE_EXITED = 2,
 }
 #[repr(C)]
+#[derive(Copy)]
 pub struct rdline {
     pub status: rdline_status,
     pub left: cirbuf,
@@ -5254,6 +5279,9 @@ fn bindgen_test_layout_rdline() {
                 } , 9904usize , concat ! (
                 "Alignment of field: " , stringify ! ( rdline ) , "::" ,
                 stringify ! ( opaque ) ));
+}
+impl Clone for rdline {
+    fn clone(&self) -> Self { *self }
 }
 pub type rdline_write_char_t =
     ::std::option::Option<unsafe extern "C" fn(rdl: *mut rdline,
@@ -5474,6 +5502,7 @@ impl Clone for cmdline_token_ops {
     fn clone(&self) -> Self { *self }
 }
 #[repr(C)]
+#[derive(Copy)]
 pub struct cmdline {
     pub s_in: ::std::os::raw::c_int,
     pub s_out: ::std::os::raw::c_int,
@@ -5518,6 +5547,9 @@ fn bindgen_test_layout_cmdline() {
                 usize } , 9960usize , concat ! (
                 "Alignment of field: " , stringify ! ( cmdline ) , "::" ,
                 stringify ! ( oldterm ) ));
+}
+impl Clone for cmdline {
+    fn clone(&self) -> Self { *self }
 }
 /// Store a instruction, which is a pointer to a callback function and
 /// its parameter that is called when the instruction is parsed, a help
@@ -5574,7 +5606,7 @@ fn bindgen_test_layout_cmdline() {
 ///
 /// @endcode
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug)]
 pub struct cmdline_inst {
     pub f: ::std::option::Option<unsafe extern "C" fn(arg1:
                                                           *mut ::std::os::raw::c_void,
@@ -5591,9 +5623,6 @@ fn bindgen_test_layout_cmdline_inst() {
                "Size of: " , stringify ! ( cmdline_inst ) ));
     assert_eq! (::std::mem::align_of::<cmdline_inst>() , 8usize , concat ! (
                 "Alignment of " , stringify ! ( cmdline_inst ) ));
-}
-impl Clone for cmdline_inst {
-    fn clone(&self) -> Self { *self }
 }
 pub type cmdline_parse_inst_t = cmdline_inst;
 /// A context is identified by its name, and contains a list of
@@ -5728,18 +5757,18 @@ extern "C" {
      -> ::std::os::raw::c_int;
 }
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Copy)]
 pub struct cmdline_ipaddr {
     pub family: u8,
     pub addr: cmdline_ipaddr__bindgen_ty_1,
     pub prefixlen: ::std::os::raw::c_uint,
 }
 #[repr(C)]
-#[derive(Debug, Copy)]
-pub struct cmdline_ipaddr__bindgen_ty_1 {
-    pub ipv4: __BindgenUnionField<in_addr>,
-    pub ipv6: __BindgenUnionField<in6_addr>,
-    pub bindgen_union_field: [u32; 4usize],
+#[derive(Copy)]
+pub union cmdline_ipaddr__bindgen_ty_1 {
+    pub ipv4: in_addr,
+    pub ipv6: in6_addr,
+    _bindgen_union_align: [u32; 4usize],
 }
 #[test]
 fn bindgen_test_layout_cmdline_ipaddr__bindgen_ty_1() {
@@ -6607,12 +6636,12 @@ extern "C" {
 #[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
 pub enum idtype_t { P_ALL = 0, P_PID = 1, P_PGID = 2, }
 #[repr(C)]
-#[derive(Debug, Copy)]
-pub struct wait {
-    pub w_status: __BindgenUnionField<::std::os::raw::c_int>,
-    pub __wait_terminated: __BindgenUnionField<wait__bindgen_ty_1>,
-    pub __wait_stopped: __BindgenUnionField<wait__bindgen_ty_2>,
-    pub bindgen_union_field: u32,
+#[derive(Copy)]
+pub union wait {
+    pub w_status: ::std::os::raw::c_int,
+    pub __wait_terminated: wait__bindgen_ty_1,
+    pub __wait_stopped: wait__bindgen_ty_2,
+    _bindgen_union_align: u32,
 }
 #[repr(C)]
 #[derive(Debug, Copy)]
@@ -6876,11 +6905,11 @@ impl Clone for wait {
     fn clone(&self) -> Self { *self }
 }
 #[repr(C)]
-#[derive(Debug, Copy)]
-pub struct __WAIT_STATUS {
-    pub __uptr: __BindgenUnionField<*mut wait>,
-    pub __iptr: __BindgenUnionField<*mut ::std::os::raw::c_int>,
-    pub bindgen_union_field: u64,
+#[derive(Copy)]
+pub union __WAIT_STATUS {
+    pub __uptr: *mut wait,
+    pub __iptr: *mut ::std::os::raw::c_int,
+    _bindgen_union_align: u64,
 }
 #[test]
 fn bindgen_test_layout___WAIT_STATUS() {
@@ -7641,14 +7670,14 @@ pub type __v16qs = [::std::os::raw::c_schar; 16usize];
 pub type xmm_t = __m128i;
 #[repr(C)]
 #[derive(Copy)]
-pub struct rte_xmm {
-    pub x: __BindgenUnionField<xmm_t>,
-    pub u8: __BindgenUnionField<[u8; 16usize]>,
-    pub u16: __BindgenUnionField<[u16; 8usize]>,
-    pub u32: __BindgenUnionField<[u32; 4usize]>,
-    pub u64: __BindgenUnionField<[u64; 2usize]>,
-    pub pd: __BindgenUnionField<[f64; 2usize]>,
-    pub bindgen_union_field: [u8; 16usize],
+pub union rte_xmm {
+    pub x: xmm_t,
+    pub u8: [u8; 16usize],
+    pub u16: [u16; 8usize],
+    pub u32: [u32; 4usize],
+    pub u64: [u64; 2usize],
+    pub pd: [f64; 2usize],
+    _bindgen_union_align: [u8; 16usize],
 }
 #[test]
 fn bindgen_test_layout_rte_xmm() {
@@ -7691,6 +7720,7 @@ impl Clone for rte_xmm {
 pub type rte_xmm_t = rte_xmm;
 /// A structure used to store memory information.
 #[repr(C)]
+#[derive(Copy)]
 pub struct memory_info {
     pub name: [::std::os::raw::c_char; 256usize],
     pub size: u64,
@@ -7712,8 +7742,12 @@ fn bindgen_test_layout_memory_info() {
                 "Alignment of field: " , stringify ! ( memory_info ) , "::" ,
                 stringify ! ( size ) ));
 }
+impl Clone for memory_info {
+    fn clone(&self) -> Self { *self }
+}
 /// A structure used to store memory segment information.
 #[repr(C)]
+#[derive(Copy)]
 pub struct memseg_info {
     pub idx: u32,
     pub pfn: u64,
@@ -7746,6 +7780,9 @@ fn bindgen_test_layout_memseg_info() {
                 usize } , 24usize , concat ! (
                 "Alignment of field: " , stringify ! ( memseg_info ) , "::" ,
                 stringify ! ( mfn ) ));
+}
+impl Clone for memseg_info {
+    fn clone(&self) -> Self { *self }
 }
 /// A structure used to store memory block information.
 #[repr(C)]
@@ -7809,7 +7846,7 @@ pub enum rte_page_sizes {
 pub type phys_addr_t = u64;
 /// Physical memory segment descriptor.
 #[repr(C, packed)]
-#[derive(Debug, Copy)]
+#[derive(Copy)]
 pub struct rte_memseg {
     /// < Start physical address.
     pub phys_addr: phys_addr_t,
@@ -7826,13 +7863,13 @@ pub struct rte_memseg {
     pub nrank: u32,
 }
 #[repr(C)]
-#[derive(Debug, Copy)]
-pub struct rte_memseg__bindgen_ty_1 {
+#[derive(Copy)]
+pub union rte_memseg__bindgen_ty_1 {
     /// < Start virtual address.
-    pub addr: __BindgenUnionField<*mut ::std::os::raw::c_void>,
+    pub addr: *mut ::std::os::raw::c_void,
     /// < Makes sure addr is always 64 bits
-    pub addr_64: __BindgenUnionField<u64>,
-    pub bindgen_union_field: u64,
+    pub addr_64: u64,
+    _bindgen_union_align: u64,
 }
 #[test]
 fn bindgen_test_layout_rte_memseg__bindgen_ty_1() {
@@ -8220,7 +8257,7 @@ pub type rte_le64_t = u64;
 /// A structure describing a memzone, which is a contiguous portion of
 /// physical memory identified by a name.
 #[repr(C, packed)]
-#[derive(Debug, Copy)]
+#[derive(Copy)]
 pub struct rte_memzone {
     /// < Name of the memory zone.
     pub name: [::std::os::raw::c_char; 32usize],
@@ -8239,13 +8276,13 @@ pub struct rte_memzone {
     pub memseg_id: u32,
 }
 #[repr(C)]
-#[derive(Debug, Copy)]
-pub struct rte_memzone__bindgen_ty_1 {
+#[derive(Copy)]
+pub union rte_memzone__bindgen_ty_1 {
     /// < Start virtual address.
-    pub addr: __BindgenUnionField<*mut ::std::os::raw::c_void>,
+    pub addr: *mut ::std::os::raw::c_void,
     /// < Makes sure addr is always 64-bits
-    pub addr_64: __BindgenUnionField<u64>,
-    pub bindgen_union_field: u64,
+    pub addr_64: u64,
+    _bindgen_union_align: u64,
 }
 #[test]
 fn bindgen_test_layout_rte_memzone__bindgen_ty_1() {
@@ -10000,6 +10037,7 @@ pub enum rte_proc_type_t {
 }
 /// The global RTE configuration structure.
 #[repr(C, packed)]
+#[derive(Copy)]
 pub struct rte_config {
     /// < Id of the master lcore
     pub master_lcore: u32,
@@ -10051,6 +10089,9 @@ fn bindgen_test_layout_rte_config() {
                 as usize } , 528usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_config ) , "::" ,
                 stringify ! ( mem_config ) ));
+}
+impl Clone for rte_config {
+    fn clone(&self) -> Self { *self }
 }
 extern "C" {
     /// Get the global configuration structure.
@@ -11083,6 +11124,7 @@ impl Clone for rte_rwlock_t {
 /// Used by the rte_config structure. It is separated out, as for multi-process
 /// support, the memory details should be shared across instances
 #[repr(C, packed)]
+#[derive(Copy)]
 pub struct rte_mem_config {
     /// < Magic number - Sanity check.
     pub magic: u32,
@@ -11174,6 +11216,9 @@ fn bindgen_test_layout_rte_mem_config() {
                 "Alignment of field: " , stringify ! ( rte_mem_config ) , "::"
                 , stringify ! ( mem_cfg_addr ) ));
 }
+impl Clone for rte_mem_config {
+    fn clone(&self) -> Self { *self }
+}
 extern "C" {
     #[thread_local]
     #[link_name = "per_lcore__rte_errno"]
@@ -11238,13 +11283,13 @@ extern "C" {
      -> ::std::os::raw::c_int;
 }
 #[repr(C)]
-#[derive(Debug, Copy)]
-pub struct rte_acl_field_types {
-    pub u8: __BindgenUnionField<u8>,
-    pub u16: __BindgenUnionField<u16>,
-    pub u32: __BindgenUnionField<u32>,
-    pub u64: __BindgenUnionField<u64>,
-    pub bindgen_union_field: u64,
+#[derive(Copy)]
+pub union rte_acl_field_types {
+    pub u8: u8,
+    pub u16: u16,
+    pub u32: u32,
+    pub u64: u64,
+    _bindgen_union_align: u64,
 }
 #[test]
 fn bindgen_test_layout_rte_acl_field_types() {
@@ -11351,6 +11396,7 @@ impl Clone for rte_acl_field_def {
 /// ACL build configuration.
 /// Defines the fields of an ACL trie and number of categories to build with.
 #[repr(C)]
+#[derive(Copy)]
 pub struct rte_acl_config {
     /// < Number of categories to build with.
     pub num_categories: u32,
@@ -11386,9 +11432,12 @@ fn bindgen_test_layout_rte_acl_config() {
                 "Alignment of field: " , stringify ! ( rte_acl_config ) , "::"
                 , stringify ! ( max_size ) ));
 }
+impl Clone for rte_acl_config {
+    fn clone(&self) -> Self { *self }
+}
 /// Defines the value of a field for a rule.
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Copy)]
 pub struct rte_acl_field {
     pub value: rte_acl_field_types,
     pub mask_range: rte_acl_field_types,
@@ -11465,7 +11514,6 @@ impl Clone for rte_acl_rule_data {
     fn clone(&self) -> Self { *self }
 }
 #[repr(C)]
-#[derive(Debug, Copy)]
 pub struct rte_acl_rule {
     pub data: rte_acl_rule_data,
     pub field: __IncompleteArrayField<rte_acl_field>,
@@ -11477,9 +11525,6 @@ fn bindgen_test_layout_rte_acl_rule() {
                "Size of: " , stringify ! ( rte_acl_rule ) ));
     assert_eq! (::std::mem::align_of::<rte_acl_rule>() , 8usize , concat ! (
                 "Alignment of " , stringify ! ( rte_acl_rule ) ));
-}
-impl Clone for rte_acl_rule {
-    fn clone(&self) -> Self { *self }
 }
 /// Parameters used when creating the ACL context.
 #[repr(C)]
@@ -12035,6 +12080,7 @@ extern "C" {
 }
 /// A structure that stores a per-core object cache.
 #[repr(C)]
+#[derive(Copy)]
 pub struct rte_mempool_cache {
     /// < Size of the cache
     pub size: u32,
@@ -12070,6 +12116,9 @@ fn bindgen_test_layout_rte_mempool_cache() {
                 as usize } , 16usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_mempool_cache ) ,
                 "::" , stringify ! ( objs ) ));
+}
+impl Clone for rte_mempool_cache {
+    fn clone(&self) -> Self { *self }
 }
 /// A structure that stores the size of mempool elements.
 #[repr(C)]
@@ -12381,13 +12430,13 @@ pub struct rte_mempool {
     pub __bindgen_padding_0: [u64; 5usize],
 }
 #[repr(C)]
-#[derive(Debug, Copy)]
-pub struct rte_mempool__bindgen_ty_1 {
+#[derive(Copy)]
+pub union rte_mempool__bindgen_ty_1 {
     /// < Ring or pool to store objects.
-    pub pool_data: __BindgenUnionField<*mut ::std::os::raw::c_void>,
+    pub pool_data: *mut ::std::os::raw::c_void,
     /// < External mempool identifier.
-    pub pool_id: __BindgenUnionField<u64>,
-    pub bindgen_union_field: u64,
+    pub pool_id: u64,
+    _bindgen_union_align: u64,
 }
 #[test]
 fn bindgen_test_layout_rte_mempool__bindgen_ty_1() {
@@ -13460,7 +13509,6 @@ pub type MARKER8 = [u8; 0usize];
 pub type MARKER64 = [u64; 0usize];
 /// The generic rte_mbuf, containing a packet mbuf.
 #[repr(C)]
-#[derive(Copy)]
 pub struct rte_mbuf {
     pub cacheline0: MARKER,
     /// < Virtual address of segment buffer.
@@ -13520,13 +13568,13 @@ pub struct rte_mbuf {
 /// or non-atomic) is controlled by the CONFIG_RTE_MBUF_REFCNT_ATOMIC
 /// config option.
 #[repr(C)]
-#[derive(Debug, Copy)]
-pub struct rte_mbuf__bindgen_ty_1 {
+#[derive(Copy)]
+pub union rte_mbuf__bindgen_ty_1 {
     /// < Atomically accessed refcnt
-    pub refcnt_atomic: __BindgenUnionField<rte_atomic16_t>,
+    pub refcnt_atomic: rte_atomic16_t,
     /// < Non-atomically accessed refcnt
-    pub refcnt: __BindgenUnionField<u16>,
-    pub bindgen_union_field: u16,
+    pub refcnt: u16,
+    _bindgen_union_align: u16,
 }
 #[test]
 fn bindgen_test_layout_rte_mbuf__bindgen_ty_1() {
@@ -13551,12 +13599,12 @@ impl Clone for rte_mbuf__bindgen_ty_1 {
     fn clone(&self) -> Self { *self }
 }
 #[repr(C)]
-#[derive(Debug, Copy)]
-pub struct rte_mbuf__bindgen_ty_2 {
+#[derive(Copy)]
+pub union rte_mbuf__bindgen_ty_2 {
     /// < L2/L3/L4 and tunnel information.
-    pub packet_type: __BindgenUnionField<u32>,
-    pub __bindgen_anon_1: __BindgenUnionField<rte_mbuf__bindgen_ty_2__bindgen_ty_1>,
-    pub bindgen_union_field: u32,
+    pub packet_type: u32,
+    pub __bindgen_anon_1: rte_mbuf__bindgen_ty_2__bindgen_ty_1,
+    _bindgen_union_align: u32,
 }
 #[repr(C)]
 #[derive(Debug, Copy)]
@@ -13882,30 +13930,30 @@ impl Clone for rte_mbuf__bindgen_ty_2 {
     fn clone(&self) -> Self { *self }
 }
 #[repr(C)]
-#[derive(Debug, Copy)]
-pub struct rte_mbuf__bindgen_ty_3 {
+#[derive(Copy)]
+pub union rte_mbuf__bindgen_ty_3 {
     /// < RSS hash result if RSS enabled
-    pub rss: __BindgenUnionField<u32>,
+    pub rss: u32,
     /// < Filter identifier if FDIR enabled
-    pub fdir: __BindgenUnionField<rte_mbuf__bindgen_ty_3__bindgen_ty_1>,
+    pub fdir: rte_mbuf__bindgen_ty_3__bindgen_ty_1,
     /// < Hierarchical scheduler
-    pub sched: __BindgenUnionField<rte_mbuf__bindgen_ty_3__bindgen_ty_2>,
+    pub sched: rte_mbuf__bindgen_ty_3__bindgen_ty_2,
     /// < User defined tags. See rte_distributor_process()
-    pub usr: __BindgenUnionField<u32>,
-    pub bindgen_union_field: [u32; 2usize],
+    pub usr: u32,
+    _bindgen_union_align: [u32; 2usize],
 }
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Copy)]
 pub struct rte_mbuf__bindgen_ty_3__bindgen_ty_1 {
     pub __bindgen_anon_1: rte_mbuf__bindgen_ty_3__bindgen_ty_1__bindgen_ty_1,
     pub hi: u32,
 }
 #[repr(C)]
-#[derive(Debug, Copy)]
-pub struct rte_mbuf__bindgen_ty_3__bindgen_ty_1__bindgen_ty_1 {
-    pub __bindgen_anon_1: __BindgenUnionField<rte_mbuf__bindgen_ty_3__bindgen_ty_1__bindgen_ty_1__bindgen_ty_1>,
-    pub lo: __BindgenUnionField<u32>,
-    pub bindgen_union_field: u32,
+#[derive(Copy)]
+pub union rte_mbuf__bindgen_ty_3__bindgen_ty_1__bindgen_ty_1 {
+    pub __bindgen_anon_1: rte_mbuf__bindgen_ty_3__bindgen_ty_1__bindgen_ty_1__bindgen_ty_1,
+    pub lo: u32,
+    _bindgen_union_align: u32,
 }
 #[repr(C)]
 #[derive(Debug, Copy)]
@@ -14056,13 +14104,13 @@ impl Clone for rte_mbuf__bindgen_ty_3 {
     fn clone(&self) -> Self { *self }
 }
 #[repr(C)]
-#[derive(Debug, Copy)]
-pub struct rte_mbuf__bindgen_ty_4 {
+#[derive(Copy)]
+pub union rte_mbuf__bindgen_ty_4 {
     /// < Can be used for external metadata
-    pub userdata: __BindgenUnionField<*mut ::std::os::raw::c_void>,
+    pub userdata: *mut ::std::os::raw::c_void,
     /// < Allow 8-byte userdata on 32-bit
-    pub udata64: __BindgenUnionField<u64>,
-    pub bindgen_union_field: u64,
+    pub udata64: u64,
+    _bindgen_union_align: u64,
 }
 #[test]
 fn bindgen_test_layout_rte_mbuf__bindgen_ty_4() {
@@ -14087,12 +14135,12 @@ impl Clone for rte_mbuf__bindgen_ty_4 {
     fn clone(&self) -> Self { *self }
 }
 #[repr(C)]
-#[derive(Debug, Copy)]
-pub struct rte_mbuf__bindgen_ty_5 {
+#[derive(Copy)]
+pub union rte_mbuf__bindgen_ty_5 {
     /// < combined for easy fetch
-    pub tx_offload: __BindgenUnionField<u64>,
-    pub __bindgen_anon_1: __BindgenUnionField<rte_mbuf__bindgen_ty_5__bindgen_ty_1>,
-    pub bindgen_union_field: u64,
+    pub tx_offload: u64,
+    pub __bindgen_anon_1: rte_mbuf__bindgen_ty_5__bindgen_ty_1,
+    _bindgen_union_align: u64,
 }
 #[repr(C)]
 #[derive(Debug, Copy)]
@@ -14491,9 +14539,6 @@ fn bindgen_test_layout_rte_mbuf() {
                 } , 100usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_mbuf ) , "::" ,
                 stringify ! ( seqn ) ));
-}
-impl Clone for rte_mbuf {
-    fn clone(&self) -> Self { *self }
 }
 /// Private data in case of pktmbuf pool.
 ///
@@ -14973,7 +15018,7 @@ impl Clone for rte_avp_device_config {
     fn clone(&self) -> Self { *self }
 }
 #[repr(C, packed)]
-#[derive(Debug, Copy)]
+#[derive(Copy)]
 pub struct rte_avp_request {
     /// < Request id
     pub req_id: u32,
@@ -14982,15 +15027,15 @@ pub struct rte_avp_request {
     pub result: i32,
 }
 #[repr(C)]
-#[derive(Debug, Copy)]
-pub struct rte_avp_request__bindgen_ty_1 {
+#[derive(Copy)]
+pub union rte_avp_request__bindgen_ty_1 {
     /// < New MTU
-    pub new_mtu: __BindgenUnionField<u32>,
+    pub new_mtu: u32,
     /// < 1: interface up, 0: interface down
-    pub if_up: __BindgenUnionField<u8>,
+    pub if_up: u8,
     /// < Queue configuration
-    pub config: __BindgenUnionField<rte_avp_device_config>,
-    pub bindgen_union_field: [u32; 7usize],
+    pub config: rte_avp_device_config,
+    _bindgen_union_align: [u32; 7usize],
 }
 #[test]
 fn bindgen_test_layout_rte_avp_request__bindgen_ty_1() {
@@ -15044,7 +15089,7 @@ impl Clone for rte_avp_request {
     fn clone(&self) -> Self { *self }
 }
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug)]
 pub struct rte_avp_fifo {
     /// < Next position to be written
     pub write: ::std::os::raw::c_uint,
@@ -15064,9 +15109,6 @@ fn bindgen_test_layout_rte_avp_fifo() {
                "Size of: " , stringify ! ( rte_avp_fifo ) ));
     assert_eq! (::std::mem::align_of::<rte_avp_fifo>() , 8usize , concat ! (
                 "Alignment of " , stringify ! ( rte_avp_fifo ) ));
-}
-impl Clone for rte_avp_fifo {
-    fn clone(&self) -> Self { *self }
 }
 #[repr(C, packed)]
 #[derive(Copy)]
@@ -15200,6 +15242,7 @@ impl Clone for rte_avp_memmap {
 }
 /// @}
 #[repr(C)]
+#[derive(Copy)]
 pub struct rte_avp_memmap_info {
     /// < Memory validation marker
     pub magic: u32,
@@ -15236,6 +15279,9 @@ fn bindgen_test_layout_rte_avp_memmap_info() {
                 _ as usize } , 16usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_avp_memmap_info ) ,
                 "::" , stringify ! ( maps ) ));
+}
+impl Clone for rte_avp_memmap_info {
+    fn clone(&self) -> Self { *self }
 }
 #[repr(C)]
 #[derive(Debug, Copy)]
@@ -15484,7 +15530,7 @@ impl Clone for rte_avp_device_info {
 }
 /// Bitmap data structure
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug)]
 pub struct rte_bitmap {
     /// < Bitmap array1
     pub array1: *mut u64,
@@ -15510,9 +15556,6 @@ fn bindgen_test_layout_rte_bitmap() {
                "Size of: " , stringify ! ( rte_bitmap ) ));
     assert_eq! (::std::mem::align_of::<rte_bitmap>() , 8usize , concat ! (
                 "Alignment of " , stringify ! ( rte_bitmap ) ));
-}
-impl Clone for rte_bitmap {
-    fn clone(&self) -> Self { *self }
 }
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
@@ -16212,6 +16255,7 @@ pub struct rte_cfgfile {
 }
 /// Configuration file entry
 #[repr(C)]
+#[derive(Copy)]
 pub struct rte_cfgfile_entry {
     /// < Name
     pub name: [::std::os::raw::c_char; 64usize],
@@ -16234,6 +16278,9 @@ fn bindgen_test_layout_rte_cfgfile_entry() {
                 _ as usize } , 64usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_cfgfile_entry ) ,
                 "::" , stringify ! ( value ) ));
+}
+impl Clone for rte_cfgfile_entry {
+    fn clone(&self) -> Self { *self }
 }
 /// Configuration file operation optional arguments
 #[repr(C)]
@@ -17087,19 +17134,19 @@ pub enum rte_crypto_sym_xform_type {
 /// hold a single transform, the type field is used to specify which transform
 /// is contained within the union
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Copy)]
 pub struct rte_crypto_sym_xform {
     pub next: *mut rte_crypto_sym_xform,
     pub type_: rte_crypto_sym_xform_type,
     pub __bindgen_anon_1: rte_crypto_sym_xform__bindgen_ty_1,
 }
 #[repr(C)]
-#[derive(Debug, Copy)]
-pub struct rte_crypto_sym_xform__bindgen_ty_1 {
-    pub auth: __BindgenUnionField<rte_crypto_auth_xform>,
-    pub cipher: __BindgenUnionField<rte_crypto_cipher_xform>,
-    pub aead: __BindgenUnionField<rte_crypto_aead_xform>,
-    pub bindgen_union_field: [u64; 4usize],
+#[derive(Copy)]
+pub union rte_crypto_sym_xform__bindgen_ty_1 {
+    pub auth: rte_crypto_auth_xform,
+    pub cipher: rte_crypto_cipher_xform,
+    pub aead: rte_crypto_aead_xform,
+    _bindgen_union_align: [u64; 4usize],
 }
 #[test]
 fn bindgen_test_layout_rte_crypto_sym_xform__bindgen_ty_1() {
@@ -17157,7 +17204,7 @@ impl Clone for rte_crypto_sym_xform {
 }
 /// Cryptodev symmetric crypto session
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug)]
 pub struct rte_cryptodev_sym_session {
     pub sess_private_data: __IncompleteArrayField<*mut ::std::os::raw::c_void>,
 }
@@ -17177,9 +17224,6 @@ fn bindgen_test_layout_rte_cryptodev_sym_session() {
                 "Alignment of field: " , stringify ! (
                 rte_cryptodev_sym_session ) , "::" , stringify ! (
                 sess_private_data ) ));
-}
-impl Clone for rte_cryptodev_sym_session {
-    fn clone(&self) -> Self { *self }
 }
 /// Symmetric Cryptographic Operation.
 ///
@@ -17210,7 +17254,7 @@ impl Clone for rte_cryptodev_sym_session {
 /// destination buffer being at a different alignment, relative to buffer start,
 /// to the data in the source buffer.
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Copy)]
 pub struct rte_crypto_sym_op {
     /// < source mbuf
     pub m_src: *mut rte_mbuf,
@@ -17220,11 +17264,11 @@ pub struct rte_crypto_sym_op {
     pub __bindgen_anon_2: rte_crypto_sym_op__bindgen_ty_2,
 }
 #[repr(C)]
-#[derive(Debug, Copy)]
-pub struct rte_crypto_sym_op__bindgen_ty_1 {
-    pub session: __BindgenUnionField<*mut rte_cryptodev_sym_session>,
-    pub xform: __BindgenUnionField<*mut rte_crypto_sym_xform>,
-    pub bindgen_union_field: u64,
+#[derive(Copy)]
+pub union rte_crypto_sym_op__bindgen_ty_1 {
+    pub session: *mut rte_cryptodev_sym_session,
+    pub xform: *mut rte_crypto_sym_xform,
+    _bindgen_union_align: u64,
 }
 #[test]
 fn bindgen_test_layout_rte_crypto_sym_op__bindgen_ty_1() {
@@ -17253,11 +17297,11 @@ impl Clone for rte_crypto_sym_op__bindgen_ty_1 {
     fn clone(&self) -> Self { *self }
 }
 #[repr(C)]
-#[derive(Debug, Copy)]
-pub struct rte_crypto_sym_op__bindgen_ty_2 {
-    pub aead: __BindgenUnionField<rte_crypto_sym_op__bindgen_ty_2__bindgen_ty_1>,
-    pub __bindgen_anon_1: __BindgenUnionField<rte_crypto_sym_op__bindgen_ty_2__bindgen_ty_2>,
-    pub bindgen_union_field: [u64; 5usize],
+#[derive(Copy)]
+pub union rte_crypto_sym_op__bindgen_ty_2 {
+    pub aead: rte_crypto_sym_op__bindgen_ty_2__bindgen_ty_1,
+    pub __bindgen_anon_1: rte_crypto_sym_op__bindgen_ty_2__bindgen_ty_2,
+    _bindgen_union_align: [u64; 5usize],
 }
 #[repr(C)]
 #[derive(Debug, Copy)]
@@ -17729,7 +17773,6 @@ pub enum rte_crypto_op_sess_type {
 /// operations are enqueued and dequeued in crypto PMDs using the
 /// rte_cryptodev_enqueue_burst() / rte_cryptodev_dequeue_burst() .
 #[repr(C)]
-#[derive(Debug, Copy)]
 pub struct rte_crypto_op {
     pub type_: u8,
     pub status: u8,
@@ -17740,7 +17783,6 @@ pub struct rte_crypto_op {
     pub __bindgen_anon_1: rte_crypto_op__bindgen_ty_1,
 }
 #[repr(C)]
-#[derive(Debug, Copy)]
 pub struct rte_crypto_op__bindgen_ty_1 {
     pub sym: __BindgenUnionField<[rte_crypto_sym_op; 0usize]>,
     pub bindgen_union_field: [u64; 0usize],
@@ -17759,9 +17801,6 @@ fn bindgen_test_layout_rte_crypto_op__bindgen_ty_1() {
                 * const _ as usize } , 0usize , concat ! (
                 "Alignment of field: " , stringify ! (
                 rte_crypto_op__bindgen_ty_1 ) , "::" , stringify ! ( sym ) ));
-}
-impl Clone for rte_crypto_op__bindgen_ty_1 {
-    fn clone(&self) -> Self { *self }
 }
 #[test]
 fn bindgen_test_layout_rte_crypto_op() {
@@ -17799,9 +17838,6 @@ fn bindgen_test_layout_rte_crypto_op() {
                 _ as usize } , 16usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_crypto_op ) , "::"
                 , stringify ! ( phys_addr ) ));
-}
-impl Clone for rte_crypto_op {
-    fn clone(&self) -> Self { *self }
 }
 /// Private data structure belonging to a crypto symmetric operation pool.
 #[repr(C)]
@@ -18347,18 +18383,18 @@ impl Clone for rte_crypto_param_range {
 }
 /// Symmetric Crypto Capability
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Copy)]
 pub struct rte_cryptodev_symmetric_capability {
     pub xform_type: rte_crypto_sym_xform_type,
     pub __bindgen_anon_1: rte_cryptodev_symmetric_capability__bindgen_ty_1,
 }
 #[repr(C)]
-#[derive(Debug, Copy)]
-pub struct rte_cryptodev_symmetric_capability__bindgen_ty_1 {
-    pub auth: __BindgenUnionField<rte_cryptodev_symmetric_capability__bindgen_ty_1__bindgen_ty_1>,
-    pub cipher: __BindgenUnionField<rte_cryptodev_symmetric_capability__bindgen_ty_1__bindgen_ty_2>,
-    pub aead: __BindgenUnionField<rte_cryptodev_symmetric_capability__bindgen_ty_1__bindgen_ty_3>,
-    pub bindgen_union_field: [u32; 8usize],
+#[derive(Copy)]
+pub union rte_cryptodev_symmetric_capability__bindgen_ty_1 {
+    pub auth: rte_cryptodev_symmetric_capability__bindgen_ty_1__bindgen_ty_1,
+    pub cipher: rte_cryptodev_symmetric_capability__bindgen_ty_1__bindgen_ty_2,
+    pub aead: rte_cryptodev_symmetric_capability__bindgen_ty_1__bindgen_ty_3,
+    _bindgen_union_align: [u32; 8usize],
 }
 #[repr(C)]
 #[derive(Debug, Copy)]
@@ -18645,16 +18681,16 @@ impl Clone for rte_cryptodev_symmetric_capability {
 }
 /// Structure used to capture a capability of a crypto device
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Copy)]
 pub struct rte_cryptodev_capabilities {
     pub op: rte_crypto_op_type,
     pub __bindgen_anon_1: rte_cryptodev_capabilities__bindgen_ty_1,
 }
 #[repr(C)]
-#[derive(Debug, Copy)]
-pub struct rte_cryptodev_capabilities__bindgen_ty_1 {
-    pub sym: __BindgenUnionField<rte_cryptodev_symmetric_capability>,
-    pub bindgen_union_field: [u32; 9usize],
+#[derive(Copy)]
+pub union rte_cryptodev_capabilities__bindgen_ty_1 {
+    pub sym: rte_cryptodev_symmetric_capability,
+    _bindgen_union_align: [u32; 9usize],
 }
 #[test]
 fn bindgen_test_layout_rte_cryptodev_capabilities__bindgen_ty_1() {
@@ -18697,18 +18733,18 @@ impl Clone for rte_cryptodev_capabilities {
 }
 /// Structure used to describe crypto algorithms
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Copy)]
 pub struct rte_cryptodev_sym_capability_idx {
     pub type_: rte_crypto_sym_xform_type,
     pub algo: rte_cryptodev_sym_capability_idx__bindgen_ty_1,
 }
 #[repr(C)]
-#[derive(Debug, Copy)]
-pub struct rte_cryptodev_sym_capability_idx__bindgen_ty_1 {
-    pub cipher: __BindgenUnionField<rte_crypto_cipher_algorithm>,
-    pub auth: __BindgenUnionField<rte_crypto_auth_algorithm>,
-    pub aead: __BindgenUnionField<rte_crypto_aead_algorithm>,
-    pub bindgen_union_field: u32,
+#[derive(Copy)]
+pub union rte_cryptodev_sym_capability_idx__bindgen_ty_1 {
+    pub cipher: rte_crypto_cipher_algorithm,
+    pub auth: rte_crypto_auth_algorithm,
+    pub aead: rte_crypto_aead_algorithm,
+    _bindgen_union_align: u32,
 }
 #[test]
 fn bindgen_test_layout_rte_cryptodev_sym_capability_idx__bindgen_ty_1() {
@@ -19517,6 +19553,7 @@ impl rte_cryptodev {
 /// This structure is safe to place in shared memory to be common among
 /// different processes in a multi-process configuration.
 #[repr(C)]
+#[derive(Copy)]
 pub struct rte_cryptodev_data {
     pub dev_id: u8,
     pub socket_id: u8,
@@ -19567,6 +19604,9 @@ fn bindgen_test_layout_rte_cryptodev_data() {
                 const _ as usize } , 96usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_cryptodev_data ) ,
                 "::" , stringify ! ( dev_private ) ));
+}
+impl Clone for rte_cryptodev_data {
+    fn clone(&self) -> Self { *self }
 }
 impl rte_cryptodev_data {
     #[inline]
@@ -19758,7 +19798,7 @@ extern "C" {
 }
 /// Interrupt handle
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Copy)]
 pub struct rte_intr_handle {
     pub __bindgen_anon_1: rte_intr_handle__bindgen_ty_1,
     /// < interrupt event file descriptor
@@ -19776,14 +19816,14 @@ pub struct rte_intr_handle {
     pub intr_vec: *mut ::std::os::raw::c_int,
 }
 #[repr(C)]
-#[derive(Debug, Copy)]
-pub struct rte_intr_handle__bindgen_ty_1 {
+#[derive(Copy)]
+pub union rte_intr_handle__bindgen_ty_1 {
     /// < VFIO device file descriptor
-    pub vfio_dev_fd: __BindgenUnionField<::std::os::raw::c_int>,
+    pub vfio_dev_fd: ::std::os::raw::c_int,
     /// < UIO config file descriptor
     /// for uio_pci_generic
-    pub uio_cfg_fd: __BindgenUnionField<::std::os::raw::c_int>,
-    pub bindgen_union_field: u32,
+    pub uio_cfg_fd: ::std::os::raw::c_int,
+    _bindgen_union_align: u32,
 }
 #[test]
 fn bindgen_test_layout_rte_intr_handle__bindgen_ty_1() {
@@ -20167,7 +20207,7 @@ extern "C" {
 }
 /// A structure describing a PCI device.
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Copy)]
 pub struct rte_pci_device {
     /// < Next probed PCI device.
     pub next: rte_pci_device__bindgen_ty_1,
@@ -20619,6 +20659,7 @@ impl Clone for pci_map {
 /// For multi-process we need to reproduce all PCI mappings in secondary
 /// processes, so save them in a tailq.
 #[repr(C)]
+#[derive(Copy)]
 pub struct mapped_pci_resource {
     pub next: mapped_pci_resource__bindgen_ty_1,
     pub pci_addr: rte_pci_addr,
@@ -20691,6 +20732,9 @@ fn bindgen_test_layout_mapped_pci_resource() {
                 _ as usize } , 4128usize , concat ! (
                 "Alignment of field: " , stringify ! ( mapped_pci_resource ) ,
                 "::" , stringify ! ( maps ) ));
+}
+impl Clone for mapped_pci_resource {
+    fn clone(&self) -> Self { *self }
 }
 /// mapped pci device list
 #[repr(C)]
@@ -21026,6 +21070,7 @@ extern "C" {
 }
 /// Global structure used for maintaining state of allocated crypto devices
 #[repr(C)]
+#[derive(Copy)]
 pub struct rte_cryptodev_global {
     /// < Device information array
     pub devs: *mut rte_cryptodev,
@@ -21063,6 +21108,9 @@ fn bindgen_test_layout_rte_cryptodev_global() {
                 const _ as usize } , 521usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_cryptodev_global )
                 , "::" , stringify ! ( max_devs ) ));
+}
+impl Clone for rte_cryptodev_global {
+    fn clone(&self) -> Self { *self }
 }
 extern "C" {
     #[link_name = "rte_cryptodev_globals"]
@@ -21866,6 +21914,7 @@ extern "C" {
 /// @internal
 /// Initialisation parameters for virtual crypto devices
 #[repr(C)]
+#[derive(Copy)]
 pub struct rte_crypto_vdev_init_params {
     pub max_nb_queue_pairs: ::std::os::raw::c_uint,
     pub max_nb_sessions: ::std::os::raw::c_uint,
@@ -21906,6 +21955,9 @@ fn bindgen_test_layout_rte_crypto_vdev_init_params() {
                 "Alignment of field: " , stringify ! (
                 rte_crypto_vdev_init_params ) , "::" , stringify ! ( name )
                 ));
+}
+impl Clone for rte_crypto_vdev_init_params {
+    fn clone(&self) -> Self { *self }
 }
 extern "C" {
     /// @internal
@@ -22564,6 +22616,7 @@ impl Clone for rte_eth_ethertype_filter {
 /// to support RTE_ETH_FILTER_FLEXIBLE with RTE_ETH_FILTER_ADD,
 /// RTE_ETH_FILTER_DELETE and RTE_ETH_FILTER_GET operations.
 #[repr(C)]
+#[derive(Copy)]
 pub struct rte_eth_flex_filter {
     pub len: u16,
     /// < flex bytes in big endian.
@@ -22608,6 +22661,9 @@ fn bindgen_test_layout_rte_eth_flex_filter() {
                 const _ as usize } , 148usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_eth_flex_filter ) ,
                 "::" , stringify ! ( queue ) ));
+}
+impl Clone for rte_eth_flex_filter {
+    fn clone(&self) -> Self { *self }
 }
 /// A structure used to define the TCP syn filter entry
 /// to support RTE_ETH_FILTER_SYN with RTE_ETH_FILTER_ADD,
@@ -22783,7 +22839,7 @@ pub enum rte_tunnel_iptype {
 }
 /// Tunneling Packet filter configuration.
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Copy)]
 pub struct rte_eth_tunnel_filter_conf {
     /// < Outer MAC address to match.
     pub outer_mac: ether_addr,
@@ -22807,13 +22863,13 @@ pub struct rte_eth_tunnel_filter_conf {
 /// is set in filter_type, or inner destination IP address to match
 /// if ETH_TUNNEL_FILTER_IIP is set in filter_type .
 #[repr(C)]
-#[derive(Debug, Copy)]
-pub struct rte_eth_tunnel_filter_conf__bindgen_ty_1 {
+#[derive(Copy)]
+pub union rte_eth_tunnel_filter_conf__bindgen_ty_1 {
     /// < IPv4 address in big endian.
-    pub ipv4_addr: __BindgenUnionField<u32>,
+    pub ipv4_addr: u32,
     /// < IPv6 address in big endian.
-    pub ipv6_addr: __BindgenUnionField<[u32; 4usize]>,
-    pub bindgen_union_field: [u32; 4usize],
+    pub ipv6_addr: [u32; 4usize],
+    _bindgen_union_align: [u32; 4usize],
 }
 #[test]
 fn bindgen_test_layout_rte_eth_tunnel_filter_conf__bindgen_ty_1() {
@@ -22920,20 +22976,20 @@ pub enum rte_eth_global_cfg_type {
 }
 /// Global eth device configuration.
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Copy)]
 pub struct rte_eth_global_cfg {
     /// < Global config type.
     pub cfg_type: rte_eth_global_cfg_type,
     pub cfg: rte_eth_global_cfg__bindgen_ty_1,
 }
 #[repr(C)]
-#[derive(Debug, Copy)]
-pub struct rte_eth_global_cfg__bindgen_ty_1 {
+#[derive(Copy)]
+pub union rte_eth_global_cfg__bindgen_ty_1 {
     /// < Valid GRE key length in byte.
-    pub gre_key_len: __BindgenUnionField<u8>,
+    pub gre_key_len: u8,
     /// < Reserve space for future use.
-    pub reserved: __BindgenUnionField<u64>,
-    pub bindgen_union_field: u64,
+    pub reserved: u64,
+    _bindgen_union_align: u64,
 }
 #[test]
 fn bindgen_test_layout_rte_eth_global_cfg__bindgen_ty_1() {
@@ -23037,6 +23093,7 @@ pub enum rte_filter_input_set_op {
 /// A structure used to define the input set configuration for
 /// flow director and hash filters
 #[repr(C)]
+#[derive(Copy)]
 pub struct rte_eth_input_set_conf {
     pub flow_type: u16,
     pub inset_size: u16,
@@ -23071,6 +23128,9 @@ fn bindgen_test_layout_rte_eth_input_set_conf() {
                 const _ as usize } , 516usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_eth_input_set_conf
                 ) , "::" , stringify ! ( op ) ));
+}
+impl Clone for rte_eth_input_set_conf {
+    fn clone(&self) -> Self { *self }
 }
 /// A structure used to define the input for L2 flow
 #[repr(C)]
@@ -23499,20 +23559,20 @@ impl Clone for rte_eth_tunnel_flow {
 /// An union contains the inputs for all types of flow
 /// Items in flows need to be in big endian
 #[repr(C)]
-#[derive(Debug, Copy)]
-pub struct rte_eth_fdir_flow {
-    pub l2_flow: __BindgenUnionField<rte_eth_l2_flow>,
-    pub udp4_flow: __BindgenUnionField<rte_eth_udpv4_flow>,
-    pub tcp4_flow: __BindgenUnionField<rte_eth_tcpv4_flow>,
-    pub sctp4_flow: __BindgenUnionField<rte_eth_sctpv4_flow>,
-    pub ip4_flow: __BindgenUnionField<rte_eth_ipv4_flow>,
-    pub udp6_flow: __BindgenUnionField<rte_eth_udpv6_flow>,
-    pub tcp6_flow: __BindgenUnionField<rte_eth_tcpv6_flow>,
-    pub sctp6_flow: __BindgenUnionField<rte_eth_sctpv6_flow>,
-    pub ipv6_flow: __BindgenUnionField<rte_eth_ipv6_flow>,
-    pub mac_vlan_flow: __BindgenUnionField<rte_eth_mac_vlan_flow>,
-    pub tunnel_flow: __BindgenUnionField<rte_eth_tunnel_flow>,
-    pub bindgen_union_field: [u32; 11usize],
+#[derive(Copy)]
+pub union rte_eth_fdir_flow {
+    pub l2_flow: rte_eth_l2_flow,
+    pub udp4_flow: rte_eth_udpv4_flow,
+    pub tcp4_flow: rte_eth_tcpv4_flow,
+    pub sctp4_flow: rte_eth_sctpv4_flow,
+    pub ip4_flow: rte_eth_ipv4_flow,
+    pub udp6_flow: rte_eth_udpv6_flow,
+    pub tcp6_flow: rte_eth_tcpv6_flow,
+    pub sctp6_flow: rte_eth_sctpv6_flow,
+    pub ipv6_flow: rte_eth_ipv6_flow,
+    pub mac_vlan_flow: rte_eth_mac_vlan_flow,
+    pub tunnel_flow: rte_eth_tunnel_flow,
+    _bindgen_union_align: [u32; 11usize],
 }
 #[test]
 fn bindgen_test_layout_rte_eth_fdir_flow() {
@@ -23624,7 +23684,7 @@ impl Clone for rte_eth_fdir_flow_ext {
 }
 /// A structure used to define the input for a flow director filter entry
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Copy)]
 pub struct rte_eth_fdir_input {
     pub flow_type: u16,
     pub flow: rte_eth_fdir_flow,
@@ -23720,7 +23780,7 @@ impl Clone for rte_eth_fdir_action {
 /// It supports RTE_ETH_FILTER_FDIR with RTE_ETH_FILTER_ADD and
 /// RTE_ETH_FILTER_DELETE operations.
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Copy)]
 pub struct rte_eth_fdir_filter {
     pub soft_id: u32,
     /// < Input set
@@ -24171,10 +24231,10 @@ pub struct rte_eth_fdir_filter_info {
 /// Details of fdir filter information
 #[repr(C)]
 #[derive(Copy)]
-pub struct rte_eth_fdir_filter_info__bindgen_ty_1 {
+pub union rte_eth_fdir_filter_info__bindgen_ty_1 {
     /// Flow Director input set configuration per port
-    pub input_set_conf: __BindgenUnionField<rte_eth_input_set_conf>,
-    pub bindgen_union_field: [u32; 130usize],
+    pub input_set_conf: rte_eth_input_set_conf,
+    _bindgen_union_align: [u32; 130usize],
 }
 #[test]
 fn bindgen_test_layout_rte_eth_fdir_filter_info__bindgen_ty_1() {
@@ -24306,14 +24366,14 @@ pub struct rte_eth_hash_filter_info {
 /// Details of hash filter information
 #[repr(C)]
 #[derive(Copy)]
-pub struct rte_eth_hash_filter_info__bindgen_ty_1 {
+pub union rte_eth_hash_filter_info__bindgen_ty_1 {
     /// For RTE_ETH_HASH_FILTER_SYM_HASH_ENA_PER_PORT
-    pub enable: __BindgenUnionField<u8>,
+    pub enable: u8,
     /// Global configurations of hash filter
-    pub global_conf: __BindgenUnionField<rte_eth_hash_global_conf>,
+    pub global_conf: rte_eth_hash_global_conf,
     /// Global configurations of hash filter input set
-    pub input_set_conf: __BindgenUnionField<rte_eth_input_set_conf>,
-    pub bindgen_union_field: [u32; 130usize],
+    pub input_set_conf: rte_eth_input_set_conf,
+    _bindgen_union_align: [u32; 130usize],
 }
 #[test]
 fn bindgen_test_layout_rte_eth_hash_filter_info__bindgen_ty_1() {
@@ -25145,6 +25205,7 @@ pub enum rte_vlan_type {
 /// A structure used to describe a vlan filter.
 /// If the bit corresponding to a VID is set, such VID is on.
 #[repr(C)]
+#[derive(Copy)]
 pub struct rte_vlan_filter_conf {
     pub ids: [u64; 64usize],
 }
@@ -25161,6 +25222,9 @@ fn bindgen_test_layout_rte_vlan_filter_conf() {
                 _ as usize } , 0usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_vlan_filter_conf )
                 , "::" , stringify ! ( ids ) ));
+}
+impl Clone for rte_vlan_filter_conf {
+    fn clone(&self) -> Self { *self }
 }
 /// A structure used to configure the Receive Side Scaling (RSS) feature
 /// of an Ethernet port.
@@ -25214,6 +25278,7 @@ impl Clone for rte_eth_rss_conf {
 }
 /// A structure used to configure VLAN traffic mirror of an Ethernet port.
 #[repr(C)]
+#[derive(Copy)]
 pub struct rte_eth_vlan_mirror {
     /// < mask for valid VLAN ID.
     pub vlan_mask: u64,
@@ -25239,8 +25304,12 @@ fn bindgen_test_layout_rte_eth_vlan_mirror() {
                 "Alignment of field: " , stringify ! ( rte_eth_vlan_mirror ) ,
                 "::" , stringify ! ( vlan_id ) ));
 }
+impl Clone for rte_eth_vlan_mirror {
+    fn clone(&self) -> Self { *self }
+}
 /// A structure used to configure traffic mirror of an Ethernet port.
 #[repr(C)]
+#[derive(Copy)]
 pub struct rte_eth_mirror_conf {
     /// < Mirroring rule type
     pub rule_type: u8,
@@ -25280,11 +25349,15 @@ fn bindgen_test_layout_rte_eth_mirror_conf() {
                 "Alignment of field: " , stringify ! ( rte_eth_mirror_conf ) ,
                 "::" , stringify ! ( vlan ) ));
 }
+impl Clone for rte_eth_mirror_conf {
+    fn clone(&self) -> Self { *self }
+}
 /// A structure used to configure 64 entries of Redirection Table of the
 /// Receive Side Scaling (RSS) feature of an Ethernet port. To configure
 /// more than 64 entries supported by hardware, an array of this structure
 /// is needed.
 #[repr(C)]
+#[derive(Copy)]
 pub struct rte_eth_rss_reta_entry64 {
     pub mask: u64,
     pub reta: [u16; 64usize],
@@ -25307,6 +25380,9 @@ fn bindgen_test_layout_rte_eth_rss_reta_entry64() {
                 const _ as usize } , 8usize , concat ! (
                 "Alignment of field: " , stringify ! (
                 rte_eth_rss_reta_entry64 ) , "::" , stringify ! ( reta ) ));
+}
+impl Clone for rte_eth_rss_reta_entry64 {
+    fn clone(&self) -> Self { *self }
 }
 #[repr(u32)]
 /// This enum indicates the possible number of traffic classes
@@ -25444,6 +25520,7 @@ impl Clone for rte_eth_vmdq_tx_conf {
 /// A default pool may be used, if desired, to route all traffic which
 /// does not match the vlan filter rules.
 #[repr(C)]
+#[derive(Copy)]
 pub struct rte_eth_vmdq_dcb_conf {
     /// < With DCB, 16 or 32 pools
     pub nb_queue_pools: rte_eth_nb_pools,
@@ -25531,6 +25608,9 @@ fn bindgen_test_layout_rte_eth_vmdq_dcb_conf() {
                 "Alignment of field: " , stringify ! ( rte_eth_vmdq_dcb_conf )
                 , "::" , stringify ! ( dcb_tc ) ));
 }
+impl Clone for rte_eth_vmdq_dcb_conf {
+    fn clone(&self) -> Self { *self }
+}
 /// A structure used to configure the VMDQ feature of an Ethernet port when
 /// not combined with the DCB feature.
 ///
@@ -25548,6 +25628,7 @@ fn bindgen_test_layout_rte_eth_vmdq_dcb_conf() {
 /// A default pool may be used, if desired, to route all traffic which
 /// does not match the vlan filter rules or any pool MAC address.
 #[repr(C)]
+#[derive(Copy)]
 pub struct rte_eth_vmdq_rx_conf {
     /// < VMDq only mode, 8 or 64 pools
     pub nb_queue_pools: rte_eth_nb_pools,
@@ -25642,6 +25723,9 @@ fn bindgen_test_layout_rte_eth_vmdq_rx_conf() {
                 const _ as usize } , 16usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_eth_vmdq_rx_conf )
                 , "::" , stringify ! ( pool_map ) ));
+}
+impl Clone for rte_eth_vmdq_rx_conf {
+    fn clone(&self) -> Self { *self }
 }
 /// A structure used to configure the TX features of an Ethernet port.
 #[repr(C)]
@@ -26307,6 +26391,7 @@ impl rte_intr_conf {
 /// Depending upon the RX multi-queue mode, extra advanced
 /// configuration settings may be needed.
 #[repr(C)]
+#[derive(Copy)]
 pub struct rte_eth_conf {
     /// < bitmap of ETH_LINK_SPEED_XXX of speeds to be
     /// used. ETH_LINK_SPEED_FIXED disables link
@@ -26339,6 +26424,7 @@ pub struct rte_eth_conf {
     pub intr_conf: rte_intr_conf,
 }
 #[repr(C)]
+#[derive(Copy)]
 pub struct rte_eth_conf__bindgen_ty_1 {
     /// < Port RSS configuration
     pub rss_conf: rte_eth_rss_conf,
@@ -26380,13 +26466,16 @@ fn bindgen_test_layout_rte_eth_conf__bindgen_ty_1() {
                 rte_eth_conf__bindgen_ty_1 ) , "::" , stringify ! (
                 vmdq_rx_conf ) ));
 }
+impl Clone for rte_eth_conf__bindgen_ty_1 {
+    fn clone(&self) -> Self { *self }
+}
 #[repr(C)]
-#[derive(Debug, Copy)]
-pub struct rte_eth_conf__bindgen_ty_2 {
-    pub vmdq_dcb_tx_conf: __BindgenUnionField<rte_eth_vmdq_dcb_tx_conf>,
-    pub dcb_tx_conf: __BindgenUnionField<rte_eth_dcb_tx_conf>,
-    pub vmdq_tx_conf: __BindgenUnionField<rte_eth_vmdq_tx_conf>,
-    pub bindgen_union_field: [u32; 3usize],
+#[derive(Copy)]
+pub union rte_eth_conf__bindgen_ty_2 {
+    pub vmdq_dcb_tx_conf: rte_eth_vmdq_dcb_tx_conf,
+    pub dcb_tx_conf: rte_eth_dcb_tx_conf,
+    pub vmdq_tx_conf: rte_eth_vmdq_tx_conf,
+    _bindgen_union_align: [u32; 3usize],
 }
 #[test]
 fn bindgen_test_layout_rte_eth_conf__bindgen_ty_2() {
@@ -26470,6 +26559,9 @@ fn bindgen_test_layout_rte_eth_conf() {
                 as usize } , 2940usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_eth_conf ) , "::" ,
                 stringify ! ( intr_conf ) ));
+}
+impl Clone for rte_eth_conf {
+    fn clone(&self) -> Self { *self }
 }
 /// Ethernet device information
 #[repr(C)]
@@ -26781,6 +26873,7 @@ impl Clone for rte_eth_xstat {
 /// It lists the names of extended statistics for a PMD. The *rte_eth_xstat*
 /// structure references these names by their array index.
 #[repr(C)]
+#[derive(Copy)]
 pub struct rte_eth_xstat_name {
     /// < The statistic name.
     pub name: [::std::os::raw::c_char; 64usize],
@@ -26797,9 +26890,13 @@ fn bindgen_test_layout_rte_eth_xstat_name() {
                 "Alignment of field: " , stringify ! ( rte_eth_xstat_name ) ,
                 "::" , stringify ! ( name ) ));
 }
+impl Clone for rte_eth_xstat_name {
+    fn clone(&self) -> Self { *self }
+}
 /// A structure used to get the information of queue and
 /// TC mapping on both TX and RX paths.
 #[repr(C)]
+#[derive(Copy)]
 pub struct rte_eth_dcb_tc_queue_mapping {
     pub tc_rxq: [[rte_eth_dcb_tc_queue_mapping__bindgen_ty_1; 8usize]; 64usize],
     pub tc_txq: [[rte_eth_dcb_tc_queue_mapping__bindgen_ty_2; 8usize]; 64usize],
@@ -26896,9 +26993,13 @@ fn bindgen_test_layout_rte_eth_dcb_tc_queue_mapping() {
                 rte_eth_dcb_tc_queue_mapping ) , "::" , stringify ! ( tc_txq )
                 ));
 }
+impl Clone for rte_eth_dcb_tc_queue_mapping {
+    fn clone(&self) -> Self { *self }
+}
 /// A structure used to get the information of DCB.
 /// It includes TC UP mapping and queue TC mapping.
 #[repr(C)]
+#[derive(Copy)]
 pub struct rte_eth_dcb_info {
     /// < number of TCs
     pub nb_tcs: u8,
@@ -26936,6 +27037,9 @@ fn bindgen_test_layout_rte_eth_dcb_info() {
                 "Alignment of field: " , stringify ! ( rte_eth_dcb_info ) ,
                 "::" , stringify ! ( tc_queue ) ));
 }
+impl Clone for rte_eth_dcb_info {
+    fn clone(&self) -> Self { *self }
+}
 /// @internal
 /// The generic data structure associated with each ethernet device.
 ///
@@ -26945,6 +27049,7 @@ fn bindgen_test_layout_rte_eth_dcb_info() {
 /// memory. This split allows the function pointer and driver data to be per-
 /// process, while the actual configuration data for the device is shared.
 #[repr(C)]
+#[derive(Copy)]
 pub struct rte_eth_dev {
     /// < Pointer to PMD receive function.
     pub rx_pkt_burst: eth_rx_burst_t,
@@ -27031,6 +27136,9 @@ fn bindgen_test_layout_rte_eth_dev() {
                 usize } , 16456usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_eth_dev ) , "::" ,
                 stringify ! ( state ) ));
+}
+impl Clone for rte_eth_dev {
+    fn clone(&self) -> Self { *self }
 }
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
@@ -28041,18 +28149,18 @@ pub type rte_tx_callback_fn =
 /// Structure used to hold information about the callbacks to be called for a
 /// queue on RX and TX.
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Copy)]
 pub struct rte_eth_rxtx_callback {
     pub next: *mut rte_eth_rxtx_callback,
     pub fn_: rte_eth_rxtx_callback__bindgen_ty_1,
     pub param: *mut ::std::os::raw::c_void,
 }
 #[repr(C)]
-#[derive(Debug, Copy)]
-pub struct rte_eth_rxtx_callback__bindgen_ty_1 {
-    pub rx: __BindgenUnionField<rte_rx_callback_fn>,
-    pub tx: __BindgenUnionField<rte_tx_callback_fn>,
-    pub bindgen_union_field: u64,
+#[derive(Copy)]
+pub union rte_eth_rxtx_callback__bindgen_ty_1 {
+    pub rx: rte_rx_callback_fn,
+    pub tx: rte_tx_callback_fn,
+    _bindgen_union_align: u64,
 }
 #[test]
 fn bindgen_test_layout_rte_eth_rxtx_callback__bindgen_ty_1() {
@@ -28163,6 +28271,7 @@ impl Clone for rte_eth_dev_sriov {
 /// This structure is safe to place in shared memory to be common among different
 /// processes in a multi-process configuration.
 #[repr(C)]
+#[derive(Copy)]
 pub struct rte_eth_dev_data {
     /// < Unique identifier name
     pub name: [::std::os::raw::c_char; 32usize],
@@ -28322,6 +28431,9 @@ fn bindgen_test_layout_rte_eth_dev_data() {
                 as * const _ as usize } , 6144usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_eth_dev_data ) ,
                 "::" , stringify ! ( vlan_filter_conf ) ));
+}
+impl Clone for rte_eth_dev_data {
+    fn clone(&self) -> Self { *self }
 }
 impl rte_eth_dev_data {
     #[inline]
@@ -29431,7 +29543,7 @@ pub type buffer_tx_error_fn =
 /// Structure used to buffer packets for future TX
 /// Used by APIs rte_eth_tx_buffer and rte_eth_tx_buffer_flush
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug)]
 pub struct rte_eth_dev_tx_buffer {
     pub error_callback: buffer_tx_error_fn,
     pub error_userdata: *mut ::std::os::raw::c_void,
@@ -29449,9 +29561,6 @@ fn bindgen_test_layout_rte_eth_dev_tx_buffer() {
     assert_eq! (::std::mem::align_of::<rte_eth_dev_tx_buffer>() , 8usize ,
                 concat ! (
                 "Alignment of " , stringify ! ( rte_eth_dev_tx_buffer ) ));
-}
-impl Clone for rte_eth_dev_tx_buffer {
-    fn clone(&self) -> Self { *self }
 }
 extern "C" {
     /// Initialize default values for buffered transmitting
@@ -30849,7 +30958,7 @@ impl Clone for vring_desc {
     fn clone(&self) -> Self { *self }
 }
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug)]
 pub struct vring_avail {
     pub flags: __virtio16,
     pub idx: __virtio16,
@@ -30861,9 +30970,6 @@ fn bindgen_test_layout_vring_avail() {
                "Size of: " , stringify ! ( vring_avail ) ));
     assert_eq! (::std::mem::align_of::<vring_avail>() , 2usize , concat ! (
                 "Alignment of " , stringify ! ( vring_avail ) ));
-}
-impl Clone for vring_avail {
-    fn clone(&self) -> Self { *self }
 }
 #[repr(C)]
 #[derive(Debug, Copy)]
@@ -30892,7 +30998,7 @@ impl Clone for vring_used_elem {
     fn clone(&self) -> Self { *self }
 }
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug)]
 pub struct vring_used {
     pub flags: __virtio16,
     pub idx: __virtio16,
@@ -30905,9 +31011,6 @@ fn bindgen_test_layout_vring_used() {
                "Size of: " , stringify ! ( vring_used ) ));
     assert_eq! (::std::mem::align_of::<vring_used>() , 4usize , concat ! (
                 "Alignment of " , stringify ! ( vring_used ) ));
-}
-impl Clone for vring_used {
-    fn clone(&self) -> Self { *self }
 }
 #[repr(C)]
 #[derive(Debug, Copy)]
@@ -31089,7 +31192,7 @@ impl Clone for vhost_memory_region {
     fn clone(&self) -> Self { *self }
 }
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug)]
 pub struct vhost_memory {
     pub nregions: __u32,
     pub padding: __u32,
@@ -31117,10 +31220,8 @@ fn bindgen_test_layout_vhost_memory() {
                 "Alignment of field: " , stringify ! ( vhost_memory ) , "::" ,
                 stringify ! ( regions ) ));
 }
-impl Clone for vhost_memory {
-    fn clone(&self) -> Self { *self }
-}
 #[repr(C)]
+#[derive(Copy)]
 pub struct vhost_scsi_target {
     pub abi_version: ::std::os::raw::c_int,
     pub vhost_wwpn: [::std::os::raw::c_char; 224usize],
@@ -31153,6 +31254,9 @@ fn bindgen_test_layout_vhost_scsi_target() {
                 const _ as usize } , 230usize , concat ! (
                 "Alignment of field: " , stringify ! ( vhost_scsi_target ) ,
                 "::" , stringify ! ( reserved ) ));
+}
+impl Clone for vhost_scsi_target {
+    fn clone(&self) -> Self { *self }
 }
 /// Information relating to memory regions including offsets to
 /// addresses in QEMUs memory file.
@@ -31216,7 +31320,7 @@ impl Clone for rte_vhost_mem_region {
 }
 /// Memory structure includes region and mapping information.
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug)]
 pub struct rte_vhost_memory {
     pub nregions: u32,
     pub regions: __IncompleteArrayField<rte_vhost_mem_region>,
@@ -31228,9 +31332,6 @@ fn bindgen_test_layout_rte_vhost_memory() {
                "Size of: " , stringify ! ( rte_vhost_memory ) ));
     assert_eq! (::std::mem::align_of::<rte_vhost_memory>() , 8usize , concat !
                 ( "Alignment of " , stringify ! ( rte_vhost_memory ) ));
-}
-impl Clone for rte_vhost_memory {
-    fn clone(&self) -> Self { *self }
 }
 #[repr(C)]
 #[derive(Debug, Copy)]
@@ -32261,18 +32362,18 @@ extern "C" {
 /// The generic *rte_event* structure to hold the event attributes
 /// for dequeue and enqueue operation
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Copy)]
 pub struct rte_event {
     pub __bindgen_anon_1: rte_event__bindgen_ty_1,
     pub __bindgen_anon_2: rte_event__bindgen_ty_2,
 }
 /// WORD0
 #[repr(C)]
-#[derive(Debug, Copy)]
-pub struct rte_event__bindgen_ty_1 {
-    pub event: __BindgenUnionField<u64>,
-    pub __bindgen_anon_1: __BindgenUnionField<rte_event__bindgen_ty_1__bindgen_ty_1>,
-    pub bindgen_union_field: u64,
+#[derive(Copy)]
+pub union rte_event__bindgen_ty_1 {
+    pub event: u64,
+    pub __bindgen_anon_1: rte_event__bindgen_ty_1__bindgen_ty_1,
+    _bindgen_union_align: u64,
 }
 /// Event attributes for dequeue or enqueue operation
 #[repr(C)]
@@ -32578,12 +32679,12 @@ impl Clone for rte_event__bindgen_ty_1 {
 }
 /// WORD1
 #[repr(C)]
-#[derive(Debug, Copy)]
-pub struct rte_event__bindgen_ty_2 {
-    pub u64: __BindgenUnionField<u64>,
-    pub event_ptr: __BindgenUnionField<*mut ::std::os::raw::c_void>,
-    pub mbuf: __BindgenUnionField<*mut rte_mbuf>,
-    pub bindgen_union_field: u64,
+#[derive(Copy)]
+pub union rte_event__bindgen_ty_2 {
+    pub u64: u64,
+    pub event_ptr: *mut ::std::os::raw::c_void,
+    pub mbuf: *mut rte_mbuf,
+    _bindgen_union_align: u64,
 }
 #[test]
 fn bindgen_test_layout_rte_event__bindgen_ty_2() {
@@ -32906,6 +33007,7 @@ pub type event_dequeue_burst_t =
 /// This structure is safe to place in shared memory to be common among
 /// different processes in a multi-process configuration.
 #[repr(C)]
+#[derive(Copy)]
 pub struct rte_eventdev_data {
     pub socket_id: ::std::os::raw::c_int,
     pub dev_id: u8,
@@ -32994,6 +33096,9 @@ fn bindgen_test_layout_rte_eventdev_data() {
                 as usize } , 89usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_eventdev_data ) ,
                 "::" , stringify ! ( name ) ));
+}
+impl Clone for rte_eventdev_data {
+    fn clone(&self) -> Self { *self }
 }
 impl rte_eventdev_data {
     #[inline]
@@ -33231,6 +33336,7 @@ pub enum rte_event_dev_xstats_mode {
 /// This structure is used to map between names and ID numbers
 /// for extended ethdev statistics.
 #[repr(C)]
+#[derive(Copy)]
 pub struct rte_event_dev_xstats_name {
     pub name: [::std::os::raw::c_char; 64usize],
 }
@@ -33248,6 +33354,9 @@ fn bindgen_test_layout_rte_event_dev_xstats_name() {
                 const _ as usize } , 0usize , concat ! (
                 "Alignment of field: " , stringify ! (
                 rte_event_dev_xstats_name ) , "::" , stringify ! ( name ) ));
+}
+impl Clone for rte_event_dev_xstats_name {
+    fn clone(&self) -> Self { *self }
 }
 extern "C" {
     /// Retrieve names of extended statistics of an event device.
@@ -33828,13 +33937,13 @@ impl Clone for rte_fbk_hash_params {
 }
 /// Individual entry in the four-byte key hash table.
 #[repr(C)]
-#[derive(Debug, Copy)]
-pub struct rte_fbk_hash_entry {
+#[derive(Copy)]
+pub union rte_fbk_hash_entry {
     /// < For accessing entire entry.
-    pub whole_entry: __BindgenUnionField<u64>,
+    pub whole_entry: u64,
     /// < For accessing each entry part.
-    pub entry: __BindgenUnionField<rte_fbk_hash_entry__bindgen_ty_1>,
-    pub bindgen_union_field: u64,
+    pub entry: rte_fbk_hash_entry__bindgen_ty_1,
+    _bindgen_union_align: u64,
 }
 #[repr(C)]
 #[derive(Debug, Copy)]
@@ -33900,7 +34009,6 @@ impl Clone for rte_fbk_hash_entry {
 }
 /// The four-byte key hash table structure.
 #[repr(C)]
-#[derive(Debug, Copy)]
 pub struct rte_fbk_hash_table {
     /// < Name of the hash.
     pub name: [::std::os::raw::c_char; 32usize],
@@ -33927,9 +34035,6 @@ fn bindgen_test_layout_rte_fbk_hash_table() {
                ! ( "Size of: " , stringify ! ( rte_fbk_hash_table ) ));
     assert_eq! (::std::mem::align_of::<rte_fbk_hash_table>() , 8usize , concat
                 ! ( "Alignment of " , stringify ! ( rte_fbk_hash_table ) ));
-}
-impl Clone for rte_fbk_hash_table {
-    fn clone(&self) -> Self { *self }
 }
 extern "C" {
     /// Performs a lookup for an existing hash table, and returns a pointer to
@@ -34681,7 +34786,7 @@ extern "C" {
 ///
 /// This type does not support ranges (struct rte_flow_item.last).
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug)]
 pub struct rte_flow_item_raw {
     pub _bitfield_1: u32,
     /// < Absolute or relative offset for pattern.
@@ -34699,9 +34804,6 @@ fn bindgen_test_layout_rte_flow_item_raw() {
                ( "Size of: " , stringify ! ( rte_flow_item_raw ) ));
     assert_eq! (::std::mem::align_of::<rte_flow_item_raw>() , 4usize , concat
                 ! ( "Alignment of " , stringify ! ( rte_flow_item_raw ) ));
-}
-impl Clone for rte_flow_item_raw {
-    fn clone(&self) -> Self { *self }
 }
 impl rte_flow_item_raw {
     #[inline]
@@ -35757,7 +35859,7 @@ impl Clone for rte_flow_action_dup {
 ///
 /// Terminating by default.
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug)]
 pub struct rte_flow_action_rss {
     /// < RSS parameters.
     pub rss_conf: *const rte_eth_rss_conf,
@@ -35773,9 +35875,6 @@ fn bindgen_test_layout_rte_flow_action_rss() {
     assert_eq! (::std::mem::align_of::<rte_flow_action_rss>() , 8usize ,
                 concat ! (
                 "Alignment of " , stringify ! ( rte_flow_action_rss ) ));
-}
-impl Clone for rte_flow_action_rss {
-    fn clone(&self) -> Self { *self }
 }
 /// RTE_FLOW_ACTION_TYPE_VF
 ///
@@ -36189,7 +36288,7 @@ extern "C" {
 /// This form is sufficient to describe an rte_flow independently from any
 /// PMD implementation and allows for replayability and identification.
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug)]
 pub struct rte_flow_desc {
     /// < Allocated space including data[].
     pub size: usize,
@@ -36208,9 +36307,6 @@ fn bindgen_test_layout_rte_flow_desc() {
                "Size of: " , stringify ! ( rte_flow_desc ) ));
     assert_eq! (::std::mem::align_of::<rte_flow_desc>() , 8usize , concat ! (
                 "Alignment of " , stringify ! ( rte_flow_desc ) ));
-}
-impl Clone for rte_flow_desc {
-    fn clone(&self) -> Self { *self }
 }
 extern "C" {
     /// Copy an rte_flow rule description.
@@ -37521,6 +37617,7 @@ impl Clone for ip_frag_pkt {
 }
 /// mbuf death row (packets to be freed)
 #[repr(C)]
+#[derive(Copy)]
 pub struct rte_ip_frag_death_row {
     /// < number of mbufs currently on death row
     pub cnt: u32,
@@ -37544,6 +37641,9 @@ fn bindgen_test_layout_rte_ip_frag_death_row() {
                 const _ as usize } , 8usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_ip_frag_death_row )
                 , "::" , stringify ! ( row ) ));
+}
+impl Clone for rte_ip_frag_death_row {
+    fn clone(&self) -> Self { *self }
 }
 #[repr(C)]
 #[derive(Debug, Copy)]
@@ -37629,7 +37729,6 @@ impl Clone for ip_frag_tbl_stat {
 }
 /// fragmentation table
 #[repr(C)]
-#[derive(Copy)]
 pub struct rte_ip_frag_tbl {
     /// < ttl for table entries.
     pub max_cycles: u64,
@@ -37714,9 +37813,6 @@ fn bindgen_test_layout_rte_ip_frag_tbl() {
                 usize } , 128usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_ip_frag_tbl ) ,
                 "::" , stringify ! ( pkt ) ));
-}
-impl Clone for rte_ip_frag_tbl {
-    fn clone(&self) -> Self { *self }
 }
 #[repr(C, packed)]
 #[derive(Debug, Copy)]
@@ -38388,7 +38484,7 @@ pub enum rte_kni_req_id {
     RTE_KNI_REQ_MAX = 3,
 }
 #[repr(C, packed)]
-#[derive(Debug, Copy)]
+#[derive(Copy)]
 pub struct rte_kni_request {
     /// < Request id
     pub req_id: u32,
@@ -38397,13 +38493,13 @@ pub struct rte_kni_request {
     pub result: i32,
 }
 #[repr(C)]
-#[derive(Debug, Copy)]
-pub struct rte_kni_request__bindgen_ty_1 {
+#[derive(Copy)]
+pub union rte_kni_request__bindgen_ty_1 {
     /// < New MTU
-    pub new_mtu: __BindgenUnionField<u32>,
+    pub new_mtu: u32,
     /// < 1: interface up, 0: interface down
-    pub if_up: __BindgenUnionField<u8>,
-    pub bindgen_union_field: u32,
+    pub if_up: u8,
+    _bindgen_union_align: u32,
 }
 #[test]
 fn bindgen_test_layout_rte_kni_request__bindgen_ty_1() {
@@ -38451,7 +38547,7 @@ impl Clone for rte_kni_request {
     fn clone(&self) -> Self { *self }
 }
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug)]
 pub struct rte_kni_fifo {
     /// < Next position to be written
     pub write: ::std::os::raw::c_uint,
@@ -38471,9 +38567,6 @@ fn bindgen_test_layout_rte_kni_fifo() {
                "Size of: " , stringify ! ( rte_kni_fifo ) ));
     assert_eq! (::std::mem::align_of::<rte_kni_fifo>() , 8usize , concat ! (
                 "Alignment of " , stringify ! ( rte_kni_fifo ) ));
-}
-impl Clone for rte_kni_fifo {
-    fn clone(&self) -> Self { *self }
 }
 #[repr(C)]
 #[derive(Copy)]
@@ -39054,6 +39147,7 @@ extern "C" {
 /// An array of this structure is returned by rte_metrics_get_names().
 /// The struct rte_metric_value references these names via their array index.
 #[repr(C)]
+#[derive(Copy)]
 pub struct rte_metric_name {
     /// String describing metric
     pub name: [::std::os::raw::c_char; 64usize],
@@ -39069,6 +39163,9 @@ fn bindgen_test_layout_rte_metric_name() {
                 as usize } , 0usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_metric_name ) ,
                 "::" , stringify ! ( name ) ));
+}
+impl Clone for rte_metric_name {
+    fn clone(&self) -> Self { *self }
 }
 /// Metric value structure.
 ///
@@ -39568,7 +39665,7 @@ extern "C" {
 }
 /// @internal Tbl24 entry structure.
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Copy)]
 pub struct rte_lpm_tbl_entry_v20 {
     pub __bindgen_anon_1: rte_lpm_tbl_entry_v20__bindgen_ty_1,
     pub _bitfield_1: u8,
@@ -39577,11 +39674,11 @@ pub struct rte_lpm_tbl_entry_v20 {
 /// a group index pointing to a tbl8 structure (tbl24 only, when
 /// valid_group is set)
 #[repr(C)]
-#[derive(Debug, Copy)]
-pub struct rte_lpm_tbl_entry_v20__bindgen_ty_1 {
-    pub next_hop: __BindgenUnionField<u8>,
-    pub group_idx: __BindgenUnionField<u8>,
-    pub bindgen_union_field: u8,
+#[derive(Copy)]
+pub union rte_lpm_tbl_entry_v20__bindgen_ty_1 {
+    pub next_hop: u8,
+    pub group_idx: u8,
+    _bindgen_union_align: u8,
 }
 #[test]
 fn bindgen_test_layout_rte_lpm_tbl_entry_v20__bindgen_ty_1() {
@@ -40059,6 +40156,7 @@ fn bindgen_test_layout_rte_lpm_v20() {
                ( "Size of: " , stringify ! ( rte_lpm_v20 ) ));
 }
 #[repr(C)]
+#[derive(Copy)]
 pub struct rte_lpm {
     /// < Name of the lpm.
     pub name: [::std::os::raw::c_char; 32usize],
@@ -40115,6 +40213,9 @@ fn bindgen_test_layout_rte_lpm() {
                 usize } , 67109192usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_lpm ) , "::" ,
                 stringify ! ( rules_tbl ) ));
+}
+impl Clone for rte_lpm {
+    fn clone(&self) -> Self { *self }
 }
 extern "C" {
     /// Create an LPM object.
@@ -41694,7 +41795,6 @@ pub enum rte_pipeline_action {
 /// associated meta-data. As all the currently defined reserved actions are
 /// mutually exclusive, only one reserved action can be set per table entry.
 #[repr(C)]
-#[derive(Debug, Copy)]
 pub struct rte_pipeline_table_entry {
     /// Reserved action
     pub action: rte_pipeline_action,
@@ -41703,14 +41803,14 @@ pub struct rte_pipeline_table_entry {
     pub action_data: __IncompleteArrayField<u8>,
 }
 #[repr(C)]
-#[derive(Debug, Copy)]
-pub struct rte_pipeline_table_entry__bindgen_ty_1 {
+#[derive(Copy)]
+pub union rte_pipeline_table_entry__bindgen_ty_1 {
     /// Output port ID (meta-data for "Send packet to output port"
     /// action)
-    pub port_id: __BindgenUnionField<u32>,
+    pub port_id: u32,
     /// Table ID (meta-data for "Send packet to table" action)
-    pub table_id: __BindgenUnionField<u32>,
-    pub bindgen_union_field: u32,
+    pub table_id: u32,
+    _bindgen_union_align: u32,
 }
 #[test]
 fn bindgen_test_layout_rte_pipeline_table_entry__bindgen_ty_1() {
@@ -41757,9 +41857,6 @@ fn bindgen_test_layout_rte_pipeline_table_entry() {
                 "Alignment of field: " , stringify ! (
                 rte_pipeline_table_entry ) , "::" , stringify ! ( action_data
                 ) ));
-}
-impl Clone for rte_pipeline_table_entry {
-    fn clone(&self) -> Self { *self }
 }
 /// Pipeline table action handler on lookup hit
 ///
@@ -46476,6 +46573,7 @@ extern "C" {
 }
 /// ACL table parameters
 #[repr(C)]
+#[derive(Copy)]
 pub struct rte_table_acl_params {
     /// Name
     pub name: *const ::std::os::raw::c_char,
@@ -46515,8 +46613,12 @@ fn bindgen_test_layout_rte_table_acl_params() {
                 "Alignment of field: " , stringify ! ( rte_table_acl_params )
                 , "::" , stringify ! ( field_format ) ));
 }
+impl Clone for rte_table_acl_params {
+    fn clone(&self) -> Self { *self }
+}
 /// ACL rule specification for entry add operation
 #[repr(C)]
+#[derive(Copy)]
 pub struct rte_table_acl_rule_add_params {
     /// ACL rule priority, with 0 as the highest priority
     pub priority: i32,
@@ -46545,8 +46647,12 @@ fn bindgen_test_layout_rte_table_acl_rule_add_params() {
                 rte_table_acl_rule_add_params ) , "::" , stringify ! (
                 field_value ) ));
 }
+impl Clone for rte_table_acl_rule_add_params {
+    fn clone(&self) -> Self { *self }
+}
 /// ACL rule specification for entry delete operation
 #[repr(C)]
+#[derive(Copy)]
 pub struct rte_table_acl_rule_delete_params {
     /// Values for the fields of the ACL rule to be deleted from table
     pub field_value: [rte_acl_field; 64usize],
@@ -46567,6 +46673,9 @@ fn bindgen_test_layout_rte_table_acl_rule_delete_params() {
                 "Alignment of field: " , stringify ! (
                 rte_table_acl_rule_delete_params ) , "::" , stringify ! (
                 field_value ) ));
+}
+impl Clone for rte_table_acl_rule_delete_params {
+    fn clone(&self) -> Self { *self }
 }
 extern "C" {
     #[link_name = "rte_table_acl_ops"]
@@ -47590,18 +47699,18 @@ extern "C" {
 /// IPv4 tuple
 /// addresses and ports/sctp_tag have to be CPU byte order
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Copy)]
 pub struct rte_ipv4_tuple {
     pub src_addr: u32,
     pub dst_addr: u32,
     pub __bindgen_anon_1: rte_ipv4_tuple__bindgen_ty_1,
 }
 #[repr(C)]
-#[derive(Debug, Copy)]
-pub struct rte_ipv4_tuple__bindgen_ty_1 {
-    pub __bindgen_anon_1: __BindgenUnionField<rte_ipv4_tuple__bindgen_ty_1__bindgen_ty_1>,
-    pub sctp_tag: __BindgenUnionField<u32>,
-    pub bindgen_union_field: u32,
+#[derive(Copy)]
+pub union rte_ipv4_tuple__bindgen_ty_1 {
+    pub __bindgen_anon_1: rte_ipv4_tuple__bindgen_ty_1__bindgen_ty_1,
+    pub sctp_tag: u32,
+    _bindgen_union_align: u32,
 }
 #[repr(C)]
 #[derive(Debug, Copy)]
@@ -47680,18 +47789,18 @@ impl Clone for rte_ipv4_tuple {
 /// Addresses have to be filled by rte_thash_load_v6_addr()
 /// ports/sctp_tag have to be CPU byte order
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Copy)]
 pub struct rte_ipv6_tuple {
     pub src_addr: [u8; 16usize],
     pub dst_addr: [u8; 16usize],
     pub __bindgen_anon_1: rte_ipv6_tuple__bindgen_ty_1,
 }
 #[repr(C)]
-#[derive(Debug, Copy)]
-pub struct rte_ipv6_tuple__bindgen_ty_1 {
-    pub __bindgen_anon_1: __BindgenUnionField<rte_ipv6_tuple__bindgen_ty_1__bindgen_ty_1>,
-    pub sctp_tag: __BindgenUnionField<u32>,
-    pub bindgen_union_field: u32,
+#[derive(Copy)]
+pub union rte_ipv6_tuple__bindgen_ty_1 {
+    pub __bindgen_anon_1: rte_ipv6_tuple__bindgen_ty_1__bindgen_ty_1,
+    pub sctp_tag: u32,
+    _bindgen_union_align: u32,
 }
 #[repr(C)]
 #[derive(Debug, Copy)]
@@ -47768,10 +47877,10 @@ impl Clone for rte_ipv6_tuple {
 }
 #[repr(C)]
 #[derive(Copy)]
-pub struct rte_thash_tuple {
-    pub v4: __BindgenUnionField<rte_ipv4_tuple>,
-    pub v6: __BindgenUnionField<rte_ipv6_tuple>,
-    pub bindgen_union_field: [u8; 48usize],
+pub union rte_thash_tuple {
+    pub v4: rte_ipv4_tuple,
+    pub v6: rte_ipv6_tuple,
+    _bindgen_union_align: [u8; 48usize],
 }
 #[test]
 fn bindgen_test_layout_rte_thash_tuple() {
@@ -47856,12 +47965,12 @@ pub enum rte_timer_type { SINGLE = 0, PERIODICAL = 1, }
 /// Timer status: A union of the state (stopped, pending, running,
 /// config) and an owner (the id of the lcore that owns the timer).
 #[repr(C)]
-#[derive(Debug, Copy)]
-pub struct rte_timer_status {
-    pub __bindgen_anon_1: __BindgenUnionField<rte_timer_status__bindgen_ty_1>,
+#[derive(Copy)]
+pub union rte_timer_status {
+    pub __bindgen_anon_1: rte_timer_status__bindgen_ty_1,
     /// < To atomic-set status + owner.
-    pub u32: __BindgenUnionField<u32>,
-    pub bindgen_union_field: u32,
+    pub u32: u32,
+    _bindgen_union_align: u32,
 }
 #[repr(C)]
 #[derive(Debug, Copy)]
@@ -47914,7 +48023,7 @@ impl Clone for rte_timer_status {
 }
 /// A structure describing a timer in RTE.
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Copy)]
 pub struct rte_timer {
     /// < Time when timer expire.
     pub expire: u64,
@@ -48627,7 +48736,7 @@ impl Clone for rte_tm_capabilities {
 }
 /// Traffic manager level capabilities
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Copy)]
 pub struct rte_tm_level_capabilities {
     /// Maximum number of nodes for the current hierarchy level.
     pub n_nodes_max: u32,
@@ -48650,11 +48759,11 @@ pub struct rte_tm_level_capabilities {
     pub __bindgen_anon_1: rte_tm_level_capabilities__bindgen_ty_1,
 }
 #[repr(C)]
-#[derive(Debug, Copy)]
-pub struct rte_tm_level_capabilities__bindgen_ty_1 {
-    pub nonleaf: __BindgenUnionField<rte_tm_level_capabilities__bindgen_ty_1__bindgen_ty_1>,
-    pub leaf: __BindgenUnionField<rte_tm_level_capabilities__bindgen_ty_1__bindgen_ty_2>,
-    pub bindgen_union_field: [u64; 7usize],
+#[derive(Copy)]
+pub union rte_tm_level_capabilities__bindgen_ty_1 {
+    pub nonleaf: rte_tm_level_capabilities__bindgen_ty_1__bindgen_ty_1,
+    pub leaf: rte_tm_level_capabilities__bindgen_ty_1__bindgen_ty_2,
+    _bindgen_union_align: [u64; 7usize],
 }
 /// Items valid only for the non-leaf nodes on this level.
 #[repr(C)]
@@ -49110,7 +49219,7 @@ impl Clone for rte_tm_level_capabilities {
 }
 /// Traffic manager node capabilities
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Copy)]
 pub struct rte_tm_node_capabilities {
     /// Private shaper support for the current node.
     pub shaper_private_supported: ::std::os::raw::c_int,
@@ -49135,11 +49244,11 @@ pub struct rte_tm_node_capabilities {
     pub stats_mask: u64,
 }
 #[repr(C)]
-#[derive(Debug, Copy)]
-pub struct rte_tm_node_capabilities__bindgen_ty_1 {
-    pub nonleaf: __BindgenUnionField<rte_tm_node_capabilities__bindgen_ty_1__bindgen_ty_1>,
-    pub leaf: __BindgenUnionField<rte_tm_node_capabilities__bindgen_ty_1__bindgen_ty_2>,
-    pub bindgen_union_field: [u32; 5usize],
+#[derive(Copy)]
+pub union rte_tm_node_capabilities__bindgen_ty_1 {
+    pub nonleaf: rte_tm_node_capabilities__bindgen_ty_1__bindgen_ty_1,
+    pub leaf: rte_tm_node_capabilities__bindgen_ty_1__bindgen_ty_2,
+    _bindgen_union_align: [u32; 5usize],
 }
 /// Items valid only for non-leaf nodes.
 #[repr(C)]
@@ -49586,7 +49695,7 @@ impl Clone for rte_tm_shaper_params {
 /// is the number of TX queues configured for the current Ethernet port. The
 /// non-leaf nodes have their IDs generated by the application.
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Copy)]
 pub struct rte_tm_node_params {
     /// Shaper profile for the private shaper. The absence of the private
     /// shaper for the current node is indicated by setting this parameter
@@ -49605,11 +49714,11 @@ pub struct rte_tm_node_params {
     pub stats_mask: u64,
 }
 #[repr(C)]
-#[derive(Debug, Copy)]
-pub struct rte_tm_node_params__bindgen_ty_1 {
-    pub nonleaf: __BindgenUnionField<rte_tm_node_params__bindgen_ty_1__bindgen_ty_1>,
-    pub leaf: __BindgenUnionField<rte_tm_node_params__bindgen_ty_1__bindgen_ty_2>,
-    pub bindgen_union_field: [u64; 4usize],
+#[derive(Copy)]
+pub union rte_tm_node_params__bindgen_ty_1 {
+    pub nonleaf: rte_tm_node_params__bindgen_ty_1__bindgen_ty_1,
+    pub leaf: rte_tm_node_params__bindgen_ty_1__bindgen_ty_2,
+    _bindgen_union_align: [u64; 4usize],
 }
 /// Parameters only valid for non-leaf nodes.
 #[repr(C)]
@@ -51237,4 +51346,46 @@ pub struct malloc_elem {
 }
 impl Clone for malloc_elem {
     fn clone(&self) -> Self { *self }
+}
+pub unsafe extern "C" fn rte_eth_rx_burst(port_id: u8, queue_id: u16,
+                                          rx_pkts: *mut *mut rte_mbuf,
+                                          nb_pkts: u16) -> i16 {
+    let dev = rte_eth_devices[port_id as usize];
+    let queue = (*dev.data).rx_queues.offset(queue_id as isize);
+    let nb_rx = (dev.rx_pkt_burst.unwrap())(queue as *mut ::std::os::raw::c_void,
+                                            rx_pkts, nb_pkts);
+    nb_rx as i16
+}
+
+pub unsafe extern "C" fn rte_eth_tx_burst(port_id: u8, queue_id: u16,
+                                          tx_pkts: *mut *mut rte_mbuf,
+                                          nb_pkts: u16) -> u16 {
+    let dev = rte_eth_devices[port_id as usize];
+    let queue = (*dev.data).tx_queues.offset(queue_id as isize);
+    let nb_tx = (dev.tx_pkt_burst.unwrap())(queue as *mut ::std::os::raw::c_void,
+                                            tx_pkts, nb_pkts);
+    nb_tx
+}
+
+pub unsafe extern "C" fn rte_eth_tx_buffer_flush(port_id: u8, queue_id: u16,
+                                                 buffer: *mut rte_eth_dev_tx_buffer) -> u16 {
+    let to_send = (*buffer).length;
+    if to_send == 0 {
+        return 0;
+    }
+    let sent = rte_eth_tx_burst(port_id, queue_id, (*buffer).pkts.as_mut_ptr(), to_send);
+    (*buffer).length = 0;
+    return sent;
+}
+
+pub unsafe extern "C" fn rte_eth_tx_buffer(port_id: u8, queue_id: u16,
+                                           buffer: *mut rte_eth_dev_tx_buffer,
+                                           tx_pkt: *mut rte_mbuf) -> u16 {
+    *(*buffer).pkts.as_mut_ptr().offset((*buffer).length as isize) = tx_pkt;
+    (*buffer).length += 1;
+    if (*buffer).length < (*buffer).size {
+        return 0;
+    }
+    let nb_tx = rte_eth_tx_buffer_flush(port_id, queue_id, buffer);
+    return nb_tx;
 }
