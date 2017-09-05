@@ -51347,6 +51347,10 @@ pub struct malloc_elem {
 impl Clone for malloc_elem {
     fn clone(&self) -> Self { *self }
 }
+pub unsafe extern "C" fn rte_lcore_count() -> u32 {
+    (*rte_eal_get_configuration()).lcore_count
+}
+
 pub unsafe extern "C" fn rte_eth_rx_burst(port_id: u8, queue_id: u16,
                                           rx_pkts: *mut *mut rte_mbuf,
                                           nb_pkts: u16) -> i16 {
