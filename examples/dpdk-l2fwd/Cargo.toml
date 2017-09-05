@@ -6,3 +6,4 @@ authors = ["Masaru OKI <oki@pontonetworks.com>"]
 [dependencies]
 libc = "0.2"
 rust-dpdk = { path = "../.." }
+getopts = "0.2"
