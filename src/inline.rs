@@ -66,11 +66,15 @@ pub unsafe fn rte_atomic16_sub_return(v: *mut rte_atomic16_t, dec: u16)
 }
 
 // rte_ethdev.h
+pub unsafe fn rte_eth_devices_get(port_id: u8) -> *const rte_eth_dev {
+    rte_eth_devices.as_ptr().offset(port_id as isize)
+}
+
 pub unsafe fn rte_eth_rx_burst(port_id: u8, queue_id: u16,
                                rx_pkts: *mut *mut rte_mbuf,
                                nb_pkts: u16) -> i16 {
-    let dev = *rte_eth_devices.as_ptr().offset(port_id as isize);
-    let queue = (*dev.data).rx_queues.offset(queue_id as isize)
+    let dev = *rte_eth_devices_get(port_id);
+    let queue = *(*dev.data).rx_queues.offset(queue_id as isize)
         as *mut ::std::os::raw::c_void;
     let nb_rx = (dev.rx_pkt_burst.unwrap())(queue, rx_pkts, nb_pkts);
     nb_rx as i16
@@ -204,7 +208,7 @@ pub unsafe fn rte_pktmbuf_prefree_seg(m: *mut rte_mbuf) -> *mut rte_mbuf {
 
 pub unsafe fn rte_pktmbuf_free_seg(m: *mut rte_mbuf) {
     let mut m = rte_pktmbuf_prefree_seg(m);
-    if m != 0 as *mut rte_mbuf {
+    if m.is_null() != true {
         rte_mbuf_raw_free(m);
     }
 }
