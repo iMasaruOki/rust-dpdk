@@ -37,7 +37,6 @@ unsafe extern "C" fn l2fwd_main_loop(arg: *mut std::os::raw::c_void) -> i32 {
         let nb_rx = dpdk::rte_eth_rx_burst(in_port, 0,
                                            pkts.as_mut_ptr(),
                                            MAX_PKT_BURST);
-        println!("lcore{}: rx_burst: received {} pkts", lcore_id, nb_rx);
         for out_port in ports.lock().unwrap().iter() {
             if *out_port == in_port {
                 continue;
@@ -104,20 +103,13 @@ fn main() {
                                                      dpdk::RTE_MBUF_DEFAULT_BUF_SIZE as u16,
                                                      dpdk::rte_socket_id() as i32);
         assert!(pktmbuf_pool.is_null() == false);
-
-        for portid in 0..255 {
-            let mut info: dpdk::rte_eth_dev_info = std::mem::zeroed();
-            dpdk::rte_eth_dev_info_get(portid, &mut info as *mut dpdk::rte_eth_dev_info);
-            if info.pci_dev.is_null() == false {
-                println!("portid {}: name {}", portid, CString::from_raw((*info.pci_dev).name.as_mut_ptr()).into_string().unwrap());
-            }
-        }
         let mut port_conf: dpdk::rte_eth_conf = std::mem::zeroed();
         port_conf.rxmode.set_hw_strip_crc(1);
         for portid in ports.lock().unwrap().clone() {
             let mut info: dpdk::rte_eth_dev_info = std::mem::zeroed();
             dpdk::rte_eth_dev_info_get(portid, &mut info as *mut dpdk::rte_eth_dev_info);
-            let data = (*dpdk::rte_eth_devices.as_ptr().offset(portid as isize)).data;
+            let data = (*dpdk::rte_eth_devices_get(portid)).data;
+            println!("Initializing port {}: name {}", portid, CString::from_raw((*data).name.as_mut_ptr()).into_string().unwrap());
             if ((*data).dev_flags & dpdk::RTE_ETH_DEV_INTR_LSC) != 0 {
                 port_conf.intr_conf.set_lsc(1);
             } else {
@@ -128,9 +120,21 @@ fn main() {
             assert!(rv == 0, "configure failed: portid {}, rv: {}", portid, rv);
             let mut nb_rxd: u16 = 128;
             let mut nb_txd: u16 = 512;
-            dpdk::rte_eth_dev_adjust_nb_rx_tx_desc(portid, &mut nb_rxd, &mut nb_txd);
-            dpdk::rte_eth_rx_queue_setup(portid, 0, nb_rxd, dpdk::rte_eth_dev_socket_id(portid) as u32, 0 as *mut dpdk::rte_eth_rxconf, pktmbuf_pool);
-            dpdk::rte_eth_tx_queue_setup(portid, 0, nb_txd, dpdk::rte_eth_dev_socket_id(portid) as u32, 0 as *mut dpdk::rte_eth_txconf);
+            let rv = dpdk::rte_eth_dev_adjust_nb_rx_tx_desc(portid, &mut nb_rxd, &mut nb_txd);
+            assert!(rv == 0, "rte_eth_dev_adjust_nb_rx_tx_desc failed: portid {}, rv: {}", portid, rv);
+            println!("portid {}: nb_rxd {}, nb_txd {}", portid, nb_rxd, nb_txd);
+            let rv = dpdk::rte_eth_rx_queue_setup(portid, 0, nb_rxd, 
+                                                  dpdk::rte_eth_dev_socket_id(portid) as u32,
+                                                  0 as *mut dpdk::rte_eth_rxconf,
+                                                  pktmbuf_pool);
+            assert!(rv == 0, "rte_eth_rx_queue_setup failed: portid {}, rv: {}", portid, rv);
+            let rv = dpdk::rte_eth_tx_queue_setup(portid, 0, nb_txd,
+                                                  dpdk::rte_eth_dev_socket_id(portid) as u32,
+                                                  0 as *mut dpdk::rte_eth_txconf);
+            assert!(rv == 0, "rte_eth_tx_queue_setup failed: portid {}, rv: {}", portid, rv);
+            let rv = dpdk::rte_eth_dev_start(portid);
+            assert!(rv == 0, "rte_eth_dev_start failed: portid {}, rv: {}", portid, rv);
+            dpdk::rte_eth_promiscuous_enable(portid);
         }
         let callback: dpdk::lcore_function_t = Some(l2fwd_main_loop);
         for n in 0..lcores.len() {
