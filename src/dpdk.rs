@@ -51486,8 +51486,7 @@ pub unsafe fn rte_mempool_generic_put(mp: *mut rte_mempool,
     if cache.is_null() || obj_table.len() > RTE_MEMPOOL_CACHE_MAX_SIZE as usize {
         rte_mempool_ops_enqueue_bulk(mp, obj_table, obj_table.len());
     } else {
-        let mut cache_objs = (*cache).objs[(*cache).len as usize];
-        memcpy(cache_objs,
+        memcpy((*cache).objs.as_mut_ptr().offset((*cache).len as isize) as *mut ::std::os::raw::c_void,
                obj_table.as_ptr() as *mut ::std::os::raw::c_void,
                ::std::mem::size_of::<*mut u32>() * obj_table.len());
         (*cache).len += obj_table.len() as u32;
