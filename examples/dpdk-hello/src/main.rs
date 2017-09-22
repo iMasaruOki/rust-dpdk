@@ -6,7 +6,7 @@ use std::ffi::CString;
 use std::vec::Vec;
 
 unsafe extern "C" fn hello_thread(arg: *mut std::os::raw::c_void) -> i32 {
-    println!("Hello! lcore {}",  dpdk::per_lcore__lcore_id);
+    println!("Hello! lcore {}",  dpdk::rte_lcore_id());
     0
 }
 
