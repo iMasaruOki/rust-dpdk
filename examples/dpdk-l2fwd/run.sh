@@ -35,7 +35,7 @@ sudo ip netns exec ns1 ping -c 3 114.0.0.2  #1->2 OK
 sudo ip netns exec ns1 ping -c 3 114.0.0.3  #1->3 OK
 
 # cleanup
-#kill -TERM $L2FWD_PID
+kill -TERM $L2FWD_PID
 sudo ip link del tap-ns1
 sudo ip link del tap-ns2
 sudo ip link del tap-ns3
