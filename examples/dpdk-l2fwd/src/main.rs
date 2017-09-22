@@ -37,16 +37,20 @@ unsafe extern "C" fn l2fwd_main_loop(arg: *mut std::os::raw::c_void) -> i32 {
         let nb_rx = dpdk::rte_eth_rx_burst(in_port, 0,
                                            pkts.as_mut_ptr(),
                                            MAX_PKT_BURST);
+        if nb_rx == 0 {
+            continue;
+        }
         for out_port in ports.lock().unwrap().iter() {
             if *out_port == in_port {
                 continue;
             }
-            let mut buffer = &mut buffers[*out_port as usize];
+            let mut buffer = buffers.as_mut_ptr().offset(*out_port as isize);
             for i in 0..nb_rx as usize {
                 dpdk::rte_mbuf_refcnt_update(pkts[i], 1);
                 let sent = dpdk::rte_eth_tx_buffer(*out_port, 0,
-                                                   buffer as *mut dpdk::rte_eth_dev_tx_buffer, pkts[i]);
+                                                   buffer, pkts[i]);
             }
+            dpdk::rte_eth_tx_buffer_flush(*out_port, 0, buffer);
         }
         for pkt in pkts.iter() {
             dpdk::rte_pktmbuf_free(*pkt);
