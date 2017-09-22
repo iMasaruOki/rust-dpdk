@@ -51437,8 +51437,8 @@ pub unsafe fn rte_eth_rx_burst(port_id: u8, queue_id: u16,
 pub unsafe fn rte_eth_tx_burst(port_id: u8, queue_id: u16,
                                tx_pkts: *mut *mut rte_mbuf,
                                nb_pkts: u16) -> u16 {
-    let dev = *rte_eth_devices.as_ptr().offset(port_id as isize);
-    let queue = (*dev.data).tx_queues.offset(queue_id as isize)
+    let dev = *rte_eth_devices_get(port_id);
+    let queue = *(*dev.data).tx_queues.offset(queue_id as isize)
         as *mut ::std::os::raw::c_void;
     let nb_tx = (dev.tx_pkt_burst.unwrap())(queue, tx_pkts, nb_pkts);
     nb_tx
@@ -51464,8 +51464,7 @@ pub unsafe fn rte_eth_tx_buffer(port_id: u8, queue_id: u16,
     if (*buffer).length < (*buffer).size {
         return 0;
     }
-    let nb_tx = rte_eth_tx_buffer_flush(port_id, queue_id, buffer);
-    return nb_tx;
+    rte_eth_tx_buffer_flush(port_id, queue_id, buffer)
 }
 
 // rte_mempool.h
