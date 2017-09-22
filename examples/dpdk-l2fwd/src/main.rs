@@ -122,7 +122,6 @@ fn main() {
             let mut nb_txd: u16 = 512;
             let rv = dpdk::rte_eth_dev_adjust_nb_rx_tx_desc(portid, &mut nb_rxd, &mut nb_txd);
             assert!(rv == 0, "rte_eth_dev_adjust_nb_rx_tx_desc failed: portid {}, rv: {}", portid, rv);
-            println!("portid {}: nb_rxd {}, nb_txd {}", portid, nb_rxd, nb_txd);
             let rv = dpdk::rte_eth_rx_queue_setup(portid, 0, nb_rxd, 
                                                   dpdk::rte_eth_dev_socket_id(portid) as u32,
                                                   0 as *mut dpdk::rte_eth_rxconf,
