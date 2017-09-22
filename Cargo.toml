@@ -10,10 +10,10 @@ description = "Bindings to DPDK: Data Plane Development Kit"
 readme = "README.md"
 keywords = ["networking", "packet", "bindings"]
 build = "build.rs"
-exclude = ["examples/**/*"]
+exclude = ["examples/**/*", "src/inline.rs"]
 
 [dependencies]
 libc = "0.2"
 
 [build-dependencies]
-bindgen = "0.29.0"
+bindgen = "0.30.0"
