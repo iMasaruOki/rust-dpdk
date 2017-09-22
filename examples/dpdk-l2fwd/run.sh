@@ -23,7 +23,8 @@ sudo ip netns exec ns3 ip link set dev ns-ns3 up
 
 # Run lagopus as rawsocket only mode.
 sudo env RUST_BACKTRACE=1 ./target/debug/dpdk-l2fwd -cf -n2 \
- -d /usr/local/lib/dpdk-pmd \
+ -d /usr/local/lib/librte_pmd_af_packet.so  \
+ -d /usr/local/lib/librte_mempool_ring.so \
  --vdev net_af_packet0,iface=tap-ns1 \
  --vdev net_af_packet1,iface=tap-ns2 \
  --vdev net_af_packet2,iface=tap-ns3 \
