@@ -63,22 +63,10 @@ static mut pktmbuf_pool: *mut dpdk::rte_mempool = 0 as *mut dpdk::rte_mempool;
 
 fn main() {
     unsafe {
-        let mut args: Vec<String> = std::env::args().collect();
-        let mut arg_iter = args.split(|str| str == "--");
-        let args: Vec<*mut i8> = arg_iter.next().unwrap().iter()
-            .map(|arg| {
-                CString::new(arg.as_bytes()).unwrap().into_raw()
-            })
-            .collect();
-        let mut argc = args.len() as i32;
-        let mut argv = args.as_ptr() as *mut *mut i8;
-        let nparam = dpdk::rte_eal_init(argc, argv);
-        assert!(nparam >= 0, "Invalid EAL arguments");
         let mut opts = Options::new();
         opts.optopt("p", "", "set port bitmap", "PORT");
-        //let args: Vec<String> = std::env::args().collect();
-        //let (_, exarg) = args.split_at(nparam as usize);
-        let exargs: Vec<String> = arg_iter.next().unwrap().to_vec();
+
+        let exargs: Vec<String> = dpdk::eal_init(std::env::args());
         let matches = match opts.parse(exargs) {
             Ok(m) => { m }
             Err(f) => { panic!(f.to_string()) }
