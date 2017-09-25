@@ -51352,6 +51352,26 @@ pub struct malloc_elem {
 impl Clone for malloc_elem {
     fn clone(&self) -> Self { *self }
 }
+pub unsafe fn eal_init(args: ::std::env::Args)
+                       -> ::std::vec::Vec<String> {
+    let mut argstrs: ::std::vec::Vec<String> = args.collect();
+    let mut arg_iter = argstrs.split(|str| str == "--");
+    let args: Vec<*mut i8> = arg_iter.next().unwrap().iter()
+        .map(|arg| {
+            ::std::ffi::CString::new(arg.as_bytes()).unwrap().into_raw()
+        })
+        .collect();
+    let mut argc = args.len() as i32;
+    let mut argv = args.as_ptr() as *mut *mut i8;
+    let nparam = rte_eal_init(argc, argv);
+    assert!(nparam >= 0, "Invalid EAL arguments");
+    let next = arg_iter.next();
+    if next != None {
+        return next.unwrap().to_vec();
+    }
+    ::std::vec::Vec::<String>::new()
+}
+
 // rte_lcore.h
 pub unsafe fn rte_lcore_id() -> u32 {
     per_lcore__lcore_id
