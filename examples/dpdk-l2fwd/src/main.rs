@@ -66,8 +66,12 @@ fn main() {
         let mut opts = Options::new();
         opts.optopt("p", "", "set port bitmap", "PORT");
 
-        let exargs: Vec<String> = dpdk::eal_init(std::env::args());
-        let matches = match opts.parse(exargs) {
+        let exargs = dpdk::eal_init(std::env::args());
+        if exargs.is_none() == true {
+            println!("parameter required.");
+            return;
+        }
+        let matches = match opts.parse(exargs.unwrap()) {
             Ok(m) => { m }
             Err(f) => { panic!(f.to_string()) }
         };
