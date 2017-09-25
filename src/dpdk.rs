@@ -51353,7 +51353,7 @@ impl Clone for malloc_elem {
     fn clone(&self) -> Self { *self }
 }
 pub unsafe fn eal_init(args: ::std::env::Args)
-                       -> ::std::vec::Vec<String> {
+                       -> ::std::option::Option<::std::vec::Vec<String>> {
     let mut argstrs: ::std::vec::Vec<String> = args.collect();
     let mut arg_iter = argstrs.split(|str| str == "--");
     let args: Vec<*mut i8> = arg_iter.next().unwrap().iter()
@@ -51367,9 +51367,11 @@ pub unsafe fn eal_init(args: ::std::env::Args)
     assert!(nparam >= 0, "Invalid EAL arguments");
     let next = arg_iter.next();
     if next != None {
-        return next.unwrap().to_vec();
+        let rv: Option<::std::vec::Vec<String>> = Some(next.unwrap().to_vec());
+        return rv;
     }
-    ::std::vec::Vec::<String>::new()
+    let rv: Option<::std::vec::Vec<String>> = None;
+    rv
 }
 
 // rte_lcore.h
