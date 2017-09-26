@@ -1,4 +1,5 @@
 extern crate dpdk;
+use dpdk::ffi;
 
 unsafe extern "C" fn hello_thread(_arg: *mut std::os::raw::c_void) -> i32 {
     println!("Hello! lcore {}",  dpdk::lcore::id());
