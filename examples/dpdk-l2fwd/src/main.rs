@@ -45,7 +45,7 @@ unsafe extern "C" fn l2fwd_main_loop(arg: *mut std::os::raw::c_void) -> i32 {
             }
             let mut buffer = &mut buffers[*out_port as usize];
             for i in 0..nb_rx as usize {
-                dpdk::mbuf::refcnt_update(pkts[i], 1);
+                (*pkts[i]).refcnt_update(1);
                 let sent = buffer.tx(*out_port, 0, pkts[i]);
             }
             buffer.flush(*out_port, 0);
