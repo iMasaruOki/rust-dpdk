@@ -4,7 +4,6 @@ extern crate dpdk;
 #[macro_use]
 extern crate lazy_static;
 
-use std::ffi::CString;
 use std::vec::Vec;
 use getopts::Options;
 use std::sync::Mutex;
