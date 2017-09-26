@@ -19,14 +19,10 @@ pub unsafe fn pool_create(name: &'static str,
                                  socket_id)
 }
 
-pub unsafe fn detach(_m: *mut rte_mbuf) {
-    // not implemented yet
-}
-
 pub unsafe fn prefree_seg(m: *mut rte_mbuf) -> *mut rte_mbuf {
-    if mbuf::refcnt_read(m) == 1 {
-        if mbuf::indirect(m) == true {
-            detach(m);
+    if (*m).refcnt() == 1 {
+        if (*m).indirect() == true {
+            (*m).detach();
         }
         if (*m).next.is_null() != true {
             (*m).next = 0 as *mut rte_mbuf;
@@ -41,7 +37,7 @@ pub unsafe fn prefree_seg(m: *mut rte_mbuf) -> *mut rte_mbuf {
 pub unsafe fn free_seg(m: *mut rte_mbuf) {
     let mut m = prefree_seg(m);
     if m.is_null() != true {
-        mbuf::raw_free(m);
+        (*m).raw_free();
     }
 }
 
