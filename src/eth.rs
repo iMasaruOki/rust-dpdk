@@ -1,16 +1,28 @@
 // rte_ethdev.h
 use ffi;
+use std::ffi::CString;
 
 pub type tx_buffer = ffi::rte_eth_dev_tx_buffer;
 
-pub unsafe fn devices_get(port_id: u8) -> *const ffi::rte_eth_dev {
-    ffi::rte_eth_devices.as_ptr().offset(port_id as isize)
+pub unsafe fn devices(port_id: u8) -> &'static ffi::rte_eth_dev {
+    &*ffi::rte_eth_devices.as_ptr().offset(port_id as isize)
+}
+
+impl ffi::rte_eth_dev {
+    pub unsafe fn is_intr_lsc_enable(&self) -> bool {
+        ((*self.data).dev_flags & ffi::RTE_ETH_DEV_INTR_LSC) != 0
+    }
+    pub unsafe fn name(&self) -> String {
+        CString::from_raw((*self.data).name.as_mut_ptr())
+            .into_string()
+            .unwrap()
+    }
 }
 
 pub unsafe fn rx_burst(port_id: u8, queue_id: u16,
                        rx_pkts: *mut *mut ffi::rte_mbuf,
                        nb_pkts: u16) -> i16 {
-    let dev = *devices_get(port_id);
+    let dev = devices(port_id);
     let queue = *(*dev.data).rx_queues.offset(queue_id as isize)
         as *mut ::std::os::raw::c_void;
     let nb_rx = (dev.rx_pkt_burst.unwrap())(queue, rx_pkts, nb_pkts);
@@ -20,7 +32,7 @@ pub unsafe fn rx_burst(port_id: u8, queue_id: u16,
 pub unsafe fn tx_burst(port_id: u8, queue_id: u16,
                        tx_pkts: *mut *mut ffi::rte_mbuf,
                        nb_pkts: u16) -> u16 {
-    let dev = *devices_get(port_id);
+    let dev = devices(port_id);
     let queue = *(*dev.data).tx_queues.offset(queue_id as isize)
         as *mut ::std::os::raw::c_void;
     let nb_tx = (dev.tx_pkt_burst.unwrap())(queue, tx_pkts, nb_pkts);

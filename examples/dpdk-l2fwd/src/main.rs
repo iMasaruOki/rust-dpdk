@@ -77,6 +77,7 @@ fn main() {
             .unwrap()
             .parse::<u32>()
             .unwrap();
+        // lcore and port assignment
         let mut lcores: Vec<u32> = Vec::new();
         let mut n = 0u8;
         let mut lc = dpdk::lcore::get_first(true);
@@ -105,9 +106,9 @@ fn main() {
         for portid in ports.lock().unwrap().clone() {
             let mut info: ffi::rte_eth_dev_info = std::mem::zeroed();
             ffi::rte_eth_dev_info_get(portid, &mut info as *mut ffi::rte_eth_dev_info);
-            let data = (*dpdk::eth::devices_get(portid)).data;
-            println!("Initializing port {}: name {}", portid, CString::from_raw((*data).name.as_mut_ptr()).into_string().unwrap());
-            if ((*data).dev_flags & ffi::RTE_ETH_DEV_INTR_LSC) != 0 {
+            let device = dpdk::eth::devices(portid);
+            println!("Initializing port {}: name {}", portid, device.name());
+            if device.is_intr_lsc_enable() == true {
                 port_conf.intr_conf.set_lsc(1);
             } else {
                 port_conf.intr_conf.set_lsc(0);
