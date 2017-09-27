@@ -8,6 +8,7 @@ use std::vec::Vec;
 use getopts::Options;
 use std::sync::Mutex;
 use dpdk::ffi;
+use std::os::raw::c_void;
 
 static force_quit: bool = false;
 
@@ -17,7 +18,7 @@ lazy_static! {
     static ref ports: Mutex<Vec<u8>> = Mutex::new(vec![]);
 }
 
-unsafe extern "C" fn l2fwd_main_loop(arg: *mut std::os::raw::c_void) -> i32 {
+unsafe extern "C" fn l2fwd_main_loop(arg: *mut c_void) -> i32 {
     let lcore_id = dpdk::lcore::id();
     let nports = ports.lock().unwrap().len();
     let mut pkts: [*mut dpdk::ffi::rte_mbuf; MAX_PKT_BURST as usize];
@@ -112,32 +113,35 @@ fn main() {
             } else {
                 port_conf.intr_conf.set_lsc(0);
             }
-            let rv = ffi::rte_eth_dev_configure(portid, 1, 1,
-                                                 &port_conf as *const ffi::rte_eth_conf);
-            assert!(rv == 0, "configure failed: portid {}, rv: {}", portid, rv);
+            let rv = dpdk::eth::configure(portid, 1, 1, &port_conf);
+            assert!(rv == 0,
+                    "configure failed: portid {}, rv: {}", portid, rv);
             let mut nb_rxd: u16 = 128;
             let mut nb_txd: u16 = 512;
             let rv = ffi::rte_eth_dev_adjust_nb_rx_tx_desc(portid, &mut nb_rxd, &mut nb_txd);
-            assert!(rv == 0, "rte_eth_dev_adjust_nb_rx_tx_desc failed: portid {}, rv: {}", portid, rv);
-            let rv = ffi::rte_eth_rx_queue_setup(portid, 0, nb_rxd, 
-                                                  ffi::rte_eth_dev_socket_id(portid) as u32,
-                                                  0 as *mut ffi::rte_eth_rxconf,
-                                                  pktmbuf_pool);
-            assert!(rv == 0, "rte_eth_rx_queue_setup failed: portid {}, rv: {}", portid, rv);
-            let rv = ffi::rte_eth_tx_queue_setup(portid, 0, nb_txd,
-                                                  ffi::rte_eth_dev_socket_id(portid) as u32,
-                                                  0 as *mut ffi::rte_eth_txconf);
-            assert!(rv == 0, "rte_eth_tx_queue_setup failed: portid {}, rv: {}", portid, rv);
-            let rv = ffi::rte_eth_dev_start(portid);
-            assert!(rv == 0, "rte_eth_dev_start failed: portid {}, rv: {}", portid, rv);
-            ffi::rte_eth_promiscuous_enable(portid);
+            assert!(rv == 0,
+                    "rte_eth_dev_adjust_nb_rx_tx_desc failed: portid {}, rv: {}", portid, rv);
+            let rv = dpdk::eth::rx_queue_setup(portid, 0, nb_rxd,
+                                               dpdk::eth::socket_id(portid),
+                                               0 as *mut ffi::rte_eth_rxconf,
+                                               pktmbuf_pool);
+            assert!(rv == 0,
+                    "rx queue setup failed: portid {}, rv: {}", portid, rv);
+            let rv = dpdk::eth::tx_queue_setup(portid, 0, nb_txd,
+                                               dpdk::eth::socket_id(portid),
+                                               0 as *mut ffi::rte_eth_txconf);
+            assert!(rv == 0,
+                    "tx queue setup failed: portid {}, rv: {}", portid, rv);
+            let rv = dpdk::eth::start(portid);
+            assert!(rv == 0,
+                    "ethernet devvice not started: portid {}, rv: {}",
+                    portid, rv);
+            dpdk::eth::promiscuous_set(portid, true);
         }
         let callback: ffi::lcore_function_t = Some(l2fwd_main_loop);
         for n in 0..lcores.len() {
-            let callback_arg = ports.lock().unwrap()[n] as *mut std::os::raw::c_void;
-            ffi::rte_eal_remote_launch(callback,
-                                        callback_arg,
-                                        lcores[n]);
+            let callback_arg = ports.lock().unwrap()[n] as *mut c_void;
+            ffi::rte_eal_remote_launch(callback, callback_arg,lcores[n]);
         }
         ffi::rte_eal_mp_wait_lcore();
     }
