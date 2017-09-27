@@ -19,6 +19,46 @@ impl ffi::rte_eth_dev {
     }
 }
 
+pub unsafe fn configure(port_id: u8, nb_rxd: u16, nb_txd: u16,
+                        port_conf: &ffi::rte_eth_conf) -> i32 {
+    ffi::rte_eth_dev_configure(port_id, nb_rxd, nb_txd,
+                               port_conf as *const ffi::rte_eth_conf)
+}
+
+pub unsafe fn socket_id(port_id: u8) -> u32 {
+    ffi::rte_eth_dev_socket_id(port_id) as u32
+}
+
+pub unsafe fn rx_queue_setup(port_id: u8, queue_id: u16, nb_rxd: u16,
+                             socket_id: u32, rxconf: *mut ffi::rte_eth_rxconf,
+                             pool: *mut ffi::rte_mempool)
+                             -> i32 {
+    ffi::rte_eth_rx_queue_setup(port_id, queue_id, nb_rxd, socket_id,
+                                rxconf, pool)
+}
+
+pub unsafe fn tx_queue_setup(port_id: u8, queue_id: u16, nb_txd: u16,
+                             socket_id: u32, txconf: *mut ffi::rte_eth_txconf)
+                             -> i32 {
+    ffi::rte_eth_tx_queue_setup(port_id, queue_id, nb_txd, socket_id, txconf)
+}
+
+pub unsafe fn start(port_id: u8) -> i32 {
+    ffi::rte_eth_dev_start(port_id)
+}
+
+pub unsafe fn stop(port_id: u8) {
+    ffi::rte_eth_dev_stop(port_id);
+}
+
+pub unsafe fn promiscuous_set(port_id: u8, onoff: bool) {
+    if onoff == true {
+        ffi::rte_eth_promiscuous_enable(port_id);
+    } else {
+        ffi::rte_eth_promiscuous_disable(port_id);
+    }
+}
+
 pub unsafe fn rx_burst(port_id: u8, queue_id: u16,
                        rx_pkts: *mut *mut ffi::rte_mbuf,
                        nb_pkts: u16) -> i16 {
