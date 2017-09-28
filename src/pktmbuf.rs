@@ -1,7 +1,6 @@
 // rte_mbuf.h
 use ffi;
 use ffi::rte_mbuf;
-use mbuf;
 use atomic;
 use std::ffi::CString;
 
@@ -35,7 +34,7 @@ pub unsafe fn prefree_seg(m: *mut rte_mbuf) -> *mut rte_mbuf {
 }
 
 pub unsafe fn free_seg(m: *mut rte_mbuf) {
-    let mut m = prefree_seg(m);
+    let m = prefree_seg(m);
     if m.is_null() != true {
         (*m).raw_free();
     }
@@ -44,7 +43,7 @@ pub unsafe fn free_seg(m: *mut rte_mbuf) {
 pub unsafe fn free(m: *mut rte_mbuf) {
     let mut n = m;
     while n.is_null() != true {
-        let mut m_next = (*n).next;
+        let m_next = (*n).next;
         free_seg(n);
         n = m_next;
     }

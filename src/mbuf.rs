@@ -34,4 +34,8 @@ impl rte_mbuf {
         }
         atomic::add16_return(&mut self.__bindgen_anon_1.refcnt_atomic, value)
     }
+
+    pub unsafe fn refcnt_inc(&mut self) -> u16 {
+        self.refcnt_update(1)
+    }
 }

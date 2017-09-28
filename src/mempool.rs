@@ -42,12 +42,12 @@ pub unsafe fn default_cache(mp: *mut ffi::rte_mempool, lcore_id: u32)
 }
 
 pub unsafe fn put_bulk(mp: *mut ffi::rte_mempool, obj_table: &[*mut c_void]) {
-    let mut cache = default_cache(mp, lcore::id());
+    let cache = default_cache(mp, lcore::id());
     generic_put(mp, obj_table, cache);
 }
 
 pub unsafe fn put(mp: *mut ffi::rte_mempool, obj: *mut c_void) {
-    let mut obj_table: [*mut c_void; 1] = [obj];
+    let obj_table: [*mut c_void; 1] = [obj];
 
     put_bulk(mp, &obj_table);
 }
