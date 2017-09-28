@@ -75,8 +75,7 @@ pub unsafe fn tx_burst(port_id: u8, queue_id: u16,
     let dev = devices(port_id);
     let queue = *(*dev.data).tx_queues.offset(queue_id as isize)
         as *mut ::std::os::raw::c_void;
-    let nb_tx = (dev.tx_pkt_burst.unwrap())(queue, tx_pkts, nb_pkts);
-    nb_tx
+    (dev.tx_pkt_burst.unwrap())(queue, tx_pkts, nb_pkts)
 }
 
 impl tx_buffer {
