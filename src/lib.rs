@@ -11,3 +11,4 @@ pub mod lcore;
 pub mod mbuf;
 pub mod pktmbuf;
 pub mod mempool;
+pub mod socket;
