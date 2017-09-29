@@ -29,6 +29,24 @@ pub unsafe fn socket_id(port_id: u8) -> u32 {
     ffi::rte_eth_dev_socket_id(port_id) as u32
 }
 
+pub unsafe fn adjust_rx_desc(port_id: u8, nb_rxd: u16) -> u16 {
+    let mut nbr = nb_rxd;
+    let mut nbt = nb_rxd;
+    let rv = ffi::rte_eth_dev_adjust_nb_rx_tx_desc(port_id,
+                                                   &mut nbr, &mut nbt);
+    assert_eq!(rv, 0);
+    nbr
+}
+
+pub unsafe fn adjust_tx_desc(port_id: u8, nb_txd: u16) -> u16 {
+    let mut nbr = nb_txd;
+    let mut nbt = nb_txd;
+    let rv = ffi::rte_eth_dev_adjust_nb_rx_tx_desc(port_id,
+                                                   &mut nbr, &mut nbt);
+    assert_eq!(rv, 0);
+    nbt
+}
+
 pub unsafe fn rx_queue_setup(port_id: u8, queue_id: u16, nb_rxd: u16,
                              socket_id: u32, rxconf: *mut ffi::rte_eth_rxconf,
                              pool: *mut ffi::rte_mempool)

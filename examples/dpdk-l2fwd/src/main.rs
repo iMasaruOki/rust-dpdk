@@ -10,7 +10,7 @@ use std::sync::Mutex;
 use dpdk::ffi;
 use std::os::raw::c_void;
 
-static force_quit: bool = false;
+static FORCE_QUIT: bool = false;
 
 const MAX_PKT_BURST:u16 = 32;
 
@@ -31,7 +31,7 @@ unsafe extern "C" fn l2fwd_main_loop(arg: *mut c_void) -> i32 {
     }
 
     println!("lcore{}: loop start", lcore_id);
-    while force_quit != true {
+    while FORCE_QUIT != true {
         let nb_rx = dpdk::eth::rx_burst(in_port, 0,
                                         pkts.as_mut_ptr(),
                                         MAX_PKT_BURST);
@@ -101,7 +101,7 @@ fn main() {
                                                   256,
                                                   0,
                                                   ffi::RTE_MBUF_DEFAULT_BUF_SIZE as u16,
-                                                  ffi::rte_socket_id() as i32);
+                                                  dpdk::socket::id());
         assert!(pktmbuf_pool.is_null() == false);
         let mut port_conf: ffi::rte_eth_conf = std::mem::zeroed();
         port_conf.rxmode.set_hw_strip_crc(1);
@@ -118,11 +118,8 @@ fn main() {
             let rv = dpdk::eth::configure(portid, 1, 1, &port_conf);
             assert!(rv == 0,
                     "configure failed: portid {}, rv: {}", portid, rv);
-            let mut nb_rxd: u16 = 128;
-            let mut nb_txd: u16 = 512;
-            let rv = ffi::rte_eth_dev_adjust_nb_rx_tx_desc(portid, &mut nb_rxd, &mut nb_txd);
-            assert!(rv == 0,
-                    "rte_eth_dev_adjust_nb_rx_tx_desc failed: portid {}, rv: {}", portid, rv);
+            let nb_rxd = dpdk::eth::adjust_rx_desc(portid, 128);
+            let nb_txd = dpdk::eth::adjust_tx_desc(portid, 512);
             let rv = dpdk::eth::rx_queue_setup(portid, 0, nb_rxd,
                                                dpdk::eth::socket_id(portid),
                                                0 as *mut ffi::rte_eth_rxconf,
@@ -143,8 +140,8 @@ fn main() {
         let callback: ffi::lcore_function_t = Some(l2fwd_main_loop);
         for n in 0..lcores.len() {
             let callback_arg = PORTS.lock().unwrap()[n] as *mut c_void;
-            ffi::rte_eal_remote_launch(callback, callback_arg,lcores[n]);
+            dpdk::eal::remote_launch(callback, callback_arg,lcores[n]);
         }
-        ffi::rte_eal_mp_wait_lcore();
+        dpdk::eal::mp_wait_lcore();
     }
 }
