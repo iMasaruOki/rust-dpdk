@@ -137,7 +137,7 @@ fn main() {
                     portid, rv);
             dpdk::eth::promiscuous_set(portid, true);
         }
-        let callback: ffi::lcore_function_t = Some(l2fwd_main_loop);
+        let callback = l2fwd_main_loop;
         for n in 0..lcores.len() {
             let callback_arg = PORTS.lock().unwrap()[n] as *mut c_void;
             dpdk::eal::remote_launch(callback, callback_arg,lcores[n]);

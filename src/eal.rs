@@ -23,10 +23,24 @@ pub unsafe fn init(args: ::std::env::Args)
     None
 }
 
-pub unsafe fn remote_launch(callback: ffi::lcore_function_t,
+type lcore_func_t = unsafe extern "C" fn(*mut ::std::os::raw::c_void) -> i32;
+
+pub unsafe fn remote_launch(callback: lcore_func_t,
                             arg: *mut ::std::os::raw::c_void,
-                            lcore: u32) -> i32{
-    ffi::rte_eal_remote_launch(callback, arg, lcore)
+                            lcore: u32) -> i32 {
+    ffi::rte_eal_remote_launch(Some(callback), arg, lcore)
+}
+
+pub unsafe fn mp_remote_launch(callback: lcore_func_t,
+                               arg: *mut ::std::os::raw::c_void,
+                               call_master: bool) -> i32 {
+    let cm;
+    if call_master == true {
+        cm = ffi::rte_rmt_call_master_t::CALL_MASTER;
+    } else {
+        cm = ffi::rte_rmt_call_master_t::SKIP_MASTER;
+    }
+    ffi::rte_eal_mp_remote_launch(Some(callback), arg, cm)
 }
 
 pub unsafe fn mp_wait_lcore() {
