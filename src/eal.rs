@@ -22,3 +22,13 @@ pub unsafe fn init(args: ::std::env::Args)
     }
     None
 }
+
+pub unsafe fn remote_launch(callback: ffi::lcore_function_t,
+                            arg: *mut ::std::os::raw::c_void,
+                            lcore: u32) -> i32{
+    ffi::rte_eal_remote_launch(callback, arg, lcore)
+}
+
+pub unsafe fn mp_wait_lcore() {
+    ffi::rte_eal_mp_wait_lcore()
+}
