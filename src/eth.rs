@@ -19,6 +19,12 @@ impl ffi::rte_eth_dev {
     }
 }
 
+impl ffi::rte_eth_dev_info {
+    pub unsafe fn get(&mut self, port_id: u8) {
+        ffi::rte_eth_dev_info_get(port_id, self as *mut ffi::rte_eth_dev_info);
+    }
+}
+
 pub unsafe fn configure(port_id: u8, nb_rxd: u16, nb_txd: u16,
                         port_conf: &ffi::rte_eth_conf) -> i32 {
     ffi::rte_eth_dev_configure(port_id, nb_rxd, nb_txd,

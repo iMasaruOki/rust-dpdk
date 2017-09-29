@@ -62,7 +62,7 @@ unsafe extern "C" fn l2fwd_main_loop(arg: *mut c_void) -> i32 {
 
 fn main() {
     unsafe {
-        let pktmbuf_pool: *mut ffi::rte_mempool;
+        let pool: *mut ffi::rte_mempool;
         let mut opts = Options::new();
         opts.optopt("p", "", "set port bitmap", "PORT");
 
@@ -96,18 +96,18 @@ fn main() {
             portmap /= 2;
             n += 1;
         }
-        pktmbuf_pool = dpdk::pktmbuf::pool_create("mbufpool",
-                                                  8192,
-                                                  256,
-                                                  0,
-                                                  ffi::RTE_MBUF_DEFAULT_BUF_SIZE as u16,
-                                                  dpdk::socket::id());
-        assert!(pktmbuf_pool.is_null() == false);
+        pool = dpdk::pktmbuf::pool_create("mbufpool",
+                                          8192,
+                                          256,
+                                          0,
+                                          ffi::RTE_MBUF_DEFAULT_BUF_SIZE as u16,
+                                          dpdk::socket::id());
+        assert!(pool.is_null() == false);
         let mut port_conf: ffi::rte_eth_conf = std::mem::zeroed();
         port_conf.rxmode.set_hw_strip_crc(1);
         for portid in PORTS.lock().unwrap().clone() {
             let mut info: ffi::rte_eth_dev_info = std::mem::zeroed();
-            ffi::rte_eth_dev_info_get(portid, &mut info as *mut ffi::rte_eth_dev_info);
+            info.get(portid);
             let device = dpdk::eth::devices(portid);
             println!("Initializing port {}: name {}", portid, device.name());
             if device.is_intr_lsc_enable() == true {
@@ -122,13 +122,13 @@ fn main() {
             let nb_txd = dpdk::eth::adjust_tx_desc(portid, 512);
             let rv = dpdk::eth::rx_queue_setup(portid, 0, nb_rxd,
                                                dpdk::eth::socket_id(portid),
-                                               0 as *mut ffi::rte_eth_rxconf,
-                                               pktmbuf_pool);
+                                               &mut info.default_rxconf,
+                                               pool);
             assert!(rv == 0,
                     "rx queue setup failed: portid {}, rv: {}", portid, rv);
             let rv = dpdk::eth::tx_queue_setup(portid, 0, nb_txd,
                                                dpdk::eth::socket_id(portid),
-                                               0 as *mut ffi::rte_eth_txconf);
+                                               &mut info.default_txconf);
             assert!(rv == 0,
                     "tx queue setup failed: portid {}, rv: {}", portid, rv);
             let rv = dpdk::eth::start(portid);
