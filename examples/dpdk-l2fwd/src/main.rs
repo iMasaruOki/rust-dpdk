@@ -20,7 +20,7 @@ lazy_static! {
 
 unsafe extern "C" fn l2fwd_main_loop(arg: *mut c_void) -> i32 {
     let lcore_id = dpdk::lcore::id();
-    let mut pkts: [*mut dpdk::ffi::rte_mbuf; MAX_PKT_BURST as usize];
+    let mut pkts: [*mut ffi::rte_mbuf; MAX_PKT_BURST as usize];
     let mut buffers: [dpdk::eth::tx_buffer; ffi::RTE_MAX_ETHPORTS as usize];
     let in_port = arg as u8;
 
