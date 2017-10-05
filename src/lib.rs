@@ -10,6 +10,7 @@ pub mod eal;
 pub mod eth;
 pub mod lcore;
 pub mod mbuf;
-pub mod pktmbuf;
 pub mod mempool;
+pub mod pktmbuf;
+pub mod ring;
 pub mod socket;
