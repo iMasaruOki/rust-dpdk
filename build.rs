@@ -24,5 +24,5 @@ fn main() {
         .arg(out_path.join("ffi.rs").as_os_str())
         .spawn()
         .expect("failed to execute perl");
-    child.wait();
+    let _ = child.wait();
 }
