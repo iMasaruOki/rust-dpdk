@@ -1,6 +1,5 @@
 extern crate bindgen;
 
-use std::env;
 use std::path::PathBuf;
 use std::process::Command;
 
@@ -9,7 +8,7 @@ fn main() {
     let bindings = bindgen::Builder::default()
         .header("rte.h")
         .generate_inline_functions(true)
-        .clang_arg(format!("-I{}/build/include", env::var("RTE_SDK").unwrap()))
+        .clang_arg("-I/usr/local/include/dpdk")
         .clang_arg("-Wno-error=implicit-function-declaration")
         .generate()
         .expect("Unable to generate bindings");
