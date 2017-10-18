@@ -24,7 +24,7 @@ NOTE: So far, we need nightly build of Rust to use #[thread_local] feature.
 To generate the bindings from scratch, use:
 
 ```
-rustup run nightly cargo build
+cargo +nightly build
 ```
 
 To use within your own project, use:

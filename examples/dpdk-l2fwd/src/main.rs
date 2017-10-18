@@ -10,12 +10,48 @@ use std::sync::Mutex;
 use dpdk::ffi;
 use std::os::raw::c_void;
 
-static FORCE_QUIT: bool = false;
+static mut FORCE_QUIT: bool = false;
+static mut DUMP_FLAG: bool = false;
 
 const MAX_PKT_BURST:u16 = 32;
 
 lazy_static! {
     static ref PORTS: Mutex<Vec<u8>> = Mutex::new(vec![]);
+}
+
+fn dump_packet_type(ptype: u32) {
+    match ptype & ffi::RTE_PTYPE_L2_MASK {
+        ffi::RTE_PTYPE_L2_ETHER => print!("Ether,"),
+        ffi::RTE_PTYPE_L2_ETHER_VLAN => print!("Ether+VLAN,"),
+        ffi::RTE_PTYPE_L2_ETHER_QINQ => print!("Ether+QinQ,"),
+        ffi::RTE_PTYPE_L2_ETHER_ARP => print!("Ether+ARP,"),
+        _ => print!("Other L2 ({}),", ptype & ffi::RTE_PTYPE_L2_MASK),
+    }
+    match ptype & ffi::RTE_PTYPE_L3_MASK {
+        ffi::RTE_PTYPE_L3_IPV4 => print!("IPv4,"),
+        ffi::RTE_PTYPE_L3_IPV4_EXT => print!("IPv4-Ext,"),
+        ffi::RTE_PTYPE_L3_IPV6 => print!("IPv6,"),
+        ffi::RTE_PTYPE_L3_IPV6_EXT => print!("IPv6-Ext,"),
+        _ => print!("Other L3 ({}),", ptype & ffi::RTE_PTYPE_L3_MASK),
+    }
+    match ptype & ffi::RTE_PTYPE_L4_MASK {
+        ffi::RTE_PTYPE_L4_UDP => println!("UDP"),
+        ffi::RTE_PTYPE_L4_TCP => println!("TCP"),
+        ffi::RTE_PTYPE_L4_SCTP => println!("SCTP"),
+        ffi::RTE_PTYPE_L4_ICMP => println!("ICMP"),
+        ffi::RTE_PTYPE_L4_FRAG => println!("Fragment"),
+        _ => println!("Other L4 ({})", ptype & ffi::RTE_PTYPE_L4_MASK),
+    }
+}
+
+unsafe fn dump_mbuf(m: &ffi::rte_mbuf) {
+    let mut hdr_lens: ffi::rte_net_hdr_lens = std::mem::zeroed();
+    let ptype = dpdk::net::get_ptype(m, &mut hdr_lens,
+                                     ffi::RTE_PTYPE_ALL_MASK);
+    dump_packet_type(ptype);
+    print!("l2_len {},", hdr_lens.l2_len);
+    print!("l3_len {},", hdr_lens.l3_len);
+    println!("l4_len {}", hdr_lens.l4_len);
 }
 
 unsafe extern "C" fn l2fwd_main_loop(arg: *mut c_void) -> i32 {
@@ -44,6 +80,9 @@ unsafe extern "C" fn l2fwd_main_loop(arg: *mut c_void) -> i32 {
             }
             let buffer = &mut buffers[*out_port as usize];
             for i in 0..nb_rx as usize {
+                if DUMP_FLAG == true {
+                    dump_mbuf(&*pkts[i]);
+                }
                 (*pkts[i]).refcnt_update(1);
                 let sent = buffer.tx(*out_port, 0, pkts[i]);
                 if sent < 1 {
@@ -64,7 +103,8 @@ fn main() {
     unsafe {
         let pool: *mut ffi::rte_mempool;
         let mut opts = Options::new();
-        opts.optopt("p", "", "set port bitmap", "PORT");
+        opts.optopt("p", "portmap", "set port bitmap", "PORTMAP");
+        opts.optflag("d", "dump", "show packet mbuf dump");
 
         let exargs = dpdk::eal::init(std::env::args());
         if exargs.is_none() == true {
@@ -75,6 +115,9 @@ fn main() {
             Ok(m) => { m }
             Err(f) => { panic!(f.to_string()) }
         };
+        if matches.opt_present("d") {
+            DUMP_FLAG = true;
+        }
         let mut portmap = matches.opt_str("p")
             .unwrap()
             .parse::<u32>()
