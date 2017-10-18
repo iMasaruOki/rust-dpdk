@@ -11,6 +11,7 @@ pub mod eth;
 pub mod lcore;
 pub mod mbuf;
 pub mod mempool;
+pub mod net;
 pub mod pktmbuf;
 pub mod ring;
 pub mod socket;
