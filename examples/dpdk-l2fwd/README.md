@@ -5,7 +5,7 @@
 To generate the bindings from scratch, use:
 
 ```
-rustup run nightly cargo build
+cargo +nightly build
 ```
 ## Running
 

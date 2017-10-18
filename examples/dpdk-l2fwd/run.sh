@@ -28,11 +28,13 @@ sudo env RUST_BACKTRACE=1 ./target/debug/dpdk-l2fwd -cf -n2 \
  --vdev net_af_packet0,iface=tap-ns1 \
  --vdev net_af_packet1,iface=tap-ns2 \
  --vdev net_af_packet2,iface=tap-ns3 \
--- -p7 &
+-- -p7 $* &
 
 # comunication test
 sudo ip netns exec ns1 ping -c 3 114.0.0.2  #1->2 OK
 sudo ip netns exec ns1 ping -c 3 114.0.0.3  #1->3 OK
+sudo ip netns exec ns1 arping -c 3 114.0.0.2  #1->2 OK
+sudo ip netns exec ns1 arping -c 3 114.0.0.3  #1->3 OK
 
 # cleanup
 sudo pkill -TERM dpdk-l2fwd
