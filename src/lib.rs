@@ -8,6 +8,7 @@ pub mod ffi;
 pub mod atomic;
 pub mod eal;
 pub mod eth;
+pub mod flow;
 pub mod lcore;
 pub mod mbuf;
 pub mod mempool;
