@@ -40,8 +40,8 @@ pub unsafe fn free_seg(m: *mut rte_mbuf) {
     }
 }
 
-pub unsafe fn free(m: *mut rte_mbuf) {
-    let mut n = m;
+pub unsafe fn free(m: &mut rte_mbuf) {
+    let mut n = m as *mut rte_mbuf;
     while n.is_null() != true {
         let m_next = (*n).next;
         free_seg(n);
