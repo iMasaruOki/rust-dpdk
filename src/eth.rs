@@ -84,12 +84,14 @@ pub unsafe fn promiscuous_set(port_id: u8, onoff: bool) {
 }
 
 pub unsafe fn rx_burst(port_id: u8, queue_id: u16,
-                       rx_pkts: *mut *mut ffi::rte_mbuf,
+                       rx_pkts: *mut &mut ffi::rte_mbuf,
                        nb_pkts: u16) -> i16 {
     let dev = devices(port_id);
     let queue = *(*dev.data).rx_queues.offset(queue_id as isize)
         as *mut ::std::os::raw::c_void;
-    let nb_rx = (dev.rx_pkt_burst.unwrap())(queue, rx_pkts, nb_pkts);
+    let nb_rx = (dev.rx_pkt_burst.unwrap())(queue,
+                                            rx_pkts as *mut *mut ffi::rte_mbuf,
+                                            nb_pkts);
     nb_rx as i16
 }
 
