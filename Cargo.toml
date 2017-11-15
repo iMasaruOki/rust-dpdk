@@ -1,6 +1,6 @@
 [package]
 name = "rust-dpdk"
-version = "0.1.0"
+version = "0.2.0"
 authors = ["Robert Clipsham <robert@octarineparrot.com>",
 	   "Masaru OKI <oki@pontonetworks.com>"]
 homepage = "http://dpdk.org/"
