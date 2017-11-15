@@ -119,7 +119,7 @@ impl tx_buffer {
         ffi::rte_eth_tx_buffer_init(self as *mut tx_buffer, size);
     }
 
-    pub unsafe fn flush(&mut self, port: Port, queue_id: u16) -> u16 {
+    pub unsafe fn flush(&mut self, port: &Port, queue_id: u16) -> u16 {
         let to_send = self.length;
         if to_send == 0 {
             return 0;
@@ -130,7 +130,7 @@ impl tx_buffer {
         sent
     }
 
-    pub unsafe fn tx(&mut self, port: Port, queue_id: u16,
+    pub unsafe fn tx(&mut self, port: &Port, queue_id: u16,
                      tx_pkt: *mut ffi::rte_mbuf) -> u16 {
         *self.pkts.as_mut_ptr().offset(self.length as isize) = tx_pkt;
         self.length += 1;
