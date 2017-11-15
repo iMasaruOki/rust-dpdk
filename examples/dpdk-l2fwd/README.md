@@ -5,7 +5,7 @@
 To generate the bindings from scratch, use:
 
 ```
-env RTE_SDK=path_to_dpdk_top cargo build
+cargo +nightly build
 ```
 ## Running
 

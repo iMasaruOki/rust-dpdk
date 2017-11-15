@@ -211,6 +211,228 @@ pub const TMP_MAX: ::std::os::raw::c_uint = 238328;
 pub const FILENAME_MAX: ::std::os::raw::c_uint = 4096;
 pub const L_ctermid: ::std::os::raw::c_uint = 9;
 pub const FOPEN_MAX: ::std::os::raw::c_uint = 16;
+pub const _TERMIOS_H: ::std::os::raw::c_uint = 1;
+pub const NCCS: ::std::os::raw::c_uint = 32;
+pub const _HAVE_STRUCT_TERMIOS_C_ISPEED: ::std::os::raw::c_uint = 1;
+pub const _HAVE_STRUCT_TERMIOS_C_OSPEED: ::std::os::raw::c_uint = 1;
+pub const VINTR: ::std::os::raw::c_uint = 0;
+pub const VQUIT: ::std::os::raw::c_uint = 1;
+pub const VERASE: ::std::os::raw::c_uint = 2;
+pub const VKILL: ::std::os::raw::c_uint = 3;
+pub const VEOF: ::std::os::raw::c_uint = 4;
+pub const VTIME: ::std::os::raw::c_uint = 5;
+pub const VMIN: ::std::os::raw::c_uint = 6;
+pub const VSWTC: ::std::os::raw::c_uint = 7;
+pub const VSTART: ::std::os::raw::c_uint = 8;
+pub const VSTOP: ::std::os::raw::c_uint = 9;
+pub const VSUSP: ::std::os::raw::c_uint = 10;
+pub const VEOL: ::std::os::raw::c_uint = 11;
+pub const VREPRINT: ::std::os::raw::c_uint = 12;
+pub const VDISCARD: ::std::os::raw::c_uint = 13;
+pub const VWERASE: ::std::os::raw::c_uint = 14;
+pub const VLNEXT: ::std::os::raw::c_uint = 15;
+pub const VEOL2: ::std::os::raw::c_uint = 16;
+pub const IGNBRK: ::std::os::raw::c_uint = 1;
+pub const BRKINT: ::std::os::raw::c_uint = 2;
+pub const IGNPAR: ::std::os::raw::c_uint = 4;
+pub const PARMRK: ::std::os::raw::c_uint = 8;
+pub const INPCK: ::std::os::raw::c_uint = 16;
+pub const ISTRIP: ::std::os::raw::c_uint = 32;
+pub const INLCR: ::std::os::raw::c_uint = 64;
+pub const IGNCR: ::std::os::raw::c_uint = 128;
+pub const ICRNL: ::std::os::raw::c_uint = 256;
+pub const IUCLC: ::std::os::raw::c_uint = 512;
+pub const IXON: ::std::os::raw::c_uint = 1024;
+pub const IXANY: ::std::os::raw::c_uint = 2048;
+pub const IXOFF: ::std::os::raw::c_uint = 4096;
+pub const IMAXBEL: ::std::os::raw::c_uint = 8192;
+pub const IUTF8: ::std::os::raw::c_uint = 16384;
+pub const OPOST: ::std::os::raw::c_uint = 1;
+pub const OLCUC: ::std::os::raw::c_uint = 2;
+pub const ONLCR: ::std::os::raw::c_uint = 4;
+pub const OCRNL: ::std::os::raw::c_uint = 8;
+pub const ONOCR: ::std::os::raw::c_uint = 16;
+pub const ONLRET: ::std::os::raw::c_uint = 32;
+pub const OFILL: ::std::os::raw::c_uint = 64;
+pub const OFDEL: ::std::os::raw::c_uint = 128;
+pub const NLDLY: ::std::os::raw::c_uint = 256;
+pub const NL0: ::std::os::raw::c_uint = 0;
+pub const NL1: ::std::os::raw::c_uint = 256;
+pub const CRDLY: ::std::os::raw::c_uint = 1536;
+pub const CR0: ::std::os::raw::c_uint = 0;
+pub const CR1: ::std::os::raw::c_uint = 512;
+pub const CR2: ::std::os::raw::c_uint = 1024;
+pub const CR3: ::std::os::raw::c_uint = 1536;
+pub const TABDLY: ::std::os::raw::c_uint = 6144;
+pub const TAB0: ::std::os::raw::c_uint = 0;
+pub const TAB1: ::std::os::raw::c_uint = 2048;
+pub const TAB2: ::std::os::raw::c_uint = 4096;
+pub const TAB3: ::std::os::raw::c_uint = 6144;
+pub const BSDLY: ::std::os::raw::c_uint = 8192;
+pub const BS0: ::std::os::raw::c_uint = 0;
+pub const BS1: ::std::os::raw::c_uint = 8192;
+pub const FFDLY: ::std::os::raw::c_uint = 32768;
+pub const FF0: ::std::os::raw::c_uint = 0;
+pub const FF1: ::std::os::raw::c_uint = 32768;
+pub const VTDLY: ::std::os::raw::c_uint = 16384;
+pub const VT0: ::std::os::raw::c_uint = 0;
+pub const VT1: ::std::os::raw::c_uint = 16384;
+pub const XTABS: ::std::os::raw::c_uint = 6144;
+pub const CBAUD: ::std::os::raw::c_uint = 4111;
+pub const B0: ::std::os::raw::c_uint = 0;
+pub const B50: ::std::os::raw::c_uint = 1;
+pub const B75: ::std::os::raw::c_uint = 2;
+pub const B110: ::std::os::raw::c_uint = 3;
+pub const B134: ::std::os::raw::c_uint = 4;
+pub const B150: ::std::os::raw::c_uint = 5;
+pub const B200: ::std::os::raw::c_uint = 6;
+pub const B300: ::std::os::raw::c_uint = 7;
+pub const B600: ::std::os::raw::c_uint = 8;
+pub const B1200: ::std::os::raw::c_uint = 9;
+pub const B1800: ::std::os::raw::c_uint = 10;
+pub const B2400: ::std::os::raw::c_uint = 11;
+pub const B4800: ::std::os::raw::c_uint = 12;
+pub const B9600: ::std::os::raw::c_uint = 13;
+pub const B19200: ::std::os::raw::c_uint = 14;
+pub const B38400: ::std::os::raw::c_uint = 15;
+pub const EXTA: ::std::os::raw::c_uint = 14;
+pub const EXTB: ::std::os::raw::c_uint = 15;
+pub const CSIZE: ::std::os::raw::c_uint = 48;
+pub const CS5: ::std::os::raw::c_uint = 0;
+pub const CS6: ::std::os::raw::c_uint = 16;
+pub const CS7: ::std::os::raw::c_uint = 32;
+pub const CS8: ::std::os::raw::c_uint = 48;
+pub const CSTOPB: ::std::os::raw::c_uint = 64;
+pub const CREAD: ::std::os::raw::c_uint = 128;
+pub const PARENB: ::std::os::raw::c_uint = 256;
+pub const PARODD: ::std::os::raw::c_uint = 512;
+pub const HUPCL: ::std::os::raw::c_uint = 1024;
+pub const CLOCAL: ::std::os::raw::c_uint = 2048;
+pub const CBAUDEX: ::std::os::raw::c_uint = 4096;
+pub const B57600: ::std::os::raw::c_uint = 4097;
+pub const B115200: ::std::os::raw::c_uint = 4098;
+pub const B230400: ::std::os::raw::c_uint = 4099;
+pub const B460800: ::std::os::raw::c_uint = 4100;
+pub const B500000: ::std::os::raw::c_uint = 4101;
+pub const B576000: ::std::os::raw::c_uint = 4102;
+pub const B921600: ::std::os::raw::c_uint = 4103;
+pub const B1000000: ::std::os::raw::c_uint = 4104;
+pub const B1152000: ::std::os::raw::c_uint = 4105;
+pub const B1500000: ::std::os::raw::c_uint = 4106;
+pub const B2000000: ::std::os::raw::c_uint = 4107;
+pub const B2500000: ::std::os::raw::c_uint = 4108;
+pub const B3000000: ::std::os::raw::c_uint = 4109;
+pub const B3500000: ::std::os::raw::c_uint = 4110;
+pub const B4000000: ::std::os::raw::c_uint = 4111;
+pub const __MAX_BAUD: ::std::os::raw::c_uint = 4111;
+pub const CIBAUD: ::std::os::raw::c_uint = 269418496;
+pub const CMSPAR: ::std::os::raw::c_uint = 1073741824;
+pub const CRTSCTS: ::std::os::raw::c_uint = 2147483648;
+pub const ISIG: ::std::os::raw::c_uint = 1;
+pub const ICANON: ::std::os::raw::c_uint = 2;
+pub const XCASE: ::std::os::raw::c_uint = 4;
+pub const ECHO: ::std::os::raw::c_uint = 8;
+pub const ECHOE: ::std::os::raw::c_uint = 16;
+pub const ECHOK: ::std::os::raw::c_uint = 32;
+pub const ECHONL: ::std::os::raw::c_uint = 64;
+pub const NOFLSH: ::std::os::raw::c_uint = 128;
+pub const TOSTOP: ::std::os::raw::c_uint = 256;
+pub const ECHOCTL: ::std::os::raw::c_uint = 512;
+pub const ECHOPRT: ::std::os::raw::c_uint = 1024;
+pub const ECHOKE: ::std::os::raw::c_uint = 2048;
+pub const FLUSHO: ::std::os::raw::c_uint = 4096;
+pub const PENDIN: ::std::os::raw::c_uint = 16384;
+pub const IEXTEN: ::std::os::raw::c_uint = 32768;
+pub const EXTPROC: ::std::os::raw::c_uint = 65536;
+pub const TCOOFF: ::std::os::raw::c_uint = 0;
+pub const TCOON: ::std::os::raw::c_uint = 1;
+pub const TCIOFF: ::std::os::raw::c_uint = 2;
+pub const TCION: ::std::os::raw::c_uint = 3;
+pub const TCIFLUSH: ::std::os::raw::c_uint = 0;
+pub const TCOFLUSH: ::std::os::raw::c_uint = 1;
+pub const TCIOFLUSH: ::std::os::raw::c_uint = 2;
+pub const TCSANOW: ::std::os::raw::c_uint = 0;
+pub const TCSADRAIN: ::std::os::raw::c_uint = 1;
+pub const TCSAFLUSH: ::std::os::raw::c_uint = 2;
+pub const TTYDEF_IFLAG: ::std::os::raw::c_uint = 11554;
+pub const TTYDEF_OFLAG: ::std::os::raw::c_uint = 6149;
+pub const TTYDEF_LFLAG: ::std::os::raw::c_uint = 35355;
+pub const TTYDEF_CFLAG: ::std::os::raw::c_uint = 1440;
+pub const TTYDEF_SPEED: ::std::os::raw::c_uint = 13;
+pub const CEOL: u8 = b'\x00';
+pub const CERASE: ::std::os::raw::c_uint = 127;
+pub const CSTATUS: u8 = b'\x00';
+pub const CMIN: ::std::os::raw::c_uint = 1;
+pub const CQUIT: ::std::os::raw::c_uint = 28;
+pub const CTIME: ::std::os::raw::c_uint = 0;
+pub const CBRK: u8 = b'\x00';
+pub const vt100_bell: &'static [u8; 2usize] = b"\x07\x00";
+pub const vt100_bs: &'static [u8; 2usize] = b"\x08\x00";
+pub const vt100_bs_clear: &'static [u8; 7usize] = b"\x08 \\010\x00";
+pub const vt100_tab: &'static [u8; 2usize] = b"\t\x00";
+pub const vt100_crnl: &'static [u8; 3usize] = b"\n\r\x00";
+pub const vt100_clear_right: &'static [u8; 5usize] = b"\x1b[0K\x00";
+pub const vt100_clear_left: &'static [u8; 5usize] = b"\x1b[1K\x00";
+pub const vt100_clear_down: &'static [u8; 5usize] = b"\x1b[0J\x00";
+pub const vt100_clear_up: &'static [u8; 5usize] = b"\x1b[1J\x00";
+pub const vt100_clear_line: &'static [u8; 5usize] = b"\x1b[2K\x00";
+pub const vt100_clear_screen: &'static [u8; 5usize] = b"\x1b[2J\x00";
+pub const vt100_up_arr: &'static [u8; 4usize] = b"\x1b[A\x00";
+pub const vt100_down_arr: &'static [u8; 4usize] = b"\x1b[B\x00";
+pub const vt100_right_arr: &'static [u8; 4usize] = b"\x1b[C\x00";
+pub const vt100_left_arr: &'static [u8; 4usize] = b"\x1b[D\x00";
+pub const vt100_multi_right: &'static [u8; 6usize] = b"\x1b[%uC\x00";
+pub const vt100_multi_left: &'static [u8; 6usize] = b"\x1b[%uD\x00";
+pub const vt100_suppr: &'static [u8; 5usize] = b"\x1b[3~\x00";
+pub const vt100_home: &'static [u8; 8usize] = b"\x1bM\\033E\x00";
+pub const vt100_word_left: &'static [u8; 3usize] = b"\x1bb\x00";
+pub const vt100_word_right: &'static [u8; 3usize] = b"\x1bf\x00";
+pub const CMDLINE_KEY_UP_ARR: ::std::os::raw::c_uint = 0;
+pub const CMDLINE_KEY_DOWN_ARR: ::std::os::raw::c_uint = 1;
+pub const CMDLINE_KEY_RIGHT_ARR: ::std::os::raw::c_uint = 2;
+pub const CMDLINE_KEY_LEFT_ARR: ::std::os::raw::c_uint = 3;
+pub const CMDLINE_KEY_BKSPACE: ::std::os::raw::c_uint = 4;
+pub const CMDLINE_KEY_RETURN: ::std::os::raw::c_uint = 5;
+pub const CMDLINE_KEY_CTRL_A: ::std::os::raw::c_uint = 6;
+pub const CMDLINE_KEY_CTRL_E: ::std::os::raw::c_uint = 7;
+pub const CMDLINE_KEY_CTRL_K: ::std::os::raw::c_uint = 8;
+pub const CMDLINE_KEY_CTRL_Y: ::std::os::raw::c_uint = 9;
+pub const CMDLINE_KEY_CTRL_C: ::std::os::raw::c_uint = 10;
+pub const CMDLINE_KEY_CTRL_F: ::std::os::raw::c_uint = 11;
+pub const CMDLINE_KEY_CTRL_B: ::std::os::raw::c_uint = 12;
+pub const CMDLINE_KEY_SUPPR: ::std::os::raw::c_uint = 13;
+pub const CMDLINE_KEY_TAB: ::std::os::raw::c_uint = 14;
+pub const CMDLINE_KEY_CTRL_D: ::std::os::raw::c_uint = 15;
+pub const CMDLINE_KEY_CTRL_L: ::std::os::raw::c_uint = 16;
+pub const CMDLINE_KEY_RETURN2: ::std::os::raw::c_uint = 17;
+pub const CMDLINE_KEY_META_BKSPACE: ::std::os::raw::c_uint = 18;
+pub const CMDLINE_KEY_WLEFT: ::std::os::raw::c_uint = 19;
+pub const CMDLINE_KEY_WRIGHT: ::std::os::raw::c_uint = 20;
+pub const CMDLINE_KEY_HELP: ::std::os::raw::c_uint = 21;
+pub const CMDLINE_KEY_CTRL_W: ::std::os::raw::c_uint = 22;
+pub const CMDLINE_KEY_CTRL_P: ::std::os::raw::c_uint = 23;
+pub const CMDLINE_KEY_CTRL_N: ::std::os::raw::c_uint = 24;
+pub const CMDLINE_KEY_META_D: ::std::os::raw::c_uint = 25;
+pub const CMDLINE_VT100_BUF_SIZE: ::std::os::raw::c_uint = 8;
+pub const RDLINE_BUF_SIZE: ::std::os::raw::c_uint = 512;
+pub const RDLINE_PROMPT_SIZE: ::std::os::raw::c_uint = 32;
+pub const RDLINE_VT100_BUF_SIZE: ::std::os::raw::c_uint = 8;
+pub const RDLINE_HISTORY_BUF_SIZE: ::std::os::raw::c_uint = 8192;
+pub const RDLINE_HISTORY_MAX_LINE: ::std::os::raw::c_uint = 64;
+pub const RDLINE_RES_SUCCESS: ::std::os::raw::c_uint = 0;
+pub const RDLINE_RES_VALIDATED: ::std::os::raw::c_uint = 1;
+pub const RDLINE_RES_COMPLETE: ::std::os::raw::c_uint = 2;
+pub const RDLINE_RES_NOT_RUNNING: ::std::os::raw::c_int = -1;
+pub const RDLINE_RES_EOF: ::std::os::raw::c_int = -2;
+pub const RDLINE_RES_EXITED: ::std::os::raw::c_int = -3;
+pub const CMDLINE_PARSE_SUCCESS: ::std::os::raw::c_uint = 0;
+pub const CMDLINE_PARSE_AMBIGUOUS: ::std::os::raw::c_int = -1;
+pub const CMDLINE_PARSE_NOMATCH: ::std::os::raw::c_int = -2;
+pub const CMDLINE_PARSE_BAD_ARGS: ::std::os::raw::c_int = -3;
+pub const CMDLINE_PARSE_COMPLETE_FINISHED: ::std::os::raw::c_uint = 0;
+pub const CMDLINE_PARSE_COMPLETE_AGAIN: ::std::os::raw::c_uint = 1;
+pub const CMDLINE_PARSE_COMPLETED_BUFFER: ::std::os::raw::c_uint = 2;
+pub const CMDLINE_PARSE_RESULT_BUFSIZE: ::std::os::raw::c_uint = 8192;
 pub const _NETINET_IN_H: ::std::os::raw::c_uint = 1;
 pub const _SYS_SOCKET_H: ::std::os::raw::c_uint = 1;
 pub const _SYS_UIO_H: ::std::os::raw::c_uint = 1;
@@ -544,228 +766,6 @@ pub const IN_CLASSC_HOST: ::std::os::raw::c_uint = 255;
 pub const IN_LOOPBACKNET: ::std::os::raw::c_uint = 127;
 pub const INET_ADDRSTRLEN: ::std::os::raw::c_uint = 16;
 pub const INET6_ADDRSTRLEN: ::std::os::raw::c_uint = 46;
-pub const _TERMIOS_H: ::std::os::raw::c_uint = 1;
-pub const NCCS: ::std::os::raw::c_uint = 32;
-pub const _HAVE_STRUCT_TERMIOS_C_ISPEED: ::std::os::raw::c_uint = 1;
-pub const _HAVE_STRUCT_TERMIOS_C_OSPEED: ::std::os::raw::c_uint = 1;
-pub const VINTR: ::std::os::raw::c_uint = 0;
-pub const VQUIT: ::std::os::raw::c_uint = 1;
-pub const VERASE: ::std::os::raw::c_uint = 2;
-pub const VKILL: ::std::os::raw::c_uint = 3;
-pub const VEOF: ::std::os::raw::c_uint = 4;
-pub const VTIME: ::std::os::raw::c_uint = 5;
-pub const VMIN: ::std::os::raw::c_uint = 6;
-pub const VSWTC: ::std::os::raw::c_uint = 7;
-pub const VSTART: ::std::os::raw::c_uint = 8;
-pub const VSTOP: ::std::os::raw::c_uint = 9;
-pub const VSUSP: ::std::os::raw::c_uint = 10;
-pub const VEOL: ::std::os::raw::c_uint = 11;
-pub const VREPRINT: ::std::os::raw::c_uint = 12;
-pub const VDISCARD: ::std::os::raw::c_uint = 13;
-pub const VWERASE: ::std::os::raw::c_uint = 14;
-pub const VLNEXT: ::std::os::raw::c_uint = 15;
-pub const VEOL2: ::std::os::raw::c_uint = 16;
-pub const IGNBRK: ::std::os::raw::c_uint = 1;
-pub const BRKINT: ::std::os::raw::c_uint = 2;
-pub const IGNPAR: ::std::os::raw::c_uint = 4;
-pub const PARMRK: ::std::os::raw::c_uint = 8;
-pub const INPCK: ::std::os::raw::c_uint = 16;
-pub const ISTRIP: ::std::os::raw::c_uint = 32;
-pub const INLCR: ::std::os::raw::c_uint = 64;
-pub const IGNCR: ::std::os::raw::c_uint = 128;
-pub const ICRNL: ::std::os::raw::c_uint = 256;
-pub const IUCLC: ::std::os::raw::c_uint = 512;
-pub const IXON: ::std::os::raw::c_uint = 1024;
-pub const IXANY: ::std::os::raw::c_uint = 2048;
-pub const IXOFF: ::std::os::raw::c_uint = 4096;
-pub const IMAXBEL: ::std::os::raw::c_uint = 8192;
-pub const IUTF8: ::std::os::raw::c_uint = 16384;
-pub const OPOST: ::std::os::raw::c_uint = 1;
-pub const OLCUC: ::std::os::raw::c_uint = 2;
-pub const ONLCR: ::std::os::raw::c_uint = 4;
-pub const OCRNL: ::std::os::raw::c_uint = 8;
-pub const ONOCR: ::std::os::raw::c_uint = 16;
-pub const ONLRET: ::std::os::raw::c_uint = 32;
-pub const OFILL: ::std::os::raw::c_uint = 64;
-pub const OFDEL: ::std::os::raw::c_uint = 128;
-pub const NLDLY: ::std::os::raw::c_uint = 256;
-pub const NL0: ::std::os::raw::c_uint = 0;
-pub const NL1: ::std::os::raw::c_uint = 256;
-pub const CRDLY: ::std::os::raw::c_uint = 1536;
-pub const CR0: ::std::os::raw::c_uint = 0;
-pub const CR1: ::std::os::raw::c_uint = 512;
-pub const CR2: ::std::os::raw::c_uint = 1024;
-pub const CR3: ::std::os::raw::c_uint = 1536;
-pub const TABDLY: ::std::os::raw::c_uint = 6144;
-pub const TAB0: ::std::os::raw::c_uint = 0;
-pub const TAB1: ::std::os::raw::c_uint = 2048;
-pub const TAB2: ::std::os::raw::c_uint = 4096;
-pub const TAB3: ::std::os::raw::c_uint = 6144;
-pub const BSDLY: ::std::os::raw::c_uint = 8192;
-pub const BS0: ::std::os::raw::c_uint = 0;
-pub const BS1: ::std::os::raw::c_uint = 8192;
-pub const FFDLY: ::std::os::raw::c_uint = 32768;
-pub const FF0: ::std::os::raw::c_uint = 0;
-pub const FF1: ::std::os::raw::c_uint = 32768;
-pub const VTDLY: ::std::os::raw::c_uint = 16384;
-pub const VT0: ::std::os::raw::c_uint = 0;
-pub const VT1: ::std::os::raw::c_uint = 16384;
-pub const XTABS: ::std::os::raw::c_uint = 6144;
-pub const CBAUD: ::std::os::raw::c_uint = 4111;
-pub const B0: ::std::os::raw::c_uint = 0;
-pub const B50: ::std::os::raw::c_uint = 1;
-pub const B75: ::std::os::raw::c_uint = 2;
-pub const B110: ::std::os::raw::c_uint = 3;
-pub const B134: ::std::os::raw::c_uint = 4;
-pub const B150: ::std::os::raw::c_uint = 5;
-pub const B200: ::std::os::raw::c_uint = 6;
-pub const B300: ::std::os::raw::c_uint = 7;
-pub const B600: ::std::os::raw::c_uint = 8;
-pub const B1200: ::std::os::raw::c_uint = 9;
-pub const B1800: ::std::os::raw::c_uint = 10;
-pub const B2400: ::std::os::raw::c_uint = 11;
-pub const B4800: ::std::os::raw::c_uint = 12;
-pub const B9600: ::std::os::raw::c_uint = 13;
-pub const B19200: ::std::os::raw::c_uint = 14;
-pub const B38400: ::std::os::raw::c_uint = 15;
-pub const EXTA: ::std::os::raw::c_uint = 14;
-pub const EXTB: ::std::os::raw::c_uint = 15;
-pub const CSIZE: ::std::os::raw::c_uint = 48;
-pub const CS5: ::std::os::raw::c_uint = 0;
-pub const CS6: ::std::os::raw::c_uint = 16;
-pub const CS7: ::std::os::raw::c_uint = 32;
-pub const CS8: ::std::os::raw::c_uint = 48;
-pub const CSTOPB: ::std::os::raw::c_uint = 64;
-pub const CREAD: ::std::os::raw::c_uint = 128;
-pub const PARENB: ::std::os::raw::c_uint = 256;
-pub const PARODD: ::std::os::raw::c_uint = 512;
-pub const HUPCL: ::std::os::raw::c_uint = 1024;
-pub const CLOCAL: ::std::os::raw::c_uint = 2048;
-pub const CBAUDEX: ::std::os::raw::c_uint = 4096;
-pub const B57600: ::std::os::raw::c_uint = 4097;
-pub const B115200: ::std::os::raw::c_uint = 4098;
-pub const B230400: ::std::os::raw::c_uint = 4099;
-pub const B460800: ::std::os::raw::c_uint = 4100;
-pub const B500000: ::std::os::raw::c_uint = 4101;
-pub const B576000: ::std::os::raw::c_uint = 4102;
-pub const B921600: ::std::os::raw::c_uint = 4103;
-pub const B1000000: ::std::os::raw::c_uint = 4104;
-pub const B1152000: ::std::os::raw::c_uint = 4105;
-pub const B1500000: ::std::os::raw::c_uint = 4106;
-pub const B2000000: ::std::os::raw::c_uint = 4107;
-pub const B2500000: ::std::os::raw::c_uint = 4108;
-pub const B3000000: ::std::os::raw::c_uint = 4109;
-pub const B3500000: ::std::os::raw::c_uint = 4110;
-pub const B4000000: ::std::os::raw::c_uint = 4111;
-pub const __MAX_BAUD: ::std::os::raw::c_uint = 4111;
-pub const CIBAUD: ::std::os::raw::c_uint = 269418496;
-pub const CMSPAR: ::std::os::raw::c_uint = 1073741824;
-pub const CRTSCTS: ::std::os::raw::c_uint = 2147483648;
-pub const ISIG: ::std::os::raw::c_uint = 1;
-pub const ICANON: ::std::os::raw::c_uint = 2;
-pub const XCASE: ::std::os::raw::c_uint = 4;
-pub const ECHO: ::std::os::raw::c_uint = 8;
-pub const ECHOE: ::std::os::raw::c_uint = 16;
-pub const ECHOK: ::std::os::raw::c_uint = 32;
-pub const ECHONL: ::std::os::raw::c_uint = 64;
-pub const NOFLSH: ::std::os::raw::c_uint = 128;
-pub const TOSTOP: ::std::os::raw::c_uint = 256;
-pub const ECHOCTL: ::std::os::raw::c_uint = 512;
-pub const ECHOPRT: ::std::os::raw::c_uint = 1024;
-pub const ECHOKE: ::std::os::raw::c_uint = 2048;
-pub const FLUSHO: ::std::os::raw::c_uint = 4096;
-pub const PENDIN: ::std::os::raw::c_uint = 16384;
-pub const IEXTEN: ::std::os::raw::c_uint = 32768;
-pub const EXTPROC: ::std::os::raw::c_uint = 65536;
-pub const TCOOFF: ::std::os::raw::c_uint = 0;
-pub const TCOON: ::std::os::raw::c_uint = 1;
-pub const TCIOFF: ::std::os::raw::c_uint = 2;
-pub const TCION: ::std::os::raw::c_uint = 3;
-pub const TCIFLUSH: ::std::os::raw::c_uint = 0;
-pub const TCOFLUSH: ::std::os::raw::c_uint = 1;
-pub const TCIOFLUSH: ::std::os::raw::c_uint = 2;
-pub const TCSANOW: ::std::os::raw::c_uint = 0;
-pub const TCSADRAIN: ::std::os::raw::c_uint = 1;
-pub const TCSAFLUSH: ::std::os::raw::c_uint = 2;
-pub const TTYDEF_IFLAG: ::std::os::raw::c_uint = 11554;
-pub const TTYDEF_OFLAG: ::std::os::raw::c_uint = 6149;
-pub const TTYDEF_LFLAG: ::std::os::raw::c_uint = 35355;
-pub const TTYDEF_CFLAG: ::std::os::raw::c_uint = 1440;
-pub const TTYDEF_SPEED: ::std::os::raw::c_uint = 13;
-pub const CEOL: u8 = b'\x00';
-pub const CERASE: ::std::os::raw::c_uint = 127;
-pub const CSTATUS: u8 = b'\x00';
-pub const CMIN: ::std::os::raw::c_uint = 1;
-pub const CQUIT: ::std::os::raw::c_uint = 28;
-pub const CTIME: ::std::os::raw::c_uint = 0;
-pub const CBRK: u8 = b'\x00';
-pub const vt100_bell: &'static [u8; 2usize] = b"\x07\x00";
-pub const vt100_bs: &'static [u8; 2usize] = b"\x08\x00";
-pub const vt100_bs_clear: &'static [u8; 7usize] = b"\x08 \\010\x00";
-pub const vt100_tab: &'static [u8; 2usize] = b"\t\x00";
-pub const vt100_crnl: &'static [u8; 3usize] = b"\n\r\x00";
-pub const vt100_clear_right: &'static [u8; 5usize] = b"\x1b[0K\x00";
-pub const vt100_clear_left: &'static [u8; 5usize] = b"\x1b[1K\x00";
-pub const vt100_clear_down: &'static [u8; 5usize] = b"\x1b[0J\x00";
-pub const vt100_clear_up: &'static [u8; 5usize] = b"\x1b[1J\x00";
-pub const vt100_clear_line: &'static [u8; 5usize] = b"\x1b[2K\x00";
-pub const vt100_clear_screen: &'static [u8; 5usize] = b"\x1b[2J\x00";
-pub const vt100_up_arr: &'static [u8; 4usize] = b"\x1b[A\x00";
-pub const vt100_down_arr: &'static [u8; 4usize] = b"\x1b[B\x00";
-pub const vt100_right_arr: &'static [u8; 4usize] = b"\x1b[C\x00";
-pub const vt100_left_arr: &'static [u8; 4usize] = b"\x1b[D\x00";
-pub const vt100_multi_right: &'static [u8; 6usize] = b"\x1b[%uC\x00";
-pub const vt100_multi_left: &'static [u8; 6usize] = b"\x1b[%uD\x00";
-pub const vt100_suppr: &'static [u8; 5usize] = b"\x1b[3~\x00";
-pub const vt100_home: &'static [u8; 8usize] = b"\x1bM\\033E\x00";
-pub const vt100_word_left: &'static [u8; 3usize] = b"\x1bb\x00";
-pub const vt100_word_right: &'static [u8; 3usize] = b"\x1bf\x00";
-pub const CMDLINE_KEY_UP_ARR: ::std::os::raw::c_uint = 0;
-pub const CMDLINE_KEY_DOWN_ARR: ::std::os::raw::c_uint = 1;
-pub const CMDLINE_KEY_RIGHT_ARR: ::std::os::raw::c_uint = 2;
-pub const CMDLINE_KEY_LEFT_ARR: ::std::os::raw::c_uint = 3;
-pub const CMDLINE_KEY_BKSPACE: ::std::os::raw::c_uint = 4;
-pub const CMDLINE_KEY_RETURN: ::std::os::raw::c_uint = 5;
-pub const CMDLINE_KEY_CTRL_A: ::std::os::raw::c_uint = 6;
-pub const CMDLINE_KEY_CTRL_E: ::std::os::raw::c_uint = 7;
-pub const CMDLINE_KEY_CTRL_K: ::std::os::raw::c_uint = 8;
-pub const CMDLINE_KEY_CTRL_Y: ::std::os::raw::c_uint = 9;
-pub const CMDLINE_KEY_CTRL_C: ::std::os::raw::c_uint = 10;
-pub const CMDLINE_KEY_CTRL_F: ::std::os::raw::c_uint = 11;
-pub const CMDLINE_KEY_CTRL_B: ::std::os::raw::c_uint = 12;
-pub const CMDLINE_KEY_SUPPR: ::std::os::raw::c_uint = 13;
-pub const CMDLINE_KEY_TAB: ::std::os::raw::c_uint = 14;
-pub const CMDLINE_KEY_CTRL_D: ::std::os::raw::c_uint = 15;
-pub const CMDLINE_KEY_CTRL_L: ::std::os::raw::c_uint = 16;
-pub const CMDLINE_KEY_RETURN2: ::std::os::raw::c_uint = 17;
-pub const CMDLINE_KEY_META_BKSPACE: ::std::os::raw::c_uint = 18;
-pub const CMDLINE_KEY_WLEFT: ::std::os::raw::c_uint = 19;
-pub const CMDLINE_KEY_WRIGHT: ::std::os::raw::c_uint = 20;
-pub const CMDLINE_KEY_HELP: ::std::os::raw::c_uint = 21;
-pub const CMDLINE_KEY_CTRL_W: ::std::os::raw::c_uint = 22;
-pub const CMDLINE_KEY_CTRL_P: ::std::os::raw::c_uint = 23;
-pub const CMDLINE_KEY_CTRL_N: ::std::os::raw::c_uint = 24;
-pub const CMDLINE_KEY_META_D: ::std::os::raw::c_uint = 25;
-pub const CMDLINE_VT100_BUF_SIZE: ::std::os::raw::c_uint = 8;
-pub const RDLINE_BUF_SIZE: ::std::os::raw::c_uint = 512;
-pub const RDLINE_PROMPT_SIZE: ::std::os::raw::c_uint = 32;
-pub const RDLINE_VT100_BUF_SIZE: ::std::os::raw::c_uint = 8;
-pub const RDLINE_HISTORY_BUF_SIZE: ::std::os::raw::c_uint = 8192;
-pub const RDLINE_HISTORY_MAX_LINE: ::std::os::raw::c_uint = 64;
-pub const RDLINE_RES_SUCCESS: ::std::os::raw::c_uint = 0;
-pub const RDLINE_RES_VALIDATED: ::std::os::raw::c_uint = 1;
-pub const RDLINE_RES_COMPLETE: ::std::os::raw::c_uint = 2;
-pub const RDLINE_RES_NOT_RUNNING: ::std::os::raw::c_int = -1;
-pub const RDLINE_RES_EOF: ::std::os::raw::c_int = -2;
-pub const RDLINE_RES_EXITED: ::std::os::raw::c_int = -3;
-pub const CMDLINE_PARSE_SUCCESS: ::std::os::raw::c_uint = 0;
-pub const CMDLINE_PARSE_AMBIGUOUS: ::std::os::raw::c_int = -1;
-pub const CMDLINE_PARSE_NOMATCH: ::std::os::raw::c_int = -2;
-pub const CMDLINE_PARSE_BAD_ARGS: ::std::os::raw::c_int = -3;
-pub const CMDLINE_PARSE_COMPLETE_FINISHED: ::std::os::raw::c_uint = 0;
-pub const CMDLINE_PARSE_COMPLETE_AGAIN: ::std::os::raw::c_uint = 1;
-pub const CMDLINE_PARSE_COMPLETED_BUFFER: ::std::os::raw::c_uint = 2;
-pub const CMDLINE_PARSE_RESULT_BUFSIZE: ::std::os::raw::c_uint = 8192;
 pub const CMDLINE_IPADDR_V4: ::std::os::raw::c_uint = 1;
 pub const CMDLINE_IPADDR_V6: ::std::os::raw::c_uint = 2;
 pub const CMDLINE_IPADDR_NETWORK: ::std::os::raw::c_uint = 4;
@@ -3100,6 +3100,940 @@ extern "C" {
 extern "C" {
     pub fn funlockfile(__stream: *mut FILE);
 }
+/// This structure is the header of a cirbuf type.
+#[repr(C)]
+#[derive(Debug, Copy)]
+pub struct cirbuf {
+    /// < total len of the fifo (number of elements)
+    pub maxlen: ::std::os::raw::c_uint,
+    /// < indice of the first elt
+    pub start: ::std::os::raw::c_uint,
+    /// < indice of the last elt
+    pub end: ::std::os::raw::c_uint,
+    /// < current len of fifo
+    pub len: ::std::os::raw::c_uint,
+    pub buf: *mut ::std::os::raw::c_char,
+}
+#[test]
+fn bindgen_test_layout_cirbuf() {
+    assert_eq!(::std::mem::size_of::<cirbuf>() , 24usize , concat ! (
+               "Size of: " , stringify ! ( cirbuf ) ));
+    assert_eq! (::std::mem::align_of::<cirbuf>() , 8usize , concat ! (
+                "Alignment of " , stringify ! ( cirbuf ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const cirbuf ) ) . maxlen as * const _ as usize
+                } , 0usize , concat ! (
+                "Alignment of field: " , stringify ! ( cirbuf ) , "::" ,
+                stringify ! ( maxlen ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const cirbuf ) ) . start as * const _ as usize
+                } , 4usize , concat ! (
+                "Alignment of field: " , stringify ! ( cirbuf ) , "::" ,
+                stringify ! ( start ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const cirbuf ) ) . end as * const _ as usize }
+                , 8usize , concat ! (
+                "Alignment of field: " , stringify ! ( cirbuf ) , "::" ,
+                stringify ! ( end ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const cirbuf ) ) . len as * const _ as usize }
+                , 12usize , concat ! (
+                "Alignment of field: " , stringify ! ( cirbuf ) , "::" ,
+                stringify ! ( len ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const cirbuf ) ) . buf as * const _ as usize }
+                , 16usize , concat ! (
+                "Alignment of field: " , stringify ! ( cirbuf ) , "::" ,
+                stringify ! ( buf ) ));
+}
+impl Clone for cirbuf {
+    fn clone(&self) -> Self { *self }
+}
+extern "C" {
+    /// Init the circular buffer
+    pub fn cirbuf_init(cbuf: *mut cirbuf, buf: *mut ::std::os::raw::c_char,
+                       start: ::std::os::raw::c_uint,
+                       maxlen: ::std::os::raw::c_uint)
+     -> ::std::os::raw::c_int;
+}
+extern "C" {
+    /// Add a character at head of the circular buffer. Return 0 on success, or
+/// a negative value on error.
+    pub fn cirbuf_add_head_safe(cbuf: *mut cirbuf, c: ::std::os::raw::c_char)
+     -> ::std::os::raw::c_int;
+}
+extern "C" {
+    /// Add a character at head of the circular buffer. You _must_ check that you
+/// have enough free space in the buffer before calling this func.
+    pub fn cirbuf_add_head(cbuf: *mut cirbuf, c: ::std::os::raw::c_char);
+}
+extern "C" {
+    /// Add a character at tail of the circular buffer. Return 0 on success, or
+/// a negative value on error.
+    pub fn cirbuf_add_tail_safe(cbuf: *mut cirbuf, c: ::std::os::raw::c_char)
+     -> ::std::os::raw::c_int;
+}
+extern "C" {
+    /// Add a character at tail of the circular buffer. You _must_ check that you
+/// have enough free space in the buffer before calling this func.
+    pub fn cirbuf_add_tail(cbuf: *mut cirbuf, c: ::std::os::raw::c_char);
+}
+extern "C" {
+    /// Remove a char at the head of the circular buffer. Return 0 on
+/// success, or a negative value on error.
+    pub fn cirbuf_del_head_safe(cbuf: *mut cirbuf) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    /// Remove a char at the head of the circular buffer. You _must_ check
+/// that buffer is not empty before calling the function.
+    pub fn cirbuf_del_head(cbuf: *mut cirbuf);
+}
+extern "C" {
+    /// Remove a char at the tail of the circular buffer. Return 0 on
+/// success, or a negative value on error.
+    pub fn cirbuf_del_tail_safe(cbuf: *mut cirbuf) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    /// Remove a char at the tail of the circular buffer. You _must_ check
+/// that buffer is not empty before calling the function.
+    pub fn cirbuf_del_tail(cbuf: *mut cirbuf);
+}
+extern "C" {
+    /// Return the head of the circular buffer. You _must_ check that
+/// buffer is not empty before calling the function.
+    pub fn cirbuf_get_head(cbuf: *mut cirbuf) -> ::std::os::raw::c_char;
+}
+extern "C" {
+    /// Return the tail of the circular buffer. You _must_ check that
+/// buffer is not empty before calling the function.
+    pub fn cirbuf_get_tail(cbuf: *mut cirbuf) -> ::std::os::raw::c_char;
+}
+extern "C" {
+    /// Add a buffer at head of the circular buffer. 'c' is a pointer to a
+/// buffer, and n is the number of char to add. Return the number of
+/// copied bytes on success, or a negative value on error.
+    pub fn cirbuf_add_buf_head(cbuf: *mut cirbuf,
+                               c: *const ::std::os::raw::c_char,
+                               n: ::std::os::raw::c_uint)
+     -> ::std::os::raw::c_int;
+}
+extern "C" {
+    /// Add a buffer at tail of the circular buffer. 'c' is a pointer to a
+/// buffer, and n is the number of char to add. Return the number of
+/// copied bytes on success, or a negative value on error.
+    pub fn cirbuf_add_buf_tail(cbuf: *mut cirbuf,
+                               c: *const ::std::os::raw::c_char,
+                               n: ::std::os::raw::c_uint)
+     -> ::std::os::raw::c_int;
+}
+extern "C" {
+    /// Remove chars at the head of the circular buffer. Return 0 on
+/// success, or a negative value on error.
+    pub fn cirbuf_del_buf_head(cbuf: *mut cirbuf,
+                               size: ::std::os::raw::c_uint)
+     -> ::std::os::raw::c_int;
+}
+extern "C" {
+    /// Remove chars at the tail of the circular buffer. Return 0 on
+/// success, or a negative value on error.
+    pub fn cirbuf_del_buf_tail(cbuf: *mut cirbuf,
+                               size: ::std::os::raw::c_uint)
+     -> ::std::os::raw::c_int;
+}
+extern "C" {
+    /// Copy a maximum of 'size' characters from the head of the circular
+/// buffer to a flat one pointed by 'c'. Return the number of copied
+/// chars.
+    pub fn cirbuf_get_buf_head(cbuf: *mut cirbuf,
+                               c: *mut ::std::os::raw::c_char,
+                               size: ::std::os::raw::c_uint)
+     -> ::std::os::raw::c_int;
+}
+extern "C" {
+    /// Copy a maximum of 'size' characters from the tail of the circular
+/// buffer to a flat one pointed by 'c'. Return the number of copied
+/// chars.
+    pub fn cirbuf_get_buf_tail(cbuf: *mut cirbuf,
+                               c: *mut ::std::os::raw::c_char,
+                               size: ::std::os::raw::c_uint)
+     -> ::std::os::raw::c_int;
+}
+extern "C" {
+    /// Set the start of the data to the index 0 of the internal buffer.
+    pub fn cirbuf_align_left(cbuf: *mut cirbuf) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    /// Set the end of the data to the last index of the internal buffer.
+    pub fn cirbuf_align_right(cbuf: *mut cirbuf) -> ::std::os::raw::c_int;
+}
+pub type pid_t = __pid_t;
+pub type cc_t = ::std::os::raw::c_uchar;
+pub type speed_t = ::std::os::raw::c_uint;
+pub type tcflag_t = ::std::os::raw::c_uint;
+#[repr(C)]
+#[derive(Debug, Copy)]
+pub struct termios {
+    pub c_iflag: tcflag_t,
+    pub c_oflag: tcflag_t,
+    pub c_cflag: tcflag_t,
+    pub c_lflag: tcflag_t,
+    pub c_line: cc_t,
+    pub c_cc: [cc_t; 32usize],
+    pub c_ispeed: speed_t,
+    pub c_ospeed: speed_t,
+}
+#[test]
+fn bindgen_test_layout_termios() {
+    assert_eq!(::std::mem::size_of::<termios>() , 60usize , concat ! (
+               "Size of: " , stringify ! ( termios ) ));
+    assert_eq! (::std::mem::align_of::<termios>() , 4usize , concat ! (
+                "Alignment of " , stringify ! ( termios ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const termios ) ) . c_iflag as * const _ as
+                usize } , 0usize , concat ! (
+                "Alignment of field: " , stringify ! ( termios ) , "::" ,
+                stringify ! ( c_iflag ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const termios ) ) . c_oflag as * const _ as
+                usize } , 4usize , concat ! (
+                "Alignment of field: " , stringify ! ( termios ) , "::" ,
+                stringify ! ( c_oflag ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const termios ) ) . c_cflag as * const _ as
+                usize } , 8usize , concat ! (
+                "Alignment of field: " , stringify ! ( termios ) , "::" ,
+                stringify ! ( c_cflag ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const termios ) ) . c_lflag as * const _ as
+                usize } , 12usize , concat ! (
+                "Alignment of field: " , stringify ! ( termios ) , "::" ,
+                stringify ! ( c_lflag ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const termios ) ) . c_line as * const _ as
+                usize } , 16usize , concat ! (
+                "Alignment of field: " , stringify ! ( termios ) , "::" ,
+                stringify ! ( c_line ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const termios ) ) . c_cc as * const _ as usize
+                } , 17usize , concat ! (
+                "Alignment of field: " , stringify ! ( termios ) , "::" ,
+                stringify ! ( c_cc ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const termios ) ) . c_ispeed as * const _ as
+                usize } , 52usize , concat ! (
+                "Alignment of field: " , stringify ! ( termios ) , "::" ,
+                stringify ! ( c_ispeed ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const termios ) ) . c_ospeed as * const _ as
+                usize } , 56usize , concat ! (
+                "Alignment of field: " , stringify ! ( termios ) , "::" ,
+                stringify ! ( c_ospeed ) ));
+}
+impl Clone for termios {
+    fn clone(&self) -> Self { *self }
+}
+extern "C" {
+    pub fn cfgetospeed(__termios_p: *const termios) -> speed_t;
+}
+extern "C" {
+    pub fn cfgetispeed(__termios_p: *const termios) -> speed_t;
+}
+extern "C" {
+    pub fn cfsetospeed(__termios_p: *mut termios, __speed: speed_t)
+     -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn cfsetispeed(__termios_p: *mut termios, __speed: speed_t)
+     -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn cfsetspeed(__termios_p: *mut termios, __speed: speed_t)
+     -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn tcgetattr(__fd: ::std::os::raw::c_int, __termios_p: *mut termios)
+     -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn tcsetattr(__fd: ::std::os::raw::c_int,
+                     __optional_actions: ::std::os::raw::c_int,
+                     __termios_p: *const termios) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn cfmakeraw(__termios_p: *mut termios);
+}
+extern "C" {
+    pub fn tcsendbreak(__fd: ::std::os::raw::c_int,
+                       __duration: ::std::os::raw::c_int)
+     -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn tcdrain(__fd: ::std::os::raw::c_int) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn tcflush(__fd: ::std::os::raw::c_int,
+                   __queue_selector: ::std::os::raw::c_int)
+     -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn tcflow(__fd: ::std::os::raw::c_int,
+                  __action: ::std::os::raw::c_int) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn tcgetsid(__fd: ::std::os::raw::c_int) -> __pid_t;
+}
+extern "C" {
+    #[link_name = "cmdline_vt100_commands"]
+    pub static mut cmdline_vt100_commands:
+               [*const ::std::os::raw::c_char; 0usize];
+}
+#[repr(u32)]
+#[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
+pub enum cmdline_vt100_parser_state {
+    CMDLINE_VT100_INIT = 0,
+    CMDLINE_VT100_ESCAPE = 1,
+    CMDLINE_VT100_ESCAPE_CSI = 2,
+}
+#[repr(C)]
+#[derive(Debug, Copy)]
+pub struct cmdline_vt100 {
+    pub bufpos: u8,
+    pub buf: [::std::os::raw::c_char; 8usize],
+    pub state: cmdline_vt100_parser_state,
+}
+#[test]
+fn bindgen_test_layout_cmdline_vt100() {
+    assert_eq!(::std::mem::size_of::<cmdline_vt100>() , 16usize , concat ! (
+               "Size of: " , stringify ! ( cmdline_vt100 ) ));
+    assert_eq! (::std::mem::align_of::<cmdline_vt100>() , 4usize , concat ! (
+                "Alignment of " , stringify ! ( cmdline_vt100 ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const cmdline_vt100 ) ) . bufpos as * const _
+                as usize } , 0usize , concat ! (
+                "Alignment of field: " , stringify ! ( cmdline_vt100 ) , "::"
+                , stringify ! ( bufpos ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const cmdline_vt100 ) ) . buf as * const _ as
+                usize } , 1usize , concat ! (
+                "Alignment of field: " , stringify ! ( cmdline_vt100 ) , "::"
+                , stringify ! ( buf ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const cmdline_vt100 ) ) . state as * const _ as
+                usize } , 12usize , concat ! (
+                "Alignment of field: " , stringify ! ( cmdline_vt100 ) , "::"
+                , stringify ! ( state ) ));
+}
+impl Clone for cmdline_vt100 {
+    fn clone(&self) -> Self { *self }
+}
+extern "C" {
+    /// Init
+    pub fn vt100_init(vt: *mut cmdline_vt100);
+}
+extern "C" {
+    /// Input a new character.
+/// Return -1 if the character is not part of a control sequence
+/// Return -2 if c is not the last char of a control sequence
+/// Else return the index in vt100_commands[]
+    pub fn vt100_parser(vt: *mut cmdline_vt100, c: ::std::os::raw::c_char)
+     -> ::std::os::raw::c_int;
+}
+#[repr(u32)]
+#[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
+pub enum rdline_status {
+    RDLINE_INIT = 0,
+    RDLINE_RUNNING = 1,
+    RDLINE_EXITED = 2,
+}
+#[repr(C)]
+#[derive(Copy)]
+pub struct rdline {
+    pub status: rdline_status,
+    pub left: cirbuf,
+    pub right: cirbuf,
+    pub left_buf: [::std::os::raw::c_char; 514usize],
+    pub right_buf: [::std::os::raw::c_char; 512usize],
+    pub prompt: [::std::os::raw::c_char; 32usize],
+    pub prompt_size: ::std::os::raw::c_uint,
+    pub kill_buf: [::std::os::raw::c_char; 512usize],
+    pub kill_size: ::std::os::raw::c_uint,
+    pub history: cirbuf,
+    pub history_buf: [::std::os::raw::c_char; 8192usize],
+    pub history_cur_line: ::std::os::raw::c_int,
+    pub write_char: rdline_write_char_t,
+    pub validate: rdline_validate_t,
+    pub complete: rdline_complete_t,
+    pub vt100: cmdline_vt100,
+    pub opaque: *mut ::std::os::raw::c_void,
+}
+#[test]
+fn bindgen_test_layout_rdline() {
+    assert_eq!(::std::mem::size_of::<rdline>() , 9912usize , concat ! (
+               "Size of: " , stringify ! ( rdline ) ));
+    assert_eq! (::std::mem::align_of::<rdline>() , 8usize , concat ! (
+                "Alignment of " , stringify ! ( rdline ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rdline ) ) . status as * const _ as usize
+                } , 0usize , concat ! (
+                "Alignment of field: " , stringify ! ( rdline ) , "::" ,
+                stringify ! ( status ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rdline ) ) . left as * const _ as usize }
+                , 8usize , concat ! (
+                "Alignment of field: " , stringify ! ( rdline ) , "::" ,
+                stringify ! ( left ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rdline ) ) . right as * const _ as usize
+                } , 32usize , concat ! (
+                "Alignment of field: " , stringify ! ( rdline ) , "::" ,
+                stringify ! ( right ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rdline ) ) . left_buf as * const _ as
+                usize } , 56usize , concat ! (
+                "Alignment of field: " , stringify ! ( rdline ) , "::" ,
+                stringify ! ( left_buf ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rdline ) ) . right_buf as * const _ as
+                usize } , 570usize , concat ! (
+                "Alignment of field: " , stringify ! ( rdline ) , "::" ,
+                stringify ! ( right_buf ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rdline ) ) . prompt as * const _ as usize
+                } , 1082usize , concat ! (
+                "Alignment of field: " , stringify ! ( rdline ) , "::" ,
+                stringify ! ( prompt ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rdline ) ) . prompt_size as * const _ as
+                usize } , 1116usize , concat ! (
+                "Alignment of field: " , stringify ! ( rdline ) , "::" ,
+                stringify ! ( prompt_size ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rdline ) ) . kill_buf as * const _ as
+                usize } , 1120usize , concat ! (
+                "Alignment of field: " , stringify ! ( rdline ) , "::" ,
+                stringify ! ( kill_buf ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rdline ) ) . kill_size as * const _ as
+                usize } , 1632usize , concat ! (
+                "Alignment of field: " , stringify ! ( rdline ) , "::" ,
+                stringify ! ( kill_size ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rdline ) ) . history as * const _ as
+                usize } , 1640usize , concat ! (
+                "Alignment of field: " , stringify ! ( rdline ) , "::" ,
+                stringify ! ( history ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rdline ) ) . history_buf as * const _ as
+                usize } , 1664usize , concat ! (
+                "Alignment of field: " , stringify ! ( rdline ) , "::" ,
+                stringify ! ( history_buf ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rdline ) ) . history_cur_line as * const
+                _ as usize } , 9856usize , concat ! (
+                "Alignment of field: " , stringify ! ( rdline ) , "::" ,
+                stringify ! ( history_cur_line ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rdline ) ) . write_char as * const _ as
+                usize } , 9864usize , concat ! (
+                "Alignment of field: " , stringify ! ( rdline ) , "::" ,
+                stringify ! ( write_char ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rdline ) ) . validate as * const _ as
+                usize } , 9872usize , concat ! (
+                "Alignment of field: " , stringify ! ( rdline ) , "::" ,
+                stringify ! ( validate ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rdline ) ) . complete as * const _ as
+                usize } , 9880usize , concat ! (
+                "Alignment of field: " , stringify ! ( rdline ) , "::" ,
+                stringify ! ( complete ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rdline ) ) . vt100 as * const _ as usize
+                } , 9888usize , concat ! (
+                "Alignment of field: " , stringify ! ( rdline ) , "::" ,
+                stringify ! ( vt100 ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rdline ) ) . opaque as * const _ as usize
+                } , 9904usize , concat ! (
+                "Alignment of field: " , stringify ! ( rdline ) , "::" ,
+                stringify ! ( opaque ) ));
+}
+impl Clone for rdline {
+    fn clone(&self) -> Self { *self }
+}
+pub type rdline_write_char_t =
+    ::std::option::Option<unsafe extern "C" fn(rdl: *mut rdline,
+                                               arg1: ::std::os::raw::c_char)
+                              -> ::std::os::raw::c_int>;
+pub type rdline_validate_t =
+    ::std::option::Option<unsafe extern "C" fn(rdl: *mut rdline,
+                                               buf:
+                                                   *const ::std::os::raw::c_char,
+                                               size: ::std::os::raw::c_uint)>;
+pub type rdline_complete_t =
+    ::std::option::Option<unsafe extern "C" fn(rdl: *mut rdline,
+                                               buf:
+                                                   *const ::std::os::raw::c_char,
+                                               dstbuf:
+                                                   *mut ::std::os::raw::c_char,
+                                               dstsize:
+                                                   ::std::os::raw::c_uint,
+                                               state:
+                                                   *mut ::std::os::raw::c_int)
+                              -> ::std::os::raw::c_int>;
+extern "C" {
+    /// Init fields for a struct rdline. Call this only once at the beginning
+/// of your program.
+/// \param rdl A pointer to an uninitialized struct rdline
+/// \param write_char The function used by the function to write a character
+/// \param validate A pointer to the function to execute when the
+/// user validates the buffer.
+/// \param complete A pointer to the function to execute when the
+/// user completes the buffer.
+    pub fn rdline_init(rdl: *mut rdline, write_char: rdline_write_char_t,
+                       validate: rdline_validate_t,
+                       complete: rdline_complete_t) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    /// Init the current buffer, and display a prompt.
+/// \param rdl A pointer to a struct rdline
+/// \param prompt A string containing the prompt
+    pub fn rdline_newline(rdl: *mut rdline,
+                          prompt: *const ::std::os::raw::c_char);
+}
+extern "C" {
+    /// Call it and all received chars will be ignored.
+/// \param rdl A pointer to a struct rdline
+    pub fn rdline_stop(rdl: *mut rdline);
+}
+extern "C" {
+    /// Same than rdline_stop() except that next calls to rdline_char_in()
+/// will return RDLINE_RES_EXITED.
+/// \param rdl A pointer to a struct rdline
+    pub fn rdline_quit(rdl: *mut rdline);
+}
+extern "C" {
+    /// Restart after a call to rdline_stop() or rdline_quit()
+/// \param rdl A pointer to a struct rdline
+    pub fn rdline_restart(rdl: *mut rdline);
+}
+extern "C" {
+    /// Redisplay the current buffer
+/// \param rdl A pointer to a struct rdline
+    pub fn rdline_redisplay(rdl: *mut rdline);
+}
+extern "C" {
+    /// Reset the current buffer and setup for a new line.
+/// \param rdl A pointer to a struct rdline
+    pub fn rdline_reset(rdl: *mut rdline);
+}
+extern "C" {
+    /// append a char to the readline buffer.
+/// Return RDLINE_RES_VALIDATE when the line has been validated.
+/// Return RDLINE_RES_COMPLETE when the user asked to complete the buffer.
+/// Return RDLINE_RES_NOT_RUNNING if it is not running.
+/// Return RDLINE_RES_EOF if EOF (ctrl-d on an empty line).
+/// Else return RDLINE_RES_SUCCESS.
+/// XXX error case when the buffer is full ?
+///
+/// \param rdl A pointer to a struct rdline
+/// \param c The character to append
+    pub fn rdline_char_in(rdl: *mut rdline, c: ::std::os::raw::c_char)
+     -> ::std::os::raw::c_int;
+}
+extern "C" {
+    /// Return the current buffer, terminated by '\0'.
+/// \param rdl A pointer to a struct rdline
+    pub fn rdline_get_buffer(rdl: *mut rdline)
+     -> *const ::std::os::raw::c_char;
+}
+extern "C" {
+    /// Add the buffer to history.
+/// return < 0 on error.
+/// \param rdl A pointer to a struct rdline
+/// \param buf A buffer that is terminated by '\0'
+    pub fn rdline_add_history(rdl: *mut rdline,
+                              buf: *const ::std::os::raw::c_char)
+     -> ::std::os::raw::c_int;
+}
+extern "C" {
+    /// Clear current history
+/// \param rdl A pointer to a struct rdline
+    pub fn rdline_clear_history(rdl: *mut rdline);
+}
+extern "C" {
+    /// Get the i-th history item
+    pub fn rdline_get_history_item(rdl: *mut rdline,
+                                   i: ::std::os::raw::c_uint)
+     -> *mut ::std::os::raw::c_char;
+}
+/// Stores a pointer to the ops struct, and the offset: the place to
+/// write the parsed result in the destination structure.
+#[repr(C)]
+#[derive(Debug, Copy)]
+pub struct cmdline_token_hdr {
+    pub ops: *mut cmdline_token_ops,
+    pub offset: ::std::os::raw::c_uint,
+}
+#[test]
+fn bindgen_test_layout_cmdline_token_hdr() {
+    assert_eq!(::std::mem::size_of::<cmdline_token_hdr>() , 16usize , concat !
+               ( "Size of: " , stringify ! ( cmdline_token_hdr ) ));
+    assert_eq! (::std::mem::align_of::<cmdline_token_hdr>() , 8usize , concat
+                ! ( "Alignment of " , stringify ! ( cmdline_token_hdr ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const cmdline_token_hdr ) ) . ops as * const _
+                as usize } , 0usize , concat ! (
+                "Alignment of field: " , stringify ! ( cmdline_token_hdr ) ,
+                "::" , stringify ! ( ops ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const cmdline_token_hdr ) ) . offset as * const
+                _ as usize } , 8usize , concat ! (
+                "Alignment of field: " , stringify ! ( cmdline_token_hdr ) ,
+                "::" , stringify ! ( offset ) ));
+}
+impl Clone for cmdline_token_hdr {
+    fn clone(&self) -> Self { *self }
+}
+pub type cmdline_parse_token_hdr_t = cmdline_token_hdr;
+/// A token is defined by this structure.
+///
+/// parse() takes the token as first argument, then the source buffer
+/// starting at the token we want to parse. The 3rd arg is a pointer
+/// where we store the parsed data (as binary). It returns the number of
+/// parsed chars on success and a negative value on error.
+///
+/// complete_get_nb() returns the number of possible values for this
+/// token if completion is possible. If it is NULL or if it returns 0,
+/// no completion is possible.
+///
+/// complete_get_elt() copy in dstbuf (the size is specified in the
+/// parameter) the i-th possible completion for this token.  returns 0
+/// on success or and a negative value on error.
+///
+/// get_help() fills the dstbuf with the help for the token. It returns
+/// -1 on error and 0 on success.
+#[repr(C)]
+#[derive(Debug, Copy)]
+pub struct cmdline_token_ops {
+    /// parse(token ptr, buf, res pts, buf len)
+    pub parse: ::std::option::Option<unsafe extern "C" fn(arg1:
+                                                              *mut cmdline_parse_token_hdr_t,
+                                                          arg2:
+                                                              *const ::std::os::raw::c_char,
+                                                          arg3:
+                                                              *mut ::std::os::raw::c_void,
+                                                          arg4:
+                                                              ::std::os::raw::c_uint)
+                                         -> ::std::os::raw::c_int>,
+    /// return the num of possible choices for this token
+    pub complete_get_nb: ::std::option::Option<unsafe extern "C" fn(arg1:
+                                                                        *mut cmdline_parse_token_hdr_t)
+                                                   -> ::std::os::raw::c_int>,
+    /// return the elt x for this token (token, idx, dstbuf, size)
+    pub complete_get_elt: ::std::option::Option<unsafe extern "C" fn(arg1:
+                                                                         *mut cmdline_parse_token_hdr_t,
+                                                                     arg2:
+                                                                         ::std::os::raw::c_int,
+                                                                     arg3:
+                                                                         *mut ::std::os::raw::c_char,
+                                                                     arg4:
+                                                                         ::std::os::raw::c_uint)
+                                                    -> ::std::os::raw::c_int>,
+    /// get help for this token (token, dstbuf, size)
+    pub get_help: ::std::option::Option<unsafe extern "C" fn(arg1:
+                                                                 *mut cmdline_parse_token_hdr_t,
+                                                             arg2:
+                                                                 *mut ::std::os::raw::c_char,
+                                                             arg3:
+                                                                 ::std::os::raw::c_uint)
+                                            -> ::std::os::raw::c_int>,
+}
+#[test]
+fn bindgen_test_layout_cmdline_token_ops() {
+    assert_eq!(::std::mem::size_of::<cmdline_token_ops>() , 32usize , concat !
+               ( "Size of: " , stringify ! ( cmdline_token_ops ) ));
+    assert_eq! (::std::mem::align_of::<cmdline_token_ops>() , 8usize , concat
+                ! ( "Alignment of " , stringify ! ( cmdline_token_ops ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const cmdline_token_ops ) ) . parse as * const
+                _ as usize } , 0usize , concat ! (
+                "Alignment of field: " , stringify ! ( cmdline_token_ops ) ,
+                "::" , stringify ! ( parse ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const cmdline_token_ops ) ) . complete_get_nb
+                as * const _ as usize } , 8usize , concat ! (
+                "Alignment of field: " , stringify ! ( cmdline_token_ops ) ,
+                "::" , stringify ! ( complete_get_nb ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const cmdline_token_ops ) ) . complete_get_elt
+                as * const _ as usize } , 16usize , concat ! (
+                "Alignment of field: " , stringify ! ( cmdline_token_ops ) ,
+                "::" , stringify ! ( complete_get_elt ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const cmdline_token_ops ) ) . get_help as *
+                const _ as usize } , 24usize , concat ! (
+                "Alignment of field: " , stringify ! ( cmdline_token_ops ) ,
+                "::" , stringify ! ( get_help ) ));
+}
+impl Clone for cmdline_token_ops {
+    fn clone(&self) -> Self { *self }
+}
+#[repr(C)]
+#[derive(Copy)]
+pub struct cmdline {
+    pub s_in: ::std::os::raw::c_int,
+    pub s_out: ::std::os::raw::c_int,
+    pub ctx: *mut cmdline_parse_ctx_t,
+    pub rdl: rdline,
+    pub prompt: [::std::os::raw::c_char; 32usize],
+    pub oldterm: termios,
+}
+#[test]
+fn bindgen_test_layout_cmdline() {
+    assert_eq!(::std::mem::size_of::<cmdline>() , 10024usize , concat ! (
+               "Size of: " , stringify ! ( cmdline ) ));
+    assert_eq! (::std::mem::align_of::<cmdline>() , 8usize , concat ! (
+                "Alignment of " , stringify ! ( cmdline ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const cmdline ) ) . s_in as * const _ as usize
+                } , 0usize , concat ! (
+                "Alignment of field: " , stringify ! ( cmdline ) , "::" ,
+                stringify ! ( s_in ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const cmdline ) ) . s_out as * const _ as usize
+                } , 4usize , concat ! (
+                "Alignment of field: " , stringify ! ( cmdline ) , "::" ,
+                stringify ! ( s_out ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const cmdline ) ) . ctx as * const _ as usize }
+                , 8usize , concat ! (
+                "Alignment of field: " , stringify ! ( cmdline ) , "::" ,
+                stringify ! ( ctx ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const cmdline ) ) . rdl as * const _ as usize }
+                , 16usize , concat ! (
+                "Alignment of field: " , stringify ! ( cmdline ) , "::" ,
+                stringify ! ( rdl ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const cmdline ) ) . prompt as * const _ as
+                usize } , 9928usize , concat ! (
+                "Alignment of field: " , stringify ! ( cmdline ) , "::" ,
+                stringify ! ( prompt ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const cmdline ) ) . oldterm as * const _ as
+                usize } , 9960usize , concat ! (
+                "Alignment of field: " , stringify ! ( cmdline ) , "::" ,
+                stringify ! ( oldterm ) ));
+}
+impl Clone for cmdline {
+    fn clone(&self) -> Self { *self }
+}
+/// Store a instruction, which is a pointer to a callback function and
+/// its parameter that is called when the instruction is parsed, a help
+/// string, and a list of token composing this instruction.
+///
+/// When no tokens are defined (tokens[0] == NULL), they are retrieved
+/// dynamically by calling f() as follows:
+///
+/// @code
+///
+/// f((struct cmdline_token_hdr **)&token_p,
+/// NULL,
+/// (struct cmdline_token_hdr **)&inst->tokens[num]);
+///
+/// @endcode
+///
+/// The address of the resulting token is expected at the location pointed by
+/// the first argument. Can be set to NULL to end the list.
+///
+/// The cmdline argument (struct cmdline *) is always NULL.
+///
+/// The last argument points to the inst->tokens[] entry to retrieve, which
+/// is not necessarily inside allocated memory and should neither be read nor
+/// written. Its sole purpose is to deduce the token entry index of interest
+/// as described in the example below.
+///
+/// Note about constraints:
+///
+/// - Only the address of these tokens is dynamic, their storage should be
+/// static like normal tokens.
+/// - Dynamic token lists that need to maintain an internal context (e.g. in
+/// order to determine the next token) must store it statically also. This
+/// context must be reinitialized when the first token is requested, that
+/// is, when &inst->tokens[0] is provided as the third argument.
+/// - Dynamic token lists must be NULL-terminated to generate usable
+/// commands.
+///
+/// @code
+///
+/// // Assuming first and third arguments are respectively named "token_p"
+/// // and "token":
+///
+/// int index = token - inst->tokens;
+///
+/// if (!index) {
+/// [...] // Clean up internal context if any.
+/// }
+/// [...] // Then set up dyn_token according to index.
+///
+/// if (no_more_tokens)
+/// *token_p = NULL;
+/// else
+/// *token_p = &dyn_token;
+///
+/// @endcode
+#[repr(C)]
+#[derive(Debug)]
+pub struct cmdline_inst {
+    pub f: ::std::option::Option<unsafe extern "C" fn(arg1:
+                                                          *mut ::std::os::raw::c_void,
+                                                      arg2: *mut cmdline,
+                                                      arg3:
+                                                          *mut ::std::os::raw::c_void)>,
+    pub data: *mut ::std::os::raw::c_void,
+    pub help_str: *const ::std::os::raw::c_char,
+    pub tokens: __IncompleteArrayField<*mut cmdline_parse_token_hdr_t>,
+}
+#[test]
+fn bindgen_test_layout_cmdline_inst() {
+    assert_eq!(::std::mem::size_of::<cmdline_inst>() , 24usize , concat ! (
+               "Size of: " , stringify ! ( cmdline_inst ) ));
+    assert_eq! (::std::mem::align_of::<cmdline_inst>() , 8usize , concat ! (
+                "Alignment of " , stringify ! ( cmdline_inst ) ));
+}
+pub type cmdline_parse_inst_t = cmdline_inst;
+/// A context is identified by its name, and contains a list of
+/// instruction
+///
+pub type cmdline_parse_ctx_t = *mut cmdline_parse_inst_t;
+extern "C" {
+    /// Try to parse a buffer according to the specified context. The
+/// argument buf must ends with "\n\0". The function returns
+/// CMDLINE_PARSE_AMBIGUOUS, CMDLINE_PARSE_NOMATCH or
+/// CMDLINE_PARSE_BAD_ARGS on error. Else it calls the associated
+/// function (defined in the context) and returns 0
+/// (CMDLINE_PARSE_SUCCESS).
+    pub fn cmdline_parse(cl: *mut cmdline, buf: *const ::std::os::raw::c_char)
+     -> ::std::os::raw::c_int;
+}
+extern "C" {
+    /// complete() must be called with *state==0 (try to complete) or
+/// with *state==-1 (just display choices), then called without
+/// modifying *state until it returns CMDLINE_PARSE_COMPLETED_BUFFER or
+/// CMDLINE_PARSE_COMPLETED_BUFFER.
+///
+/// It returns < 0 on error.
+///
+/// Else it returns:
+/// - CMDLINE_PARSE_COMPLETED_BUFFER on completion (one possible
+/// choice). In this case, the chars are appended in dst buffer.
+/// - CMDLINE_PARSE_COMPLETE_AGAIN if there is several possible
+/// choices. In this case, you must call the function again,
+/// keeping the value of state intact.
+/// - CMDLINE_PARSE_COMPLETED_BUFFER when the iteration is
+/// finished. The dst is not valid for this last call.
+///
+/// The returned dst buf ends with \0.
+    pub fn cmdline_complete(cl: *mut cmdline,
+                            buf: *const ::std::os::raw::c_char,
+                            state: *mut ::std::os::raw::c_int,
+                            dst: *mut ::std::os::raw::c_char,
+                            size: ::std::os::raw::c_uint)
+     -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn cmdline_isendoftoken(c: ::std::os::raw::c_char)
+     -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn cmdline_isendofcommand(c: ::std::os::raw::c_char)
+     -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn cmdline_new(ctx: *mut cmdline_parse_ctx_t,
+                       prompt: *const ::std::os::raw::c_char,
+                       s_in: ::std::os::raw::c_int,
+                       s_out: ::std::os::raw::c_int) -> *mut cmdline;
+}
+extern "C" {
+    pub fn cmdline_set_prompt(cl: *mut cmdline,
+                              prompt: *const ::std::os::raw::c_char);
+}
+extern "C" {
+    pub fn cmdline_free(cl: *mut cmdline);
+}
+extern "C" {
+    pub fn cmdline_printf(cl: *const cmdline,
+                          fmt: *const ::std::os::raw::c_char, ...);
+}
+extern "C" {
+    pub fn cmdline_in(cl: *mut cmdline, buf: *const ::std::os::raw::c_char,
+                      size: ::std::os::raw::c_int) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn cmdline_write_char(rdl: *mut rdline, c: ::std::os::raw::c_char)
+     -> ::std::os::raw::c_int;
+}
+extern "C" {
+    /// This function is nonblocking equivalent of ``cmdline_interact()``. It polls
+/// *cl* for one character and interpret it. If return value is *RDLINE_EXITED*
+/// it mean that ``cmdline_quit()`` was invoked.
+///
+/// @param cl
+/// The command line object.
+///
+/// @return
+/// On success return object status - one of *enum rdline_status*.
+/// On error return negative value.
+    pub fn cmdline_poll(cl: *mut cmdline) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn cmdline_interact(cl: *mut cmdline);
+}
+extern "C" {
+    pub fn cmdline_quit(cl: *mut cmdline);
+}
+#[repr(C)]
+#[derive(Debug, Copy)]
+pub struct cmdline_token_etheraddr {
+    pub hdr: cmdline_token_hdr,
+}
+#[test]
+fn bindgen_test_layout_cmdline_token_etheraddr() {
+    assert_eq!(::std::mem::size_of::<cmdline_token_etheraddr>() , 16usize ,
+               concat ! (
+               "Size of: " , stringify ! ( cmdline_token_etheraddr ) ));
+    assert_eq! (::std::mem::align_of::<cmdline_token_etheraddr>() , 8usize ,
+                concat ! (
+                "Alignment of " , stringify ! ( cmdline_token_etheraddr ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const cmdline_token_etheraddr ) ) . hdr as *
+                const _ as usize } , 0usize , concat ! (
+                "Alignment of field: " , stringify ! ( cmdline_token_etheraddr
+                ) , "::" , stringify ! ( hdr ) ));
+}
+impl Clone for cmdline_token_etheraddr {
+    fn clone(&self) -> Self { *self }
+}
+pub type cmdline_parse_token_etheraddr_t = cmdline_token_etheraddr;
+extern "C" {
+    #[link_name = "cmdline_token_etheraddr_ops"]
+    pub static mut cmdline_token_etheraddr_ops: cmdline_token_ops;
+}
+extern "C" {
+    pub fn cmdline_parse_etheraddr(tk: *mut cmdline_parse_token_hdr_t,
+                                   srcbuf: *const ::std::os::raw::c_char,
+                                   res: *mut ::std::os::raw::c_void,
+                                   ressize: ::std::os::raw::c_uint)
+     -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn cmdline_get_help_etheraddr(tk: *mut cmdline_parse_token_hdr_t,
+                                      dstbuf: *mut ::std::os::raw::c_char,
+                                      size: ::std::os::raw::c_uint)
+     -> ::std::os::raw::c_int;
+}
 pub type u_char = __u_char;
 pub type u_short = __u_short;
 pub type u_int = __u_int;
@@ -3114,7 +4048,6 @@ pub type gid_t = __gid_t;
 pub type mode_t = __mode_t;
 pub type nlink_t = __nlink_t;
 pub type uid_t = __uid_t;
-pub type pid_t = __pid_t;
 pub type id_t = __id_t;
 pub type daddr_t = __daddr_t;
 pub type caddr_t = __caddr_t;
@@ -4826,939 +5759,6 @@ extern "C" {
 extern "C" {
     pub fn bindresvport6(__sockfd: ::std::os::raw::c_int,
                          __sock_in: *mut sockaddr_in6)
-     -> ::std::os::raw::c_int;
-}
-pub type cc_t = ::std::os::raw::c_uchar;
-pub type speed_t = ::std::os::raw::c_uint;
-pub type tcflag_t = ::std::os::raw::c_uint;
-#[repr(C)]
-#[derive(Debug, Copy)]
-pub struct termios {
-    pub c_iflag: tcflag_t,
-    pub c_oflag: tcflag_t,
-    pub c_cflag: tcflag_t,
-    pub c_lflag: tcflag_t,
-    pub c_line: cc_t,
-    pub c_cc: [cc_t; 32usize],
-    pub c_ispeed: speed_t,
-    pub c_ospeed: speed_t,
-}
-#[test]
-fn bindgen_test_layout_termios() {
-    assert_eq!(::std::mem::size_of::<termios>() , 60usize , concat ! (
-               "Size of: " , stringify ! ( termios ) ));
-    assert_eq! (::std::mem::align_of::<termios>() , 4usize , concat ! (
-                "Alignment of " , stringify ! ( termios ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const termios ) ) . c_iflag as * const _ as
-                usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( termios ) , "::" ,
-                stringify ! ( c_iflag ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const termios ) ) . c_oflag as * const _ as
-                usize } , 4usize , concat ! (
-                "Alignment of field: " , stringify ! ( termios ) , "::" ,
-                stringify ! ( c_oflag ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const termios ) ) . c_cflag as * const _ as
-                usize } , 8usize , concat ! (
-                "Alignment of field: " , stringify ! ( termios ) , "::" ,
-                stringify ! ( c_cflag ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const termios ) ) . c_lflag as * const _ as
-                usize } , 12usize , concat ! (
-                "Alignment of field: " , stringify ! ( termios ) , "::" ,
-                stringify ! ( c_lflag ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const termios ) ) . c_line as * const _ as
-                usize } , 16usize , concat ! (
-                "Alignment of field: " , stringify ! ( termios ) , "::" ,
-                stringify ! ( c_line ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const termios ) ) . c_cc as * const _ as usize
-                } , 17usize , concat ! (
-                "Alignment of field: " , stringify ! ( termios ) , "::" ,
-                stringify ! ( c_cc ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const termios ) ) . c_ispeed as * const _ as
-                usize } , 52usize , concat ! (
-                "Alignment of field: " , stringify ! ( termios ) , "::" ,
-                stringify ! ( c_ispeed ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const termios ) ) . c_ospeed as * const _ as
-                usize } , 56usize , concat ! (
-                "Alignment of field: " , stringify ! ( termios ) , "::" ,
-                stringify ! ( c_ospeed ) ));
-}
-impl Clone for termios {
-    fn clone(&self) -> Self { *self }
-}
-extern "C" {
-    pub fn cfgetospeed(__termios_p: *const termios) -> speed_t;
-}
-extern "C" {
-    pub fn cfgetispeed(__termios_p: *const termios) -> speed_t;
-}
-extern "C" {
-    pub fn cfsetospeed(__termios_p: *mut termios, __speed: speed_t)
-     -> ::std::os::raw::c_int;
-}
-extern "C" {
-    pub fn cfsetispeed(__termios_p: *mut termios, __speed: speed_t)
-     -> ::std::os::raw::c_int;
-}
-extern "C" {
-    pub fn cfsetspeed(__termios_p: *mut termios, __speed: speed_t)
-     -> ::std::os::raw::c_int;
-}
-extern "C" {
-    pub fn tcgetattr(__fd: ::std::os::raw::c_int, __termios_p: *mut termios)
-     -> ::std::os::raw::c_int;
-}
-extern "C" {
-    pub fn tcsetattr(__fd: ::std::os::raw::c_int,
-                     __optional_actions: ::std::os::raw::c_int,
-                     __termios_p: *const termios) -> ::std::os::raw::c_int;
-}
-extern "C" {
-    pub fn cfmakeraw(__termios_p: *mut termios);
-}
-extern "C" {
-    pub fn tcsendbreak(__fd: ::std::os::raw::c_int,
-                       __duration: ::std::os::raw::c_int)
-     -> ::std::os::raw::c_int;
-}
-extern "C" {
-    pub fn tcdrain(__fd: ::std::os::raw::c_int) -> ::std::os::raw::c_int;
-}
-extern "C" {
-    pub fn tcflush(__fd: ::std::os::raw::c_int,
-                   __queue_selector: ::std::os::raw::c_int)
-     -> ::std::os::raw::c_int;
-}
-extern "C" {
-    pub fn tcflow(__fd: ::std::os::raw::c_int,
-                  __action: ::std::os::raw::c_int) -> ::std::os::raw::c_int;
-}
-extern "C" {
-    pub fn tcgetsid(__fd: ::std::os::raw::c_int) -> __pid_t;
-}
-/// This structure is the header of a cirbuf type.
-#[repr(C)]
-#[derive(Debug, Copy)]
-pub struct cirbuf {
-    /// < total len of the fifo (number of elements)
-    pub maxlen: ::std::os::raw::c_uint,
-    /// < indice of the first elt
-    pub start: ::std::os::raw::c_uint,
-    /// < indice of the last elt
-    pub end: ::std::os::raw::c_uint,
-    /// < current len of fifo
-    pub len: ::std::os::raw::c_uint,
-    pub buf: *mut ::std::os::raw::c_char,
-}
-#[test]
-fn bindgen_test_layout_cirbuf() {
-    assert_eq!(::std::mem::size_of::<cirbuf>() , 24usize , concat ! (
-               "Size of: " , stringify ! ( cirbuf ) ));
-    assert_eq! (::std::mem::align_of::<cirbuf>() , 8usize , concat ! (
-                "Alignment of " , stringify ! ( cirbuf ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const cirbuf ) ) . maxlen as * const _ as usize
-                } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( cirbuf ) , "::" ,
-                stringify ! ( maxlen ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const cirbuf ) ) . start as * const _ as usize
-                } , 4usize , concat ! (
-                "Alignment of field: " , stringify ! ( cirbuf ) , "::" ,
-                stringify ! ( start ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const cirbuf ) ) . end as * const _ as usize }
-                , 8usize , concat ! (
-                "Alignment of field: " , stringify ! ( cirbuf ) , "::" ,
-                stringify ! ( end ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const cirbuf ) ) . len as * const _ as usize }
-                , 12usize , concat ! (
-                "Alignment of field: " , stringify ! ( cirbuf ) , "::" ,
-                stringify ! ( len ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const cirbuf ) ) . buf as * const _ as usize }
-                , 16usize , concat ! (
-                "Alignment of field: " , stringify ! ( cirbuf ) , "::" ,
-                stringify ! ( buf ) ));
-}
-impl Clone for cirbuf {
-    fn clone(&self) -> Self { *self }
-}
-extern "C" {
-    /// Init the circular buffer
-    pub fn cirbuf_init(cbuf: *mut cirbuf, buf: *mut ::std::os::raw::c_char,
-                       start: ::std::os::raw::c_uint,
-                       maxlen: ::std::os::raw::c_uint)
-     -> ::std::os::raw::c_int;
-}
-extern "C" {
-    /// Add a character at head of the circular buffer. Return 0 on success, or
-/// a negative value on error.
-    pub fn cirbuf_add_head_safe(cbuf: *mut cirbuf, c: ::std::os::raw::c_char)
-     -> ::std::os::raw::c_int;
-}
-extern "C" {
-    /// Add a character at head of the circular buffer. You _must_ check that you
-/// have enough free space in the buffer before calling this func.
-    pub fn cirbuf_add_head(cbuf: *mut cirbuf, c: ::std::os::raw::c_char);
-}
-extern "C" {
-    /// Add a character at tail of the circular buffer. Return 0 on success, or
-/// a negative value on error.
-    pub fn cirbuf_add_tail_safe(cbuf: *mut cirbuf, c: ::std::os::raw::c_char)
-     -> ::std::os::raw::c_int;
-}
-extern "C" {
-    /// Add a character at tail of the circular buffer. You _must_ check that you
-/// have enough free space in the buffer before calling this func.
-    pub fn cirbuf_add_tail(cbuf: *mut cirbuf, c: ::std::os::raw::c_char);
-}
-extern "C" {
-    /// Remove a char at the head of the circular buffer. Return 0 on
-/// success, or a negative value on error.
-    pub fn cirbuf_del_head_safe(cbuf: *mut cirbuf) -> ::std::os::raw::c_int;
-}
-extern "C" {
-    /// Remove a char at the head of the circular buffer. You _must_ check
-/// that buffer is not empty before calling the function.
-    pub fn cirbuf_del_head(cbuf: *mut cirbuf);
-}
-extern "C" {
-    /// Remove a char at the tail of the circular buffer. Return 0 on
-/// success, or a negative value on error.
-    pub fn cirbuf_del_tail_safe(cbuf: *mut cirbuf) -> ::std::os::raw::c_int;
-}
-extern "C" {
-    /// Remove a char at the tail of the circular buffer. You _must_ check
-/// that buffer is not empty before calling the function.
-    pub fn cirbuf_del_tail(cbuf: *mut cirbuf);
-}
-extern "C" {
-    /// Return the head of the circular buffer. You _must_ check that
-/// buffer is not empty before calling the function.
-    pub fn cirbuf_get_head(cbuf: *mut cirbuf) -> ::std::os::raw::c_char;
-}
-extern "C" {
-    /// Return the tail of the circular buffer. You _must_ check that
-/// buffer is not empty before calling the function.
-    pub fn cirbuf_get_tail(cbuf: *mut cirbuf) -> ::std::os::raw::c_char;
-}
-extern "C" {
-    /// Add a buffer at head of the circular buffer. 'c' is a pointer to a
-/// buffer, and n is the number of char to add. Return the number of
-/// copied bytes on success, or a negative value on error.
-    pub fn cirbuf_add_buf_head(cbuf: *mut cirbuf,
-                               c: *const ::std::os::raw::c_char,
-                               n: ::std::os::raw::c_uint)
-     -> ::std::os::raw::c_int;
-}
-extern "C" {
-    /// Add a buffer at tail of the circular buffer. 'c' is a pointer to a
-/// buffer, and n is the number of char to add. Return the number of
-/// copied bytes on success, or a negative value on error.
-    pub fn cirbuf_add_buf_tail(cbuf: *mut cirbuf,
-                               c: *const ::std::os::raw::c_char,
-                               n: ::std::os::raw::c_uint)
-     -> ::std::os::raw::c_int;
-}
-extern "C" {
-    /// Remove chars at the head of the circular buffer. Return 0 on
-/// success, or a negative value on error.
-    pub fn cirbuf_del_buf_head(cbuf: *mut cirbuf,
-                               size: ::std::os::raw::c_uint)
-     -> ::std::os::raw::c_int;
-}
-extern "C" {
-    /// Remove chars at the tail of the circular buffer. Return 0 on
-/// success, or a negative value on error.
-    pub fn cirbuf_del_buf_tail(cbuf: *mut cirbuf,
-                               size: ::std::os::raw::c_uint)
-     -> ::std::os::raw::c_int;
-}
-extern "C" {
-    /// Copy a maximum of 'size' characters from the head of the circular
-/// buffer to a flat one pointed by 'c'. Return the number of copied
-/// chars.
-    pub fn cirbuf_get_buf_head(cbuf: *mut cirbuf,
-                               c: *mut ::std::os::raw::c_char,
-                               size: ::std::os::raw::c_uint)
-     -> ::std::os::raw::c_int;
-}
-extern "C" {
-    /// Copy a maximum of 'size' characters from the tail of the circular
-/// buffer to a flat one pointed by 'c'. Return the number of copied
-/// chars.
-    pub fn cirbuf_get_buf_tail(cbuf: *mut cirbuf,
-                               c: *mut ::std::os::raw::c_char,
-                               size: ::std::os::raw::c_uint)
-     -> ::std::os::raw::c_int;
-}
-extern "C" {
-    /// Set the start of the data to the index 0 of the internal buffer.
-    pub fn cirbuf_align_left(cbuf: *mut cirbuf) -> ::std::os::raw::c_int;
-}
-extern "C" {
-    /// Set the end of the data to the last index of the internal buffer.
-    pub fn cirbuf_align_right(cbuf: *mut cirbuf) -> ::std::os::raw::c_int;
-}
-extern "C" {
-    #[link_name = "cmdline_vt100_commands"]
-    pub static mut cmdline_vt100_commands:
-               [*const ::std::os::raw::c_char; 0usize];
-}
-#[repr(u32)]
-#[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
-pub enum cmdline_vt100_parser_state {
-    CMDLINE_VT100_INIT = 0,
-    CMDLINE_VT100_ESCAPE = 1,
-    CMDLINE_VT100_ESCAPE_CSI = 2,
-}
-#[repr(C)]
-#[derive(Debug, Copy)]
-pub struct cmdline_vt100 {
-    pub bufpos: u8,
-    pub buf: [::std::os::raw::c_char; 8usize],
-    pub state: cmdline_vt100_parser_state,
-}
-#[test]
-fn bindgen_test_layout_cmdline_vt100() {
-    assert_eq!(::std::mem::size_of::<cmdline_vt100>() , 16usize , concat ! (
-               "Size of: " , stringify ! ( cmdline_vt100 ) ));
-    assert_eq! (::std::mem::align_of::<cmdline_vt100>() , 4usize , concat ! (
-                "Alignment of " , stringify ! ( cmdline_vt100 ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const cmdline_vt100 ) ) . bufpos as * const _
-                as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( cmdline_vt100 ) , "::"
-                , stringify ! ( bufpos ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const cmdline_vt100 ) ) . buf as * const _ as
-                usize } , 1usize , concat ! (
-                "Alignment of field: " , stringify ! ( cmdline_vt100 ) , "::"
-                , stringify ! ( buf ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const cmdline_vt100 ) ) . state as * const _ as
-                usize } , 12usize , concat ! (
-                "Alignment of field: " , stringify ! ( cmdline_vt100 ) , "::"
-                , stringify ! ( state ) ));
-}
-impl Clone for cmdline_vt100 {
-    fn clone(&self) -> Self { *self }
-}
-extern "C" {
-    /// Init
-    pub fn vt100_init(vt: *mut cmdline_vt100);
-}
-extern "C" {
-    /// Input a new character.
-/// Return -1 if the character is not part of a control sequence
-/// Return -2 if c is not the last char of a control sequence
-/// Else return the index in vt100_commands[]
-    pub fn vt100_parser(vt: *mut cmdline_vt100, c: ::std::os::raw::c_char)
-     -> ::std::os::raw::c_int;
-}
-#[repr(u32)]
-#[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
-pub enum rdline_status {
-    RDLINE_INIT = 0,
-    RDLINE_RUNNING = 1,
-    RDLINE_EXITED = 2,
-}
-#[repr(C)]
-#[derive(Copy)]
-pub struct rdline {
-    pub status: rdline_status,
-    pub left: cirbuf,
-    pub right: cirbuf,
-    pub left_buf: [::std::os::raw::c_char; 514usize],
-    pub right_buf: [::std::os::raw::c_char; 512usize],
-    pub prompt: [::std::os::raw::c_char; 32usize],
-    pub prompt_size: ::std::os::raw::c_uint,
-    pub kill_buf: [::std::os::raw::c_char; 512usize],
-    pub kill_size: ::std::os::raw::c_uint,
-    pub history: cirbuf,
-    pub history_buf: [::std::os::raw::c_char; 8192usize],
-    pub history_cur_line: ::std::os::raw::c_int,
-    pub write_char: rdline_write_char_t,
-    pub validate: rdline_validate_t,
-    pub complete: rdline_complete_t,
-    pub vt100: cmdline_vt100,
-    pub opaque: *mut ::std::os::raw::c_void,
-}
-#[test]
-fn bindgen_test_layout_rdline() {
-    assert_eq!(::std::mem::size_of::<rdline>() , 9912usize , concat ! (
-               "Size of: " , stringify ! ( rdline ) ));
-    assert_eq! (::std::mem::align_of::<rdline>() , 8usize , concat ! (
-                "Alignment of " , stringify ! ( rdline ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rdline ) ) . status as * const _ as usize
-                } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( rdline ) , "::" ,
-                stringify ! ( status ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rdline ) ) . left as * const _ as usize }
-                , 8usize , concat ! (
-                "Alignment of field: " , stringify ! ( rdline ) , "::" ,
-                stringify ! ( left ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rdline ) ) . right as * const _ as usize
-                } , 32usize , concat ! (
-                "Alignment of field: " , stringify ! ( rdline ) , "::" ,
-                stringify ! ( right ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rdline ) ) . left_buf as * const _ as
-                usize } , 56usize , concat ! (
-                "Alignment of field: " , stringify ! ( rdline ) , "::" ,
-                stringify ! ( left_buf ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rdline ) ) . right_buf as * const _ as
-                usize } , 570usize , concat ! (
-                "Alignment of field: " , stringify ! ( rdline ) , "::" ,
-                stringify ! ( right_buf ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rdline ) ) . prompt as * const _ as usize
-                } , 1082usize , concat ! (
-                "Alignment of field: " , stringify ! ( rdline ) , "::" ,
-                stringify ! ( prompt ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rdline ) ) . prompt_size as * const _ as
-                usize } , 1116usize , concat ! (
-                "Alignment of field: " , stringify ! ( rdline ) , "::" ,
-                stringify ! ( prompt_size ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rdline ) ) . kill_buf as * const _ as
-                usize } , 1120usize , concat ! (
-                "Alignment of field: " , stringify ! ( rdline ) , "::" ,
-                stringify ! ( kill_buf ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rdline ) ) . kill_size as * const _ as
-                usize } , 1632usize , concat ! (
-                "Alignment of field: " , stringify ! ( rdline ) , "::" ,
-                stringify ! ( kill_size ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rdline ) ) . history as * const _ as
-                usize } , 1640usize , concat ! (
-                "Alignment of field: " , stringify ! ( rdline ) , "::" ,
-                stringify ! ( history ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rdline ) ) . history_buf as * const _ as
-                usize } , 1664usize , concat ! (
-                "Alignment of field: " , stringify ! ( rdline ) , "::" ,
-                stringify ! ( history_buf ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rdline ) ) . history_cur_line as * const
-                _ as usize } , 9856usize , concat ! (
-                "Alignment of field: " , stringify ! ( rdline ) , "::" ,
-                stringify ! ( history_cur_line ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rdline ) ) . write_char as * const _ as
-                usize } , 9864usize , concat ! (
-                "Alignment of field: " , stringify ! ( rdline ) , "::" ,
-                stringify ! ( write_char ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rdline ) ) . validate as * const _ as
-                usize } , 9872usize , concat ! (
-                "Alignment of field: " , stringify ! ( rdline ) , "::" ,
-                stringify ! ( validate ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rdline ) ) . complete as * const _ as
-                usize } , 9880usize , concat ! (
-                "Alignment of field: " , stringify ! ( rdline ) , "::" ,
-                stringify ! ( complete ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rdline ) ) . vt100 as * const _ as usize
-                } , 9888usize , concat ! (
-                "Alignment of field: " , stringify ! ( rdline ) , "::" ,
-                stringify ! ( vt100 ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rdline ) ) . opaque as * const _ as usize
-                } , 9904usize , concat ! (
-                "Alignment of field: " , stringify ! ( rdline ) , "::" ,
-                stringify ! ( opaque ) ));
-}
-impl Clone for rdline {
-    fn clone(&self) -> Self { *self }
-}
-pub type rdline_write_char_t =
-    ::std::option::Option<unsafe extern "C" fn(rdl: *mut rdline,
-                                               arg1: ::std::os::raw::c_char)
-                              -> ::std::os::raw::c_int>;
-pub type rdline_validate_t =
-    ::std::option::Option<unsafe extern "C" fn(rdl: *mut rdline,
-                                               buf:
-                                                   *const ::std::os::raw::c_char,
-                                               size: ::std::os::raw::c_uint)>;
-pub type rdline_complete_t =
-    ::std::option::Option<unsafe extern "C" fn(rdl: *mut rdline,
-                                               buf:
-                                                   *const ::std::os::raw::c_char,
-                                               dstbuf:
-                                                   *mut ::std::os::raw::c_char,
-                                               dstsize:
-                                                   ::std::os::raw::c_uint,
-                                               state:
-                                                   *mut ::std::os::raw::c_int)
-                              -> ::std::os::raw::c_int>;
-extern "C" {
-    /// Init fields for a struct rdline. Call this only once at the beginning
-/// of your program.
-/// \param rdl A pointer to an uninitialized struct rdline
-/// \param write_char The function used by the function to write a character
-/// \param validate A pointer to the function to execute when the
-/// user validates the buffer.
-/// \param complete A pointer to the function to execute when the
-/// user completes the buffer.
-    pub fn rdline_init(rdl: *mut rdline, write_char: rdline_write_char_t,
-                       validate: rdline_validate_t,
-                       complete: rdline_complete_t) -> ::std::os::raw::c_int;
-}
-extern "C" {
-    /// Init the current buffer, and display a prompt.
-/// \param rdl A pointer to a struct rdline
-/// \param prompt A string containing the prompt
-    pub fn rdline_newline(rdl: *mut rdline,
-                          prompt: *const ::std::os::raw::c_char);
-}
-extern "C" {
-    /// Call it and all received chars will be ignored.
-/// \param rdl A pointer to a struct rdline
-    pub fn rdline_stop(rdl: *mut rdline);
-}
-extern "C" {
-    /// Same than rdline_stop() except that next calls to rdline_char_in()
-/// will return RDLINE_RES_EXITED.
-/// \param rdl A pointer to a struct rdline
-    pub fn rdline_quit(rdl: *mut rdline);
-}
-extern "C" {
-    /// Restart after a call to rdline_stop() or rdline_quit()
-/// \param rdl A pointer to a struct rdline
-    pub fn rdline_restart(rdl: *mut rdline);
-}
-extern "C" {
-    /// Redisplay the current buffer
-/// \param rdl A pointer to a struct rdline
-    pub fn rdline_redisplay(rdl: *mut rdline);
-}
-extern "C" {
-    /// Reset the current buffer and setup for a new line.
-/// \param rdl A pointer to a struct rdline
-    pub fn rdline_reset(rdl: *mut rdline);
-}
-extern "C" {
-    /// append a char to the readline buffer.
-/// Return RDLINE_RES_VALIDATE when the line has been validated.
-/// Return RDLINE_RES_COMPLETE when the user asked to complete the buffer.
-/// Return RDLINE_RES_NOT_RUNNING if it is not running.
-/// Return RDLINE_RES_EOF if EOF (ctrl-d on an empty line).
-/// Else return RDLINE_RES_SUCCESS.
-/// XXX error case when the buffer is full ?
-///
-/// \param rdl A pointer to a struct rdline
-/// \param c The character to append
-    pub fn rdline_char_in(rdl: *mut rdline, c: ::std::os::raw::c_char)
-     -> ::std::os::raw::c_int;
-}
-extern "C" {
-    /// Return the current buffer, terminated by '\0'.
-/// \param rdl A pointer to a struct rdline
-    pub fn rdline_get_buffer(rdl: *mut rdline)
-     -> *const ::std::os::raw::c_char;
-}
-extern "C" {
-    /// Add the buffer to history.
-/// return < 0 on error.
-/// \param rdl A pointer to a struct rdline
-/// \param buf A buffer that is terminated by '\0'
-    pub fn rdline_add_history(rdl: *mut rdline,
-                              buf: *const ::std::os::raw::c_char)
-     -> ::std::os::raw::c_int;
-}
-extern "C" {
-    /// Clear current history
-/// \param rdl A pointer to a struct rdline
-    pub fn rdline_clear_history(rdl: *mut rdline);
-}
-extern "C" {
-    /// Get the i-th history item
-    pub fn rdline_get_history_item(rdl: *mut rdline,
-                                   i: ::std::os::raw::c_uint)
-     -> *mut ::std::os::raw::c_char;
-}
-/// Stores a pointer to the ops struct, and the offset: the place to
-/// write the parsed result in the destination structure.
-#[repr(C)]
-#[derive(Debug, Copy)]
-pub struct cmdline_token_hdr {
-    pub ops: *mut cmdline_token_ops,
-    pub offset: ::std::os::raw::c_uint,
-}
-#[test]
-fn bindgen_test_layout_cmdline_token_hdr() {
-    assert_eq!(::std::mem::size_of::<cmdline_token_hdr>() , 16usize , concat !
-               ( "Size of: " , stringify ! ( cmdline_token_hdr ) ));
-    assert_eq! (::std::mem::align_of::<cmdline_token_hdr>() , 8usize , concat
-                ! ( "Alignment of " , stringify ! ( cmdline_token_hdr ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const cmdline_token_hdr ) ) . ops as * const _
-                as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( cmdline_token_hdr ) ,
-                "::" , stringify ! ( ops ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const cmdline_token_hdr ) ) . offset as * const
-                _ as usize } , 8usize , concat ! (
-                "Alignment of field: " , stringify ! ( cmdline_token_hdr ) ,
-                "::" , stringify ! ( offset ) ));
-}
-impl Clone for cmdline_token_hdr {
-    fn clone(&self) -> Self { *self }
-}
-pub type cmdline_parse_token_hdr_t = cmdline_token_hdr;
-/// A token is defined by this structure.
-///
-/// parse() takes the token as first argument, then the source buffer
-/// starting at the token we want to parse. The 3rd arg is a pointer
-/// where we store the parsed data (as binary). It returns the number of
-/// parsed chars on success and a negative value on error.
-///
-/// complete_get_nb() returns the number of possible values for this
-/// token if completion is possible. If it is NULL or if it returns 0,
-/// no completion is possible.
-///
-/// complete_get_elt() copy in dstbuf (the size is specified in the
-/// parameter) the i-th possible completion for this token.  returns 0
-/// on success or and a negative value on error.
-///
-/// get_help() fills the dstbuf with the help for the token. It returns
-/// -1 on error and 0 on success.
-#[repr(C)]
-#[derive(Debug, Copy)]
-pub struct cmdline_token_ops {
-    /// parse(token ptr, buf, res pts, buf len)
-    pub parse: ::std::option::Option<unsafe extern "C" fn(arg1:
-                                                              *mut cmdline_parse_token_hdr_t,
-                                                          arg2:
-                                                              *const ::std::os::raw::c_char,
-                                                          arg3:
-                                                              *mut ::std::os::raw::c_void,
-                                                          arg4:
-                                                              ::std::os::raw::c_uint)
-                                         -> ::std::os::raw::c_int>,
-    /// return the num of possible choices for this token
-    pub complete_get_nb: ::std::option::Option<unsafe extern "C" fn(arg1:
-                                                                        *mut cmdline_parse_token_hdr_t)
-                                                   -> ::std::os::raw::c_int>,
-    /// return the elt x for this token (token, idx, dstbuf, size)
-    pub complete_get_elt: ::std::option::Option<unsafe extern "C" fn(arg1:
-                                                                         *mut cmdline_parse_token_hdr_t,
-                                                                     arg2:
-                                                                         ::std::os::raw::c_int,
-                                                                     arg3:
-                                                                         *mut ::std::os::raw::c_char,
-                                                                     arg4:
-                                                                         ::std::os::raw::c_uint)
-                                                    -> ::std::os::raw::c_int>,
-    /// get help for this token (token, dstbuf, size)
-    pub get_help: ::std::option::Option<unsafe extern "C" fn(arg1:
-                                                                 *mut cmdline_parse_token_hdr_t,
-                                                             arg2:
-                                                                 *mut ::std::os::raw::c_char,
-                                                             arg3:
-                                                                 ::std::os::raw::c_uint)
-                                            -> ::std::os::raw::c_int>,
-}
-#[test]
-fn bindgen_test_layout_cmdline_token_ops() {
-    assert_eq!(::std::mem::size_of::<cmdline_token_ops>() , 32usize , concat !
-               ( "Size of: " , stringify ! ( cmdline_token_ops ) ));
-    assert_eq! (::std::mem::align_of::<cmdline_token_ops>() , 8usize , concat
-                ! ( "Alignment of " , stringify ! ( cmdline_token_ops ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const cmdline_token_ops ) ) . parse as * const
-                _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( cmdline_token_ops ) ,
-                "::" , stringify ! ( parse ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const cmdline_token_ops ) ) . complete_get_nb
-                as * const _ as usize } , 8usize , concat ! (
-                "Alignment of field: " , stringify ! ( cmdline_token_ops ) ,
-                "::" , stringify ! ( complete_get_nb ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const cmdline_token_ops ) ) . complete_get_elt
-                as * const _ as usize } , 16usize , concat ! (
-                "Alignment of field: " , stringify ! ( cmdline_token_ops ) ,
-                "::" , stringify ! ( complete_get_elt ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const cmdline_token_ops ) ) . get_help as *
-                const _ as usize } , 24usize , concat ! (
-                "Alignment of field: " , stringify ! ( cmdline_token_ops ) ,
-                "::" , stringify ! ( get_help ) ));
-}
-impl Clone for cmdline_token_ops {
-    fn clone(&self) -> Self { *self }
-}
-#[repr(C)]
-#[derive(Copy)]
-pub struct cmdline {
-    pub s_in: ::std::os::raw::c_int,
-    pub s_out: ::std::os::raw::c_int,
-    pub ctx: *mut cmdline_parse_ctx_t,
-    pub rdl: rdline,
-    pub prompt: [::std::os::raw::c_char; 32usize],
-    pub oldterm: termios,
-}
-#[test]
-fn bindgen_test_layout_cmdline() {
-    assert_eq!(::std::mem::size_of::<cmdline>() , 10024usize , concat ! (
-               "Size of: " , stringify ! ( cmdline ) ));
-    assert_eq! (::std::mem::align_of::<cmdline>() , 8usize , concat ! (
-                "Alignment of " , stringify ! ( cmdline ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const cmdline ) ) . s_in as * const _ as usize
-                } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( cmdline ) , "::" ,
-                stringify ! ( s_in ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const cmdline ) ) . s_out as * const _ as usize
-                } , 4usize , concat ! (
-                "Alignment of field: " , stringify ! ( cmdline ) , "::" ,
-                stringify ! ( s_out ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const cmdline ) ) . ctx as * const _ as usize }
-                , 8usize , concat ! (
-                "Alignment of field: " , stringify ! ( cmdline ) , "::" ,
-                stringify ! ( ctx ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const cmdline ) ) . rdl as * const _ as usize }
-                , 16usize , concat ! (
-                "Alignment of field: " , stringify ! ( cmdline ) , "::" ,
-                stringify ! ( rdl ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const cmdline ) ) . prompt as * const _ as
-                usize } , 9928usize , concat ! (
-                "Alignment of field: " , stringify ! ( cmdline ) , "::" ,
-                stringify ! ( prompt ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const cmdline ) ) . oldterm as * const _ as
-                usize } , 9960usize , concat ! (
-                "Alignment of field: " , stringify ! ( cmdline ) , "::" ,
-                stringify ! ( oldterm ) ));
-}
-impl Clone for cmdline {
-    fn clone(&self) -> Self { *self }
-}
-/// Store a instruction, which is a pointer to a callback function and
-/// its parameter that is called when the instruction is parsed, a help
-/// string, and a list of token composing this instruction.
-///
-/// When no tokens are defined (tokens[0] == NULL), they are retrieved
-/// dynamically by calling f() as follows:
-///
-/// @code
-///
-/// f((struct cmdline_token_hdr **)&token_p,
-/// NULL,
-/// (struct cmdline_token_hdr **)&inst->tokens[num]);
-///
-/// @endcode
-///
-/// The address of the resulting token is expected at the location pointed by
-/// the first argument. Can be set to NULL to end the list.
-///
-/// The cmdline argument (struct cmdline *) is always NULL.
-///
-/// The last argument points to the inst->tokens[] entry to retrieve, which
-/// is not necessarily inside allocated memory and should neither be read nor
-/// written. Its sole purpose is to deduce the token entry index of interest
-/// as described in the example below.
-///
-/// Note about constraints:
-///
-/// - Only the address of these tokens is dynamic, their storage should be
-/// static like normal tokens.
-/// - Dynamic token lists that need to maintain an internal context (e.g. in
-/// order to determine the next token) must store it statically also. This
-/// context must be reinitialized when the first token is requested, that
-/// is, when &inst->tokens[0] is provided as the third argument.
-/// - Dynamic token lists must be NULL-terminated to generate usable
-/// commands.
-///
-/// @code
-///
-/// // Assuming first and third arguments are respectively named "token_p"
-/// // and "token":
-///
-/// int index = token - inst->tokens;
-///
-/// if (!index) {
-/// [...] // Clean up internal context if any.
-/// }
-/// [...] // Then set up dyn_token according to index.
-///
-/// if (no_more_tokens)
-/// *token_p = NULL;
-/// else
-/// *token_p = &dyn_token;
-///
-/// @endcode
-#[repr(C)]
-#[derive(Debug)]
-pub struct cmdline_inst {
-    pub f: ::std::option::Option<unsafe extern "C" fn(arg1:
-                                                          *mut ::std::os::raw::c_void,
-                                                      arg2: *mut cmdline,
-                                                      arg3:
-                                                          *mut ::std::os::raw::c_void)>,
-    pub data: *mut ::std::os::raw::c_void,
-    pub help_str: *const ::std::os::raw::c_char,
-    pub tokens: __IncompleteArrayField<*mut cmdline_parse_token_hdr_t>,
-}
-#[test]
-fn bindgen_test_layout_cmdline_inst() {
-    assert_eq!(::std::mem::size_of::<cmdline_inst>() , 24usize , concat ! (
-               "Size of: " , stringify ! ( cmdline_inst ) ));
-    assert_eq! (::std::mem::align_of::<cmdline_inst>() , 8usize , concat ! (
-                "Alignment of " , stringify ! ( cmdline_inst ) ));
-}
-pub type cmdline_parse_inst_t = cmdline_inst;
-/// A context is identified by its name, and contains a list of
-/// instruction
-///
-pub type cmdline_parse_ctx_t = *mut cmdline_parse_inst_t;
-extern "C" {
-    /// Try to parse a buffer according to the specified context. The
-/// argument buf must ends with "\n\0". The function returns
-/// CMDLINE_PARSE_AMBIGUOUS, CMDLINE_PARSE_NOMATCH or
-/// CMDLINE_PARSE_BAD_ARGS on error. Else it calls the associated
-/// function (defined in the context) and returns 0
-/// (CMDLINE_PARSE_SUCCESS).
-    pub fn cmdline_parse(cl: *mut cmdline, buf: *const ::std::os::raw::c_char)
-     -> ::std::os::raw::c_int;
-}
-extern "C" {
-    /// complete() must be called with *state==0 (try to complete) or
-/// with *state==-1 (just display choices), then called without
-/// modifying *state until it returns CMDLINE_PARSE_COMPLETED_BUFFER or
-/// CMDLINE_PARSE_COMPLETED_BUFFER.
-///
-/// It returns < 0 on error.
-///
-/// Else it returns:
-/// - CMDLINE_PARSE_COMPLETED_BUFFER on completion (one possible
-/// choice). In this case, the chars are appended in dst buffer.
-/// - CMDLINE_PARSE_COMPLETE_AGAIN if there is several possible
-/// choices. In this case, you must call the function again,
-/// keeping the value of state intact.
-/// - CMDLINE_PARSE_COMPLETED_BUFFER when the iteration is
-/// finished. The dst is not valid for this last call.
-///
-/// The returned dst buf ends with \0.
-    pub fn cmdline_complete(cl: *mut cmdline,
-                            buf: *const ::std::os::raw::c_char,
-                            state: *mut ::std::os::raw::c_int,
-                            dst: *mut ::std::os::raw::c_char,
-                            size: ::std::os::raw::c_uint)
-     -> ::std::os::raw::c_int;
-}
-extern "C" {
-    pub fn cmdline_isendoftoken(c: ::std::os::raw::c_char)
-     -> ::std::os::raw::c_int;
-}
-extern "C" {
-    pub fn cmdline_isendofcommand(c: ::std::os::raw::c_char)
-     -> ::std::os::raw::c_int;
-}
-extern "C" {
-    pub fn cmdline_new(ctx: *mut cmdline_parse_ctx_t,
-                       prompt: *const ::std::os::raw::c_char,
-                       s_in: ::std::os::raw::c_int,
-                       s_out: ::std::os::raw::c_int) -> *mut cmdline;
-}
-extern "C" {
-    pub fn cmdline_set_prompt(cl: *mut cmdline,
-                              prompt: *const ::std::os::raw::c_char);
-}
-extern "C" {
-    pub fn cmdline_free(cl: *mut cmdline);
-}
-extern "C" {
-    pub fn cmdline_printf(cl: *const cmdline,
-                          fmt: *const ::std::os::raw::c_char, ...);
-}
-extern "C" {
-    pub fn cmdline_in(cl: *mut cmdline, buf: *const ::std::os::raw::c_char,
-                      size: ::std::os::raw::c_int) -> ::std::os::raw::c_int;
-}
-extern "C" {
-    pub fn cmdline_write_char(rdl: *mut rdline, c: ::std::os::raw::c_char)
-     -> ::std::os::raw::c_int;
-}
-extern "C" {
-    /// This function is nonblocking equivalent of ``cmdline_interact()``. It polls
-/// *cl* for one character and interpret it. If return value is *RDLINE_EXITED*
-/// it mean that ``cmdline_quit()`` was invoked.
-///
-/// @param cl
-/// The command line object.
-///
-/// @return
-/// On success return object status - one of *enum rdline_status*.
-/// On error return negative value.
-    pub fn cmdline_poll(cl: *mut cmdline) -> ::std::os::raw::c_int;
-}
-extern "C" {
-    pub fn cmdline_interact(cl: *mut cmdline);
-}
-extern "C" {
-    pub fn cmdline_quit(cl: *mut cmdline);
-}
-#[repr(C)]
-#[derive(Debug, Copy)]
-pub struct cmdline_token_etheraddr {
-    pub hdr: cmdline_token_hdr,
-}
-#[test]
-fn bindgen_test_layout_cmdline_token_etheraddr() {
-    assert_eq!(::std::mem::size_of::<cmdline_token_etheraddr>() , 16usize ,
-               concat ! (
-               "Size of: " , stringify ! ( cmdline_token_etheraddr ) ));
-    assert_eq! (::std::mem::align_of::<cmdline_token_etheraddr>() , 8usize ,
-                concat ! (
-                "Alignment of " , stringify ! ( cmdline_token_etheraddr ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const cmdline_token_etheraddr ) ) . hdr as *
-                const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( cmdline_token_etheraddr
-                ) , "::" , stringify ! ( hdr ) ));
-}
-impl Clone for cmdline_token_etheraddr {
-    fn clone(&self) -> Self { *self }
-}
-pub type cmdline_parse_token_etheraddr_t = cmdline_token_etheraddr;
-extern "C" {
-    #[link_name = "cmdline_token_etheraddr_ops"]
-    pub static mut cmdline_token_etheraddr_ops: cmdline_token_ops;
-}
-extern "C" {
-    pub fn cmdline_parse_etheraddr(tk: *mut cmdline_parse_token_hdr_t,
-                                   srcbuf: *const ::std::os::raw::c_char,
-                                   res: *mut ::std::os::raw::c_void,
-                                   ressize: ::std::os::raw::c_uint)
-     -> ::std::os::raw::c_int;
-}
-extern "C" {
-    pub fn cmdline_get_help_etheraddr(tk: *mut cmdline_parse_token_hdr_t,
-                                      dstbuf: *mut ::std::os::raw::c_char,
-                                      size: ::std::os::raw::c_uint)
      -> ::std::os::raw::c_int;
 }
 #[repr(C)]
@@ -51351,247 +51351,4 @@ pub struct malloc_elem {
 }
 impl Clone for malloc_elem {
     fn clone(&self) -> Self { *self }
-}
-pub unsafe fn eal_init(args: ::std::env::Args)
-                       -> ::std::option::Option<::std::vec::Vec<String>> {
-    let mut argstrs: ::std::vec::Vec<String> = args.collect();
-    let mut arg_iter = argstrs.split(|str| str == "--");
-    let args: Vec<*mut i8> = arg_iter.next().unwrap().iter()
-        .map(|arg| {
-            ::std::ffi::CString::new(arg.as_bytes()).unwrap().into_raw()
-        })
-        .collect();
-    let mut argc = args.len() as i32;
-    let mut argv = args.as_ptr() as *mut *mut i8;
-    let nparam = rte_eal_init(argc, argv);
-    assert!(nparam >= 0, "Invalid EAL arguments");
-    let next = arg_iter.next();
-    if next != None {
-        let rv: Option<::std::vec::Vec<String>> = Some(next.unwrap().to_vec());
-        return rv;
-    }
-    let rv: Option<::std::vec::Vec<String>> = None;
-    rv
-}
-
-// rte_lcore.h
-pub unsafe fn rte_lcore_id() -> u32 {
-    per_lcore__lcore_id
-}
-
-pub unsafe fn rte_lcore_count() -> u32 {
-    (*rte_eal_get_configuration()).lcore_count
-}
-
-pub unsafe fn rte_get_master_lcore()-> u32 {
-    (*rte_eal_get_configuration()).master_lcore
-}
-
-pub unsafe fn rte_lcore_is_enabled(lcore_id: u32) -> bool {
-    if lcore_id >= RTE_MAX_LCORE {
-        return false;
-    }
-    let role = (*rte_eal_get_configuration()).lcore_role[lcore_id as usize];
-    role == rte_lcore_role_t::ROLE_RTE
-}
-
-pub unsafe fn rte_get_first_lcore(skip_master: bool) -> u32 {
-    let mut i = 0u32;
-    while i < RTE_MAX_LCORE {
-        if rte_lcore_is_enabled(i) == false ||
-            (skip_master == true && i == rte_get_master_lcore()) {
-                i += 1;
-            }
-        break;
-    }
-    i
-}
-
-pub unsafe fn rte_get_next_lcore(prev: u32, skip_master: bool,
-                                 wrap: bool) -> u32 {
-    let mut i = prev + 1;
-    if wrap == true {
-        i %= RTE_MAX_LCORE;
-    }
-    while i < RTE_MAX_LCORE {
-        if rte_lcore_is_enabled(i) == false ||
-            (skip_master == true && i == rte_get_master_lcore()) {
-                i += 1;
-                if wrap == true {
-                    i %= RTE_MAX_LCORE;
-                }
-            }
-        break;
-    }
-    i
-}
-
-// rte_atomic.h
-pub unsafe fn rte_atomic16_set(v: *mut rte_atomic16_t, new_value: u16) {
-    ::std::intrinsics::atomic_store(v as *mut u16, new_value)
-}
-
-pub unsafe fn rte_atomic16_add_return(v: *mut rte_atomic16_t, inc: u16)
-                                      -> u16 {
-    ::std::intrinsics::atomic_xadd(v as *mut u16, inc) + inc
-}
-
-pub unsafe fn rte_atomic16_sub_return(v: *mut rte_atomic16_t, dec: u16)
-                                      -> u16 {
-    ::std::intrinsics::atomic_xsub(v as *mut u16, dec) - dec
-}
-
-// rte_ethdev.h
-pub unsafe fn rte_eth_devices_get(port_id: u8) -> *const rte_eth_dev {
-    rte_eth_devices.as_ptr().offset(port_id as isize)
-}
-
-pub unsafe fn rte_eth_rx_burst(port_id: u8, queue_id: u16,
-                               rx_pkts: *mut *mut rte_mbuf,
-                               nb_pkts: u16) -> i16 {
-    let dev = *rte_eth_devices_get(port_id);
-    let queue = *(*dev.data).rx_queues.offset(queue_id as isize)
-        as *mut ::std::os::raw::c_void;
-    let nb_rx = (dev.rx_pkt_burst.unwrap())(queue, rx_pkts, nb_pkts);
-    nb_rx as i16
-}
-
-pub unsafe fn rte_eth_tx_burst(port_id: u8, queue_id: u16,
-                               tx_pkts: *mut *mut rte_mbuf,
-                               nb_pkts: u16) -> u16 {
-    let dev = *rte_eth_devices_get(port_id);
-    let queue = *(*dev.data).tx_queues.offset(queue_id as isize)
-        as *mut ::std::os::raw::c_void;
-    let nb_tx = (dev.tx_pkt_burst.unwrap())(queue, tx_pkts, nb_pkts);
-    nb_tx
-}
-
-pub unsafe fn rte_eth_tx_buffer_flush(port_id: u8, queue_id: u16,
-                                      buffer: *mut rte_eth_dev_tx_buffer) -> u16 {
-    let to_send = (*buffer).length;
-    if to_send == 0 {
-        return 0;
-    }
-    let sent = rte_eth_tx_burst(port_id, queue_id,
-                                (*buffer).pkts.as_mut_ptr(), to_send);
-    (*buffer).length = 0;
-    return sent;
-}
-
-pub unsafe fn rte_eth_tx_buffer(port_id: u8, queue_id: u16,
-                                buffer: *mut rte_eth_dev_tx_buffer,
-                                tx_pkt: *mut rte_mbuf) -> u16 {
-    *(*buffer).pkts.as_mut_ptr().offset((*buffer).length as isize) = tx_pkt;
-    (*buffer).length += 1;
-    if (*buffer).length < (*buffer).size {
-        return 0;
-    }
-    rte_eth_tx_buffer_flush(port_id, queue_id, buffer)
-}
-
-// rte_mempool.h
-pub unsafe fn rte_mempool_get_ops(ops_index: usize) -> *const rte_mempool_ops {
-    &rte_mempool_ops_table.ops[ops_index]
-}
-
-pub unsafe fn rte_mempool_ops_enqueue_bulk(mp: *mut rte_mempool,
-                                           obj_table: &[*mut ::std::os::raw::c_void],
-                                           len: usize) {
-    let ops = rte_mempool_get_ops((*mp).ops_index as usize);
-    (*ops).enqueue.unwrap()(mp, obj_table.as_ptr() as *const *const ::std::os::raw::c_void, len as u32);
-}
-
-pub unsafe fn rte_mempool_generic_put(mp: *mut rte_mempool,
-                                      obj_table: &[*mut ::std::os::raw::c_void],
-                                      cache: *mut rte_mempool_cache) {
-    if cache.is_null() || obj_table.len() > RTE_MEMPOOL_CACHE_MAX_SIZE as usize {
-        rte_mempool_ops_enqueue_bulk(mp, obj_table, obj_table.len());
-    } else {
-        memcpy((*cache).objs.as_mut_ptr().offset((*cache).len as isize) as *mut ::std::os::raw::c_void,
-               obj_table.as_ptr() as *mut ::std::os::raw::c_void,
-               ::std::mem::size_of::<*mut u32>() * obj_table.len());
-        (*cache).len += obj_table.len() as u32;
-        if (*cache).len >= (*cache).flushthresh {
-            rte_mempool_ops_enqueue_bulk(mp, &[(*cache).objs[(*cache).size as usize]],
-                                         ((*cache).len - (*cache).size) as usize);
-            (*cache).len = (*cache).size;
-        }
-    }
-}
-
-pub unsafe fn rte_mempool_default_cache(mp: *mut rte_mempool, lcore_id: u32)
-                                        -> *mut rte_mempool_cache {
-    (*mp).local_cache.offset(lcore_id as isize)
-}
-
-pub unsafe fn rte_mempool_put_bulk(mp: *mut rte_mempool, obj_table: &[*mut ::std::os::raw::c_void]) {
-    let mut cache = rte_mempool_default_cache(mp, rte_lcore_id());
-    rte_mempool_generic_put(mp, obj_table, cache);
-}
-
-pub unsafe fn rte_mempool_put(mp: *mut rte_mempool, obj: *mut ::std::os::raw::c_void) {
-    let mut obj_table: [*mut ::std::os::raw::c_void; 1] = [obj];
-
-    rte_mempool_put_bulk(mp, &obj_table);
-}
-
-// rte_mbuf.h
-pub unsafe fn rte_mbuf_indirect(m: *const rte_mbuf) -> bool {
-    (*m).ol_flags & IND_ATTACHED_MBUF != 0
-}
-
-pub unsafe fn rte_mbuf_raw_free(m: *mut rte_mbuf) {
-    rte_mempool_put((*m).pool, m as *mut ::std::os::raw::c_void);
-}
-
-pub unsafe fn rte_pktmbuf_detach(_m: *mut rte_mbuf) {
-    // not implemented yet
-}
-
-pub unsafe fn rte_mbuf_refcnt_read(m: *const rte_mbuf) -> u16 {
-    (*m).__bindgen_anon_1.refcnt
-}
-
-pub unsafe fn rte_mbuf_refcnt_set(m: *mut rte_mbuf, new_value: u16) {
-    rte_atomic16_set(&mut (*m).__bindgen_anon_1.refcnt_atomic,
-                     new_value)
-}
-
-pub unsafe fn rte_mbuf_refcnt_update(m: *mut rte_mbuf, value: u16) -> u16 {
-    if rte_mbuf_refcnt_read(m) == 1 {
-        rte_mbuf_refcnt_set(m, 1 + value);
-        return 1 + value;
-    }
-    rte_atomic16_add_return(&mut (*m).__bindgen_anon_1.refcnt_atomic, value)
-}
-
-pub unsafe fn rte_pktmbuf_prefree_seg(m: *mut rte_mbuf) -> *mut rte_mbuf {
-    if rte_mbuf_refcnt_read(m) == 1 {
-        if rte_mbuf_indirect(m) == true {
-            rte_pktmbuf_detach(m);
-        }
-        if (*m).next.is_null() != true {
-            (*m).next = 0 as *mut rte_mbuf;
-            (*m).nb_segs = 1;
-        }
-        return m;
-    } else if rte_atomic16_sub_return(&mut (*m).__bindgen_anon_1.refcnt_atomic, 1) == 0 {
-    }
-    0 as *mut rte_mbuf
-}
-
-pub unsafe fn rte_pktmbuf_free_seg(m: *mut rte_mbuf) {
-    let mut m = rte_pktmbuf_prefree_seg(m);
-    if m.is_null() != true {
-        rte_mbuf_raw_free(m);
-    }
-}
-
-pub unsafe fn rte_pktmbuf_free(m: *mut rte_mbuf) {
-    let mut n = m;
-    while n.is_null() != true {
-        let mut m_next = (*n).next;
-        rte_pktmbuf_free_seg(n);
-        n = m_next;
-    }
 }

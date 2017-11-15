@@ -1,6 +1,6 @@
 [package]
 name = "rust-dpdk"
-version = "0.0.2"
+version = "0.1.0"
 authors = ["Robert Clipsham <robert@octarineparrot.com>",
 	   "Masaru OKI <oki@pontonetworks.com>"]
 homepage = "http://dpdk.org/"
@@ -10,10 +10,12 @@ description = "Bindings to DPDK: Data Plane Development Kit"
 readme = "README.md"
 keywords = ["networking", "packet", "bindings"]
 build = "build.rs"
-exclude = ["examples/**/*", "src/inline.rs"]
+
+[lib]
+name = "dpdk"
 
 [dependencies]
 libc = "0.2"
 
 [build-dependencies]
-bindgen = "0.30.0"
+bindgen = "0.30"
