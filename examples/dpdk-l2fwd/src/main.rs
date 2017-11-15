@@ -76,22 +76,22 @@ unsafe extern "C" fn l2fwd_main_loop(arg: *mut c_void) -> i32 {
             if out_port.port_id == in_port.port_id {
                 continue;
             }
-            let buffer = &mut buffers[(*out_port).port_id as usize];
+            let buffer = &mut buffers[out_port.port_id as usize];
             for i in 0..nb_rx as usize {
                 if DUMP_FLAG == true {
                     dump_mbuf(pkts[i]);
                 }
                 pkts[i].refcnt_update(1);
-                let sent = buffer.tx(*out_port, 0, pkts[i]);
+                let sent = buffer.tx(out_port, 0, pkts[i]);
                 if sent < 1 {
                     let new_refcnt = pkts[i].refcnt() - 1;
                     pkts[i].refcnt_set(new_refcnt);
                 }
             }
-            buffer.flush(*out_port, 0);
+            buffer.flush(out_port, 0);
         }
         for pkt in pkts.iter_mut() {
-            dpdk::pktmbuf::free(*pkt);
+            dpdk::pktmbuf::free(pkt);
         }
     }
     0
