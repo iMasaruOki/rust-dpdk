@@ -1,20 +1,16 @@
-extern crate rust_dpdk;
+extern crate dpdk;
+use std::os::raw::c_void;
 
-use rust_dpdk::dpdk;
-
-unsafe extern "C" fn hello_thread(_arg: *mut std::os::raw::c_void) -> i32 {
-    println!("Hello! lcore {}",  dpdk::rte_lcore_id());
+unsafe extern "C" fn hello_thread(_arg: *mut c_void) -> i32 {
+    println!("Hello! lcore {}",  dpdk::lcore::id());
     0
 }
 
 fn main() {
     unsafe {
-        let _ = dpdk::eal_init(std::env::args());
-        let callback: dpdk::lcore_function_t = Some(hello_thread);
-        let callback_arg: *mut std::os::raw::c_void = std::mem::zeroed();
-        dpdk::rte_eal_mp_remote_launch(callback,
-                                       callback_arg,
-                                       dpdk::rte_rmt_call_master_t::CALL_MASTER);
-        dpdk::rte_eal_mp_wait_lcore();
+        let _ = dpdk::eal::init(std::env::args());
+        let callback_arg: *mut c_void = std::mem::zeroed();
+        dpdk::eal::mp_remote_launch(hello_thread, callback_arg, true);
+        dpdk::eal::mp_wait_lcore();
     }
 }
