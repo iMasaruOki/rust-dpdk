@@ -28,7 +28,7 @@ pub unsafe fn prefree_seg(m: *mut rte_mbuf) -> *mut rte_mbuf {
             (*m).nb_segs = 1;
         }
         return m;
-    } else if atomic::sub16_return(&mut (*m).__bindgen_anon_1.refcnt_atomic, 1) == 0 {
+    } else if atomic::sub16_return(&mut (*m).__bindgen_anon_2.refcnt_atomic, 1) == 0 {
     }
     0 as *mut rte_mbuf
 }

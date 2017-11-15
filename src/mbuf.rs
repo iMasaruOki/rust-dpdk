@@ -20,11 +20,11 @@ impl rte_mbuf {
     }
 
     pub unsafe fn refcnt(&self) -> u16 {
-        self.__bindgen_anon_1.refcnt
+        self.__bindgen_anon_2.refcnt
     }
 
     pub unsafe fn refcnt_set(&mut self, new_value: u16) {
-        atomic::set16(&mut self.__bindgen_anon_1.refcnt_atomic, new_value)
+        atomic::set16(&mut self.__bindgen_anon_2.refcnt_atomic, new_value)
     }
 
     pub unsafe fn refcnt_update(&mut self, value: u16) -> u16 {
@@ -32,7 +32,7 @@ impl rte_mbuf {
             self.refcnt_set(1 + value);
             return 1 + value;
         }
-        atomic::add16_return(&mut self.__bindgen_anon_1.refcnt_atomic, value)
+        atomic::add16_return(&mut self.__bindgen_anon_2.refcnt_atomic, value)
     }
 
     pub unsafe fn refcnt_inc(&mut self) -> u16 {
