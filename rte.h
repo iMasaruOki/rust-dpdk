@@ -1,6 +1,8 @@
 #include <stdint.h>
 #include <stdio.h>
 
+#include <rte_config.h>
+
 #include <cmdline_cirbuf.h>
 #include <cmdline.h>
 #include <cmdline_parse_etheraddr.h>
@@ -28,7 +30,6 @@
 #include <rte_cfgfile.h>
 #include <rte_common.h>
 #include <rte_compat.h>
-#include <rte_config.h>
 #include <rte_cpuflags.h>
 #include <rte_cryptodev.h>
 #include <rte_cryptodev_pci.h>
@@ -156,7 +157,6 @@
 #include <rte_vhost.h>
 
 #include <exec-env/rte_dom0_common.h>
-#include <exec-env/rte_interrupts.h>
 #include <exec-env/rte_kni_common.h>
 
 #include <generic/rte_atomic.h>

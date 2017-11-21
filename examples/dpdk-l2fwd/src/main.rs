@@ -16,7 +16,7 @@ static mut DUMP_FLAG: bool = false;
 const MAX_PKT_BURST:u16 = 32;
 
 lazy_static! {
-    static ref PORTS: Mutex<Vec<u8>> = Mutex::new(vec![]);
+    static ref PORTS: Mutex<Vec<dpdk::eth::Port>> = Mutex::new(vec![]);
 }
 
 fn dump_packet_type(ptype: u32) {
@@ -58,7 +58,7 @@ unsafe extern "C" fn l2fwd_main_loop(arg: *mut c_void) -> i32 {
     let lcore_id = dpdk::lcore::id();
     let mut pkts: [&mut ffi::rte_mbuf; MAX_PKT_BURST as usize];
     let mut buffers: [dpdk::eth::tx_buffer; ffi::RTE_MAX_ETHPORTS as usize];
-    let in_port = arg as u8;
+    let in_port = dpdk::eth::Port { port_id: arg as u16 };
 
     pkts = std::mem::zeroed();
     buffers =  std::mem::zeroed();
@@ -68,32 +68,30 @@ unsafe extern "C" fn l2fwd_main_loop(arg: *mut c_void) -> i32 {
 
     println!("lcore{}: loop start", lcore_id);
     while FORCE_QUIT != true {
-        let nb_rx = dpdk::eth::rx_burst(in_port, 0,
-                                        pkts.as_mut_ptr(),
-                                        MAX_PKT_BURST);
+        let nb_rx = in_port.rx_burst(0, pkts.as_mut_ptr(), MAX_PKT_BURST);
         if nb_rx == 0 {
             continue;
         }
         for out_port in PORTS.lock().unwrap().iter() {
-            if *out_port == in_port {
+            if out_port.port_id == in_port.port_id {
                 continue;
             }
-            let buffer = &mut buffers[*out_port as usize];
+            let buffer = &mut buffers[out_port.port_id as usize];
             for i in 0..nb_rx as usize {
                 if DUMP_FLAG == true {
                     dump_mbuf(pkts[i]);
                 }
                 pkts[i].refcnt_update(1);
-                let sent = buffer.tx(*out_port, 0, pkts[i]);
+                let sent = buffer.tx(out_port, 0, pkts[i]);
                 if sent < 1 {
                     let new_refcnt = pkts[i].refcnt() - 1;
                     pkts[i].refcnt_set(new_refcnt);
                 }
             }
-            buffer.flush(*out_port, 0);
+            buffer.flush(out_port, 0);
         }
         for pkt in pkts.iter_mut() {
-            dpdk::pktmbuf::free(*pkt);
+            dpdk::pktmbuf::free(pkt);
         }
     }
     0
@@ -125,7 +123,7 @@ fn main() {
             .unwrap();
         // lcore and port assignment
         let mut lcores: Vec<u32> = Vec::new();
-        let mut n = 0u8;
+        let mut n = 0u16;
         let mut lc = dpdk::lcore::get_first(true);
         while portmap > 0 {
             if portmap & 1 != 0 {
@@ -133,7 +131,7 @@ fn main() {
                     panic!("Not enough logical core.");
                 }
                 println!("portid {}: lcore {}", n, lc);
-                PORTS.lock().unwrap().push(n);
+                PORTS.lock().unwrap().push(dpdk::eth::Port { port_id: n});
                 lcores.push(lc);
                 lc = dpdk::lcore::get_next(lc, false, false);
             }
@@ -149,41 +147,44 @@ fn main() {
         assert!(pool.is_null() == false);
         let mut port_conf: ffi::rte_eth_conf = std::mem::zeroed();
         port_conf.rxmode.set_hw_strip_crc(1);
-        for portid in PORTS.lock().unwrap().clone() {
+        for port in PORTS.lock().unwrap().clone() {
             let mut info: ffi::rte_eth_dev_info = std::mem::zeroed();
-            info.get(portid);
-            let device = dpdk::eth::devices(portid);
-            println!("Initializing port {}: name {}", portid, device.name());
+            port.info(&mut info);
+            let device = port.devices();
+            println!("Initializing port {}: name {}",
+                     port.port_id, device.name());
             if device.is_intr_lsc_enable() == true {
                 port_conf.intr_conf.set_lsc(1);
             } else {
                 port_conf.intr_conf.set_lsc(0);
             }
-            let rv = dpdk::eth::configure(portid, 1, 1, &port_conf);
+            let rv = port.configure(1, 1, &port_conf);
             assert!(rv == 0,
-                    "configure failed: portid {}, rv: {}", portid, rv);
-            let nb_rxd = dpdk::eth::adjust_rx_desc(portid, 128);
-            let nb_txd = dpdk::eth::adjust_tx_desc(portid, 512);
-            let rv = dpdk::eth::rx_queue_setup(portid, 0, nb_rxd,
-                                               dpdk::eth::socket_id(portid),
-                                               &mut info.default_rxconf,
-                                               pool);
+                    "configure failed: portid {}, rv: {}", port.port_id, rv);
+            let nb_rxd = port.adjust_rx_desc(128);
+            let nb_txd = port.adjust_tx_desc(512);
+            let rv = port.rx_queue_setup(0, nb_rxd,
+                                         port.socket_id(),
+                                         &mut info.default_rxconf,
+                                         pool);
             assert!(rv == 0,
-                    "rx queue setup failed: portid {}, rv: {}", portid, rv);
-            let rv = dpdk::eth::tx_queue_setup(portid, 0, nb_txd,
-                                               dpdk::eth::socket_id(portid),
-                                               &mut info.default_txconf);
+                    "rx queue setup failed: portid {}, rv: {}",
+                    port.port_id, rv);
+            let rv = port.tx_queue_setup(0, nb_txd,
+                                         port.socket_id(),
+                                         &mut info.default_txconf);
             assert!(rv == 0,
-                    "tx queue setup failed: portid {}, rv: {}", portid, rv);
-            let rv = dpdk::eth::start(portid);
+                    "tx queue setup failed: portid {}, rv: {}",
+                    port.port_id, rv);
+            let rv = port.start();
             assert!(rv == 0,
                     "ethernet devvice not started: portid {}, rv: {}",
-                    portid, rv);
-            dpdk::eth::promiscuous_set(portid, true);
+                    port.port_id, rv);
+            port.promiscuous_set(true);
         }
         let callback = l2fwd_main_loop;
         for n in 0..lcores.len() {
-            let callback_arg = PORTS.lock().unwrap()[n] as *mut c_void;
+            let callback_arg = PORTS.lock().unwrap()[n].port_id as *mut c_void;
             dpdk::eal::remote_launch(callback, callback_arg,lcores[n]);
         }
         dpdk::eal::mp_wait_lcore();
