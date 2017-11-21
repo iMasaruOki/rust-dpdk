@@ -211,6 +211,153 @@ pub const TMP_MAX: ::std::os::raw::c_uint = 238328;
 pub const FILENAME_MAX: ::std::os::raw::c_uint = 4096;
 pub const L_ctermid: ::std::os::raw::c_uint = 9;
 pub const FOPEN_MAX: ::std::os::raw::c_uint = 16;
+pub const RTE_EXEC_ENV: &'static [u8; 9usize] = b"linuxapp\x00";
+pub const RTE_ARCH: &'static [u8; 7usize] = b"x86_64\x00";
+pub const RTE_MACHINE: &'static [u8; 7usize] = b"native\x00";
+pub const RTE_TOOLCHAIN: &'static [u8; 4usize] = b"gcc\x00";
+pub const RTE_BUILD_SHARED_LIB: ::std::os::raw::c_uint = 1;
+pub const RTE_NEXT_ABI: ::std::os::raw::c_uint = 1;
+pub const RTE_CACHE_LINE_SIZE: ::std::os::raw::c_uint = 64;
+pub const RTE_LIBRTE_EAL: ::std::os::raw::c_uint = 1;
+pub const RTE_MAX_LCORE: ::std::os::raw::c_uint = 128;
+pub const RTE_MAX_NUMA_NODES: ::std::os::raw::c_uint = 8;
+pub const RTE_MAX_MEMSEG: ::std::os::raw::c_uint = 256;
+pub const RTE_MAX_MEMZONE: ::std::os::raw::c_uint = 2560;
+pub const RTE_MAX_TAILQ: ::std::os::raw::c_uint = 32;
+pub const RTE_LOG_HISTORY: ::std::os::raw::c_uint = 256;
+pub const RTE_BACKTRACE: ::std::os::raw::c_uint = 1;
+pub const RTE_EAL_IGB_UIO: ::std::os::raw::c_uint = 1;
+pub const RTE_EAL_VFIO: ::std::os::raw::c_uint = 1;
+pub const RTE_EAL_NUMA_AWARE_HUGEPAGES: ::std::os::raw::c_uint = 1;
+pub const RTE_ENABLE_AVX: ::std::os::raw::c_uint = 1;
+pub const RTE_EAL_PMD_PATH: &'static [u8; 1usize] = b"\x00";
+pub const RTE_LIBRTE_EAL_VMWARE_TSC_MAP_SUPPORT: ::std::os::raw::c_uint = 1;
+pub const RTE_LIBRTE_PCI: ::std::os::raw::c_uint = 1;
+pub const RTE_LIBRTE_KVARGS: ::std::os::raw::c_uint = 1;
+pub const RTE_LIBRTE_ETHER: ::std::os::raw::c_uint = 1;
+pub const RTE_MAX_ETHPORTS: ::std::os::raw::c_uint = 32;
+pub const RTE_MAX_QUEUES_PER_PORT: ::std::os::raw::c_uint = 1024;
+pub const RTE_ETHDEV_QUEUE_STAT_CNTRS: ::std::os::raw::c_uint = 16;
+pub const RTE_ETHDEV_RXTX_CALLBACKS: ::std::os::raw::c_uint = 1;
+pub const RTE_LIBRTE_PCI_BUS: ::std::os::raw::c_uint = 1;
+pub const RTE_LIBRTE_VDEV_BUS: ::std::os::raw::c_uint = 1;
+pub const RTE_LIBRTE_ENA_PMD: ::std::os::raw::c_uint = 1;
+pub const RTE_LIBRTE_EM_PMD: ::std::os::raw::c_uint = 1;
+pub const RTE_LIBRTE_IGB_PMD: ::std::os::raw::c_uint = 1;
+pub const RTE_LIBRTE_IXGBE_PMD: ::std::os::raw::c_uint = 1;
+pub const RTE_IXGBE_INC_VECTOR: ::std::os::raw::c_uint = 1;
+pub const RTE_LIBRTE_I40E_PMD: ::std::os::raw::c_uint = 1;
+pub const RTE_LIBRTE_I40E_RX_ALLOW_BULK_ALLOC: ::std::os::raw::c_uint = 1;
+pub const RTE_LIBRTE_I40E_INC_VECTOR: ::std::os::raw::c_uint = 1;
+pub const RTE_LIBRTE_I40E_QUEUE_NUM_PER_PF: ::std::os::raw::c_uint = 64;
+pub const RTE_LIBRTE_I40E_QUEUE_NUM_PER_VF: ::std::os::raw::c_uint = 4;
+pub const RTE_LIBRTE_I40E_QUEUE_NUM_PER_VM: ::std::os::raw::c_uint = 4;
+pub const RTE_LIBRTE_I40E_ITR_INTERVAL: ::std::os::raw::c_int = -1;
+pub const RTE_LIBRTE_FM10K_PMD: ::std::os::raw::c_uint = 1;
+pub const RTE_LIBRTE_FM10K_RX_OLFLAGS_ENABLE: ::std::os::raw::c_uint = 1;
+pub const RTE_LIBRTE_FM10K_INC_VECTOR: ::std::os::raw::c_uint = 1;
+pub const RTE_LIBRTE_MLX4_TX_MP_CACHE: ::std::os::raw::c_uint = 8;
+pub const RTE_LIBRTE_MLX5_TX_MP_CACHE: ::std::os::raw::c_uint = 8;
+pub const RTE_LIBRTE_CXGBE_PMD: ::std::os::raw::c_uint = 1;
+pub const RTE_LIBRTE_CXGBE_TPUT: ::std::os::raw::c_uint = 1;
+pub const RTE_LIBRTE_ENIC_PMD: ::std::os::raw::c_uint = 1;
+pub const RTE_LIBRTE_NFP_PMD: ::std::os::raw::c_uint = 1;
+pub const RTE_LIBRTE_BNXT_PMD: ::std::os::raw::c_uint = 1;
+pub const RTE_LIBRTE_SFC_EFX_PMD: ::std::os::raw::c_uint = 1;
+pub const RTE_LIBRTE_PMD_SOFTNIC: ::std::os::raw::c_uint = 1;
+pub const RTE_LIBRTE_PMD_SZEDATA2_AS: ::std::os::raw::c_uint = 0;
+pub const RTE_LIBRTE_THUNDERX_NICVF_PMD: ::std::os::raw::c_uint = 1;
+pub const RTE_LIBRTE_LIO_PMD: ::std::os::raw::c_uint = 1;
+pub const RTE_LIBRTE_OCTEONTX_PMD: ::std::os::raw::c_uint = 1;
+pub const RTE_LIBRTE_DPAA2_USE_PHYS_IOVA: ::std::os::raw::c_uint = 1;
+pub const RTE_LIBRTE_VIRTIO_PMD: ::std::os::raw::c_uint = 1;
+pub const RTE_VIRTIO_USER: ::std::os::raw::c_uint = 1;
+pub const RTE_LIBRTE_VMXNET3_PMD: ::std::os::raw::c_uint = 1;
+pub const RTE_LIBRTE_PMD_RING: ::std::os::raw::c_uint = 1;
+pub const RTE_PMD_RING_MAX_RX_RINGS: ::std::os::raw::c_uint = 16;
+pub const RTE_PMD_RING_MAX_TX_RINGS: ::std::os::raw::c_uint = 16;
+pub const RTE_LIBRTE_PMD_BOND: ::std::os::raw::c_uint = 1;
+pub const RTE_LIBRTE_QEDE_PMD: ::std::os::raw::c_uint = 1;
+pub const RTE_LIBRTE_QEDE_VF_TX_SWITCH: ::std::os::raw::c_uint = 1;
+pub const RTE_LIBRTE_QEDE_FW: &'static [u8; 1usize] = b"\x00";
+pub const RTE_LIBRTE_PMD_AF_PACKET: ::std::os::raw::c_uint = 1;
+pub const RTE_LIBRTE_ARK_PMD: ::std::os::raw::c_uint = 1;
+pub const RTE_LIBRTE_ARK_PAD_TX: ::std::os::raw::c_uint = 1;
+pub const RTE_LIBRTE_AVP_PMD: ::std::os::raw::c_uint = 1;
+pub const RTE_LIBRTE_AVP_DEBUG_DRIVER: ::std::os::raw::c_uint = 1;
+pub const RTE_LIBRTE_PMD_TAP: ::std::os::raw::c_uint = 1;
+pub const RTE_LIBRTE_PMD_NULL: ::std::os::raw::c_uint = 1;
+pub const RTE_LIBRTE_PMD_FAILSAFE: ::std::os::raw::c_uint = 1;
+pub const RTE_PMD_PACKET_PREFETCH: ::std::os::raw::c_uint = 1;
+pub const RTE_LIBRTE_CRYPTODEV: ::std::os::raw::c_uint = 1;
+pub const RTE_CRYPTO_MAX_DEVS: ::std::os::raw::c_uint = 64;
+pub const RTE_CRYPTODEV_NAME_LEN: ::std::os::raw::c_uint = 64;
+pub const RTE_QAT_PMD_MAX_NB_SESSIONS: ::std::os::raw::c_uint = 2048;
+pub const RTE_LIBRTE_PMD_CRYPTO_SCHEDULER: ::std::os::raw::c_uint = 1;
+pub const RTE_LIBRTE_PMD_NULL_CRYPTO: ::std::os::raw::c_uint = 1;
+pub const RTE_LIBRTE_SECURITY: ::std::os::raw::c_uint = 1;
+pub const RTE_LIBRTE_EVENTDEV: ::std::os::raw::c_uint = 1;
+pub const RTE_EVENT_MAX_DEVS: ::std::os::raw::c_uint = 16;
+pub const RTE_EVENT_MAX_QUEUES_PER_DEV: ::std::os::raw::c_uint = 64;
+pub const RTE_LIBRTE_PMD_SKELETON_EVENTDEV: ::std::os::raw::c_uint = 1;
+pub const RTE_LIBRTE_PMD_SW_EVENTDEV: ::std::os::raw::c_uint = 1;
+pub const RTE_LIBRTE_PMD_OCTEONTX_SSOVF: ::std::os::raw::c_uint = 1;
+pub const RTE_LIBRTE_RING: ::std::os::raw::c_uint = 1;
+pub const RTE_LIBRTE_MEMPOOL: ::std::os::raw::c_uint = 1;
+pub const RTE_MEMPOOL_CACHE_MAX_SIZE: ::std::os::raw::c_uint = 512;
+pub const RTE_DRIVER_MEMPOOL_RING: ::std::os::raw::c_uint = 1;
+pub const RTE_DRIVER_MEMPOOL_STACK: ::std::os::raw::c_uint = 1;
+pub const RTE_LIBRTE_OCTEONTX_MEMPOOL: ::std::os::raw::c_uint = 1;
+pub const RTE_LIBRTE_MBUF: ::std::os::raw::c_uint = 1;
+pub const RTE_MBUF_DEFAULT_MEMPOOL_OPS: &'static [u8; 11usize] =
+    b"ring_mp_mc\x00";
+pub const RTE_MBUF_REFCNT_ATOMIC: ::std::os::raw::c_uint = 1;
+pub const RTE_PKTMBUF_HEADROOM: ::std::os::raw::c_uint = 128;
+pub const RTE_LIBRTE_TIMER: ::std::os::raw::c_uint = 1;
+pub const RTE_LIBRTE_CFGFILE: ::std::os::raw::c_uint = 1;
+pub const RTE_LIBRTE_CMDLINE: ::std::os::raw::c_uint = 1;
+pub const RTE_LIBRTE_HASH: ::std::os::raw::c_uint = 1;
+pub const RTE_LIBRTE_EFD: ::std::os::raw::c_uint = 1;
+pub const RTE_LIBRTE_MEMBER: ::std::os::raw::c_uint = 1;
+pub const RTE_LIBRTE_JOBSTATS: ::std::os::raw::c_uint = 1;
+pub const RTE_LIBRTE_METRICS: ::std::os::raw::c_uint = 1;
+pub const RTE_LIBRTE_BITRATE: ::std::os::raw::c_uint = 1;
+pub const RTE_LIBRTE_LATENCY_STATS: ::std::os::raw::c_uint = 1;
+pub const RTE_LIBRTE_LPM: ::std::os::raw::c_uint = 1;
+pub const RTE_LIBRTE_ACL: ::std::os::raw::c_uint = 1;
+pub const RTE_LIBRTE_POWER: ::std::os::raw::c_uint = 1;
+pub const RTE_MAX_LCORE_FREQS: ::std::os::raw::c_uint = 64;
+pub const RTE_LIBRTE_NET: ::std::os::raw::c_uint = 1;
+pub const RTE_LIBRTE_IP_FRAG: ::std::os::raw::c_uint = 1;
+pub const RTE_LIBRTE_IP_FRAG_MAX_FRAG: ::std::os::raw::c_uint = 4;
+pub const RTE_LIBRTE_GRO: ::std::os::raw::c_uint = 1;
+pub const RTE_LIBRTE_GSO: ::std::os::raw::c_uint = 1;
+pub const RTE_LIBRTE_METER: ::std::os::raw::c_uint = 1;
+pub const RTE_LIBRTE_FLOW_CLASSIFY: ::std::os::raw::c_uint = 1;
+pub const RTE_LIBRTE_SCHED: ::std::os::raw::c_uint = 1;
+pub const RTE_SCHED_PORT_N_GRINDERS: ::std::os::raw::c_uint = 8;
+pub const RTE_LIBRTE_DISTRIBUTOR: ::std::os::raw::c_uint = 1;
+pub const RTE_LIBRTE_REORDER: ::std::os::raw::c_uint = 1;
+pub const RTE_LIBRTE_PORT: ::std::os::raw::c_uint = 1;
+pub const RTE_LIBRTE_TABLE: ::std::os::raw::c_uint = 1;
+pub const RTE_LIBRTE_PIPELINE: ::std::os::raw::c_uint = 1;
+pub const RTE_LIBRTE_KNI: ::std::os::raw::c_uint = 1;
+pub const RTE_LIBRTE_PMD_KNI: ::std::os::raw::c_uint = 1;
+pub const RTE_KNI_KMOD: ::std::os::raw::c_uint = 1;
+pub const RTE_KNI_PREEMPT_DEFAULT: ::std::os::raw::c_uint = 1;
+pub const RTE_LIBRTE_PDUMP: ::std::os::raw::c_uint = 1;
+pub const RTE_LIBRTE_VHOST: ::std::os::raw::c_uint = 1;
+pub const RTE_LIBRTE_VHOST_NUMA: ::std::os::raw::c_uint = 1;
+pub const RTE_LIBRTE_PMD_VHOST: ::std::os::raw::c_uint = 1;
+pub const RTE_APP_TEST: ::std::os::raw::c_uint = 1;
+pub const RTE_TEST_PMD: ::std::os::raw::c_uint = 1;
+pub const RTE_APP_CRYPTO_PERF: ::std::os::raw::c_uint = 1;
+pub const RTE_APP_EVENTDEV: ::std::os::raw::c_uint = 1;
+pub const RTE_EXEC_ENV_LINUXAPP: ::std::os::raw::c_uint = 1;
+pub const RTE_ARCH_X86_64: ::std::os::raw::c_uint = 1;
+pub const RTE_ARCH_X86: ::std::os::raw::c_uint = 1;
+pub const RTE_ARCH_64: ::std::os::raw::c_uint = 1;
+pub const RTE_TOOLCHAIN_GCC: ::std::os::raw::c_uint = 1;
 pub const _TERMIOS_H: ::std::os::raw::c_uint = 1;
 pub const NCCS: ::std::os::raw::c_uint = 32;
 pub const _HAVE_STRUCT_TERMIOS_C_ISPEED: ::std::os::raw::c_uint = 1;
@@ -1225,153 +1372,6 @@ pub const _SIDD_LEAST_SIGNIFICANT: ::std::os::raw::c_uint = 0;
 pub const _SIDD_MOST_SIGNIFICANT: ::std::os::raw::c_uint = 64;
 pub const _SIDD_BIT_MASK: ::std::os::raw::c_uint = 0;
 pub const _SIDD_UNIT_MASK: ::std::os::raw::c_uint = 64;
-pub const RTE_EXEC_ENV: &'static [u8; 9usize] = b"linuxapp\x00";
-pub const RTE_ARCH: &'static [u8; 7usize] = b"x86_64\x00";
-pub const RTE_MACHINE: &'static [u8; 7usize] = b"native\x00";
-pub const RTE_TOOLCHAIN: &'static [u8; 4usize] = b"gcc\x00";
-pub const RTE_BUILD_SHARED_LIB: ::std::os::raw::c_uint = 1;
-pub const RTE_NEXT_ABI: ::std::os::raw::c_uint = 1;
-pub const RTE_CACHE_LINE_SIZE: ::std::os::raw::c_uint = 64;
-pub const RTE_LIBRTE_EAL: ::std::os::raw::c_uint = 1;
-pub const RTE_MAX_LCORE: ::std::os::raw::c_uint = 128;
-pub const RTE_MAX_NUMA_NODES: ::std::os::raw::c_uint = 8;
-pub const RTE_MAX_MEMSEG: ::std::os::raw::c_uint = 256;
-pub const RTE_MAX_MEMZONE: ::std::os::raw::c_uint = 2560;
-pub const RTE_MAX_TAILQ: ::std::os::raw::c_uint = 32;
-pub const RTE_LOG_HISTORY: ::std::os::raw::c_uint = 256;
-pub const RTE_BACKTRACE: ::std::os::raw::c_uint = 1;
-pub const RTE_EAL_IGB_UIO: ::std::os::raw::c_uint = 1;
-pub const RTE_EAL_VFIO: ::std::os::raw::c_uint = 1;
-pub const RTE_EAL_NUMA_AWARE_HUGEPAGES: ::std::os::raw::c_uint = 1;
-pub const RTE_ENABLE_AVX: ::std::os::raw::c_uint = 1;
-pub const RTE_EAL_PMD_PATH: &'static [u8; 1usize] = b"\x00";
-pub const RTE_LIBRTE_EAL_VMWARE_TSC_MAP_SUPPORT: ::std::os::raw::c_uint = 1;
-pub const RTE_LIBRTE_KVARGS: ::std::os::raw::c_uint = 1;
-pub const RTE_LIBRTE_ETHER: ::std::os::raw::c_uint = 1;
-pub const RTE_MAX_ETHPORTS: ::std::os::raw::c_uint = 32;
-pub const RTE_MAX_QUEUES_PER_PORT: ::std::os::raw::c_uint = 1024;
-pub const RTE_ETHDEV_QUEUE_STAT_CNTRS: ::std::os::raw::c_uint = 16;
-pub const RTE_ETHDEV_RXTX_CALLBACKS: ::std::os::raw::c_uint = 1;
-pub const RTE_LIBRTE_ENA_PMD: ::std::os::raw::c_uint = 1;
-pub const RTE_LIBRTE_EM_PMD: ::std::os::raw::c_uint = 1;
-pub const RTE_LIBRTE_IGB_PMD: ::std::os::raw::c_uint = 1;
-pub const RTE_LIBRTE_IXGBE_PMD: ::std::os::raw::c_uint = 1;
-pub const RTE_IXGBE_INC_VECTOR: ::std::os::raw::c_uint = 1;
-pub const RTE_LIBRTE_I40E_PMD: ::std::os::raw::c_uint = 1;
-pub const RTE_LIBRTE_I40E_RX_ALLOW_BULK_ALLOC: ::std::os::raw::c_uint = 1;
-pub const RTE_LIBRTE_I40E_INC_VECTOR: ::std::os::raw::c_uint = 1;
-pub const RTE_LIBRTE_I40E_QUEUE_NUM_PER_PF: ::std::os::raw::c_uint = 64;
-pub const RTE_LIBRTE_I40E_QUEUE_NUM_PER_VF: ::std::os::raw::c_uint = 4;
-pub const RTE_LIBRTE_I40E_QUEUE_NUM_PER_VM: ::std::os::raw::c_uint = 4;
-pub const RTE_LIBRTE_I40E_ITR_INTERVAL: ::std::os::raw::c_int = -1;
-pub const RTE_LIBRTE_FM10K_PMD: ::std::os::raw::c_uint = 1;
-pub const RTE_LIBRTE_FM10K_RX_OLFLAGS_ENABLE: ::std::os::raw::c_uint = 1;
-pub const RTE_LIBRTE_FM10K_INC_VECTOR: ::std::os::raw::c_uint = 1;
-pub const RTE_LIBRTE_MLX4_SGE_WR_N: ::std::os::raw::c_uint = 4;
-pub const RTE_LIBRTE_MLX4_MAX_INLINE: ::std::os::raw::c_uint = 0;
-pub const RTE_LIBRTE_MLX4_TX_MP_CACHE: ::std::os::raw::c_uint = 8;
-pub const RTE_LIBRTE_MLX4_SOFT_COUNTERS: ::std::os::raw::c_uint = 1;
-pub const RTE_LIBRTE_MLX5_TX_MP_CACHE: ::std::os::raw::c_uint = 8;
-pub const RTE_LIBRTE_CXGBE_PMD: ::std::os::raw::c_uint = 1;
-pub const RTE_LIBRTE_CXGBE_TPUT: ::std::os::raw::c_uint = 1;
-pub const RTE_LIBRTE_ENIC_PMD: ::std::os::raw::c_uint = 1;
-pub const RTE_LIBRTE_NFP_PMD: ::std::os::raw::c_uint = 1;
-pub const RTE_LIBRTE_BNXT_PMD: ::std::os::raw::c_uint = 1;
-pub const RTE_LIBRTE_SFC_EFX_PMD: ::std::os::raw::c_uint = 1;
-pub const RTE_LIBRTE_PMD_SZEDATA2_AS: ::std::os::raw::c_uint = 0;
-pub const RTE_LIBRTE_THUNDERX_NICVF_PMD: ::std::os::raw::c_uint = 1;
-pub const RTE_LIBRTE_LIO_PMD: ::std::os::raw::c_uint = 1;
-pub const RTE_LIBRTE_DPAA2_USE_PHYS_IOVA: ::std::os::raw::c_uint = 1;
-pub const RTE_LIBRTE_VIRTIO_PMD: ::std::os::raw::c_uint = 1;
-pub const RTE_VIRTIO_USER: ::std::os::raw::c_uint = 1;
-pub const RTE_LIBRTE_VMXNET3_PMD: ::std::os::raw::c_uint = 1;
-pub const RTE_LIBRTE_PMD_RING: ::std::os::raw::c_uint = 1;
-pub const RTE_PMD_RING_MAX_RX_RINGS: ::std::os::raw::c_uint = 16;
-pub const RTE_PMD_RING_MAX_TX_RINGS: ::std::os::raw::c_uint = 16;
-pub const RTE_LIBRTE_PMD_PCAP: ::std::os::raw::c_uint = 1;
-pub const RTE_LIBRTE_PMD_BOND: ::std::os::raw::c_uint = 1;
-pub const RTE_LIBRTE_QEDE_PMD: ::std::os::raw::c_uint = 1;
-pub const RTE_LIBRTE_QEDE_FW: &'static [u8; 1usize] = b"\x00";
-pub const RTE_LIBRTE_PMD_AF_PACKET: ::std::os::raw::c_uint = 1;
-pub const RTE_LIBRTE_ARK_PMD: ::std::os::raw::c_uint = 1;
-pub const RTE_LIBRTE_ARK_PAD_TX: ::std::os::raw::c_uint = 1;
-pub const RTE_LIBRTE_AVP_PMD: ::std::os::raw::c_uint = 1;
-pub const RTE_LIBRTE_AVP_DEBUG_DRIVER: ::std::os::raw::c_uint = 1;
-pub const RTE_LIBRTE_PMD_TAP: ::std::os::raw::c_uint = 1;
-pub const RTE_LIBRTE_PMD_NULL: ::std::os::raw::c_uint = 1;
-pub const RTE_LIBRTE_PMD_FAILSAFE: ::std::os::raw::c_uint = 1;
-pub const RTE_PMD_PACKET_PREFETCH: ::std::os::raw::c_uint = 1;
-pub const RTE_LIBRTE_CRYPTODEV: ::std::os::raw::c_uint = 1;
-pub const RTE_CRYPTO_MAX_DEVS: ::std::os::raw::c_uint = 64;
-pub const RTE_CRYPTODEV_NAME_LEN: ::std::os::raw::c_uint = 64;
-pub const RTE_QAT_PMD_MAX_NB_SESSIONS: ::std::os::raw::c_uint = 2048;
-pub const RTE_LIBRTE_PMD_CRYPTO_SCHEDULER: ::std::os::raw::c_uint = 1;
-pub const RTE_LIBRTE_PMD_NULL_CRYPTO: ::std::os::raw::c_uint = 1;
-pub const RTE_LIBRTE_EVENTDEV: ::std::os::raw::c_uint = 1;
-pub const RTE_EVENT_MAX_DEVS: ::std::os::raw::c_uint = 16;
-pub const RTE_EVENT_MAX_QUEUES_PER_DEV: ::std::os::raw::c_uint = 64;
-pub const RTE_LIBRTE_PMD_SKELETON_EVENTDEV: ::std::os::raw::c_uint = 1;
-pub const RTE_LIBRTE_PMD_SW_EVENTDEV: ::std::os::raw::c_uint = 1;
-pub const RTE_LIBRTE_PMD_OCTEONTX_SSOVF: ::std::os::raw::c_uint = 1;
-pub const RTE_LIBRTE_RING: ::std::os::raw::c_uint = 1;
-pub const RTE_LIBRTE_MEMPOOL: ::std::os::raw::c_uint = 1;
-pub const RTE_MEMPOOL_CACHE_MAX_SIZE: ::std::os::raw::c_uint = 512;
-pub const RTE_DRIVER_MEMPOOL_RING: ::std::os::raw::c_uint = 1;
-pub const RTE_DRIVER_MEMPOOL_STACK: ::std::os::raw::c_uint = 1;
-pub const RTE_LIBRTE_MBUF: ::std::os::raw::c_uint = 1;
-pub const RTE_MBUF_DEFAULT_MEMPOOL_OPS: &'static [u8; 11usize] =
-    b"ring_mp_mc\x00";
-pub const RTE_MBUF_REFCNT_ATOMIC: ::std::os::raw::c_uint = 1;
-pub const RTE_PKTMBUF_HEADROOM: ::std::os::raw::c_uint = 128;
-pub const RTE_LIBRTE_TIMER: ::std::os::raw::c_uint = 1;
-pub const RTE_LIBRTE_CFGFILE: ::std::os::raw::c_uint = 1;
-pub const RTE_LIBRTE_CMDLINE: ::std::os::raw::c_uint = 1;
-pub const RTE_LIBRTE_HASH: ::std::os::raw::c_uint = 1;
-pub const RTE_LIBRTE_EFD: ::std::os::raw::c_uint = 1;
-pub const RTE_LIBRTE_JOBSTATS: ::std::os::raw::c_uint = 1;
-pub const RTE_LIBRTE_METRICS: ::std::os::raw::c_uint = 1;
-pub const RTE_LIBRTE_BITRATE: ::std::os::raw::c_uint = 1;
-pub const RTE_LIBRTE_LATENCY_STATS: ::std::os::raw::c_uint = 1;
-pub const RTE_LIBRTE_LPM: ::std::os::raw::c_uint = 1;
-pub const RTE_LIBRTE_ACL: ::std::os::raw::c_uint = 1;
-pub const RTE_LIBRTE_POWER: ::std::os::raw::c_uint = 1;
-pub const RTE_MAX_LCORE_FREQS: ::std::os::raw::c_uint = 64;
-pub const RTE_LIBRTE_NET: ::std::os::raw::c_uint = 1;
-pub const RTE_LIBRTE_IP_FRAG: ::std::os::raw::c_uint = 1;
-pub const RTE_LIBRTE_IP_FRAG_MAX_FRAG: ::std::os::raw::c_uint = 4;
-pub const RTE_LIBRTE_GRO: ::std::os::raw::c_uint = 1;
-pub const RTE_LIBRTE_METER: ::std::os::raw::c_uint = 1;
-pub const RTE_LIBRTE_SCHED: ::std::os::raw::c_uint = 1;
-pub const RTE_SCHED_PORT_N_GRINDERS: ::std::os::raw::c_uint = 8;
-pub const RTE_LIBRTE_DISTRIBUTOR: ::std::os::raw::c_uint = 1;
-pub const RTE_LIBRTE_REORDER: ::std::os::raw::c_uint = 1;
-pub const RTE_LIBRTE_PORT: ::std::os::raw::c_uint = 1;
-pub const RTE_LIBRTE_TABLE: ::std::os::raw::c_uint = 1;
-pub const RTE_LIBRTE_PIPELINE: ::std::os::raw::c_uint = 1;
-pub const RTE_LIBRTE_KNI: ::std::os::raw::c_uint = 1;
-pub const RTE_LIBRTE_PMD_KNI: ::std::os::raw::c_uint = 1;
-pub const RTE_KNI_KMOD: ::std::os::raw::c_uint = 1;
-pub const RTE_KNI_PREEMPT_DEFAULT: ::std::os::raw::c_uint = 1;
-pub const RTE_LIBRTE_PDUMP: ::std::os::raw::c_uint = 1;
-pub const RTE_LIBRTE_VHOST: ::std::os::raw::c_uint = 1;
-pub const RTE_LIBRTE_VHOST_NUMA: ::std::os::raw::c_uint = 1;
-pub const RTE_LIBRTE_PMD_VHOST: ::std::os::raw::c_uint = 1;
-pub const RTE_APP_TEST: ::std::os::raw::c_uint = 1;
-pub const RTE_TEST_PMD: ::std::os::raw::c_uint = 1;
-pub const RTE_APP_CRYPTO_PERF: ::std::os::raw::c_uint = 1;
-pub const RTE_APP_EVENTDEV: ::std::os::raw::c_uint = 1;
-pub const RTE_EXEC_ENV_LINUXAPP: ::std::os::raw::c_uint = 1;
-pub const RTE_ARCH_X86_64: ::std::os::raw::c_uint = 1;
-pub const RTE_ARCH_X86: ::std::os::raw::c_uint = 1;
-pub const RTE_ARCH_64: ::std::os::raw::c_uint = 1;
-pub const RTE_TOOLCHAIN_GCC: ::std::os::raw::c_uint = 1;
-pub const DOM0_NAME_MAX: ::std::os::raw::c_uint = 256;
-pub const DOM0_MM_DEV: &'static [u8; 13usize] = b"/dev/dom0_mm\x00";
-pub const DOM0_CONTIG_NUM_ORDER: ::std::os::raw::c_uint = 9;
-pub const DOM0_NUM_MEMSEG: ::std::os::raw::c_uint = 512;
-pub const DOM0_MEMBLOCK_SIZE: ::std::os::raw::c_uint = 2097152;
-pub const DOM0_CONFIG_MEMSIZE: ::std::os::raw::c_uint = 4096;
-pub const DOM0_NUM_MEMBLOCK: ::std::os::raw::c_uint = 2048;
 pub const SOCKET_ID_ANY: ::std::os::raw::c_int = -1;
 pub const RTE_CACHE_LINE_MASK: ::std::os::raw::c_uint = 63;
 pub const RTE_CACHE_LINE_SIZE_LOG2: ::std::os::raw::c_uint = 6;
@@ -1396,6 +1396,7 @@ pub const RTE_LOGTYPE_MBUF: ::std::os::raw::c_uint = 16;
 pub const RTE_LOGTYPE_CRYPTODEV: ::std::os::raw::c_uint = 17;
 pub const RTE_LOGTYPE_EFD: ::std::os::raw::c_uint = 18;
 pub const RTE_LOGTYPE_EVENTDEV: ::std::os::raw::c_uint = 19;
+pub const RTE_LOGTYPE_GSO: ::std::os::raw::c_uint = 20;
 pub const RTE_LOGTYPE_USER1: ::std::os::raw::c_uint = 24;
 pub const RTE_LOGTYPE_USER2: ::std::os::raw::c_uint = 25;
 pub const RTE_LOGTYPE_USER3: ::std::os::raw::c_uint = 26;
@@ -1417,16 +1418,6 @@ pub const ALIGNMENT_MASK: ::std::os::raw::c_uint = 15;
 pub const RTE_BIG_ENDIAN: ::std::os::raw::c_uint = 1;
 pub const RTE_LITTLE_ENDIAN: ::std::os::raw::c_uint = 2;
 pub const RTE_BYTE_ORDER: ::std::os::raw::c_uint = 2;
-pub const RTE_MEMZONE_2MB: ::std::os::raw::c_uint = 1;
-pub const RTE_MEMZONE_1GB: ::std::os::raw::c_uint = 2;
-pub const RTE_MEMZONE_16MB: ::std::os::raw::c_uint = 256;
-pub const RTE_MEMZONE_16GB: ::std::os::raw::c_uint = 512;
-pub const RTE_MEMZONE_256KB: ::std::os::raw::c_uint = 65536;
-pub const RTE_MEMZONE_256MB: ::std::os::raw::c_uint = 131072;
-pub const RTE_MEMZONE_512MB: ::std::os::raw::c_uint = 262144;
-pub const RTE_MEMZONE_4GB: ::std::os::raw::c_uint = 524288;
-pub const RTE_MEMZONE_SIZE_HINT_ONLY: ::std::os::raw::c_uint = 4;
-pub const RTE_MEMZONE_NAMESIZE: ::std::os::raw::c_uint = 32;
 pub const _SCHED_H: ::std::os::raw::c_uint = 1;
 pub const SCHED_OTHER: ::std::os::raw::c_uint = 0;
 pub const SCHED_FIFO: ::std::os::raw::c_uint = 1;
@@ -1452,9 +1443,20 @@ pub const TIME_UTC: ::std::os::raw::c_uint = 1;
 pub const _BITS_SETJMP_H: ::std::os::raw::c_uint = 1;
 pub const PTHREAD_ONCE_INIT: ::std::os::raw::c_uint = 0;
 pub const PTHREAD_BARRIER_SERIAL_THREAD: ::std::os::raw::c_int = -1;
+pub const RTE_DEV_NAME_MAX_LEN: ::std::os::raw::c_uint = 64;
 pub const RTE_MAGIC: ::std::os::raw::c_uint = 19820526;
 pub const RTE_MAX_THREAD_NAME_LEN: ::std::os::raw::c_uint = 16;
 pub const RTE_TAILQ_NAMESIZE: ::std::os::raw::c_uint = 32;
+pub const RTE_MEMZONE_2MB: ::std::os::raw::c_uint = 1;
+pub const RTE_MEMZONE_1GB: ::std::os::raw::c_uint = 2;
+pub const RTE_MEMZONE_16MB: ::std::os::raw::c_uint = 256;
+pub const RTE_MEMZONE_16GB: ::std::os::raw::c_uint = 512;
+pub const RTE_MEMZONE_256KB: ::std::os::raw::c_uint = 65536;
+pub const RTE_MEMZONE_256MB: ::std::os::raw::c_uint = 131072;
+pub const RTE_MEMZONE_512MB: ::std::os::raw::c_uint = 262144;
+pub const RTE_MEMZONE_4GB: ::std::os::raw::c_uint = 524288;
+pub const RTE_MEMZONE_SIZE_HINT_ONLY: ::std::os::raw::c_uint = 4;
+pub const RTE_MEMZONE_NAMESIZE: ::std::os::raw::c_uint = 32;
 pub const LCORE_ID_ANY: ::std::os::raw::c_uint = 4294967295;
 pub const _RTE_RTM_H_: ::std::os::raw::c_uint = 1;
 pub const RTE_XBEGIN_STARTED: ::std::os::raw::c_int = -1;
@@ -1480,6 +1482,7 @@ pub const CONS_ALIGN: ::std::os::raw::c_uint = 128;
 pub const RING_F_SP_ENQ: ::std::os::raw::c_uint = 1;
 pub const RING_F_SC_DEQ: ::std::os::raw::c_uint = 2;
 pub const RING_F_EXACT_SZ: ::std::os::raw::c_uint = 4;
+pub const RTE_RING_SZ_MASK: ::std::os::raw::c_uint = 2147483647;
 pub const __IS_SP: ::std::os::raw::c_uint = 1;
 pub const __IS_MP: ::std::os::raw::c_uint = 0;
 pub const __IS_SC: ::std::os::raw::c_uint = 1;
@@ -1501,6 +1504,8 @@ pub const MEMPOOL_F_SP_PUT: ::std::os::raw::c_uint = 4;
 pub const MEMPOOL_F_SC_GET: ::std::os::raw::c_uint = 8;
 pub const MEMPOOL_F_POOL_CREATED: ::std::os::raw::c_uint = 16;
 pub const MEMPOOL_F_NO_PHYS_CONTIG: ::std::os::raw::c_uint = 32;
+pub const MEMPOOL_F_CAPA_PHYS_CONTIG: ::std::os::raw::c_uint = 64;
+pub const MEMPOOL_F_CAPA_BLK_ALIGNED_OBJECTS: ::std::os::raw::c_uint = 128;
 pub const RTE_MEMPOOL_OPS_NAMESIZE: ::std::os::raw::c_uint = 32;
 pub const RTE_MEMPOOL_MAX_OPS_IDX: ::std::os::raw::c_uint = 16;
 pub const RTE_PTYPE_UNKNOWN: ::std::os::raw::c_uint = 0;
@@ -1532,6 +1537,9 @@ pub const RTE_PTYPE_TUNNEL_VXLAN: ::std::os::raw::c_uint = 12288;
 pub const RTE_PTYPE_TUNNEL_NVGRE: ::std::os::raw::c_uint = 16384;
 pub const RTE_PTYPE_TUNNEL_GENEVE: ::std::os::raw::c_uint = 20480;
 pub const RTE_PTYPE_TUNNEL_GRENAT: ::std::os::raw::c_uint = 24576;
+pub const RTE_PTYPE_TUNNEL_GTPC: ::std::os::raw::c_uint = 28672;
+pub const RTE_PTYPE_TUNNEL_GTPU: ::std::os::raw::c_uint = 32768;
+pub const RTE_PTYPE_TUNNEL_ESP: ::std::os::raw::c_uint = 36864;
 pub const RTE_PTYPE_TUNNEL_MASK: ::std::os::raw::c_uint = 61440;
 pub const RTE_PTYPE_INNER_L2_ETHER: ::std::os::raw::c_uint = 65536;
 pub const RTE_PTYPE_INNER_L2_ETHER_VLAN: ::std::os::raw::c_uint = 131072;
@@ -1554,7 +1562,7 @@ pub const RTE_PTYPE_INNER_L4_ICMP: ::std::os::raw::c_uint = 83886080;
 pub const RTE_PTYPE_INNER_L4_NONFRAG: ::std::os::raw::c_uint = 100663296;
 pub const RTE_PTYPE_INNER_L4_MASK: ::std::os::raw::c_uint = 251658240;
 pub const RTE_PTYPE_ALL_MASK: ::std::os::raw::c_uint = 268435455;
-pub const PKT_RX_VLAN_PKT: ::std::os::raw::c_uint = 1;
+pub const PKT_RX_VLAN: ::std::os::raw::c_uint = 1;
 pub const PKT_RX_RSS_HASH: ::std::os::raw::c_uint = 2;
 pub const PKT_RX_FDIR: ::std::os::raw::c_uint = 4;
 pub const PKT_RX_L4_CKSUM_BAD: ::std::os::raw::c_uint = 8;
@@ -1574,9 +1582,12 @@ pub const PKT_RX_IEEE1588_TMST: ::std::os::raw::c_uint = 1024;
 pub const PKT_RX_FDIR_ID: ::std::os::raw::c_uint = 8192;
 pub const PKT_RX_FDIR_FLX: ::std::os::raw::c_uint = 16384;
 pub const PKT_RX_QINQ_STRIPPED: ::std::os::raw::c_uint = 32768;
-pub const PKT_RX_QINQ_PKT: ::std::os::raw::c_uint = 32768;
 pub const PKT_RX_LRO: ::std::os::raw::c_uint = 65536;
 pub const PKT_RX_TIMESTAMP: ::std::os::raw::c_uint = 131072;
+pub const PKT_RX_SEC_OFFLOAD: ::std::os::raw::c_uint = 262144;
+pub const PKT_RX_SEC_OFFLOAD_FAILED: ::std::os::raw::c_uint = 524288;
+pub const PKT_RX_QINQ: ::std::os::raw::c_uint = 1048576;
+pub const PKT_TX_SEC_OFFLOAD: ::std::os::raw::c_ulonglong = 8796093022208;
 pub const PKT_TX_MACSEC: ::std::os::raw::c_ulonglong = 17592186044416;
 pub const PKT_TX_TUNNEL_VXLAN: ::std::os::raw::c_ulonglong = 35184372088832;
 pub const PKT_TX_TUNNEL_GRE: ::std::os::raw::c_ulonglong = 70368744177664;
@@ -1604,7 +1615,7 @@ pub const PKT_TX_OUTER_IPV4: ::std::os::raw::c_ulonglong = 576460752303423488;
 pub const PKT_TX_OUTER_IPV6: ::std::os::raw::c_ulonglong =
     1152921504606846976;
 pub const PKT_TX_OFFLOAD_MASK: ::std::os::raw::c_ulonglong =
-    468356769060487168;
+    468365565153509376;
 pub const __RESERVED: ::std::os::raw::c_ulonglong = 2305843009213693952;
 pub const IND_ATTACHED_MBUF: ::std::os::raw::c_ulonglong =
     4611686018427387904;
@@ -1612,6 +1623,8 @@ pub const CTRL_MBUF_FLAG: ::std::os::raw::c_longlong = -9223372036854775808;
 pub const RTE_MBUF_PRIV_ALIGN: ::std::os::raw::c_uint = 8;
 pub const RTE_MBUF_DEFAULT_DATAROOM: ::std::os::raw::c_uint = 2048;
 pub const RTE_MBUF_DEFAULT_BUF_SIZE: ::std::os::raw::c_uint = 2176;
+pub const RTE_MBUF_MAX_NB_SEGS: ::std::os::raw::c_uint = 65535;
+pub const MBUF_INVALID_PORT: ::std::os::raw::c_uint = 65535;
 pub const ETHER_ADDR_LEN: ::std::os::raw::c_uint = 6;
 pub const ETHER_TYPE_LEN: ::std::os::raw::c_uint = 2;
 pub const ETHER_CRC_LEN: ::std::os::raw::c_uint = 4;
@@ -1713,7 +1726,6 @@ pub const RTE_BITMAP_CL_BIT_MASK: ::std::os::raw::c_uint = 511;
 pub const RTE_BITMAP_CL_SLAB_SIZE: ::std::os::raw::c_uint = 8;
 pub const RTE_BITMAP_CL_SLAB_SIZE_LOG2: ::std::os::raw::c_uint = 3;
 pub const RTE_BITMAP_CL_SLAB_MASK: ::std::os::raw::c_uint = 7;
-pub const RTE_DEV_NAME_MAX_LEN: ::std::os::raw::c_uint = 32;
 pub const CFG_NAME_LEN: ::std::os::raw::c_uint = 64;
 pub const CFG_VALUE_LEN: ::std::os::raw::c_uint = 256;
 pub const CFG_DEFAULT_COMMENT_CHARACTER: u8 = b';';
@@ -1732,6 +1744,7 @@ pub const RTE_CRYPTODEV_FF_CPU_AVX512: ::std::os::raw::c_uint = 256;
 pub const RTE_CRYPTODEV_FF_MBUF_SCATTER_GATHER: ::std::os::raw::c_uint = 512;
 pub const RTE_CRYPTODEV_FF_CPU_NEON: ::std::os::raw::c_uint = 1024;
 pub const RTE_CRYPTODEV_FF_CPU_ARM_CE: ::std::os::raw::c_uint = 2048;
+pub const RTE_CRYPTODEV_FF_SECURITY: ::std::os::raw::c_uint = 4096;
 pub const RTE_CRYPTODEV_DETACHED: ::std::os::raw::c_uint = 0;
 pub const RTE_CRYPTODEV_ATTACHED: ::std::os::raw::c_uint = 1;
 pub const RTE_CRYPTODEV_NAME_MAX_LEN: ::std::os::raw::c_uint = 64;
@@ -1748,10 +1761,18 @@ pub const PCI_RESOURCE_FMT_NVAL: ::std::os::raw::c_uint = 3;
 pub const PCI_MAX_RESOURCE: ::std::os::raw::c_uint = 6;
 pub const PCI_ANY_ID: ::std::os::raw::c_uint = 65535;
 pub const RTE_CLASS_ANY_ID: ::std::os::raw::c_uint = 16777215;
-pub const RTE_PCI_DRV_NEED_MAPPING: ::std::os::raw::c_uint = 1;
-pub const RTE_PCI_DRV_INTR_LSC: ::std::os::raw::c_uint = 8;
-pub const RTE_PCI_DRV_INTR_RMV: ::std::os::raw::c_uint = 16;
-pub const RTE_PCI_DRV_KEEP_MAPPED_RES: ::std::os::raw::c_uint = 32;
+pub const RTE_CRYPTODEV_PMD_DEFAULT_MAX_NB_QUEUE_PAIRS: ::std::os::raw::c_uint
+          =
+    8;
+pub const RTE_CRYPTODEV_PMD_DEFAULT_MAX_NB_SESSIONS: ::std::os::raw::c_uint =
+    2048;
+pub const RTE_CRYPTODEV_PMD_NAME_ARG: &'static [u8; 5usize] = b"name\x00";
+pub const RTE_CRYPTODEV_PMD_MAX_NB_QP_ARG: &'static [u8; 19usize] =
+    b"max_nb_queue_pairs\x00";
+pub const RTE_CRYPTODEV_PMD_MAX_NB_SESS_ARG: &'static [u8; 16usize] =
+    b"max_nb_sessions\x00";
+pub const RTE_CRYPTODEV_PMD_SOCKET_ID_ARG: &'static [u8; 10usize] =
+    b"socket_id\x00";
 pub const RTE_CRYPTODEV_SCHEDULER_MAX_NB_SLAVES: ::std::os::raw::c_uint = 8;
 pub const RTE_CRYPTODEV_SCHEDULER_MAX_NB_WORKER_CORES: ::std::os::raw::c_uint
           =
@@ -1940,6 +1961,7 @@ pub const ETH_TXQ_FLAGS_NOXSUMUDP: ::std::os::raw::c_uint = 1024;
 pub const ETH_TXQ_FLAGS_NOXSUMTCP: ::std::os::raw::c_uint = 2048;
 pub const ETH_TXQ_FLAGS_NOOFFLOADS: ::std::os::raw::c_uint = 3840;
 pub const ETH_TXQ_FLAGS_NOXSUMS: ::std::os::raw::c_uint = 3584;
+pub const ETH_TXQ_FLAGS_IGNORE: ::std::os::raw::c_uint = 32768;
 pub const DEV_RX_OFFLOAD_VLAN_STRIP: ::std::os::raw::c_uint = 1;
 pub const DEV_RX_OFFLOAD_IPV4_CKSUM: ::std::os::raw::c_uint = 2;
 pub const DEV_RX_OFFLOAD_UDP_CKSUM: ::std::os::raw::c_uint = 4;
@@ -1948,6 +1970,16 @@ pub const DEV_RX_OFFLOAD_TCP_LRO: ::std::os::raw::c_uint = 16;
 pub const DEV_RX_OFFLOAD_QINQ_STRIP: ::std::os::raw::c_uint = 32;
 pub const DEV_RX_OFFLOAD_OUTER_IPV4_CKSUM: ::std::os::raw::c_uint = 64;
 pub const DEV_RX_OFFLOAD_MACSEC_STRIP: ::std::os::raw::c_uint = 128;
+pub const DEV_RX_OFFLOAD_HEADER_SPLIT: ::std::os::raw::c_uint = 256;
+pub const DEV_RX_OFFLOAD_VLAN_FILTER: ::std::os::raw::c_uint = 512;
+pub const DEV_RX_OFFLOAD_VLAN_EXTEND: ::std::os::raw::c_uint = 1024;
+pub const DEV_RX_OFFLOAD_JUMBO_FRAME: ::std::os::raw::c_uint = 2048;
+pub const DEV_RX_OFFLOAD_CRC_STRIP: ::std::os::raw::c_uint = 4096;
+pub const DEV_RX_OFFLOAD_SCATTER: ::std::os::raw::c_uint = 8192;
+pub const DEV_RX_OFFLOAD_TIMESTAMP: ::std::os::raw::c_uint = 16384;
+pub const DEV_RX_OFFLOAD_SECURITY: ::std::os::raw::c_uint = 32768;
+pub const DEV_RX_OFFLOAD_CHECKSUM: ::std::os::raw::c_uint = 14;
+pub const DEV_RX_OFFLOAD_VLAN: ::std::os::raw::c_uint = 1537;
 pub const DEV_TX_OFFLOAD_VLAN_INSERT: ::std::os::raw::c_uint = 1;
 pub const DEV_TX_OFFLOAD_IPV4_CKSUM: ::std::os::raw::c_uint = 2;
 pub const DEV_TX_OFFLOAD_UDP_CKSUM: ::std::os::raw::c_uint = 4;
@@ -1963,6 +1995,9 @@ pub const DEV_TX_OFFLOAD_IPIP_TNL_TSO: ::std::os::raw::c_uint = 2048;
 pub const DEV_TX_OFFLOAD_GENEVE_TNL_TSO: ::std::os::raw::c_uint = 4096;
 pub const DEV_TX_OFFLOAD_MACSEC_INSERT: ::std::os::raw::c_uint = 8192;
 pub const DEV_TX_OFFLOAD_MT_LOCKFREE: ::std::os::raw::c_uint = 16384;
+pub const DEV_TX_OFFLOAD_MULTI_SEGS: ::std::os::raw::c_uint = 32768;
+pub const DEV_TX_OFFLOAD_MBUF_FAST_FREE: ::std::os::raw::c_uint = 65536;
+pub const DEV_TX_OFFLOAD_SECURITY: ::std::os::raw::c_uint = 131072;
 pub const RTE_ETH_XSTATS_NAME_SIZE: ::std::os::raw::c_uint = 64;
 pub const ETH_DCB_NUM_TCS: ::std::os::raw::c_uint = 8;
 pub const ETH_MAX_VMDQ_POOL: ::std::os::raw::c_uint = 64;
@@ -1972,8 +2007,7 @@ pub const ETH_L2_TUNNEL_ENABLE_MASK: ::std::os::raw::c_uint = 1;
 pub const ETH_L2_TUNNEL_INSERTION_MASK: ::std::os::raw::c_uint = 2;
 pub const ETH_L2_TUNNEL_STRIPPING_MASK: ::std::os::raw::c_uint = 4;
 pub const ETH_L2_TUNNEL_FORWARDING_MASK: ::std::os::raw::c_uint = 8;
-pub const RTE_ETH_NAME_MAX_LEN: ::std::os::raw::c_uint = 32;
-pub const RTE_ETH_DEV_DETACHABLE: ::std::os::raw::c_uint = 1;
+pub const RTE_ETH_NAME_MAX_LEN: ::std::os::raw::c_uint = 64;
 pub const RTE_ETH_DEV_INTR_LSC: ::std::os::raw::c_uint = 2;
 pub const RTE_ETH_DEV_BONDED_SLAVE: ::std::os::raw::c_uint = 4;
 pub const RTE_ETH_DEV_INTR_RMV: ::std::os::raw::c_uint = 8;
@@ -1983,6 +2017,10 @@ pub const RTE_ETH_RX_DESC_UNAVAIL: ::std::os::raw::c_uint = 2;
 pub const RTE_ETH_TX_DESC_FULL: ::std::os::raw::c_uint = 0;
 pub const RTE_ETH_TX_DESC_DONE: ::std::os::raw::c_uint = 1;
 pub const RTE_ETH_TX_DESC_UNAVAIL: ::std::os::raw::c_uint = 2;
+pub const RTE_PCI_DRV_NEED_MAPPING: ::std::os::raw::c_uint = 1;
+pub const RTE_PCI_DRV_INTR_LSC: ::std::os::raw::c_uint = 8;
+pub const RTE_PCI_DRV_INTR_RMV: ::std::os::raw::c_uint = 16;
+pub const RTE_PCI_DRV_KEEP_MAPPED_RES: ::std::os::raw::c_uint = 32;
 pub const true_: ::std::os::raw::c_uint = 1;
 pub const false_: ::std::os::raw::c_uint = 0;
 pub const __bool_true_false_are_defined: ::std::os::raw::c_uint = 1;
@@ -2039,6 +2077,7 @@ pub const VHOST_SCSI_ABI_VERSION: ::std::os::raw::c_uint = 1;
 pub const RTE_VHOST_USER_CLIENT: ::std::os::raw::c_uint = 1;
 pub const RTE_VHOST_USER_NO_RECONNECT: ::std::os::raw::c_uint = 2;
 pub const RTE_VHOST_USER_DEQUEUE_ZERO_COPY: ::std::os::raw::c_uint = 4;
+pub const RTE_VHOST_USER_IOMMU_SUPPORT: ::std::os::raw::c_uint = 8;
 pub const RTE_EVENT_DEV_CAP_QUEUE_QOS: ::std::os::raw::c_uint = 1;
 pub const RTE_EVENT_DEV_CAP_EVENT_QOS: ::std::os::raw::c_uint = 2;
 pub const RTE_EVENT_DEV_CAP_DISTRIBUTED_SCHED: ::std::os::raw::c_uint = 4;
@@ -2047,13 +2086,22 @@ pub const RTE_EVENT_DEV_CAP_BURST_MODE: ::std::os::raw::c_uint = 16;
 pub const RTE_EVENT_DEV_PRIORITY_HIGHEST: ::std::os::raw::c_uint = 0;
 pub const RTE_EVENT_DEV_PRIORITY_NORMAL: ::std::os::raw::c_uint = 128;
 pub const RTE_EVENT_DEV_PRIORITY_LOWEST: ::std::os::raw::c_uint = 255;
+pub const RTE_EVENT_DEV_ATTR_PORT_COUNT: ::std::os::raw::c_uint = 0;
+pub const RTE_EVENT_DEV_ATTR_QUEUE_COUNT: ::std::os::raw::c_uint = 1;
+pub const RTE_EVENT_DEV_ATTR_STARTED: ::std::os::raw::c_uint = 2;
 pub const RTE_EVENT_DEV_CFG_PER_DEQUEUE_TIMEOUT: ::std::os::raw::c_uint = 1;
-pub const RTE_EVENT_QUEUE_CFG_TYPE_MASK: ::std::os::raw::c_uint = 3;
-pub const RTE_EVENT_QUEUE_CFG_ALL_TYPES: ::std::os::raw::c_uint = 0;
-pub const RTE_EVENT_QUEUE_CFG_ATOMIC_ONLY: ::std::os::raw::c_uint = 1;
-pub const RTE_EVENT_QUEUE_CFG_ORDERED_ONLY: ::std::os::raw::c_uint = 2;
-pub const RTE_EVENT_QUEUE_CFG_PARALLEL_ONLY: ::std::os::raw::c_uint = 3;
-pub const RTE_EVENT_QUEUE_CFG_SINGLE_LINK: ::std::os::raw::c_uint = 4;
+pub const RTE_EVENT_QUEUE_CFG_ALL_TYPES: ::std::os::raw::c_uint = 1;
+pub const RTE_EVENT_QUEUE_CFG_SINGLE_LINK: ::std::os::raw::c_uint = 2;
+pub const RTE_EVENT_QUEUE_ATTR_PRIORITY: ::std::os::raw::c_uint = 0;
+pub const RTE_EVENT_QUEUE_ATTR_NB_ATOMIC_FLOWS: ::std::os::raw::c_uint = 1;
+pub const RTE_EVENT_QUEUE_ATTR_NB_ATOMIC_ORDER_SEQUENCES:
+          ::std::os::raw::c_uint =
+    2;
+pub const RTE_EVENT_QUEUE_ATTR_EVENT_QUEUE_CFG: ::std::os::raw::c_uint = 3;
+pub const RTE_EVENT_QUEUE_ATTR_SCHEDULE_TYPE: ::std::os::raw::c_uint = 4;
+pub const RTE_EVENT_PORT_ATTR_ENQ_DEPTH: ::std::os::raw::c_uint = 0;
+pub const RTE_EVENT_PORT_ATTR_DEQ_DEPTH: ::std::os::raw::c_uint = 1;
+pub const RTE_EVENT_PORT_ATTR_NEW_EVENT_THRESHOLD: ::std::os::raw::c_uint = 2;
 pub const RTE_SCHED_TYPE_ORDERED: ::std::os::raw::c_uint = 0;
 pub const RTE_SCHED_TYPE_ATOMIC: ::std::os::raw::c_uint = 1;
 pub const RTE_SCHED_TYPE_PARALLEL: ::std::os::raw::c_uint = 2;
@@ -2061,12 +2109,21 @@ pub const RTE_EVENT_TYPE_ETHDEV: ::std::os::raw::c_uint = 0;
 pub const RTE_EVENT_TYPE_CRYPTODEV: ::std::os::raw::c_uint = 1;
 pub const RTE_EVENT_TYPE_TIMERDEV: ::std::os::raw::c_uint = 2;
 pub const RTE_EVENT_TYPE_CPU: ::std::os::raw::c_uint = 3;
+pub const RTE_EVENT_TYPE_ETH_RX_ADAPTER: ::std::os::raw::c_uint = 4;
 pub const RTE_EVENT_TYPE_MAX: ::std::os::raw::c_uint = 16;
 pub const RTE_EVENT_OP_NEW: ::std::os::raw::c_uint = 0;
 pub const RTE_EVENT_OP_FORWARD: ::std::os::raw::c_uint = 1;
 pub const RTE_EVENT_OP_RELEASE: ::std::os::raw::c_uint = 2;
+pub const RTE_EVENT_ETH_RX_ADAPTER_CAP_INTERNAL_PORT: ::std::os::raw::c_uint =
+    1;
+pub const RTE_EVENT_ETH_RX_ADAPTER_CAP_MULTI_EVENTQ: ::std::os::raw::c_uint =
+    2;
+pub const RTE_EVENT_ETH_RX_ADAPTER_CAP_OVERRIDE_FLOW_ID:
+          ::std::os::raw::c_uint =
+    4;
 pub const RTE_EVENTDEV_NAME_MAX_LEN: ::std::os::raw::c_uint = 64;
 pub const RTE_EVENT_DEV_XSTATS_NAME_SIZE: ::std::os::raw::c_uint = 64;
+pub const RTE_EVENT_ETH_RX_ADAPTER_SW_CAP: ::std::os::raw::c_uint = 6;
 pub const RTE_EVENTDEV_DETACHED: ::std::os::raw::c_uint = 0;
 pub const RTE_EVENTDEV_ATTACHED: ::std::os::raw::c_uint = 1;
 pub const RTE_TAILQ_EVENT_RING_NAME: &'static [u8; 15usize] =
@@ -2147,9 +2204,15 @@ pub const BNXT_VF_SET_VLAN: ::std::os::raw::c_uint = 3;
 pub const BNXT_VF_SET_MTU: ::std::os::raw::c_uint = 4;
 pub const BNXT_VF_SET_MRU: ::std::os::raw::c_uint = 5;
 pub const RTE_PMD_I40E_DDP_NAME_SIZE: ::std::os::raw::c_uint = 32;
+pub const RTE_PMD_I40E_PCTYPE_MAX: ::std::os::raw::c_uint = 64;
+pub const RTE_PMD_I40E_REGION_MAX_NUM: ::std::os::raw::c_uint = 8;
+pub const RTE_PMD_I40E_MAX_USER_PRIORITY: ::std::os::raw::c_uint = 8;
 pub const RTE_PMD_I40E_DDP_OWNER_UNKNOWN: ::std::os::raw::c_uint = 255;
+pub const RTE_PMD_I40E_PROTO_NUM: ::std::os::raw::c_uint = 6;
+pub const RTE_PMD_I40E_PROTO_UNUSED: ::std::os::raw::c_uint = 255;
 pub const RTE_PMD_I40E_PTYPE_USER_DEFINE_MASK: ::std::os::raw::c_uint =
     2147483648;
+pub const RTE_PMD_I40E_FLOW_TYPE_MAX: ::std::os::raw::c_uint = 64;
 pub const RTE_SCHED_TRAFFIC_CLASSES_PER_PIPE: ::std::os::raw::c_uint = 4;
 pub const RTE_SCHED_QUEUES_PER_TRAFFIC_CLASS: ::std::os::raw::c_uint = 4;
 pub const RTE_SCHED_QUEUES_PER_PIPE: ::std::os::raw::c_uint = 16;
@@ -2182,10 +2245,17 @@ pub const RTE_TM_NODE_ID_NULL: ::std::os::raw::c_uint = 4294967295;
 pub const RTE_TM_NODE_LEVEL_ID_ANY: ::std::os::raw::c_uint = 4294967295;
 pub const RTE_VER_PREFIX: &'static [u8; 5usize] = b"DPDK\x00";
 pub const RTE_VER_YEAR: ::std::os::raw::c_uint = 17;
-pub const RTE_VER_MONTH: ::std::os::raw::c_uint = 8;
+pub const RTE_VER_MONTH: ::std::os::raw::c_uint = 11;
 pub const RTE_VER_MINOR: ::std::os::raw::c_uint = 0;
 pub const RTE_VER_SUFFIX: &'static [u8; 1usize] = b"\x00";
 pub const RTE_VER_RELEASE: ::std::os::raw::c_uint = 16;
+pub const DOM0_NAME_MAX: ::std::os::raw::c_uint = 256;
+pub const DOM0_MM_DEV: &'static [u8; 13usize] = b"/dev/dom0_mm\x00";
+pub const DOM0_CONTIG_NUM_ORDER: ::std::os::raw::c_uint = 9;
+pub const DOM0_NUM_MEMSEG: ::std::os::raw::c_uint = 512;
+pub const DOM0_MEMBLOCK_SIZE: ::std::os::raw::c_uint = 2097152;
+pub const DOM0_CONFIG_MEMSIZE: ::std::os::raw::c_uint = 4096;
+pub const DOM0_NUM_MEMBLOCK: ::std::os::raw::c_uint = 2048;
 pub type int_least8_t = ::std::os::raw::c_schar;
 pub type int_least16_t = ::std::os::raw::c_short;
 pub type int_least32_t = ::std::os::raw::c_int;
@@ -7723,117 +7793,6 @@ impl Clone for rte_xmm {
     fn clone(&self) -> Self { *self }
 }
 pub type rte_xmm_t = rte_xmm;
-/// A structure used to store memory information.
-#[repr(C)]
-#[derive(Copy)]
-pub struct memory_info {
-    pub name: [::std::os::raw::c_char; 256usize],
-    pub size: u64,
-}
-#[test]
-fn bindgen_test_layout_memory_info() {
-    assert_eq!(::std::mem::size_of::<memory_info>() , 264usize , concat ! (
-               "Size of: " , stringify ! ( memory_info ) ));
-    assert_eq! (::std::mem::align_of::<memory_info>() , 8usize , concat ! (
-                "Alignment of " , stringify ! ( memory_info ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const memory_info ) ) . name as * const _ as
-                usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( memory_info ) , "::" ,
-                stringify ! ( name ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const memory_info ) ) . size as * const _ as
-                usize } , 256usize , concat ! (
-                "Alignment of field: " , stringify ! ( memory_info ) , "::" ,
-                stringify ! ( size ) ));
-}
-impl Clone for memory_info {
-    fn clone(&self) -> Self { *self }
-}
-/// A structure used to store memory segment information.
-#[repr(C)]
-#[derive(Copy)]
-pub struct memseg_info {
-    pub idx: u32,
-    pub pfn: u64,
-    pub size: u64,
-    pub mfn: [u64; 2048usize],
-}
-#[test]
-fn bindgen_test_layout_memseg_info() {
-    assert_eq!(::std::mem::size_of::<memseg_info>() , 16408usize , concat ! (
-               "Size of: " , stringify ! ( memseg_info ) ));
-    assert_eq! (::std::mem::align_of::<memseg_info>() , 8usize , concat ! (
-                "Alignment of " , stringify ! ( memseg_info ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const memseg_info ) ) . idx as * const _ as
-                usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( memseg_info ) , "::" ,
-                stringify ! ( idx ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const memseg_info ) ) . pfn as * const _ as
-                usize } , 8usize , concat ! (
-                "Alignment of field: " , stringify ! ( memseg_info ) , "::" ,
-                stringify ! ( pfn ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const memseg_info ) ) . size as * const _ as
-                usize } , 16usize , concat ! (
-                "Alignment of field: " , stringify ! ( memseg_info ) , "::" ,
-                stringify ! ( size ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const memseg_info ) ) . mfn as * const _ as
-                usize } , 24usize , concat ! (
-                "Alignment of field: " , stringify ! ( memseg_info ) , "::" ,
-                stringify ! ( mfn ) ));
-}
-impl Clone for memseg_info {
-    fn clone(&self) -> Self { *self }
-}
-/// A structure used to store memory block information.
-#[repr(C)]
-#[derive(Debug, Copy)]
-pub struct memblock_info {
-    pub exchange_flag: u8,
-    pub used: u8,
-    pub vir_addr: u64,
-    pub pfn: u64,
-    pub mfn: u64,
-}
-#[test]
-fn bindgen_test_layout_memblock_info() {
-    assert_eq!(::std::mem::size_of::<memblock_info>() , 32usize , concat ! (
-               "Size of: " , stringify ! ( memblock_info ) ));
-    assert_eq! (::std::mem::align_of::<memblock_info>() , 8usize , concat ! (
-                "Alignment of " , stringify ! ( memblock_info ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const memblock_info ) ) . exchange_flag as *
-                const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( memblock_info ) , "::"
-                , stringify ! ( exchange_flag ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const memblock_info ) ) . used as * const _ as
-                usize } , 1usize , concat ! (
-                "Alignment of field: " , stringify ! ( memblock_info ) , "::"
-                , stringify ! ( used ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const memblock_info ) ) . vir_addr as * const _
-                as usize } , 8usize , concat ! (
-                "Alignment of field: " , stringify ! ( memblock_info ) , "::"
-                , stringify ! ( vir_addr ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const memblock_info ) ) . pfn as * const _ as
-                usize } , 16usize , concat ! (
-                "Alignment of field: " , stringify ! ( memblock_info ) , "::"
-                , stringify ! ( pfn ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const memblock_info ) ) . mfn as * const _ as
-                usize } , 24usize , concat ! (
-                "Alignment of field: " , stringify ! ( memblock_info ) , "::"
-                , stringify ! ( mfn ) ));
-}
-impl Clone for memblock_info {
-    fn clone(&self) -> Self { *self }
-}
 #[repr(u64)]
 #[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
 pub enum rte_page_sizes {
@@ -7849,13 +7808,18 @@ pub enum rte_page_sizes {
     RTE_PGSIZE_16G = 17179869184,
 }
 pub type phys_addr_t = u64;
+/// IO virtual address type.
+/// When the physical addressing mode (IOVA as PA) is in use,
+/// the translation from an IO virtual address (IOVA) to a physical address
+/// is a direct mapping, i.e. the same value.
+/// Otherwise, in virtual mode (IOVA as VA), an IOMMU may do the translation.
+pub type rte_iova_t = u64;
 /// Physical memory segment descriptor.
 #[repr(C, packed)]
 #[derive(Copy)]
 pub struct rte_memseg {
-    /// < Start physical address.
-    pub phys_addr: phys_addr_t,
     pub __bindgen_anon_1: rte_memseg__bindgen_ty_1,
+    pub __bindgen_anon_2: rte_memseg__bindgen_ty_2,
     /// < Length of the segment.
     pub len: usize,
     /// < The pagesize of underlying memory
@@ -7870,10 +7834,10 @@ pub struct rte_memseg {
 #[repr(C)]
 #[derive(Copy)]
 pub union rte_memseg__bindgen_ty_1 {
-    /// < Start virtual address.
-    pub addr: *mut ::std::os::raw::c_void,
-    /// < Makes sure addr is always 64 bits
-    pub addr_64: u64,
+    /// < deprecated - Start physical address.
+    pub phys_addr: phys_addr_t,
+    /// < Start IO address.
+    pub iova: rte_iova_t,
     _bindgen_union_align: u64,
 }
 #[test]
@@ -7885,18 +7849,50 @@ fn bindgen_test_layout_rte_memseg__bindgen_ty_1() {
                 concat ! (
                 "Alignment of " , stringify ! ( rte_memseg__bindgen_ty_1 ) ));
     assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_memseg__bindgen_ty_1 ) ) . addr as *
+                & ( * ( 0 as * const rte_memseg__bindgen_ty_1 ) ) . phys_addr
+                as * const _ as usize } , 0usize , concat ! (
+                "Alignment of field: " , stringify ! (
+                rte_memseg__bindgen_ty_1 ) , "::" , stringify ! ( phys_addr )
+                ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_memseg__bindgen_ty_1 ) ) . iova as *
                 const _ as usize } , 0usize , concat ! (
                 "Alignment of field: " , stringify ! (
-                rte_memseg__bindgen_ty_1 ) , "::" , stringify ! ( addr ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_memseg__bindgen_ty_1 ) ) . addr_64 as
-                * const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                rte_memseg__bindgen_ty_1 ) , "::" , stringify ! ( addr_64 )
-                ));
+                rte_memseg__bindgen_ty_1 ) , "::" , stringify ! ( iova ) ));
 }
 impl Clone for rte_memseg__bindgen_ty_1 {
+    fn clone(&self) -> Self { *self }
+}
+#[repr(C)]
+#[derive(Copy)]
+pub union rte_memseg__bindgen_ty_2 {
+    /// < Start virtual address.
+    pub addr: *mut ::std::os::raw::c_void,
+    /// < Makes sure addr is always 64 bits
+    pub addr_64: u64,
+    _bindgen_union_align: u64,
+}
+#[test]
+fn bindgen_test_layout_rte_memseg__bindgen_ty_2() {
+    assert_eq!(::std::mem::size_of::<rte_memseg__bindgen_ty_2>() , 8usize ,
+               concat ! (
+               "Size of: " , stringify ! ( rte_memseg__bindgen_ty_2 ) ));
+    assert_eq! (::std::mem::align_of::<rte_memseg__bindgen_ty_2>() , 8usize ,
+                concat ! (
+                "Alignment of " , stringify ! ( rte_memseg__bindgen_ty_2 ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_memseg__bindgen_ty_2 ) ) . addr as *
+                const _ as usize } , 0usize , concat ! (
+                "Alignment of field: " , stringify ! (
+                rte_memseg__bindgen_ty_2 ) , "::" , stringify ! ( addr ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_memseg__bindgen_ty_2 ) ) . addr_64 as
+                * const _ as usize } , 0usize , concat ! (
+                "Alignment of field: " , stringify ! (
+                rte_memseg__bindgen_ty_2 ) , "::" , stringify ! ( addr_64 )
+                ));
+}
+impl Clone for rte_memseg__bindgen_ty_2 {
     fn clone(&self) -> Self { *self }
 }
 #[test]
@@ -7905,11 +7901,6 @@ fn bindgen_test_layout_rte_memseg() {
                "Size of: " , stringify ! ( rte_memseg ) ));
     assert_eq! (::std::mem::align_of::<rte_memseg>() , 1usize , concat ! (
                 "Alignment of " , stringify ! ( rte_memseg ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_memseg ) ) . phys_addr as * const _
-                as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( rte_memseg ) , "::" ,
-                stringify ! ( phys_addr ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const rte_memseg ) ) . len as * const _ as
                 usize } , 16usize , concat ! (
@@ -7957,9 +7948,19 @@ extern "C" {
 /// @param virt
 /// The virtual address.
 /// @return
-/// The physical address or RTE_BAD_PHYS_ADDR on error.
+/// The physical address or RTE_BAD_IOVA on error.
     pub fn rte_mem_virt2phy(virt: *const ::std::os::raw::c_void)
      -> phys_addr_t;
+}
+extern "C" {
+    /// Get IO virtual address of any mapped virtual address in the current process.
+///
+/// @param virt
+/// The virtual address.
+/// @return
+/// The IO address or RTE_BAD_IOVA on error.
+    pub fn rte_mem_virt2iova(virt: *const ::std::os::raw::c_void)
+     -> rte_iova_t;
 }
 extern "C" {
     /// Get the layout of the available physical memory.
@@ -8006,6 +8007,16 @@ extern "C" {
 /// The number of memory ranks on the system. The value is 0 if unknown or
 /// not the same on all devices.
     pub fn rte_memory_get_nrank() -> ::std::os::raw::c_uint;
+}
+extern "C" {
+    /// Drivers based on uio will not load unless physical
+/// addresses are obtainable. It is only possible to get
+/// physical addresses when running as a privileged user.
+///
+/// @return
+/// 1 if the system is able to obtain physical addresses.
+/// 0 if using DMA addresses through an IOMMU.
+    pub fn rte_eal_using_phys_addrs() -> ::std::os::raw::c_int;
 }
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
@@ -8089,32 +8100,11 @@ extern "C" {
     pub fn rte_log_set_global_level(level: u32);
 }
 extern "C" {
-    /// Deprecated, replaced by rte_log_set_global_level().
-    pub fn rte_set_log_level(level: u32);
-}
-extern "C" {
     /// Get the global log level.
 ///
 /// @return
 /// The current global log level.
     pub fn rte_log_get_global_level() -> u32;
-}
-extern "C" {
-    /// Deprecated, replaced by rte_log_get_global_level().
-    pub fn rte_get_log_level() -> u32;
-}
-extern "C" {
-    /// Enable or disable the log type.
-///
-/// @param type
-/// Log type, for example, RTE_LOGTYPE_EAL.
-/// @param enable
-/// True for enable; false for disable.
-    pub fn rte_set_log_type(type_: u32, enable: ::std::os::raw::c_int);
-}
-extern "C" {
-    /// Get the global log type.
-    pub fn rte_get_log_type() -> u32;
 }
 extern "C" {
     /// Get the log level for a given type.
@@ -8185,7 +8175,7 @@ extern "C" {
 /// The string identifying the log type.
 /// @return
 /// - >0: success, the returned value is the log type identifier.
-/// - (-ENONEM): cannot allocate memory.
+/// - (-ENOMEM): cannot allocate memory.
     pub fn rte_log_register(name: *const ::std::os::raw::c_char)
      -> ::std::os::raw::c_int;
 }
@@ -8259,312 +8249,6 @@ pub type rte_be64_t = u64;
 pub type rte_le16_t = u16;
 pub type rte_le32_t = u32;
 pub type rte_le64_t = u64;
-/// A structure describing a memzone, which is a contiguous portion of
-/// physical memory identified by a name.
-#[repr(C, packed)]
-#[derive(Copy)]
-pub struct rte_memzone {
-    /// < Name of the memory zone.
-    pub name: [::std::os::raw::c_char; 32usize],
-    /// < Start physical address.
-    pub phys_addr: phys_addr_t,
-    pub __bindgen_anon_1: rte_memzone__bindgen_ty_1,
-    /// < Length of the memzone.
-    pub len: usize,
-    /// < The page size of underlying memory
-    pub hugepage_sz: u64,
-    /// < NUMA socket ID.
-    pub socket_id: i32,
-    /// < Characteristics of this memzone.
-    pub flags: u32,
-    /// < Memseg it belongs.
-    pub memseg_id: u32,
-}
-#[repr(C)]
-#[derive(Copy)]
-pub union rte_memzone__bindgen_ty_1 {
-    /// < Start virtual address.
-    pub addr: *mut ::std::os::raw::c_void,
-    /// < Makes sure addr is always 64-bits
-    pub addr_64: u64,
-    _bindgen_union_align: u64,
-}
-#[test]
-fn bindgen_test_layout_rte_memzone__bindgen_ty_1() {
-    assert_eq!(::std::mem::size_of::<rte_memzone__bindgen_ty_1>() , 8usize ,
-               concat ! (
-               "Size of: " , stringify ! ( rte_memzone__bindgen_ty_1 ) ));
-    assert_eq! (::std::mem::align_of::<rte_memzone__bindgen_ty_1>() , 8usize ,
-                concat ! (
-                "Alignment of " , stringify ! ( rte_memzone__bindgen_ty_1 )
-                ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_memzone__bindgen_ty_1 ) ) . addr as *
-                const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                rte_memzone__bindgen_ty_1 ) , "::" , stringify ! ( addr ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_memzone__bindgen_ty_1 ) ) . addr_64
-                as * const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                rte_memzone__bindgen_ty_1 ) , "::" , stringify ! ( addr_64 )
-                ));
-}
-impl Clone for rte_memzone__bindgen_ty_1 {
-    fn clone(&self) -> Self { *self }
-}
-#[test]
-fn bindgen_test_layout_rte_memzone() {
-    assert_eq!(::std::mem::size_of::<rte_memzone>() , 76usize , concat ! (
-               "Size of: " , stringify ! ( rte_memzone ) ));
-    assert_eq! (::std::mem::align_of::<rte_memzone>() , 1usize , concat ! (
-                "Alignment of " , stringify ! ( rte_memzone ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_memzone ) ) . name as * const _ as
-                usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( rte_memzone ) , "::" ,
-                stringify ! ( name ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_memzone ) ) . phys_addr as * const _
-                as usize } , 32usize , concat ! (
-                "Alignment of field: " , stringify ! ( rte_memzone ) , "::" ,
-                stringify ! ( phys_addr ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_memzone ) ) . len as * const _ as
-                usize } , 48usize , concat ! (
-                "Alignment of field: " , stringify ! ( rte_memzone ) , "::" ,
-                stringify ! ( len ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_memzone ) ) . hugepage_sz as * const
-                _ as usize } , 56usize , concat ! (
-                "Alignment of field: " , stringify ! ( rte_memzone ) , "::" ,
-                stringify ! ( hugepage_sz ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_memzone ) ) . socket_id as * const _
-                as usize } , 64usize , concat ! (
-                "Alignment of field: " , stringify ! ( rte_memzone ) , "::" ,
-                stringify ! ( socket_id ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_memzone ) ) . flags as * const _ as
-                usize } , 68usize , concat ! (
-                "Alignment of field: " , stringify ! ( rte_memzone ) , "::" ,
-                stringify ! ( flags ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_memzone ) ) . memseg_id as * const _
-                as usize } , 72usize , concat ! (
-                "Alignment of field: " , stringify ! ( rte_memzone ) , "::" ,
-                stringify ! ( memseg_id ) ));
-}
-impl Clone for rte_memzone {
-    fn clone(&self) -> Self { *self }
-}
-extern "C" {
-    /// Reserve a portion of physical memory.
-///
-/// This function reserves some memory and returns a pointer to a
-/// correctly filled memzone descriptor. If the allocation cannot be
-/// done, return NULL.
-///
-/// @param name
-/// The name of the memzone. If it already exists, the function will
-/// fail and return NULL.
-/// @param len
-/// The size of the memory to be reserved. If it
-/// is 0, the biggest contiguous zone will be reserved.
-/// @param socket_id
-/// The socket identifier in the case of
-/// NUMA. The value can be SOCKET_ID_ANY if there is no NUMA
-/// constraint for the reserved zone.
-/// @param flags
-/// The flags parameter is used to request memzones to be
-/// taken from specifically sized hugepages.
-/// - RTE_MEMZONE_2MB - Reserved from 2MB pages
-/// - RTE_MEMZONE_1GB - Reserved from 1GB pages
-/// - RTE_MEMZONE_16MB - Reserved from 16MB pages
-/// - RTE_MEMZONE_16GB - Reserved from 16GB pages
-/// - RTE_MEMZONE_256KB - Reserved from 256KB pages
-/// - RTE_MEMZONE_256MB - Reserved from 256MB pages
-/// - RTE_MEMZONE_512MB - Reserved from 512MB pages
-/// - RTE_MEMZONE_4GB - Reserved from 4GB pages
-/// - RTE_MEMZONE_SIZE_HINT_ONLY - Allow alternative page size to be used if
-/// the requested page size is unavailable.
-/// If this flag is not set, the function
-/// will return error on an unavailable size
-/// request.
-/// @return
-/// A pointer to a correctly-filled read-only memzone descriptor, or NULL
-/// on error.
-/// On error case, rte_errno will be set appropriately:
-/// - E_RTE_NO_CONFIG - function could not get pointer to rte_config structure
-/// - E_RTE_SECONDARY - function was called from a secondary process instance
-/// - ENOSPC - the maximum number of memzones has already been allocated
-/// - EEXIST - a memzone with the same name already exists
-/// - ENOMEM - no appropriate memory area found in which to create memzone
-/// - EINVAL - invalid parameters
-    pub fn rte_memzone_reserve(name: *const ::std::os::raw::c_char,
-                               len: usize, socket_id: ::std::os::raw::c_int,
-                               flags: ::std::os::raw::c_uint)
-     -> *const rte_memzone;
-}
-extern "C" {
-    /// Reserve a portion of physical memory with alignment on a specified
-/// boundary.
-///
-/// This function reserves some memory with alignment on a specified
-/// boundary, and returns a pointer to a correctly filled memzone
-/// descriptor. If the allocation cannot be done or if the alignment
-/// is not a power of 2, returns NULL.
-///
-/// @param name
-/// The name of the memzone. If it already exists, the function will
-/// fail and return NULL.
-/// @param len
-/// The size of the memory to be reserved. If it
-/// is 0, the biggest contiguous zone will be reserved.
-/// @param socket_id
-/// The socket identifier in the case of
-/// NUMA. The value can be SOCKET_ID_ANY if there is no NUMA
-/// constraint for the reserved zone.
-/// @param flags
-/// The flags parameter is used to request memzones to be
-/// taken from specifically sized hugepages.
-/// - RTE_MEMZONE_2MB - Reserved from 2MB pages
-/// - RTE_MEMZONE_1GB - Reserved from 1GB pages
-/// - RTE_MEMZONE_16MB - Reserved from 16MB pages
-/// - RTE_MEMZONE_16GB - Reserved from 16GB pages
-/// - RTE_MEMZONE_256KB - Reserved from 256KB pages
-/// - RTE_MEMZONE_256MB - Reserved from 256MB pages
-/// - RTE_MEMZONE_512MB - Reserved from 512MB pages
-/// - RTE_MEMZONE_4GB - Reserved from 4GB pages
-/// - RTE_MEMZONE_SIZE_HINT_ONLY - Allow alternative page size to be used if
-/// the requested page size is unavailable.
-/// If this flag is not set, the function
-/// will return error on an unavailable size
-/// request.
-/// @param align
-/// Alignment for resulting memzone. Must be a power of 2.
-/// @return
-/// A pointer to a correctly-filled read-only memzone descriptor, or NULL
-/// on error.
-/// On error case, rte_errno will be set appropriately:
-/// - E_RTE_NO_CONFIG - function could not get pointer to rte_config structure
-/// - E_RTE_SECONDARY - function was called from a secondary process instance
-/// - ENOSPC - the maximum number of memzones has already been allocated
-/// - EEXIST - a memzone with the same name already exists
-/// - ENOMEM - no appropriate memory area found in which to create memzone
-/// - EINVAL - invalid parameters
-    pub fn rte_memzone_reserve_aligned(name: *const ::std::os::raw::c_char,
-                                       len: usize,
-                                       socket_id: ::std::os::raw::c_int,
-                                       flags: ::std::os::raw::c_uint,
-                                       align: ::std::os::raw::c_uint)
-     -> *const rte_memzone;
-}
-extern "C" {
-    /// Reserve a portion of physical memory with specified alignment and
-/// boundary.
-///
-/// This function reserves some memory with specified alignment and
-/// boundary, and returns a pointer to a correctly filled memzone
-/// descriptor. If the allocation cannot be done or if the alignment
-/// or boundary are not a power of 2, returns NULL.
-/// Memory buffer is reserved in a way, that it wouldn't cross specified
-/// boundary. That implies that requested length should be less or equal
-/// then boundary.
-///
-/// @param name
-/// The name of the memzone. If it already exists, the function will
-/// fail and return NULL.
-/// @param len
-/// The size of the memory to be reserved. If it
-/// is 0, the biggest contiguous zone will be reserved.
-/// @param socket_id
-/// The socket identifier in the case of
-/// NUMA. The value can be SOCKET_ID_ANY if there is no NUMA
-/// constraint for the reserved zone.
-/// @param flags
-/// The flags parameter is used to request memzones to be
-/// taken from specifically sized hugepages.
-/// - RTE_MEMZONE_2MB - Reserved from 2MB pages
-/// - RTE_MEMZONE_1GB - Reserved from 1GB pages
-/// - RTE_MEMZONE_16MB - Reserved from 16MB pages
-/// - RTE_MEMZONE_16GB - Reserved from 16GB pages
-/// - RTE_MEMZONE_256KB - Reserved from 256KB pages
-/// - RTE_MEMZONE_256MB - Reserved from 256MB pages
-/// - RTE_MEMZONE_512MB - Reserved from 512MB pages
-/// - RTE_MEMZONE_4GB - Reserved from 4GB pages
-/// - RTE_MEMZONE_SIZE_HINT_ONLY - Allow alternative page size to be used if
-/// the requested page size is unavailable.
-/// If this flag is not set, the function
-/// will return error on an unavailable size
-/// request.
-/// @param align
-/// Alignment for resulting memzone. Must be a power of 2.
-/// @param bound
-/// Boundary for resulting memzone. Must be a power of 2 or zero.
-/// Zero value implies no boundary condition.
-/// @return
-/// A pointer to a correctly-filled read-only memzone descriptor, or NULL
-/// on error.
-/// On error case, rte_errno will be set appropriately:
-/// - E_RTE_NO_CONFIG - function could not get pointer to rte_config structure
-/// - E_RTE_SECONDARY - function was called from a secondary process instance
-/// - ENOSPC - the maximum number of memzones has already been allocated
-/// - EEXIST - a memzone with the same name already exists
-/// - ENOMEM - no appropriate memory area found in which to create memzone
-/// - EINVAL - invalid parameters
-    pub fn rte_memzone_reserve_bounded(name: *const ::std::os::raw::c_char,
-                                       len: usize,
-                                       socket_id: ::std::os::raw::c_int,
-                                       flags: ::std::os::raw::c_uint,
-                                       align: ::std::os::raw::c_uint,
-                                       bound: ::std::os::raw::c_uint)
-     -> *const rte_memzone;
-}
-extern "C" {
-    /// Free a memzone.
-///
-/// @param mz
-/// A pointer to the memzone
-/// @return
-/// -EINVAL - invalid parameter.
-/// 0 - success
-    pub fn rte_memzone_free(mz: *const rte_memzone) -> ::std::os::raw::c_int;
-}
-extern "C" {
-    /// Lookup for a memzone.
-///
-/// Get a pointer to a descriptor of an already reserved memory
-/// zone identified by the name given as an argument.
-///
-/// @param name
-/// The name of the memzone.
-/// @return
-/// A pointer to a read-only memzone descriptor.
-    pub fn rte_memzone_lookup(name: *const ::std::os::raw::c_char)
-     -> *const rte_memzone;
-}
-extern "C" {
-    /// Dump all reserved memzones to a file.
-///
-/// @param f
-/// A pointer to a file for output
-    pub fn rte_memzone_dump(f: *mut FILE);
-}
-extern "C" {
-    /// Walk list of all memzones
-///
-/// @param func
-/// Iterator function
-/// @param arg
-/// Argument passed to iterator
-    pub fn rte_memzone_walk(func:
-                                ::std::option::Option<unsafe extern "C" fn(arg1:
-                                                                               *const rte_memzone,
-                                                                           arg:
-                                                                               *mut ::std::os::raw::c_void)>,
-                            arg: *mut ::std::os::raw::c_void);
-}
 /// Structure to hold heap statistics obtained from rte_malloc_get_socket_stats function.
 #[repr(C)]
 #[derive(Debug, Copy)]
@@ -8889,16 +8573,16 @@ extern "C" {
                                 max: usize) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    /// Return the physical address of a virtual address obtained through
+    /// Return the IO address of a virtual address obtained through
 /// rte_malloc
 ///
 /// @param addr
 /// Address obtained from a previous rte_malloc call
 /// @return
-/// RTE_BAD_PHYS_ADDR on error
-/// otherwise return physical address of the buffer
-    pub fn rte_malloc_virt2phy(addr: *const ::std::os::raw::c_void)
-     -> phys_addr_t;
+/// RTE_BAD_IOVA on error
+/// otherwise return an address suitable for IO
+    pub fn rte_malloc_virt2iova(addr: *const ::std::os::raw::c_void)
+     -> rte_iova_t;
 }
 #[repr(C)]
 #[derive(Debug, Copy)]
@@ -10028,6 +9712,675 @@ extern "C" {
      -> ::std::os::raw::c_int;
 }
 #[repr(u32)]
+/// Device driver.
+#[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
+pub enum rte_kernel_driver {
+    RTE_KDRV_UNKNOWN = 0,
+    RTE_KDRV_IGB_UIO = 1,
+    RTE_KDRV_VFIO = 2,
+    RTE_KDRV_UIO_GENERIC = 3,
+    RTE_KDRV_NIC_UIO = 4,
+    RTE_KDRV_NONE = 5,
+}
+#[repr(u32)]
+/// Device policies.
+#[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
+pub enum rte_dev_policy { RTE_DEV_WHITELISTED = 0, RTE_DEV_BLACKLISTED = 1, }
+/// A generic memory resource representation.
+#[repr(C)]
+#[derive(Debug, Copy)]
+pub struct rte_mem_resource {
+    /// < Physical address, 0 if not resource.
+    pub phys_addr: u64,
+    /// < Length of the resource.
+    pub len: u64,
+    /// < Virtual address, NULL when not mapped.
+    pub addr: *mut ::std::os::raw::c_void,
+}
+#[test]
+fn bindgen_test_layout_rte_mem_resource() {
+    assert_eq!(::std::mem::size_of::<rte_mem_resource>() , 24usize , concat !
+               ( "Size of: " , stringify ! ( rte_mem_resource ) ));
+    assert_eq! (::std::mem::align_of::<rte_mem_resource>() , 8usize , concat !
+                ( "Alignment of " , stringify ! ( rte_mem_resource ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_mem_resource ) ) . phys_addr as *
+                const _ as usize } , 0usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_mem_resource ) ,
+                "::" , stringify ! ( phys_addr ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_mem_resource ) ) . len as * const _
+                as usize } , 8usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_mem_resource ) ,
+                "::" , stringify ! ( len ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_mem_resource ) ) . addr as * const _
+                as usize } , 16usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_mem_resource ) ,
+                "::" , stringify ! ( addr ) ));
+}
+impl Clone for rte_mem_resource {
+    fn clone(&self) -> Self { *self }
+}
+/// A structure describing a device driver.
+#[repr(C)]
+#[derive(Debug, Copy)]
+pub struct rte_driver {
+    /// < Next in list.
+    pub next: rte_driver__bindgen_ty_1,
+    /// < Driver name.
+    pub name: *const ::std::os::raw::c_char,
+    /// < Driver alias.
+    pub alias: *const ::std::os::raw::c_char,
+}
+#[repr(C)]
+#[derive(Debug, Copy)]
+pub struct rte_driver__bindgen_ty_1 {
+    pub tqe_next: *mut rte_driver,
+    pub tqe_prev: *mut *mut rte_driver,
+}
+#[test]
+fn bindgen_test_layout_rte_driver__bindgen_ty_1() {
+    assert_eq!(::std::mem::size_of::<rte_driver__bindgen_ty_1>() , 16usize ,
+               concat ! (
+               "Size of: " , stringify ! ( rte_driver__bindgen_ty_1 ) ));
+    assert_eq! (::std::mem::align_of::<rte_driver__bindgen_ty_1>() , 8usize ,
+                concat ! (
+                "Alignment of " , stringify ! ( rte_driver__bindgen_ty_1 ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_driver__bindgen_ty_1 ) ) . tqe_next
+                as * const _ as usize } , 0usize , concat ! (
+                "Alignment of field: " , stringify ! (
+                rte_driver__bindgen_ty_1 ) , "::" , stringify ! ( tqe_next )
+                ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_driver__bindgen_ty_1 ) ) . tqe_prev
+                as * const _ as usize } , 8usize , concat ! (
+                "Alignment of field: " , stringify ! (
+                rte_driver__bindgen_ty_1 ) , "::" , stringify ! ( tqe_prev )
+                ));
+}
+impl Clone for rte_driver__bindgen_ty_1 {
+    fn clone(&self) -> Self { *self }
+}
+#[test]
+fn bindgen_test_layout_rte_driver() {
+    assert_eq!(::std::mem::size_of::<rte_driver>() , 32usize , concat ! (
+               "Size of: " , stringify ! ( rte_driver ) ));
+    assert_eq! (::std::mem::align_of::<rte_driver>() , 8usize , concat ! (
+                "Alignment of " , stringify ! ( rte_driver ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_driver ) ) . next as * const _ as
+                usize } , 0usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_driver ) , "::" ,
+                stringify ! ( next ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_driver ) ) . name as * const _ as
+                usize } , 16usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_driver ) , "::" ,
+                stringify ! ( name ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_driver ) ) . alias as * const _ as
+                usize } , 24usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_driver ) , "::" ,
+                stringify ! ( alias ) ));
+}
+impl Clone for rte_driver {
+    fn clone(&self) -> Self { *self }
+}
+/// A structure describing a generic device.
+#[repr(C)]
+#[derive(Debug, Copy)]
+pub struct rte_device {
+    /// < Next device
+    pub next: rte_device__bindgen_ty_1,
+    /// < Device name
+    pub name: *const ::std::os::raw::c_char,
+    /// < Associated driver
+    pub driver: *const rte_driver,
+    /// < NUMA node connection
+    pub numa_node: ::std::os::raw::c_int,
+    /// < Device user arguments
+    pub devargs: *mut rte_devargs,
+}
+#[repr(C)]
+#[derive(Debug, Copy)]
+pub struct rte_device__bindgen_ty_1 {
+    pub tqe_next: *mut rte_device,
+    pub tqe_prev: *mut *mut rte_device,
+}
+#[test]
+fn bindgen_test_layout_rte_device__bindgen_ty_1() {
+    assert_eq!(::std::mem::size_of::<rte_device__bindgen_ty_1>() , 16usize ,
+               concat ! (
+               "Size of: " , stringify ! ( rte_device__bindgen_ty_1 ) ));
+    assert_eq! (::std::mem::align_of::<rte_device__bindgen_ty_1>() , 8usize ,
+                concat ! (
+                "Alignment of " , stringify ! ( rte_device__bindgen_ty_1 ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_device__bindgen_ty_1 ) ) . tqe_next
+                as * const _ as usize } , 0usize , concat ! (
+                "Alignment of field: " , stringify ! (
+                rte_device__bindgen_ty_1 ) , "::" , stringify ! ( tqe_next )
+                ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_device__bindgen_ty_1 ) ) . tqe_prev
+                as * const _ as usize } , 8usize , concat ! (
+                "Alignment of field: " , stringify ! (
+                rte_device__bindgen_ty_1 ) , "::" , stringify ! ( tqe_prev )
+                ));
+}
+impl Clone for rte_device__bindgen_ty_1 {
+    fn clone(&self) -> Self { *self }
+}
+#[test]
+fn bindgen_test_layout_rte_device() {
+    assert_eq!(::std::mem::size_of::<rte_device>() , 48usize , concat ! (
+               "Size of: " , stringify ! ( rte_device ) ));
+    assert_eq! (::std::mem::align_of::<rte_device>() , 8usize , concat ! (
+                "Alignment of " , stringify ! ( rte_device ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_device ) ) . next as * const _ as
+                usize } , 0usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_device ) , "::" ,
+                stringify ! ( next ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_device ) ) . name as * const _ as
+                usize } , 16usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_device ) , "::" ,
+                stringify ! ( name ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_device ) ) . driver as * const _ as
+                usize } , 24usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_device ) , "::" ,
+                stringify ! ( driver ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_device ) ) . numa_node as * const _
+                as usize } , 32usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_device ) , "::" ,
+                stringify ! ( numa_node ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_device ) ) . devargs as * const _ as
+                usize } , 40usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_device ) , "::" ,
+                stringify ! ( devargs ) ));
+}
+impl Clone for rte_device {
+    fn clone(&self) -> Self { *self }
+}
+extern "C" {
+    /// Attach a device to a registered driver.
+///
+/// @param name
+/// The device name, that refers to a pci device (or some private
+/// way of designating a vdev device). Based on this device name, eal
+/// will identify a driver capable of handling it and pass it to the
+/// driver probing function.
+/// @param devargs
+/// Device arguments to be passed to the driver.
+/// @return
+/// 0 on success, negative on error.
+    pub fn rte_eal_dev_attach(name: *const ::std::os::raw::c_char,
+                              devargs: *const ::std::os::raw::c_char)
+     -> ::std::os::raw::c_int;
+}
+extern "C" {
+    /// Detach a device from its driver.
+///
+/// @param dev
+/// A pointer to a rte_device structure.
+/// @return
+/// 0 on success, negative on error.
+    pub fn rte_eal_dev_detach(dev: *mut rte_device) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    /// @warning
+/// @b EXPERIMENTAL: this API may change without prior notice
+///
+/// Hotplug add a given device to a specific bus.
+///
+/// @param busname
+/// The bus name the device is added to.
+/// @param devname
+/// The device name. Based on this device name, eal will identify a driver
+/// capable of handling it and pass it to the driver probing function.
+/// @param devargs
+/// Device arguments to be passed to the driver.
+/// @return
+/// 0 on success, negative on error.
+    pub fn rte_eal_hotplug_add(busname: *const ::std::os::raw::c_char,
+                               devname: *const ::std::os::raw::c_char,
+                               devargs: *const ::std::os::raw::c_char)
+     -> ::std::os::raw::c_int;
+}
+extern "C" {
+    /// @warning
+/// @b EXPERIMENTAL: this API may change without prior notice
+///
+/// Hotplug remove a given device from a specific bus.
+///
+/// @param busname
+/// The bus name the device is removed from.
+/// @param devname
+/// The device name being removed.
+/// @return
+/// 0 on success, negative on error.
+    pub fn rte_eal_hotplug_remove(busname: *const ::std::os::raw::c_char,
+                                  devname: *const ::std::os::raw::c_char)
+     -> ::std::os::raw::c_int;
+}
+/// Device comparison function.
+///
+/// This type of function is used to compare an rte_device with arbitrary
+/// data.
+///
+/// @param dev
+/// Device handle.
+///
+/// @param data
+/// Data to compare against. The type of this parameter is determined by
+/// the kind of comparison performed by the function.
+///
+/// @return
+/// 0 if the device matches the data.
+/// !0 if the device does not match.
+/// <0 if ordering is possible and the device is lower than the data.
+/// >0 if ordering is possible and the device is greater than the data.
+pub type rte_dev_cmp_t =
+    ::std::option::Option<unsafe extern "C" fn(dev: *const rte_device,
+                                               data:
+                                                   *const ::std::os::raw::c_void)
+                              -> ::std::os::raw::c_int>;
+/// Double linked list of buses
+#[repr(C)]
+#[derive(Debug, Copy)]
+pub struct rte_bus_list {
+    pub tqh_first: *mut rte_bus,
+    pub tqh_last: *mut *mut rte_bus,
+}
+#[test]
+fn bindgen_test_layout_rte_bus_list() {
+    assert_eq!(::std::mem::size_of::<rte_bus_list>() , 16usize , concat ! (
+               "Size of: " , stringify ! ( rte_bus_list ) ));
+    assert_eq! (::std::mem::align_of::<rte_bus_list>() , 8usize , concat ! (
+                "Alignment of " , stringify ! ( rte_bus_list ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_bus_list ) ) . tqh_first as * const _
+                as usize } , 0usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_bus_list ) , "::" ,
+                stringify ! ( tqh_first ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_bus_list ) ) . tqh_last as * const _
+                as usize } , 8usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_bus_list ) , "::" ,
+                stringify ! ( tqh_last ) ));
+}
+impl Clone for rte_bus_list {
+    fn clone(&self) -> Self { *self }
+}
+#[repr(u32)]
+/// IOVA mapping mode.
+///
+/// IOVA mapping mode is iommu programming mode of a device.
+/// That device (for example: IOMMU backed DMA device) based
+/// on rte_iova_mode will generate physical or virtual address.
+///
+#[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
+pub enum rte_iova_mode { RTE_IOVA_DC = 0, RTE_IOVA_PA = 1, RTE_IOVA_VA = 2, }
+/// Bus specific scan for devices attached on the bus.
+/// For each bus object, the scan would be responsible for finding devices and
+/// adding them to its private device list.
+///
+/// A bus should mandatorily implement this method.
+///
+/// @return
+/// 0 for successful scan
+/// <0 for unsuccessful scan with error value
+pub type rte_bus_scan_t =
+    ::std::option::Option<unsafe extern "C" fn() -> ::std::os::raw::c_int>;
+/// Implementation specific probe function which is responsible for linking
+/// devices on that bus with applicable drivers.
+///
+/// This is called while iterating over each registered bus.
+///
+/// @return
+/// 0 for successful probe
+/// !0 for any error while probing
+pub type rte_bus_probe_t =
+    ::std::option::Option<unsafe extern "C" fn() -> ::std::os::raw::c_int>;
+/// Device iterator to find a device on a bus.
+///
+/// This function returns an rte_device if one of those held by the bus
+/// matches the data passed as parameter.
+///
+/// If the comparison function returns zero this function should stop iterating
+/// over any more devices. To continue a search the device of a previous search
+/// can be passed via the start parameter.
+///
+/// @param cmp
+/// Comparison function.
+///
+/// @param data
+/// Data to compare each device against.
+///
+/// @param start
+/// starting point for the iteration
+///
+/// @return
+/// The first device matching the data, NULL if none exists.
+pub type rte_bus_find_device_t =
+    ::std::option::Option<unsafe extern "C" fn(start: *const rte_device,
+                                               cmp: rte_dev_cmp_t,
+                                               data:
+                                                   *const ::std::os::raw::c_void)
+                              -> *mut rte_device>;
+/// Implementation specific probe function which is responsible for linking
+/// devices on that bus with applicable drivers.
+///
+/// @param dev
+/// Device pointer that was returned by a previous call to find_device.
+///
+/// @return
+/// 0 on success.
+/// !0 on error.
+pub type rte_bus_plug_t =
+    ::std::option::Option<unsafe extern "C" fn(dev: *mut rte_device)
+                              -> ::std::os::raw::c_int>;
+/// Implementation specific remove function which is responsible for unlinking
+/// devices on that bus from assigned driver.
+///
+/// @param dev
+/// Device pointer that was returned by a previous call to find_device.
+///
+/// @return
+/// 0 on success.
+/// !0 on error.
+pub type rte_bus_unplug_t =
+    ::std::option::Option<unsafe extern "C" fn(dev: *mut rte_device)
+                              -> ::std::os::raw::c_int>;
+/// Bus specific parsing function.
+/// Validates the syntax used in the textual representation of a device,
+/// If the syntax is valid and ``addr`` is not NULL, writes the bus-specific
+/// device representation to ``addr``.
+///
+/// @param[in] name
+/// device textual description
+///
+/// @param[out] addr
+/// device information location address, into which parsed info
+/// should be written. If NULL, nothing should be written, which
+/// is not an error.
+///
+/// @return
+/// 0 if parsing was successful.
+/// !0 for any error.
+pub type rte_bus_parse_t =
+    ::std::option::Option<unsafe extern "C" fn(name:
+                                                   *const ::std::os::raw::c_char,
+                                               addr:
+                                                   *mut ::std::os::raw::c_void)
+                              -> ::std::os::raw::c_int>;
+#[repr(u32)]
+/// Bus scan policies
+#[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
+pub enum rte_bus_scan_mode {
+    RTE_BUS_SCAN_UNDEFINED = 0,
+    RTE_BUS_SCAN_WHITELIST = 1,
+    RTE_BUS_SCAN_BLACKLIST = 2,
+}
+/// A structure used to configure bus operations.
+#[repr(C)]
+#[derive(Debug, Copy)]
+pub struct rte_bus_conf {
+    /// < Scan policy.
+    pub scan_mode: rte_bus_scan_mode,
+}
+#[test]
+fn bindgen_test_layout_rte_bus_conf() {
+    assert_eq!(::std::mem::size_of::<rte_bus_conf>() , 4usize , concat ! (
+               "Size of: " , stringify ! ( rte_bus_conf ) ));
+    assert_eq! (::std::mem::align_of::<rte_bus_conf>() , 4usize , concat ! (
+                "Alignment of " , stringify ! ( rte_bus_conf ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_bus_conf ) ) . scan_mode as * const _
+                as usize } , 0usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_bus_conf ) , "::" ,
+                stringify ! ( scan_mode ) ));
+}
+impl Clone for rte_bus_conf {
+    fn clone(&self) -> Self { *self }
+}
+/// Get common iommu class of the all the devices on the bus. The bus may
+/// check that those devices are attached to iommu driver.
+/// If no devices are attached to the bus. The bus may return with don't care
+/// (_DC) value.
+/// Otherwise, The bus will return appropriate _pa or _va iova mode.
+///
+/// @return
+/// enum rte_iova_mode value.
+pub type rte_bus_get_iommu_class_t =
+    ::std::option::Option<unsafe extern "C" fn() -> rte_iova_mode>;
+/// A structure describing a generic bus.
+#[repr(C)]
+#[derive(Debug, Copy)]
+pub struct rte_bus {
+    /// < Next bus object in linked list
+    pub next: rte_bus__bindgen_ty_1,
+    /// < Name of the bus
+    pub name: *const ::std::os::raw::c_char,
+    /// < Scan for devices attached to bus
+    pub scan: rte_bus_scan_t,
+    /// < Probe devices on bus
+    pub probe: rte_bus_probe_t,
+    /// < Find a device on the bus
+    pub find_device: rte_bus_find_device_t,
+    /// < Probe single device for drivers
+    pub plug: rte_bus_plug_t,
+    /// < Remove single device from driver
+    pub unplug: rte_bus_unplug_t,
+    /// < Parse a device name
+    pub parse: rte_bus_parse_t,
+    /// < Bus configuration
+    pub conf: rte_bus_conf,
+    /// < Get iommu class
+    pub get_iommu_class: rte_bus_get_iommu_class_t,
+}
+#[repr(C)]
+#[derive(Debug, Copy)]
+pub struct rte_bus__bindgen_ty_1 {
+    pub tqe_next: *mut rte_bus,
+    pub tqe_prev: *mut *mut rte_bus,
+}
+#[test]
+fn bindgen_test_layout_rte_bus__bindgen_ty_1() {
+    assert_eq!(::std::mem::size_of::<rte_bus__bindgen_ty_1>() , 16usize ,
+               concat ! ( "Size of: " , stringify ! ( rte_bus__bindgen_ty_1 )
+               ));
+    assert_eq! (::std::mem::align_of::<rte_bus__bindgen_ty_1>() , 8usize ,
+                concat ! (
+                "Alignment of " , stringify ! ( rte_bus__bindgen_ty_1 ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_bus__bindgen_ty_1 ) ) . tqe_next as *
+                const _ as usize } , 0usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_bus__bindgen_ty_1 )
+                , "::" , stringify ! ( tqe_next ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_bus__bindgen_ty_1 ) ) . tqe_prev as *
+                const _ as usize } , 8usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_bus__bindgen_ty_1 )
+                , "::" , stringify ! ( tqe_prev ) ));
+}
+impl Clone for rte_bus__bindgen_ty_1 {
+    fn clone(&self) -> Self { *self }
+}
+#[test]
+fn bindgen_test_layout_rte_bus() {
+    assert_eq!(::std::mem::size_of::<rte_bus>() , 88usize , concat ! (
+               "Size of: " , stringify ! ( rte_bus ) ));
+    assert_eq! (::std::mem::align_of::<rte_bus>() , 8usize , concat ! (
+                "Alignment of " , stringify ! ( rte_bus ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_bus ) ) . next as * const _ as usize
+                } , 0usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_bus ) , "::" ,
+                stringify ! ( next ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_bus ) ) . name as * const _ as usize
+                } , 16usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_bus ) , "::" ,
+                stringify ! ( name ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_bus ) ) . scan as * const _ as usize
+                } , 24usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_bus ) , "::" ,
+                stringify ! ( scan ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_bus ) ) . probe as * const _ as usize
+                } , 32usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_bus ) , "::" ,
+                stringify ! ( probe ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_bus ) ) . find_device as * const _ as
+                usize } , 40usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_bus ) , "::" ,
+                stringify ! ( find_device ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_bus ) ) . plug as * const _ as usize
+                } , 48usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_bus ) , "::" ,
+                stringify ! ( plug ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_bus ) ) . unplug as * const _ as
+                usize } , 56usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_bus ) , "::" ,
+                stringify ! ( unplug ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_bus ) ) . parse as * const _ as usize
+                } , 64usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_bus ) , "::" ,
+                stringify ! ( parse ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_bus ) ) . conf as * const _ as usize
+                } , 72usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_bus ) , "::" ,
+                stringify ! ( conf ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_bus ) ) . get_iommu_class as * const
+                _ as usize } , 80usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_bus ) , "::" ,
+                stringify ! ( get_iommu_class ) ));
+}
+impl Clone for rte_bus {
+    fn clone(&self) -> Self { *self }
+}
+extern "C" {
+    /// Register a Bus handler.
+///
+/// @param bus
+/// A pointer to a rte_bus structure describing the bus
+/// to be registered.
+    pub fn rte_bus_register(bus: *mut rte_bus);
+}
+extern "C" {
+    /// Unregister a Bus handler.
+///
+/// @param bus
+/// A pointer to a rte_bus structure describing the bus
+/// to be unregistered.
+    pub fn rte_bus_unregister(bus: *mut rte_bus);
+}
+extern "C" {
+    /// Scan all the buses.
+///
+/// @return
+/// 0 in case of success in scanning all buses
+/// !0 in case of failure to scan
+    pub fn rte_bus_scan() -> ::std::os::raw::c_int;
+}
+extern "C" {
+    /// For each device on the buses, perform a driver 'match' and call the
+/// driver-specific probe for device initialization.
+///
+/// @return
+/// 0 for successful match/probe
+/// !0 otherwise
+    pub fn rte_bus_probe() -> ::std::os::raw::c_int;
+}
+extern "C" {
+    /// Dump information of all the buses registered with EAL.
+///
+/// @param f
+/// A valid and open output stream handle
+    pub fn rte_bus_dump(f: *mut FILE);
+}
+/// Bus comparison function.
+///
+/// @param bus
+/// Bus under test.
+///
+/// @param data
+/// Data to compare against.
+///
+/// @return
+/// 0 if the bus matches the data.
+/// !0 if the bus does not match.
+/// <0 if ordering is possible and the bus is lower than the data.
+/// >0 if ordering is possible and the bus is greater than the data.
+pub type rte_bus_cmp_t =
+    ::std::option::Option<unsafe extern "C" fn(bus: *const rte_bus,
+                                               data:
+                                                   *const ::std::os::raw::c_void)
+                              -> ::std::os::raw::c_int>;
+extern "C" {
+    /// Bus iterator to find a particular bus.
+///
+/// This function compares each registered bus to find one that matches
+/// the data passed as parameter.
+///
+/// If the comparison function returns zero this function will stop iterating
+/// over any more buses. To continue a search the bus of a previous search can
+/// be passed via the start parameter.
+///
+/// @param start
+/// Starting point for the iteration.
+///
+/// @param cmp
+/// Comparison function.
+///
+/// @param data
+/// Data to pass to comparison function.
+///
+/// @return
+/// A pointer to a rte_bus structure or NULL in case no bus matches
+    pub fn rte_bus_find(start: *const rte_bus, cmp: rte_bus_cmp_t,
+                        data: *const ::std::os::raw::c_void) -> *mut rte_bus;
+}
+extern "C" {
+    /// Find the registered bus for a particular device.
+    pub fn rte_bus_find_by_device(dev: *const rte_device) -> *mut rte_bus;
+}
+extern "C" {
+    /// Find the registered bus for a given name.
+    pub fn rte_bus_find_by_name(busname: *const ::std::os::raw::c_char)
+     -> *mut rte_bus;
+}
+extern "C" {
+    /// Get the common iommu class of devices bound on to buses available in the
+/// system. The default mode is PA.
+///
+/// @return
+/// enum rte_iova_mode value.
+    pub fn rte_bus_get_iommu_class() -> rte_iova_mode;
+}
+#[repr(u32)]
+#[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
+pub enum rte_intr_mode {
+    RTE_INTR_MODE_NONE = 0,
+    RTE_INTR_MODE_LEGACY = 1,
+    RTE_INTR_MODE_MSI = 2,
+    RTE_INTR_MODE_MSIX = 3,
+}
+#[repr(u32)]
 /// The lcore role (used in RTE or not).
 #[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
 pub enum rte_lcore_role_t { ROLE_RTE = 0, ROLE_OFF = 1, ROLE_SERVICE = 2, }
@@ -10054,13 +10407,15 @@ pub struct rte_config {
     pub lcore_role: [rte_lcore_role_t; 128usize],
     /// Primary or secondary configuration
     pub process_type: rte_proc_type_t,
+    /// PA or VA mapping mode
+    pub iova_mode: rte_iova_mode,
     /// Pointer to memory configuration, which may be shared across multiple
     /// DPDK instances
     pub mem_config: *mut rte_mem_config,
 }
 #[test]
 fn bindgen_test_layout_rte_config() {
-    assert_eq!(::std::mem::size_of::<rte_config>() , 536usize , concat ! (
+    assert_eq!(::std::mem::size_of::<rte_config>() , 540usize , concat ! (
                "Size of: " , stringify ! ( rte_config ) ));
     assert_eq! (::std::mem::align_of::<rte_config>() , 1usize , concat ! (
                 "Alignment of " , stringify ! ( rte_config ) ));
@@ -10090,8 +10445,13 @@ fn bindgen_test_layout_rte_config() {
                 "Alignment of field: " , stringify ! ( rte_config ) , "::" ,
                 stringify ! ( process_type ) ));
     assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_config ) ) . mem_config as * const _
+                & ( * ( 0 as * const rte_config ) ) . iova_mode as * const _
                 as usize } , 528usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_config ) , "::" ,
+                stringify ! ( iova_mode ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_config ) ) . mem_config as * const _
+                as usize } , 532usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_config ) , "::" ,
                 stringify ! ( mem_config ) ));
 }
@@ -10213,7 +10573,7 @@ extern "C" {
 }
 /// Usage function typedef used by the application usage function.
 ///
-/// Use this function typedef to define and call rte_set_applcation_usage_hook()
+/// Use this function typedef to define and call rte_set_application_usage_hook()
 /// routine.
 pub type rte_usage_hook_t =
     ::std::option::Option<unsafe extern "C" fn(prgname:
@@ -10253,12 +10613,50 @@ extern "C" {
     pub fn rte_eal_has_hugepages() -> ::std::os::raw::c_int;
 }
 extern "C" {
+    /// Whether EAL is using PCI bus.
+/// Disabled by --no-pci option.
+///
+/// @return
+/// Nonzero if the PCI bus is enabled.
+    pub fn rte_eal_has_pci() -> ::std::os::raw::c_int;
+}
+extern "C" {
+    /// Whether the EAL was asked to create UIO device.
+///
+/// @return
+/// Nonzero if true.
+    pub fn rte_eal_create_uio_dev() -> ::std::os::raw::c_int;
+}
+extern "C" {
+    /// The user-configured vfio interrupt mode.
+///
+/// @return
+/// Interrupt mode configured with the command line,
+/// RTE_INTR_MODE_NONE by default.
+    pub fn rte_eal_vfio_intr_mode() -> rte_intr_mode;
+}
+extern "C" {
     /// A wrap API for syscall gettid.
 ///
 /// @return
 /// On success, returns the thread ID of calling process.
 /// It is always successful.
     pub fn rte_sys_gettid() -> ::std::os::raw::c_int;
+}
+extern "C" {
+    /// Get the iova mode
+///
+/// @return
+/// enum rte_iova_mode value.
+    pub fn rte_eal_iova_mode() -> rte_iova_mode;
+}
+extern "C" {
+    /// Get default pool ops name for mbuf
+///
+/// @return
+/// returns default pool ops name.
+    pub fn rte_eal_mbuf_default_mempool_ops()
+     -> *const ::std::os::raw::c_char;
 }
 extern "C" {
     /// Dump the stack of the calling core to the console.
@@ -10500,6 +10898,339 @@ extern "C" {
 /// 0 on success or -1 in case of an error.
     pub fn rte_eal_tailq_register(t: *mut rte_tailq_elem)
      -> ::std::os::raw::c_int;
+}
+/// A structure describing a memzone, which is a contiguous portion of
+/// physical memory identified by a name.
+#[repr(C, packed)]
+#[derive(Copy)]
+pub struct rte_memzone {
+    /// < Name of the memory zone.
+    pub name: [::std::os::raw::c_char; 32usize],
+    pub __bindgen_anon_1: rte_memzone__bindgen_ty_1,
+    pub __bindgen_anon_2: rte_memzone__bindgen_ty_2,
+    /// < Length of the memzone.
+    pub len: usize,
+    /// < The page size of underlying memory
+    pub hugepage_sz: u64,
+    /// < NUMA socket ID.
+    pub socket_id: i32,
+    /// < Characteristics of this memzone.
+    pub flags: u32,
+    /// < Memseg it belongs.
+    pub memseg_id: u32,
+}
+#[repr(C)]
+#[derive(Copy)]
+pub union rte_memzone__bindgen_ty_1 {
+    /// < deprecated - Start physical address.
+    pub phys_addr: phys_addr_t,
+    /// < Start IO address.
+    pub iova: rte_iova_t,
+    _bindgen_union_align: u64,
+}
+#[test]
+fn bindgen_test_layout_rte_memzone__bindgen_ty_1() {
+    assert_eq!(::std::mem::size_of::<rte_memzone__bindgen_ty_1>() , 8usize ,
+               concat ! (
+               "Size of: " , stringify ! ( rte_memzone__bindgen_ty_1 ) ));
+    assert_eq! (::std::mem::align_of::<rte_memzone__bindgen_ty_1>() , 8usize ,
+                concat ! (
+                "Alignment of " , stringify ! ( rte_memzone__bindgen_ty_1 )
+                ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_memzone__bindgen_ty_1 ) ) . phys_addr
+                as * const _ as usize } , 0usize , concat ! (
+                "Alignment of field: " , stringify ! (
+                rte_memzone__bindgen_ty_1 ) , "::" , stringify ! ( phys_addr )
+                ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_memzone__bindgen_ty_1 ) ) . iova as *
+                const _ as usize } , 0usize , concat ! (
+                "Alignment of field: " , stringify ! (
+                rte_memzone__bindgen_ty_1 ) , "::" , stringify ! ( iova ) ));
+}
+impl Clone for rte_memzone__bindgen_ty_1 {
+    fn clone(&self) -> Self { *self }
+}
+#[repr(C)]
+#[derive(Copy)]
+pub union rte_memzone__bindgen_ty_2 {
+    /// < Start virtual address.
+    pub addr: *mut ::std::os::raw::c_void,
+    /// < Makes sure addr is always 64-bits
+    pub addr_64: u64,
+    _bindgen_union_align: u64,
+}
+#[test]
+fn bindgen_test_layout_rte_memzone__bindgen_ty_2() {
+    assert_eq!(::std::mem::size_of::<rte_memzone__bindgen_ty_2>() , 8usize ,
+               concat ! (
+               "Size of: " , stringify ! ( rte_memzone__bindgen_ty_2 ) ));
+    assert_eq! (::std::mem::align_of::<rte_memzone__bindgen_ty_2>() , 8usize ,
+                concat ! (
+                "Alignment of " , stringify ! ( rte_memzone__bindgen_ty_2 )
+                ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_memzone__bindgen_ty_2 ) ) . addr as *
+                const _ as usize } , 0usize , concat ! (
+                "Alignment of field: " , stringify ! (
+                rte_memzone__bindgen_ty_2 ) , "::" , stringify ! ( addr ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_memzone__bindgen_ty_2 ) ) . addr_64
+                as * const _ as usize } , 0usize , concat ! (
+                "Alignment of field: " , stringify ! (
+                rte_memzone__bindgen_ty_2 ) , "::" , stringify ! ( addr_64 )
+                ));
+}
+impl Clone for rte_memzone__bindgen_ty_2 {
+    fn clone(&self) -> Self { *self }
+}
+#[test]
+fn bindgen_test_layout_rte_memzone() {
+    assert_eq!(::std::mem::size_of::<rte_memzone>() , 76usize , concat ! (
+               "Size of: " , stringify ! ( rte_memzone ) ));
+    assert_eq! (::std::mem::align_of::<rte_memzone>() , 1usize , concat ! (
+                "Alignment of " , stringify ! ( rte_memzone ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_memzone ) ) . name as * const _ as
+                usize } , 0usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_memzone ) , "::" ,
+                stringify ! ( name ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_memzone ) ) . len as * const _ as
+                usize } , 48usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_memzone ) , "::" ,
+                stringify ! ( len ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_memzone ) ) . hugepage_sz as * const
+                _ as usize } , 56usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_memzone ) , "::" ,
+                stringify ! ( hugepage_sz ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_memzone ) ) . socket_id as * const _
+                as usize } , 64usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_memzone ) , "::" ,
+                stringify ! ( socket_id ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_memzone ) ) . flags as * const _ as
+                usize } , 68usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_memzone ) , "::" ,
+                stringify ! ( flags ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_memzone ) ) . memseg_id as * const _
+                as usize } , 72usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_memzone ) , "::" ,
+                stringify ! ( memseg_id ) ));
+}
+impl Clone for rte_memzone {
+    fn clone(&self) -> Self { *self }
+}
+extern "C" {
+    /// Reserve a portion of physical memory.
+///
+/// This function reserves some memory and returns a pointer to a
+/// correctly filled memzone descriptor. If the allocation cannot be
+/// done, return NULL.
+///
+/// @param name
+/// The name of the memzone. If it already exists, the function will
+/// fail and return NULL.
+/// @param len
+/// The size of the memory to be reserved. If it
+/// is 0, the biggest contiguous zone will be reserved.
+/// @param socket_id
+/// The socket identifier in the case of
+/// NUMA. The value can be SOCKET_ID_ANY if there is no NUMA
+/// constraint for the reserved zone.
+/// @param flags
+/// The flags parameter is used to request memzones to be
+/// taken from specifically sized hugepages.
+/// - RTE_MEMZONE_2MB - Reserved from 2MB pages
+/// - RTE_MEMZONE_1GB - Reserved from 1GB pages
+/// - RTE_MEMZONE_16MB - Reserved from 16MB pages
+/// - RTE_MEMZONE_16GB - Reserved from 16GB pages
+/// - RTE_MEMZONE_256KB - Reserved from 256KB pages
+/// - RTE_MEMZONE_256MB - Reserved from 256MB pages
+/// - RTE_MEMZONE_512MB - Reserved from 512MB pages
+/// - RTE_MEMZONE_4GB - Reserved from 4GB pages
+/// - RTE_MEMZONE_SIZE_HINT_ONLY - Allow alternative page size to be used if
+/// the requested page size is unavailable.
+/// If this flag is not set, the function
+/// will return error on an unavailable size
+/// request.
+/// @return
+/// A pointer to a correctly-filled read-only memzone descriptor, or NULL
+/// on error.
+/// On error case, rte_errno will be set appropriately:
+/// - E_RTE_NO_CONFIG - function could not get pointer to rte_config structure
+/// - E_RTE_SECONDARY - function was called from a secondary process instance
+/// - ENOSPC - the maximum number of memzones has already been allocated
+/// - EEXIST - a memzone with the same name already exists
+/// - ENOMEM - no appropriate memory area found in which to create memzone
+/// - EINVAL - invalid parameters
+    pub fn rte_memzone_reserve(name: *const ::std::os::raw::c_char,
+                               len: usize, socket_id: ::std::os::raw::c_int,
+                               flags: ::std::os::raw::c_uint)
+     -> *const rte_memzone;
+}
+extern "C" {
+    /// Reserve a portion of physical memory with alignment on a specified
+/// boundary.
+///
+/// This function reserves some memory with alignment on a specified
+/// boundary, and returns a pointer to a correctly filled memzone
+/// descriptor. If the allocation cannot be done or if the alignment
+/// is not a power of 2, returns NULL.
+///
+/// @param name
+/// The name of the memzone. If it already exists, the function will
+/// fail and return NULL.
+/// @param len
+/// The size of the memory to be reserved. If it
+/// is 0, the biggest contiguous zone will be reserved.
+/// @param socket_id
+/// The socket identifier in the case of
+/// NUMA. The value can be SOCKET_ID_ANY if there is no NUMA
+/// constraint for the reserved zone.
+/// @param flags
+/// The flags parameter is used to request memzones to be
+/// taken from specifically sized hugepages.
+/// - RTE_MEMZONE_2MB - Reserved from 2MB pages
+/// - RTE_MEMZONE_1GB - Reserved from 1GB pages
+/// - RTE_MEMZONE_16MB - Reserved from 16MB pages
+/// - RTE_MEMZONE_16GB - Reserved from 16GB pages
+/// - RTE_MEMZONE_256KB - Reserved from 256KB pages
+/// - RTE_MEMZONE_256MB - Reserved from 256MB pages
+/// - RTE_MEMZONE_512MB - Reserved from 512MB pages
+/// - RTE_MEMZONE_4GB - Reserved from 4GB pages
+/// - RTE_MEMZONE_SIZE_HINT_ONLY - Allow alternative page size to be used if
+/// the requested page size is unavailable.
+/// If this flag is not set, the function
+/// will return error on an unavailable size
+/// request.
+/// @param align
+/// Alignment for resulting memzone. Must be a power of 2.
+/// @return
+/// A pointer to a correctly-filled read-only memzone descriptor, or NULL
+/// on error.
+/// On error case, rte_errno will be set appropriately:
+/// - E_RTE_NO_CONFIG - function could not get pointer to rte_config structure
+/// - E_RTE_SECONDARY - function was called from a secondary process instance
+/// - ENOSPC - the maximum number of memzones has already been allocated
+/// - EEXIST - a memzone with the same name already exists
+/// - ENOMEM - no appropriate memory area found in which to create memzone
+/// - EINVAL - invalid parameters
+    pub fn rte_memzone_reserve_aligned(name: *const ::std::os::raw::c_char,
+                                       len: usize,
+                                       socket_id: ::std::os::raw::c_int,
+                                       flags: ::std::os::raw::c_uint,
+                                       align: ::std::os::raw::c_uint)
+     -> *const rte_memzone;
+}
+extern "C" {
+    /// Reserve a portion of physical memory with specified alignment and
+/// boundary.
+///
+/// This function reserves some memory with specified alignment and
+/// boundary, and returns a pointer to a correctly filled memzone
+/// descriptor. If the allocation cannot be done or if the alignment
+/// or boundary are not a power of 2, returns NULL.
+/// Memory buffer is reserved in a way, that it wouldn't cross specified
+/// boundary. That implies that requested length should be less or equal
+/// then boundary.
+///
+/// @param name
+/// The name of the memzone. If it already exists, the function will
+/// fail and return NULL.
+/// @param len
+/// The size of the memory to be reserved. If it
+/// is 0, the biggest contiguous zone will be reserved.
+/// @param socket_id
+/// The socket identifier in the case of
+/// NUMA. The value can be SOCKET_ID_ANY if there is no NUMA
+/// constraint for the reserved zone.
+/// @param flags
+/// The flags parameter is used to request memzones to be
+/// taken from specifically sized hugepages.
+/// - RTE_MEMZONE_2MB - Reserved from 2MB pages
+/// - RTE_MEMZONE_1GB - Reserved from 1GB pages
+/// - RTE_MEMZONE_16MB - Reserved from 16MB pages
+/// - RTE_MEMZONE_16GB - Reserved from 16GB pages
+/// - RTE_MEMZONE_256KB - Reserved from 256KB pages
+/// - RTE_MEMZONE_256MB - Reserved from 256MB pages
+/// - RTE_MEMZONE_512MB - Reserved from 512MB pages
+/// - RTE_MEMZONE_4GB - Reserved from 4GB pages
+/// - RTE_MEMZONE_SIZE_HINT_ONLY - Allow alternative page size to be used if
+/// the requested page size is unavailable.
+/// If this flag is not set, the function
+/// will return error on an unavailable size
+/// request.
+/// @param align
+/// Alignment for resulting memzone. Must be a power of 2.
+/// @param bound
+/// Boundary for resulting memzone. Must be a power of 2 or zero.
+/// Zero value implies no boundary condition.
+/// @return
+/// A pointer to a correctly-filled read-only memzone descriptor, or NULL
+/// on error.
+/// On error case, rte_errno will be set appropriately:
+/// - E_RTE_NO_CONFIG - function could not get pointer to rte_config structure
+/// - E_RTE_SECONDARY - function was called from a secondary process instance
+/// - ENOSPC - the maximum number of memzones has already been allocated
+/// - EEXIST - a memzone with the same name already exists
+/// - ENOMEM - no appropriate memory area found in which to create memzone
+/// - EINVAL - invalid parameters
+    pub fn rte_memzone_reserve_bounded(name: *const ::std::os::raw::c_char,
+                                       len: usize,
+                                       socket_id: ::std::os::raw::c_int,
+                                       flags: ::std::os::raw::c_uint,
+                                       align: ::std::os::raw::c_uint,
+                                       bound: ::std::os::raw::c_uint)
+     -> *const rte_memzone;
+}
+extern "C" {
+    /// Free a memzone.
+///
+/// @param mz
+/// A pointer to the memzone
+/// @return
+/// -EINVAL - invalid parameter.
+/// 0 - success
+    pub fn rte_memzone_free(mz: *const rte_memzone) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    /// Lookup for a memzone.
+///
+/// Get a pointer to a descriptor of an already reserved memory
+/// zone identified by the name given as an argument.
+///
+/// @param name
+/// The name of the memzone.
+/// @return
+/// A pointer to a read-only memzone descriptor.
+    pub fn rte_memzone_lookup(name: *const ::std::os::raw::c_char)
+     -> *const rte_memzone;
+}
+extern "C" {
+    /// Dump all reserved memzones to a file.
+///
+/// @param f
+/// A pointer to a file for output
+    pub fn rte_memzone_dump(f: *mut FILE);
+}
+extern "C" {
+    /// Walk list of all memzones
+///
+/// @param func
+/// Iterator function
+/// @param arg
+/// Argument passed to iterator
+    pub fn rte_memzone_walk(func:
+                                ::std::option::Option<unsafe extern "C" fn(arg1:
+                                                                               *const rte_memzone,
+                                                                           arg:
+                                                                               *mut ::std::os::raw::c_void)>,
+                            arg: *mut ::std::os::raw::c_void);
 }
 #[repr(u32)]
 /// State of an lcore.
@@ -10781,6 +11512,20 @@ extern "C" {
 /// On success, return 0; otherwise return a negative value.
     pub fn rte_thread_setname(id: pthread_t,
                               name: *const ::std::os::raw::c_char)
+     -> ::std::os::raw::c_int;
+}
+extern "C" {
+    /// Test if the core supplied has a specific role
+///
+/// @param lcore_id
+/// The identifier of the lcore, which MUST be between 0 and
+/// RTE_MAX_LCORE-1.
+/// @param role
+/// The role to be checked against.
+/// @return
+/// On success, return 0; otherwise return a negative value.
+    pub fn rte_lcore_has_role(lcore_id: ::std::os::raw::c_uint,
+                              role: rte_lcore_role_t)
      -> ::std::os::raw::c_int;
 }
 /// The rte_spinlock_t type.
@@ -12175,14 +12920,13 @@ impl Clone for rte_mempool_objsz {
 /// a cookie is also added in this structure preventing corruptions and
 /// double-frees.
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Copy)]
 pub struct rte_mempool_objhdr {
     /// < Next in list.
     pub next: rte_mempool_objhdr__bindgen_ty_1,
     /// < The mempool owning the object.
     pub mp: *mut rte_mempool,
-    /// < Physical address of the object.
-    pub physaddr: phys_addr_t,
+    pub __bindgen_anon_1: rte_mempool_objhdr__bindgen_ty_2,
 }
 #[repr(C)]
 #[derive(Debug, Copy)]
@@ -12209,6 +12953,41 @@ fn bindgen_test_layout_rte_mempool_objhdr__bindgen_ty_1() {
 impl Clone for rte_mempool_objhdr__bindgen_ty_1 {
     fn clone(&self) -> Self { *self }
 }
+#[repr(C)]
+#[derive(Copy)]
+pub union rte_mempool_objhdr__bindgen_ty_2 {
+    /// < IO address of the object.
+    pub iova: rte_iova_t,
+    /// < deprecated - Physical address of the object.
+    pub physaddr: phys_addr_t,
+    _bindgen_union_align: u64,
+}
+#[test]
+fn bindgen_test_layout_rte_mempool_objhdr__bindgen_ty_2() {
+    assert_eq!(::std::mem::size_of::<rte_mempool_objhdr__bindgen_ty_2>() ,
+               8usize , concat ! (
+               "Size of: " , stringify ! ( rte_mempool_objhdr__bindgen_ty_2 )
+               ));
+    assert_eq! (::std::mem::align_of::<rte_mempool_objhdr__bindgen_ty_2>() ,
+                8usize , concat ! (
+                "Alignment of " , stringify ! (
+                rte_mempool_objhdr__bindgen_ty_2 ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_mempool_objhdr__bindgen_ty_2 ) ) .
+                iova as * const _ as usize } , 0usize , concat ! (
+                "Alignment of field: " , stringify ! (
+                rte_mempool_objhdr__bindgen_ty_2 ) , "::" , stringify ! ( iova
+                ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_mempool_objhdr__bindgen_ty_2 ) ) .
+                physaddr as * const _ as usize } , 0usize , concat ! (
+                "Alignment of field: " , stringify ! (
+                rte_mempool_objhdr__bindgen_ty_2 ) , "::" , stringify ! (
+                physaddr ) ));
+}
+impl Clone for rte_mempool_objhdr__bindgen_ty_2 {
+    fn clone(&self) -> Self { *self }
+}
 #[test]
 fn bindgen_test_layout_rte_mempool_objhdr() {
     assert_eq!(::std::mem::size_of::<rte_mempool_objhdr>() , 24usize , concat
@@ -12225,11 +13004,6 @@ fn bindgen_test_layout_rte_mempool_objhdr() {
                 as usize } , 8usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_mempool_objhdr ) ,
                 "::" , stringify ! ( mp ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_mempool_objhdr ) ) . physaddr as *
-                const _ as usize } , 16usize , concat ! (
-                "Alignment of field: " , stringify ! ( rte_mempool_objhdr ) ,
-                "::" , stringify ! ( physaddr ) ));
 }
 impl Clone for rte_mempool_objhdr {
     fn clone(&self) -> Self { *self }
@@ -12303,7 +13077,7 @@ pub type rte_mempool_memchunk_free_cb_t =
 /// The memory chunks where objects are stored. Each chunk is virtually
 /// and physically contiguous.
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Copy)]
 pub struct rte_mempool_memhdr {
     /// < Next in list.
     pub next: rte_mempool_memhdr__bindgen_ty_1,
@@ -12311,8 +13085,7 @@ pub struct rte_mempool_memhdr {
     pub mp: *mut rte_mempool,
     /// < Virtual address of the chunk
     pub addr: *mut ::std::os::raw::c_void,
-    /// < Physical address of the chunk
-    pub phys_addr: phys_addr_t,
+    pub __bindgen_anon_1: rte_mempool_memhdr__bindgen_ty_2,
     /// < length of the chunk
     pub len: usize,
     /// < Free callback
@@ -12345,6 +13118,41 @@ fn bindgen_test_layout_rte_mempool_memhdr__bindgen_ty_1() {
 impl Clone for rte_mempool_memhdr__bindgen_ty_1 {
     fn clone(&self) -> Self { *self }
 }
+#[repr(C)]
+#[derive(Copy)]
+pub union rte_mempool_memhdr__bindgen_ty_2 {
+    /// < IO address of the chunk
+    pub iova: rte_iova_t,
+    /// < Physical address of the chunk
+    pub phys_addr: phys_addr_t,
+    _bindgen_union_align: u64,
+}
+#[test]
+fn bindgen_test_layout_rte_mempool_memhdr__bindgen_ty_2() {
+    assert_eq!(::std::mem::size_of::<rte_mempool_memhdr__bindgen_ty_2>() ,
+               8usize , concat ! (
+               "Size of: " , stringify ! ( rte_mempool_memhdr__bindgen_ty_2 )
+               ));
+    assert_eq! (::std::mem::align_of::<rte_mempool_memhdr__bindgen_ty_2>() ,
+                8usize , concat ! (
+                "Alignment of " , stringify ! (
+                rte_mempool_memhdr__bindgen_ty_2 ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_mempool_memhdr__bindgen_ty_2 ) ) .
+                iova as * const _ as usize } , 0usize , concat ! (
+                "Alignment of field: " , stringify ! (
+                rte_mempool_memhdr__bindgen_ty_2 ) , "::" , stringify ! ( iova
+                ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_mempool_memhdr__bindgen_ty_2 ) ) .
+                phys_addr as * const _ as usize } , 0usize , concat ! (
+                "Alignment of field: " , stringify ! (
+                rte_mempool_memhdr__bindgen_ty_2 ) , "::" , stringify ! (
+                phys_addr ) ));
+}
+impl Clone for rte_mempool_memhdr__bindgen_ty_2 {
+    fn clone(&self) -> Self { *self }
+}
 #[test]
 fn bindgen_test_layout_rte_mempool_memhdr() {
     assert_eq!(::std::mem::size_of::<rte_mempool_memhdr>() , 56usize , concat
@@ -12366,11 +13174,6 @@ fn bindgen_test_layout_rte_mempool_memhdr() {
                 _ as usize } , 16usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_mempool_memhdr ) ,
                 "::" , stringify ! ( addr ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_mempool_memhdr ) ) . phys_addr as *
-                const _ as usize } , 24usize , concat ! (
-                "Alignment of field: " , stringify ! ( rte_mempool_memhdr ) ,
-                "::" , stringify ! ( phys_addr ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const rte_mempool_memhdr ) ) . len as * const _
                 as usize } , 32usize , concat ! (
@@ -12402,7 +13205,7 @@ pub struct rte_mempool {
     /// < Memzone where pool is alloc'd.
     pub mz: *const rte_memzone,
     /// < Flags of the mempool.
-    pub flags: ::std::os::raw::c_int,
+    pub flags: ::std::os::raw::c_uint,
     /// < Socket id passed at create.
     pub socket_id: ::std::os::raw::c_int,
     /// < Max size of the mempool.
@@ -12617,6 +13420,19 @@ pub type rte_mempool_dequeue_t =
 pub type rte_mempool_get_count =
     ::std::option::Option<unsafe extern "C" fn(mp: *const rte_mempool)
                               -> ::std::os::raw::c_uint>;
+/// Get the mempool capabilities.
+pub type rte_mempool_get_capabilities_t =
+    ::std::option::Option<unsafe extern "C" fn(mp: *const rte_mempool,
+                                               flags:
+                                                   *mut ::std::os::raw::c_uint)
+                              -> ::std::os::raw::c_int>;
+/// Notify new memory area to mempool.
+pub type rte_mempool_ops_register_memory_area_t =
+    ::std::option::Option<unsafe extern "C" fn(mp: *const rte_mempool,
+                                               vaddr:
+                                                   *mut ::std::os::raw::c_char,
+                                               iova: rte_iova_t, len: usize)
+                              -> ::std::os::raw::c_int>;
 /// Structure defining mempool operations structure
 #[repr(C)]
 #[derive(Copy)]
@@ -12633,7 +13449,11 @@ pub struct rte_mempool_ops {
     pub dequeue: rte_mempool_dequeue_t,
     /// < Get qty of available objs.
     pub get_count: rte_mempool_get_count,
-    pub __bindgen_padding_0: [u64; 7usize],
+    /// Get the mempool capabilities
+    pub get_capabilities: rte_mempool_get_capabilities_t,
+    /// Notify new memory area to mempool
+    pub register_memory_area: rte_mempool_ops_register_memory_area_t,
+    pub __bindgen_padding_0: [u64; 5usize],
 }
 #[test]
 fn bindgen_test_layout_rte_mempool_ops() {
@@ -12669,6 +13489,17 @@ fn bindgen_test_layout_rte_mempool_ops() {
                 const _ as usize } , 64usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_mempool_ops ) ,
                 "::" , stringify ! ( get_count ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_mempool_ops ) ) . get_capabilities as
+                * const _ as usize } , 72usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_mempool_ops ) ,
+                "::" , stringify ! ( get_capabilities ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_mempool_ops ) ) .
+                register_memory_area as * const _ as usize } , 80usize ,
+                concat ! (
+                "Alignment of field: " , stringify ! ( rte_mempool_ops ) ,
+                "::" , stringify ! ( register_memory_area ) ));
 }
 impl Clone for rte_mempool_ops {
     fn clone(&self) -> Self { *self }
@@ -12739,6 +13570,45 @@ extern "C" {
 /// The number of available objects in the external pool.
     pub fn rte_mempool_ops_get_count(mp: *const rte_mempool)
      -> ::std::os::raw::c_uint;
+}
+extern "C" {
+    /// @internal wrapper for mempool_ops get_capabilities callback.
+///
+/// @param mp [in]
+/// Pointer to the memory pool.
+/// @param flags [out]
+/// Pointer to the mempool flags.
+/// @return
+/// - 0: Success; The mempool driver has advertised his pool capabilities in
+/// flags param.
+/// - -ENOTSUP - doesn't support get_capabilities ops (valid case).
+/// - Otherwise, pool create fails.
+    pub fn rte_mempool_ops_get_capabilities(mp: *const rte_mempool,
+                                            flags:
+                                                *mut ::std::os::raw::c_uint)
+     -> ::std::os::raw::c_int;
+}
+extern "C" {
+    /// @internal wrapper for mempool_ops register_memory_area callback.
+/// API to notify the mempool handler when a new memory area is added to pool.
+///
+/// @param mp
+/// Pointer to the memory pool.
+/// @param vaddr
+/// Pointer to the buffer virtual address.
+/// @param iova
+/// Pointer to the buffer IO address.
+/// @param len
+/// Pool size.
+/// @return
+/// - 0: Success;
+/// - -ENOTSUP - doesn't support register_memory_area ops (valid error case).
+/// - Otherwise, rte_mempool_populate_phys fails thus pool create fails.
+    pub fn rte_mempool_ops_register_memory_area(mp: *const rte_mempool,
+                                                vaddr:
+                                                    *mut ::std::os::raw::c_char,
+                                                iova: rte_iova_t, len: usize)
+     -> ::std::os::raw::c_int;
 }
 extern "C" {
     /// @internal wrapper for mempool_ops free callback.
@@ -12951,11 +13821,10 @@ extern "C" {
 /// @param vaddr
 /// Virtual address of the externally allocated memory buffer.
 /// Will be used to store mempool objects.
-/// @param paddr
-/// Array of physical addresses of the pages that comprises given memory
-/// buffer.
+/// @param iova
+/// Array of IO addresses of the pages that comprises given memory buffer.
 /// @param pg_num
-/// Number of elements in the paddr array.
+/// Number of elements in the iova array.
 /// @param pg_shift
 /// LOG2 of the physical pages size.
 /// @return
@@ -12973,7 +13842,7 @@ extern "C" {
                                    socket_id: ::std::os::raw::c_int,
                                    flags: ::std::os::raw::c_uint,
                                    vaddr: *mut ::std::os::raw::c_void,
-                                   paddr: *const phys_addr_t, pg_num: u32,
+                                   iova: *const rte_iova_t, pg_num: u32,
                                    pg_shift: u32) -> *mut rte_mempool;
 }
 extern "C" {
@@ -13035,7 +13904,7 @@ extern "C" {
 /// Add a virtually and physically contiguous memory chunk in the pool
 /// where objects can be instantiated.
 ///
-/// If the given physical address is unknown (paddr = RTE_BAD_PHYS_ADDR),
+/// If the given IO address is unknown (iova = RTE_BAD_IOVA),
 /// the chunk doesn't need to be physically contiguous (only virtually),
 /// and allocated objects may span two pages.
 ///
@@ -13043,8 +13912,8 @@ extern "C" {
 /// A pointer to the mempool structure.
 /// @param vaddr
 /// The virtual address of memory that should be used to store objects.
-/// @param paddr
-/// The physical address
+/// @param iova
+/// The IO address
 /// @param len
 /// The length of memory in bytes.
 /// @param free_cb
@@ -13055,6 +13924,14 @@ extern "C" {
 /// The number of objects added on success.
 /// On error, the chunk is not added in the memory list of the
 /// mempool and a negative errno is returned.
+    pub fn rte_mempool_populate_iova(mp: *mut rte_mempool,
+                                     vaddr: *mut ::std::os::raw::c_char,
+                                     iova: rte_iova_t, len: usize,
+                                     free_cb: rte_mempool_memchunk_free_cb_t,
+                                     opaque: *mut ::std::os::raw::c_void)
+     -> ::std::os::raw::c_int;
+}
+extern "C" {
     pub fn rte_mempool_populate_phys(mp: *mut rte_mempool,
                                      vaddr: *mut ::std::os::raw::c_char,
                                      paddr: phys_addr_t, len: usize,
@@ -13066,18 +13943,17 @@ extern "C" {
     /// Add physical memory for objects in the pool at init
 ///
 /// Add a virtually contiguous memory chunk in the pool where objects can
-/// be instantiated. The physical addresses corresponding to the virtual
-/// area are described in paddr[], pg_num, pg_shift.
+/// be instantiated. The IO addresses corresponding to the virtual
+/// area are described in iova[], pg_num, pg_shift.
 ///
 /// @param mp
 /// A pointer to the mempool structure.
 /// @param vaddr
 /// The virtual address of memory that should be used to store objects.
-/// @param paddr
-/// An array of physical addresses of each page composing the virtual
-/// area.
+/// @param iova
+/// An array of IO addresses of each page composing the virtual area.
 /// @param pg_num
-/// Number of elements in the paddr array.
+/// Number of elements in the iova array.
 /// @param pg_shift
 /// LOG2 of the physical pages size.
 /// @param free_cb
@@ -13088,6 +13964,16 @@ extern "C" {
 /// The number of objects added on success.
 /// On error, the chunks are not added in the memory list of the
 /// mempool and a negative errno is returned.
+    pub fn rte_mempool_populate_iova_tab(mp: *mut rte_mempool,
+                                         vaddr: *mut ::std::os::raw::c_char,
+                                         iova: *const rte_iova_t, pg_num: u32,
+                                         pg_shift: u32,
+                                         free_cb:
+                                             rte_mempool_memchunk_free_cb_t,
+                                         opaque: *mut ::std::os::raw::c_void)
+     -> ::std::os::raw::c_int;
+}
+extern "C" {
     pub fn rte_mempool_populate_phys_tab(mp: *mut rte_mempool,
                                          vaddr: *mut ::std::os::raw::c_char,
                                          paddr: *const phys_addr_t,
@@ -13325,10 +14211,13 @@ extern "C" {
 /// by rte_mempool_calc_obj_size().
 /// @param pg_shift
 /// LOG2 of the physical pages size. If set to 0, ignore page boundaries.
+/// @param flags
+/// The mempool flags.
 /// @return
 /// Required memory size aligned at page boundary.
     pub fn rte_mempool_xmem_size(elt_num: u32, total_elt_sz: usize,
-                                 pg_shift: u32) -> usize;
+                                 pg_shift: u32, flags: ::std::os::raw::c_uint)
+     -> usize;
 }
 extern "C" {
     /// Get the size of memory required to store mempool elements.
@@ -13344,13 +14233,14 @@ extern "C" {
 /// @param total_elt_sz
 /// The size of each element, including header and trailer, as returned
 /// by rte_mempool_calc_obj_size().
-/// @param paddr
-/// Array of physical addresses of the pages that comprises given memory
-/// buffer.
+/// @param iova
+/// Array of IO addresses of the pages that comprises given memory buffer.
 /// @param pg_num
-/// Number of elements in the paddr array.
+/// Number of elements in the iova array.
 /// @param pg_shift
 /// LOG2 of the physical pages size.
+/// @param flags
+/// The mempool flags.
 /// @return
 /// On success, the number of bytes needed to store given number of
 /// objects, aligned to the given page size. If the provided memory
@@ -13358,8 +14248,9 @@ extern "C" {
 /// is the actual number of elements that can be stored in that buffer.
     pub fn rte_mempool_xmem_usage(vaddr: *mut ::std::os::raw::c_void,
                                   elt_num: u32, total_elt_sz: usize,
-                                  paddr: *const phys_addr_t, pg_num: u32,
-                                  pg_shift: u32) -> isize;
+                                  iova: *const rte_iova_t, pg_num: u32,
+                                  pg_shift: u32,
+                                  flags: ::std::os::raw::c_uint) -> isize;
 }
 extern "C" {
     /// Walk list of all memory pools
@@ -13518,14 +14409,10 @@ pub struct rte_mbuf {
     pub cacheline0: MARKER,
     /// < Virtual address of segment buffer.
     pub buf_addr: *mut ::std::os::raw::c_void,
-    /// Physical address of segment buffer.
-    /// Force alignment to 8-bytes, so as to ensure we have the exact
-    /// same mbuf cacheline0 layout for 32-bit and 64-bit. This makes
-    /// working on vector drivers easier.
-    pub buf_physaddr: phys_addr_t,
+    pub __bindgen_anon_1: rte_mbuf__bindgen_ty_1,
     pub rearm_data: MARKER64,
     pub data_off: u16,
-    pub __bindgen_anon_1: rte_mbuf__bindgen_ty_1,
+    pub __bindgen_anon_2: rte_mbuf__bindgen_ty_2,
     /// < Number of segments.
     pub nb_segs: u16,
     /// Input port (16 bits to support more than 256 virtual ports).
@@ -13533,7 +14420,7 @@ pub struct rte_mbuf {
     /// < Offload features.
     pub ol_flags: u64,
     pub rx_descriptor_fields1: MARKER,
-    pub __bindgen_anon_2: rte_mbuf__bindgen_ty_2,
+    pub __bindgen_anon_3: rte_mbuf__bindgen_ty_3,
     /// < Total pkt len: sum of all segments.
     pub pkt_len: u32,
     /// < Amount of data in segment buffer.
@@ -13541,7 +14428,7 @@ pub struct rte_mbuf {
     /// VLAN TCI (CPU order), valid if PKT_RX_VLAN_STRIPPED is set.
     pub vlan_tci: u16,
     /// < hash information
-    pub hash: rte_mbuf__bindgen_ty_3,
+    pub hash: rte_mbuf__bindgen_ty_4,
     /// Outer VLAN TCI (CPU order), valid if PKT_RX_QINQ_STRIPPED is set.
     pub vlan_tci_outer: u16,
     /// < Length of segment buffer.
@@ -13550,12 +14437,12 @@ pub struct rte_mbuf {
     /// are not normalized but are always the same for a given port.
     pub timestamp: u64,
     pub cacheline1: MARKER,
-    pub __bindgen_anon_3: rte_mbuf__bindgen_ty_4,
+    pub __bindgen_anon_4: rte_mbuf__bindgen_ty_5,
     /// < Pool from which mbuf was allocated.
     pub pool: *mut rte_mempool,
     /// < Next segment of scattered packet.
     pub next: *mut rte_mbuf,
-    pub __bindgen_anon_4: rte_mbuf__bindgen_ty_5,
+    pub __bindgen_anon_5: rte_mbuf__bindgen_ty_6,
     /// Size of the application private data. In case of an indirect
     /// mbuf, it stores the direct mbuf private data size.
     pub priv_size: u16,
@@ -13564,6 +14451,40 @@ pub struct rte_mbuf {
     /// Sequence number. See also rte_reorder_insert().
     pub seqn: u32,
     pub __bindgen_padding_0: [u64; 3usize],
+}
+/// Physical address of segment buffer.
+/// Force alignment to 8-bytes, so as to ensure we have the exact
+/// same mbuf cacheline0 layout for 32-bit and 64-bit. This makes
+/// working on vector drivers easier.
+#[repr(C)]
+#[derive(Copy)]
+pub union rte_mbuf__bindgen_ty_1 {
+    pub buf_iova: rte_iova_t,
+    /// < deprecated
+    pub buf_physaddr: rte_iova_t,
+    _bindgen_union_align: u64,
+}
+#[test]
+fn bindgen_test_layout_rte_mbuf__bindgen_ty_1() {
+    assert_eq!(::std::mem::size_of::<rte_mbuf__bindgen_ty_1>() , 8usize ,
+               concat ! ( "Size of: " , stringify ! ( rte_mbuf__bindgen_ty_1 )
+               ));
+    assert_eq! (::std::mem::align_of::<rte_mbuf__bindgen_ty_1>() , 8usize ,
+                concat ! (
+                "Alignment of " , stringify ! ( rte_mbuf__bindgen_ty_1 ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_mbuf__bindgen_ty_1 ) ) . buf_iova as
+                * const _ as usize } , 0usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_mbuf__bindgen_ty_1
+                ) , "::" , stringify ! ( buf_iova ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_mbuf__bindgen_ty_1 ) ) . buf_physaddr
+                as * const _ as usize } , 0usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_mbuf__bindgen_ty_1
+                ) , "::" , stringify ! ( buf_physaddr ) ));
+}
+impl Clone for rte_mbuf__bindgen_ty_1 {
+    fn clone(&self) -> Self { *self }
 }
 /// Reference counter. Its size should at least equal to the size
 /// of port field (16 bits), to support zero-copy broadcast.
@@ -13574,7 +14495,7 @@ pub struct rte_mbuf {
 /// config option.
 #[repr(C)]
 #[derive(Copy)]
-pub union rte_mbuf__bindgen_ty_1 {
+pub union rte_mbuf__bindgen_ty_2 {
     /// < Atomically accessed refcnt
     pub refcnt_atomic: rte_atomic16_t,
     /// < Non-atomically accessed refcnt
@@ -13582,81 +14503,99 @@ pub union rte_mbuf__bindgen_ty_1 {
     _bindgen_union_align: u16,
 }
 #[test]
-fn bindgen_test_layout_rte_mbuf__bindgen_ty_1() {
-    assert_eq!(::std::mem::size_of::<rte_mbuf__bindgen_ty_1>() , 2usize ,
-               concat ! ( "Size of: " , stringify ! ( rte_mbuf__bindgen_ty_1 )
+fn bindgen_test_layout_rte_mbuf__bindgen_ty_2() {
+    assert_eq!(::std::mem::size_of::<rte_mbuf__bindgen_ty_2>() , 2usize ,
+               concat ! ( "Size of: " , stringify ! ( rte_mbuf__bindgen_ty_2 )
                ));
-    assert_eq! (::std::mem::align_of::<rte_mbuf__bindgen_ty_1>() , 2usize ,
+    assert_eq! (::std::mem::align_of::<rte_mbuf__bindgen_ty_2>() , 2usize ,
                 concat ! (
-                "Alignment of " , stringify ! ( rte_mbuf__bindgen_ty_1 ) ));
+                "Alignment of " , stringify ! ( rte_mbuf__bindgen_ty_2 ) ));
     assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_mbuf__bindgen_ty_1 ) ) .
+                & ( * ( 0 as * const rte_mbuf__bindgen_ty_2 ) ) .
                 refcnt_atomic as * const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( rte_mbuf__bindgen_ty_1
+                "Alignment of field: " , stringify ! ( rte_mbuf__bindgen_ty_2
                 ) , "::" , stringify ! ( refcnt_atomic ) ));
     assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_mbuf__bindgen_ty_1 ) ) . refcnt as *
+                & ( * ( 0 as * const rte_mbuf__bindgen_ty_2 ) ) . refcnt as *
                 const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( rte_mbuf__bindgen_ty_1
+                "Alignment of field: " , stringify ! ( rte_mbuf__bindgen_ty_2
                 ) , "::" , stringify ! ( refcnt ) ));
 }
-impl Clone for rte_mbuf__bindgen_ty_1 {
+impl Clone for rte_mbuf__bindgen_ty_2 {
     fn clone(&self) -> Self { *self }
 }
 #[repr(C)]
 #[derive(Copy)]
-pub union rte_mbuf__bindgen_ty_2 {
+pub union rte_mbuf__bindgen_ty_3 {
     /// < L2/L3/L4 and tunnel information.
     pub packet_type: u32,
-    pub __bindgen_anon_1: rte_mbuf__bindgen_ty_2__bindgen_ty_1,
+    pub __bindgen_anon_1: rte_mbuf__bindgen_ty_3__bindgen_ty_1,
     _bindgen_union_align: u32,
 }
 #[repr(C)]
-#[derive(Debug, Copy)]
-pub struct rte_mbuf__bindgen_ty_2__bindgen_ty_1 {
-    pub _bitfield_1: [u8; 4usize],
+#[derive(Copy)]
+pub struct rte_mbuf__bindgen_ty_3__bindgen_ty_1 {
+    pub _bitfield_1: [u8; 2usize],
+    pub __bindgen_anon_1: rte_mbuf__bindgen_ty_3__bindgen_ty_1__bindgen_ty_1,
+    pub _bitfield_2: u8,
     pub __bindgen_align: [u32; 0usize],
 }
-#[test]
-fn bindgen_test_layout_rte_mbuf__bindgen_ty_2__bindgen_ty_1() {
-    assert_eq!(::std::mem::size_of::<rte_mbuf__bindgen_ty_2__bindgen_ty_1>() ,
-               4usize , concat ! (
-               "Size of: " , stringify ! (
-               rte_mbuf__bindgen_ty_2__bindgen_ty_1 ) ));
-    assert_eq! (::std::mem::align_of::<rte_mbuf__bindgen_ty_2__bindgen_ty_1>()
-                , 4usize , concat ! (
-                "Alignment of " , stringify ! (
-                rte_mbuf__bindgen_ty_2__bindgen_ty_1 ) ));
+#[repr(C)]
+#[derive(Copy)]
+pub union rte_mbuf__bindgen_ty_3__bindgen_ty_1__bindgen_ty_1 {
+    pub inner_esp_next_proto: u8,
+    pub __bindgen_anon_1: rte_mbuf__bindgen_ty_3__bindgen_ty_1__bindgen_ty_1__bindgen_ty_1,
+    _bindgen_union_align: u8,
 }
-impl Clone for rte_mbuf__bindgen_ty_2__bindgen_ty_1 {
+#[repr(C)]
+#[derive(Debug, Copy)]
+pub struct rte_mbuf__bindgen_ty_3__bindgen_ty_1__bindgen_ty_1__bindgen_ty_1 {
+    pub _bitfield_1: u8,
+    pub __bindgen_align: [u8; 0usize],
+}
+#[test]
+fn bindgen_test_layout_rte_mbuf__bindgen_ty_3__bindgen_ty_1__bindgen_ty_1__bindgen_ty_1() {
+    assert_eq!(::std::mem::size_of::<rte_mbuf__bindgen_ty_3__bindgen_ty_1__bindgen_ty_1__bindgen_ty_1>()
+               , 1usize , concat ! (
+               "Size of: " , stringify ! (
+               rte_mbuf__bindgen_ty_3__bindgen_ty_1__bindgen_ty_1__bindgen_ty_1
+               ) ));
+    assert_eq! (::std::mem::align_of::<rte_mbuf__bindgen_ty_3__bindgen_ty_1__bindgen_ty_1__bindgen_ty_1>()
+                , 1usize , concat ! (
+                "Alignment of " , stringify ! (
+                rte_mbuf__bindgen_ty_3__bindgen_ty_1__bindgen_ty_1__bindgen_ty_1
+                ) ));
+}
+impl Clone for
+ rte_mbuf__bindgen_ty_3__bindgen_ty_1__bindgen_ty_1__bindgen_ty_1 {
     fn clone(&self) -> Self { *self }
 }
-impl rte_mbuf__bindgen_ty_2__bindgen_ty_1 {
+impl rte_mbuf__bindgen_ty_3__bindgen_ty_1__bindgen_ty_1__bindgen_ty_1 {
     #[inline]
-    pub fn l2_type(&self) -> u32 {
-        let mut unit_field_val: u32 = unsafe { ::std::mem::uninitialized() };
+    pub fn inner_l2_type(&self) -> u8 {
+        let mut unit_field_val: u8 = unsafe { ::std::mem::uninitialized() };
         unsafe {
             ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
                                                 *const u8,
-                                            &mut unit_field_val as *mut u32 as
+                                            &mut unit_field_val as *mut u8 as
                                                 *mut u8,
-                                            ::std::mem::size_of::<u32>())
+                                            ::std::mem::size_of::<u8>())
         };
-        let mask = 15u64 as u32;
+        let mask = 15u64 as u8;
         let val = (unit_field_val & mask) >> 0usize;
-        unsafe { ::std::mem::transmute(val as u32) }
+        unsafe { ::std::mem::transmute(val as u8) }
     }
     #[inline]
-    pub fn set_l2_type(&mut self, val: u32) {
-        let mask = 15u64 as u32;
-        let val = val as u32 as u32;
-        let mut unit_field_val: u32 = unsafe { ::std::mem::uninitialized() };
+    pub fn set_inner_l2_type(&mut self, val: u8) {
+        let mask = 15u64 as u8;
+        let val = val as u8 as u8;
+        let mut unit_field_val: u8 = unsafe { ::std::mem::uninitialized() };
         unsafe {
             ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
                                                 *const u8,
-                                            &mut unit_field_val as *mut u32 as
+                                            &mut unit_field_val as *mut u8 as
                                                 *mut u8,
-                                            ::std::mem::size_of::<u32>())
+                                            ::std::mem::size_of::<u8>())
         };
         unit_field_val &= !mask;
         unit_field_val |= (val << 0usize) & mask;
@@ -13665,34 +14604,34 @@ impl rte_mbuf__bindgen_ty_2__bindgen_ty_1 {
                                                 *const u8,
                                             &mut self._bitfield_1 as *mut _ as
                                                 *mut u8,
-                                            ::std::mem::size_of::<u32>());
+                                            ::std::mem::size_of::<u8>());
         }
     }
     #[inline]
-    pub fn l3_type(&self) -> u32 {
-        let mut unit_field_val: u32 = unsafe { ::std::mem::uninitialized() };
+    pub fn inner_l3_type(&self) -> u8 {
+        let mut unit_field_val: u8 = unsafe { ::std::mem::uninitialized() };
         unsafe {
             ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
                                                 *const u8,
-                                            &mut unit_field_val as *mut u32 as
+                                            &mut unit_field_val as *mut u8 as
                                                 *mut u8,
-                                            ::std::mem::size_of::<u32>())
+                                            ::std::mem::size_of::<u8>())
         };
-        let mask = 240u64 as u32;
+        let mask = 240u64 as u8;
         let val = (unit_field_val & mask) >> 4usize;
-        unsafe { ::std::mem::transmute(val as u32) }
+        unsafe { ::std::mem::transmute(val as u8) }
     }
     #[inline]
-    pub fn set_l3_type(&mut self, val: u32) {
-        let mask = 240u64 as u32;
-        let val = val as u32 as u32;
-        let mut unit_field_val: u32 = unsafe { ::std::mem::uninitialized() };
+    pub fn set_inner_l3_type(&mut self, val: u8) {
+        let mask = 240u64 as u8;
+        let val = val as u8 as u8;
+        let mut unit_field_val: u8 = unsafe { ::std::mem::uninitialized() };
         unsafe {
             ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
                                                 *const u8,
-                                            &mut unit_field_val as *mut u32 as
+                                            &mut unit_field_val as *mut u8 as
                                                 *mut u8,
-                                            ::std::mem::size_of::<u32>())
+                                            ::std::mem::size_of::<u8>())
         };
         unit_field_val &= !mask;
         unit_field_val |= (val << 4usize) & mask;
@@ -13701,34 +14640,151 @@ impl rte_mbuf__bindgen_ty_2__bindgen_ty_1 {
                                                 *const u8,
                                             &mut self._bitfield_1 as *mut _ as
                                                 *mut u8,
-                                            ::std::mem::size_of::<u32>());
+                                            ::std::mem::size_of::<u8>());
+        }
+    }
+    #[inline]
+    pub fn new_bitfield_1(inner_l2_type: u8, inner_l3_type: u8) -> u8 {
+        ({ ({ 0 } | ((inner_l2_type as u8 as u8) << 0usize) & (15u64 as u8)) }
+             | ((inner_l3_type as u8 as u8) << 4usize) & (240u64 as u8))
+    }
+}
+#[test]
+fn bindgen_test_layout_rte_mbuf__bindgen_ty_3__bindgen_ty_1__bindgen_ty_1() {
+    assert_eq!(::std::mem::size_of::<rte_mbuf__bindgen_ty_3__bindgen_ty_1__bindgen_ty_1>()
+               , 1usize , concat ! (
+               "Size of: " , stringify ! (
+               rte_mbuf__bindgen_ty_3__bindgen_ty_1__bindgen_ty_1 ) ));
+    assert_eq! (::std::mem::align_of::<rte_mbuf__bindgen_ty_3__bindgen_ty_1__bindgen_ty_1>()
+                , 1usize , concat ! (
+                "Alignment of " , stringify ! (
+                rte_mbuf__bindgen_ty_3__bindgen_ty_1__bindgen_ty_1 ) ));
+    assert_eq! (unsafe {
+                & (
+                * (
+                0 as * const
+                rte_mbuf__bindgen_ty_3__bindgen_ty_1__bindgen_ty_1 ) ) .
+                inner_esp_next_proto as * const _ as usize } , 0usize , concat
+                ! (
+                "Alignment of field: " , stringify ! (
+                rte_mbuf__bindgen_ty_3__bindgen_ty_1__bindgen_ty_1 ) , "::" ,
+                stringify ! ( inner_esp_next_proto ) ));
+}
+impl Clone for rte_mbuf__bindgen_ty_3__bindgen_ty_1__bindgen_ty_1 {
+    fn clone(&self) -> Self { *self }
+}
+#[test]
+fn bindgen_test_layout_rte_mbuf__bindgen_ty_3__bindgen_ty_1() {
+    assert_eq!(::std::mem::size_of::<rte_mbuf__bindgen_ty_3__bindgen_ty_1>() ,
+               4usize , concat ! (
+               "Size of: " , stringify ! (
+               rte_mbuf__bindgen_ty_3__bindgen_ty_1 ) ));
+    assert_eq! (::std::mem::align_of::<rte_mbuf__bindgen_ty_3__bindgen_ty_1>()
+                , 4usize , concat ! (
+                "Alignment of " , stringify ! (
+                rte_mbuf__bindgen_ty_3__bindgen_ty_1 ) ));
+}
+impl Clone for rte_mbuf__bindgen_ty_3__bindgen_ty_1 {
+    fn clone(&self) -> Self { *self }
+}
+impl rte_mbuf__bindgen_ty_3__bindgen_ty_1 {
+    #[inline]
+    pub fn l2_type(&self) -> u32 {
+        let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
+        unsafe {
+            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
+                                                *const u8,
+                                            &mut unit_field_val as *mut u16 as
+                                                *mut u8,
+                                            ::std::mem::size_of::<u16>())
+        };
+        let mask = 15u64 as u16;
+        let val = (unit_field_val & mask) >> 0usize;
+        unsafe { ::std::mem::transmute(val as u32) }
+    }
+    #[inline]
+    pub fn set_l2_type(&mut self, val: u32) {
+        let mask = 15u64 as u16;
+        let val = val as u32 as u16;
+        let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
+        unsafe {
+            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
+                                                *const u8,
+                                            &mut unit_field_val as *mut u16 as
+                                                *mut u8,
+                                            ::std::mem::size_of::<u16>())
+        };
+        unit_field_val &= !mask;
+        unit_field_val |= (val << 0usize) & mask;
+        unsafe {
+            ::std::ptr::copy_nonoverlapping(&unit_field_val as *const _ as
+                                                *const u8,
+                                            &mut self._bitfield_1 as *mut _ as
+                                                *mut u8,
+                                            ::std::mem::size_of::<u16>());
+        }
+    }
+    #[inline]
+    pub fn l3_type(&self) -> u32 {
+        let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
+        unsafe {
+            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
+                                                *const u8,
+                                            &mut unit_field_val as *mut u16 as
+                                                *mut u8,
+                                            ::std::mem::size_of::<u16>())
+        };
+        let mask = 240u64 as u16;
+        let val = (unit_field_val & mask) >> 4usize;
+        unsafe { ::std::mem::transmute(val as u32) }
+    }
+    #[inline]
+    pub fn set_l3_type(&mut self, val: u32) {
+        let mask = 240u64 as u16;
+        let val = val as u32 as u16;
+        let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
+        unsafe {
+            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
+                                                *const u8,
+                                            &mut unit_field_val as *mut u16 as
+                                                *mut u8,
+                                            ::std::mem::size_of::<u16>())
+        };
+        unit_field_val &= !mask;
+        unit_field_val |= (val << 4usize) & mask;
+        unsafe {
+            ::std::ptr::copy_nonoverlapping(&unit_field_val as *const _ as
+                                                *const u8,
+                                            &mut self._bitfield_1 as *mut _ as
+                                                *mut u8,
+                                            ::std::mem::size_of::<u16>());
         }
     }
     #[inline]
     pub fn l4_type(&self) -> u32 {
-        let mut unit_field_val: u32 = unsafe { ::std::mem::uninitialized() };
+        let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
         unsafe {
             ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
                                                 *const u8,
-                                            &mut unit_field_val as *mut u32 as
+                                            &mut unit_field_val as *mut u16 as
                                                 *mut u8,
-                                            ::std::mem::size_of::<u32>())
+                                            ::std::mem::size_of::<u16>())
         };
-        let mask = 3840u64 as u32;
+        let mask = 3840u64 as u16;
         let val = (unit_field_val & mask) >> 8usize;
         unsafe { ::std::mem::transmute(val as u32) }
     }
     #[inline]
     pub fn set_l4_type(&mut self, val: u32) {
-        let mask = 3840u64 as u32;
-        let val = val as u32 as u32;
-        let mut unit_field_val: u32 = unsafe { ::std::mem::uninitialized() };
+        let mask = 3840u64 as u16;
+        let val = val as u32 as u16;
+        let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
         unsafe {
             ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
                                                 *const u8,
-                                            &mut unit_field_val as *mut u32 as
+                                            &mut unit_field_val as *mut u16 as
                                                 *mut u8,
-                                            ::std::mem::size_of::<u32>())
+                                            ::std::mem::size_of::<u16>())
         };
         unit_field_val &= !mask;
         unit_field_val |= (val << 8usize) & mask;
@@ -13737,34 +14793,34 @@ impl rte_mbuf__bindgen_ty_2__bindgen_ty_1 {
                                                 *const u8,
                                             &mut self._bitfield_1 as *mut _ as
                                                 *mut u8,
-                                            ::std::mem::size_of::<u32>());
+                                            ::std::mem::size_of::<u16>());
         }
     }
     #[inline]
     pub fn tun_type(&self) -> u32 {
-        let mut unit_field_val: u32 = unsafe { ::std::mem::uninitialized() };
+        let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
         unsafe {
             ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
                                                 *const u8,
-                                            &mut unit_field_val as *mut u32 as
+                                            &mut unit_field_val as *mut u16 as
                                                 *mut u8,
-                                            ::std::mem::size_of::<u32>())
+                                            ::std::mem::size_of::<u16>())
         };
-        let mask = 61440u64 as u32;
+        let mask = 61440u64 as u16;
         let val = (unit_field_val & mask) >> 12usize;
         unsafe { ::std::mem::transmute(val as u32) }
     }
     #[inline]
     pub fn set_tun_type(&mut self, val: u32) {
-        let mask = 61440u64 as u32;
-        let val = val as u32 as u32;
-        let mut unit_field_val: u32 = unsafe { ::std::mem::uninitialized() };
+        let mask = 61440u64 as u16;
+        let val = val as u32 as u16;
+        let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
         unsafe {
             ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
                                                 *const u8,
-                                            &mut unit_field_val as *mut u32 as
+                                            &mut unit_field_val as *mut u16 as
                                                 *mut u8,
-                                            ::std::mem::size_of::<u32>())
+                                            ::std::mem::size_of::<u16>())
         };
         unit_field_val &= !mask;
         unit_field_val |= (val << 12usize) & mask;
@@ -13773,337 +14829,76 @@ impl rte_mbuf__bindgen_ty_2__bindgen_ty_1 {
                                                 *const u8,
                                             &mut self._bitfield_1 as *mut _ as
                                                 *mut u8,
-                                            ::std::mem::size_of::<u32>());
-        }
-    }
-    #[inline]
-    pub fn inner_l2_type(&self) -> u32 {
-        let mut unit_field_val: u32 = unsafe { ::std::mem::uninitialized() };
-        unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u32 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>())
-        };
-        let mask = 983040u64 as u32;
-        let val = (unit_field_val & mask) >> 16usize;
-        unsafe { ::std::mem::transmute(val as u32) }
-    }
-    #[inline]
-    pub fn set_inner_l2_type(&mut self, val: u32) {
-        let mask = 983040u64 as u32;
-        let val = val as u32 as u32;
-        let mut unit_field_val: u32 = unsafe { ::std::mem::uninitialized() };
-        unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u32 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>())
-        };
-        unit_field_val &= !mask;
-        unit_field_val |= (val << 16usize) & mask;
-        unsafe {
-            ::std::ptr::copy_nonoverlapping(&unit_field_val as *const _ as
-                                                *const u8,
-                                            &mut self._bitfield_1 as *mut _ as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>());
-        }
-    }
-    #[inline]
-    pub fn inner_l3_type(&self) -> u32 {
-        let mut unit_field_val: u32 = unsafe { ::std::mem::uninitialized() };
-        unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u32 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>())
-        };
-        let mask = 15728640u64 as u32;
-        let val = (unit_field_val & mask) >> 20usize;
-        unsafe { ::std::mem::transmute(val as u32) }
-    }
-    #[inline]
-    pub fn set_inner_l3_type(&mut self, val: u32) {
-        let mask = 15728640u64 as u32;
-        let val = val as u32 as u32;
-        let mut unit_field_val: u32 = unsafe { ::std::mem::uninitialized() };
-        unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u32 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>())
-        };
-        unit_field_val &= !mask;
-        unit_field_val |= (val << 20usize) & mask;
-        unsafe {
-            ::std::ptr::copy_nonoverlapping(&unit_field_val as *const _ as
-                                                *const u8,
-                                            &mut self._bitfield_1 as *mut _ as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>());
-        }
-    }
-    #[inline]
-    pub fn inner_l4_type(&self) -> u32 {
-        let mut unit_field_val: u32 = unsafe { ::std::mem::uninitialized() };
-        unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u32 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>())
-        };
-        let mask = 251658240u64 as u32;
-        let val = (unit_field_val & mask) >> 24usize;
-        unsafe { ::std::mem::transmute(val as u32) }
-    }
-    #[inline]
-    pub fn set_inner_l4_type(&mut self, val: u32) {
-        let mask = 251658240u64 as u32;
-        let val = val as u32 as u32;
-        let mut unit_field_val: u32 = unsafe { ::std::mem::uninitialized() };
-        unsafe {
-            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
-                                                *const u8,
-                                            &mut unit_field_val as *mut u32 as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>())
-        };
-        unit_field_val &= !mask;
-        unit_field_val |= (val << 24usize) & mask;
-        unsafe {
-            ::std::ptr::copy_nonoverlapping(&unit_field_val as *const _ as
-                                                *const u8,
-                                            &mut self._bitfield_1 as *mut _ as
-                                                *mut u8,
-                                            ::std::mem::size_of::<u32>());
+                                            ::std::mem::size_of::<u16>());
         }
     }
     #[inline]
     pub fn new_bitfield_1(l2_type: u32, l3_type: u32, l4_type: u32,
-                          tun_type: u32, inner_l2_type: u32,
-                          inner_l3_type: u32, inner_l4_type: u32) -> u32 {
+                          tun_type: u32) -> u16 {
         ({
              ({
                   ({
-                       ({
-                            ({
-                                 ({
-                                      ({ 0 } |
-                                           ((l2_type as u32 as u32) << 0usize)
-                                               & (15u64 as u32))
-                                  } |
-                                      ((l3_type as u32 as u32) << 4usize) &
-                                          (240u64 as u32))
-                             } |
-                                 ((l4_type as u32 as u32) << 8usize) &
-                                     (3840u64 as u32))
-                        } |
-                            ((tun_type as u32 as u32) << 12usize) &
-                                (61440u64 as u32))
-                   } |
-                       ((inner_l2_type as u32 as u32) << 16usize) &
-                           (983040u64 as u32))
-              } |
-                  ((inner_l3_type as u32 as u32) << 20usize) &
-                      (15728640u64 as u32))
-         } |
-             ((inner_l4_type as u32 as u32) << 24usize) &
-                 (251658240u64 as u32))
+                       ({ 0 } |
+                            ((l2_type as u32 as u16) << 0usize) &
+                                (15u64 as u16))
+                   } | ((l3_type as u32 as u16) << 4usize) & (240u64 as u16))
+              } | ((l4_type as u32 as u16) << 8usize) & (3840u64 as u16))
+         } | ((tun_type as u32 as u16) << 12usize) & (61440u64 as u16))
+    }
+    #[inline]
+    pub fn inner_l4_type(&self) -> u32 {
+        let mut unit_field_val: u8 = unsafe { ::std::mem::uninitialized() };
+        unsafe {
+            ::std::ptr::copy_nonoverlapping(&self._bitfield_2 as *const _ as
+                                                *const u8,
+                                            &mut unit_field_val as *mut u8 as
+                                                *mut u8,
+                                            ::std::mem::size_of::<u8>())
+        };
+        let mask = 15u64 as u8;
+        let val = (unit_field_val & mask) >> 0usize;
+        unsafe { ::std::mem::transmute(val as u32) }
+    }
+    #[inline]
+    pub fn set_inner_l4_type(&mut self, val: u32) {
+        let mask = 15u64 as u8;
+        let val = val as u32 as u8;
+        let mut unit_field_val: u8 = unsafe { ::std::mem::uninitialized() };
+        unsafe {
+            ::std::ptr::copy_nonoverlapping(&self._bitfield_2 as *const _ as
+                                                *const u8,
+                                            &mut unit_field_val as *mut u8 as
+                                                *mut u8,
+                                            ::std::mem::size_of::<u8>())
+        };
+        unit_field_val &= !mask;
+        unit_field_val |= (val << 0usize) & mask;
+        unsafe {
+            ::std::ptr::copy_nonoverlapping(&unit_field_val as *const _ as
+                                                *const u8,
+                                            &mut self._bitfield_2 as *mut _ as
+                                                *mut u8,
+                                            ::std::mem::size_of::<u8>());
+        }
+    }
+    #[inline]
+    pub fn new_bitfield_2(inner_l4_type: u32) -> u8 {
+        ({ 0 } | ((inner_l4_type as u32 as u8) << 0usize) & (15u64 as u8))
     }
 }
 #[test]
-fn bindgen_test_layout_rte_mbuf__bindgen_ty_2() {
-    assert_eq!(::std::mem::size_of::<rte_mbuf__bindgen_ty_2>() , 4usize ,
-               concat ! ( "Size of: " , stringify ! ( rte_mbuf__bindgen_ty_2 )
-               ));
-    assert_eq! (::std::mem::align_of::<rte_mbuf__bindgen_ty_2>() , 4usize ,
-                concat ! (
-                "Alignment of " , stringify ! ( rte_mbuf__bindgen_ty_2 ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_mbuf__bindgen_ty_2 ) ) . packet_type
-                as * const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( rte_mbuf__bindgen_ty_2
-                ) , "::" , stringify ! ( packet_type ) ));
-}
-impl Clone for rte_mbuf__bindgen_ty_2 {
-    fn clone(&self) -> Self { *self }
-}
-#[repr(C)]
-#[derive(Copy)]
-pub union rte_mbuf__bindgen_ty_3 {
-    /// < RSS hash result if RSS enabled
-    pub rss: u32,
-    /// < Filter identifier if FDIR enabled
-    pub fdir: rte_mbuf__bindgen_ty_3__bindgen_ty_1,
-    /// < Hierarchical scheduler
-    pub sched: rte_mbuf__bindgen_ty_3__bindgen_ty_2,
-    /// < User defined tags. See rte_distributor_process()
-    pub usr: u32,
-    _bindgen_union_align: [u32; 2usize],
-}
-#[repr(C)]
-#[derive(Copy)]
-pub struct rte_mbuf__bindgen_ty_3__bindgen_ty_1 {
-    pub __bindgen_anon_1: rte_mbuf__bindgen_ty_3__bindgen_ty_1__bindgen_ty_1,
-    pub hi: u32,
-}
-#[repr(C)]
-#[derive(Copy)]
-pub union rte_mbuf__bindgen_ty_3__bindgen_ty_1__bindgen_ty_1 {
-    pub __bindgen_anon_1: rte_mbuf__bindgen_ty_3__bindgen_ty_1__bindgen_ty_1__bindgen_ty_1,
-    pub lo: u32,
-    _bindgen_union_align: u32,
-}
-#[repr(C)]
-#[derive(Debug, Copy)]
-pub struct rte_mbuf__bindgen_ty_3__bindgen_ty_1__bindgen_ty_1__bindgen_ty_1 {
-    pub hash: u16,
-    pub id: u16,
-}
-#[test]
-fn bindgen_test_layout_rte_mbuf__bindgen_ty_3__bindgen_ty_1__bindgen_ty_1__bindgen_ty_1() {
-    assert_eq!(::std::mem::size_of::<rte_mbuf__bindgen_ty_3__bindgen_ty_1__bindgen_ty_1__bindgen_ty_1>()
-               , 4usize , concat ! (
-               "Size of: " , stringify ! (
-               rte_mbuf__bindgen_ty_3__bindgen_ty_1__bindgen_ty_1__bindgen_ty_1
-               ) ));
-    assert_eq! (::std::mem::align_of::<rte_mbuf__bindgen_ty_3__bindgen_ty_1__bindgen_ty_1__bindgen_ty_1>()
-                , 2usize , concat ! (
-                "Alignment of " , stringify ! (
-                rte_mbuf__bindgen_ty_3__bindgen_ty_1__bindgen_ty_1__bindgen_ty_1
-                ) ));
-    assert_eq! (unsafe {
-                & (
-                * (
-                0 as * const
-                rte_mbuf__bindgen_ty_3__bindgen_ty_1__bindgen_ty_1__bindgen_ty_1
-                ) ) . hash as * const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                rte_mbuf__bindgen_ty_3__bindgen_ty_1__bindgen_ty_1__bindgen_ty_1
-                ) , "::" , stringify ! ( hash ) ));
-    assert_eq! (unsafe {
-                & (
-                * (
-                0 as * const
-                rte_mbuf__bindgen_ty_3__bindgen_ty_1__bindgen_ty_1__bindgen_ty_1
-                ) ) . id as * const _ as usize } , 2usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                rte_mbuf__bindgen_ty_3__bindgen_ty_1__bindgen_ty_1__bindgen_ty_1
-                ) , "::" , stringify ! ( id ) ));
-}
-impl Clone for
- rte_mbuf__bindgen_ty_3__bindgen_ty_1__bindgen_ty_1__bindgen_ty_1 {
-    fn clone(&self) -> Self { *self }
-}
-#[test]
-fn bindgen_test_layout_rte_mbuf__bindgen_ty_3__bindgen_ty_1__bindgen_ty_1() {
-    assert_eq!(::std::mem::size_of::<rte_mbuf__bindgen_ty_3__bindgen_ty_1__bindgen_ty_1>()
-               , 4usize , concat ! (
-               "Size of: " , stringify ! (
-               rte_mbuf__bindgen_ty_3__bindgen_ty_1__bindgen_ty_1 ) ));
-    assert_eq! (::std::mem::align_of::<rte_mbuf__bindgen_ty_3__bindgen_ty_1__bindgen_ty_1>()
-                , 4usize , concat ! (
-                "Alignment of " , stringify ! (
-                rte_mbuf__bindgen_ty_3__bindgen_ty_1__bindgen_ty_1 ) ));
-    assert_eq! (unsafe {
-                & (
-                * (
-                0 as * const
-                rte_mbuf__bindgen_ty_3__bindgen_ty_1__bindgen_ty_1 ) ) . lo as
-                * const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                rte_mbuf__bindgen_ty_3__bindgen_ty_1__bindgen_ty_1 ) , "::" ,
-                stringify ! ( lo ) ));
-}
-impl Clone for rte_mbuf__bindgen_ty_3__bindgen_ty_1__bindgen_ty_1 {
-    fn clone(&self) -> Self { *self }
-}
-#[test]
-fn bindgen_test_layout_rte_mbuf__bindgen_ty_3__bindgen_ty_1() {
-    assert_eq!(::std::mem::size_of::<rte_mbuf__bindgen_ty_3__bindgen_ty_1>() ,
-               8usize , concat ! (
-               "Size of: " , stringify ! (
-               rte_mbuf__bindgen_ty_3__bindgen_ty_1 ) ));
-    assert_eq! (::std::mem::align_of::<rte_mbuf__bindgen_ty_3__bindgen_ty_1>()
-                , 4usize , concat ! (
-                "Alignment of " , stringify ! (
-                rte_mbuf__bindgen_ty_3__bindgen_ty_1 ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_mbuf__bindgen_ty_3__bindgen_ty_1 ) )
-                . hi as * const _ as usize } , 4usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                rte_mbuf__bindgen_ty_3__bindgen_ty_1 ) , "::" , stringify ! (
-                hi ) ));
-}
-impl Clone for rte_mbuf__bindgen_ty_3__bindgen_ty_1 {
-    fn clone(&self) -> Self { *self }
-}
-#[repr(C)]
-#[derive(Debug, Copy)]
-pub struct rte_mbuf__bindgen_ty_3__bindgen_ty_2 {
-    pub lo: u32,
-    pub hi: u32,
-}
-#[test]
-fn bindgen_test_layout_rte_mbuf__bindgen_ty_3__bindgen_ty_2() {
-    assert_eq!(::std::mem::size_of::<rte_mbuf__bindgen_ty_3__bindgen_ty_2>() ,
-               8usize , concat ! (
-               "Size of: " , stringify ! (
-               rte_mbuf__bindgen_ty_3__bindgen_ty_2 ) ));
-    assert_eq! (::std::mem::align_of::<rte_mbuf__bindgen_ty_3__bindgen_ty_2>()
-                , 4usize , concat ! (
-                "Alignment of " , stringify ! (
-                rte_mbuf__bindgen_ty_3__bindgen_ty_2 ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_mbuf__bindgen_ty_3__bindgen_ty_2 ) )
-                . lo as * const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                rte_mbuf__bindgen_ty_3__bindgen_ty_2 ) , "::" , stringify ! (
-                lo ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_mbuf__bindgen_ty_3__bindgen_ty_2 ) )
-                . hi as * const _ as usize } , 4usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                rte_mbuf__bindgen_ty_3__bindgen_ty_2 ) , "::" , stringify ! (
-                hi ) ));
-}
-impl Clone for rte_mbuf__bindgen_ty_3__bindgen_ty_2 {
-    fn clone(&self) -> Self { *self }
-}
-#[test]
 fn bindgen_test_layout_rte_mbuf__bindgen_ty_3() {
-    assert_eq!(::std::mem::size_of::<rte_mbuf__bindgen_ty_3>() , 8usize ,
+    assert_eq!(::std::mem::size_of::<rte_mbuf__bindgen_ty_3>() , 4usize ,
                concat ! ( "Size of: " , stringify ! ( rte_mbuf__bindgen_ty_3 )
                ));
     assert_eq! (::std::mem::align_of::<rte_mbuf__bindgen_ty_3>() , 4usize ,
                 concat ! (
                 "Alignment of " , stringify ! ( rte_mbuf__bindgen_ty_3 ) ));
     assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_mbuf__bindgen_ty_3 ) ) . rss as *
-                const _ as usize } , 0usize , concat ! (
+                & ( * ( 0 as * const rte_mbuf__bindgen_ty_3 ) ) . packet_type
+                as * const _ as usize } , 0usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_mbuf__bindgen_ty_3
-                ) , "::" , stringify ! ( rss ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_mbuf__bindgen_ty_3 ) ) . fdir as *
-                const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( rte_mbuf__bindgen_ty_3
-                ) , "::" , stringify ! ( fdir ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_mbuf__bindgen_ty_3 ) ) . sched as *
-                const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( rte_mbuf__bindgen_ty_3
-                ) , "::" , stringify ! ( sched ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_mbuf__bindgen_ty_3 ) ) . usr as *
-                const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( rte_mbuf__bindgen_ty_3
-                ) , "::" , stringify ! ( usr ) ));
+                ) , "::" , stringify ! ( packet_type ) ));
 }
 impl Clone for rte_mbuf__bindgen_ty_3 {
     fn clone(&self) -> Self { *self }
@@ -14111,30 +14906,173 @@ impl Clone for rte_mbuf__bindgen_ty_3 {
 #[repr(C)]
 #[derive(Copy)]
 pub union rte_mbuf__bindgen_ty_4 {
-    /// < Can be used for external metadata
-    pub userdata: *mut ::std::os::raw::c_void,
-    /// < Allow 8-byte userdata on 32-bit
-    pub udata64: u64,
-    _bindgen_union_align: u64,
+    /// < RSS hash result if RSS enabled
+    pub rss: u32,
+    /// < Filter identifier if FDIR enabled
+    pub fdir: rte_mbuf__bindgen_ty_4__bindgen_ty_1,
+    /// < Hierarchical scheduler
+    pub sched: rte_mbuf__bindgen_ty_4__bindgen_ty_2,
+    /// < User defined tags. See rte_distributor_process()
+    pub usr: u32,
+    _bindgen_union_align: [u32; 2usize],
+}
+#[repr(C)]
+#[derive(Copy)]
+pub struct rte_mbuf__bindgen_ty_4__bindgen_ty_1 {
+    pub __bindgen_anon_1: rte_mbuf__bindgen_ty_4__bindgen_ty_1__bindgen_ty_1,
+    pub hi: u32,
+}
+#[repr(C)]
+#[derive(Copy)]
+pub union rte_mbuf__bindgen_ty_4__bindgen_ty_1__bindgen_ty_1 {
+    pub __bindgen_anon_1: rte_mbuf__bindgen_ty_4__bindgen_ty_1__bindgen_ty_1__bindgen_ty_1,
+    pub lo: u32,
+    _bindgen_union_align: u32,
+}
+#[repr(C)]
+#[derive(Debug, Copy)]
+pub struct rte_mbuf__bindgen_ty_4__bindgen_ty_1__bindgen_ty_1__bindgen_ty_1 {
+    pub hash: u16,
+    pub id: u16,
+}
+#[test]
+fn bindgen_test_layout_rte_mbuf__bindgen_ty_4__bindgen_ty_1__bindgen_ty_1__bindgen_ty_1() {
+    assert_eq!(::std::mem::size_of::<rte_mbuf__bindgen_ty_4__bindgen_ty_1__bindgen_ty_1__bindgen_ty_1>()
+               , 4usize , concat ! (
+               "Size of: " , stringify ! (
+               rte_mbuf__bindgen_ty_4__bindgen_ty_1__bindgen_ty_1__bindgen_ty_1
+               ) ));
+    assert_eq! (::std::mem::align_of::<rte_mbuf__bindgen_ty_4__bindgen_ty_1__bindgen_ty_1__bindgen_ty_1>()
+                , 2usize , concat ! (
+                "Alignment of " , stringify ! (
+                rte_mbuf__bindgen_ty_4__bindgen_ty_1__bindgen_ty_1__bindgen_ty_1
+                ) ));
+    assert_eq! (unsafe {
+                & (
+                * (
+                0 as * const
+                rte_mbuf__bindgen_ty_4__bindgen_ty_1__bindgen_ty_1__bindgen_ty_1
+                ) ) . hash as * const _ as usize } , 0usize , concat ! (
+                "Alignment of field: " , stringify ! (
+                rte_mbuf__bindgen_ty_4__bindgen_ty_1__bindgen_ty_1__bindgen_ty_1
+                ) , "::" , stringify ! ( hash ) ));
+    assert_eq! (unsafe {
+                & (
+                * (
+                0 as * const
+                rte_mbuf__bindgen_ty_4__bindgen_ty_1__bindgen_ty_1__bindgen_ty_1
+                ) ) . id as * const _ as usize } , 2usize , concat ! (
+                "Alignment of field: " , stringify ! (
+                rte_mbuf__bindgen_ty_4__bindgen_ty_1__bindgen_ty_1__bindgen_ty_1
+                ) , "::" , stringify ! ( id ) ));
+}
+impl Clone for
+ rte_mbuf__bindgen_ty_4__bindgen_ty_1__bindgen_ty_1__bindgen_ty_1 {
+    fn clone(&self) -> Self { *self }
+}
+#[test]
+fn bindgen_test_layout_rte_mbuf__bindgen_ty_4__bindgen_ty_1__bindgen_ty_1() {
+    assert_eq!(::std::mem::size_of::<rte_mbuf__bindgen_ty_4__bindgen_ty_1__bindgen_ty_1>()
+               , 4usize , concat ! (
+               "Size of: " , stringify ! (
+               rte_mbuf__bindgen_ty_4__bindgen_ty_1__bindgen_ty_1 ) ));
+    assert_eq! (::std::mem::align_of::<rte_mbuf__bindgen_ty_4__bindgen_ty_1__bindgen_ty_1>()
+                , 4usize , concat ! (
+                "Alignment of " , stringify ! (
+                rte_mbuf__bindgen_ty_4__bindgen_ty_1__bindgen_ty_1 ) ));
+    assert_eq! (unsafe {
+                & (
+                * (
+                0 as * const
+                rte_mbuf__bindgen_ty_4__bindgen_ty_1__bindgen_ty_1 ) ) . lo as
+                * const _ as usize } , 0usize , concat ! (
+                "Alignment of field: " , stringify ! (
+                rte_mbuf__bindgen_ty_4__bindgen_ty_1__bindgen_ty_1 ) , "::" ,
+                stringify ! ( lo ) ));
+}
+impl Clone for rte_mbuf__bindgen_ty_4__bindgen_ty_1__bindgen_ty_1 {
+    fn clone(&self) -> Self { *self }
+}
+#[test]
+fn bindgen_test_layout_rte_mbuf__bindgen_ty_4__bindgen_ty_1() {
+    assert_eq!(::std::mem::size_of::<rte_mbuf__bindgen_ty_4__bindgen_ty_1>() ,
+               8usize , concat ! (
+               "Size of: " , stringify ! (
+               rte_mbuf__bindgen_ty_4__bindgen_ty_1 ) ));
+    assert_eq! (::std::mem::align_of::<rte_mbuf__bindgen_ty_4__bindgen_ty_1>()
+                , 4usize , concat ! (
+                "Alignment of " , stringify ! (
+                rte_mbuf__bindgen_ty_4__bindgen_ty_1 ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_mbuf__bindgen_ty_4__bindgen_ty_1 ) )
+                . hi as * const _ as usize } , 4usize , concat ! (
+                "Alignment of field: " , stringify ! (
+                rte_mbuf__bindgen_ty_4__bindgen_ty_1 ) , "::" , stringify ! (
+                hi ) ));
+}
+impl Clone for rte_mbuf__bindgen_ty_4__bindgen_ty_1 {
+    fn clone(&self) -> Self { *self }
+}
+#[repr(C)]
+#[derive(Debug, Copy)]
+pub struct rte_mbuf__bindgen_ty_4__bindgen_ty_2 {
+    pub lo: u32,
+    pub hi: u32,
+}
+#[test]
+fn bindgen_test_layout_rte_mbuf__bindgen_ty_4__bindgen_ty_2() {
+    assert_eq!(::std::mem::size_of::<rte_mbuf__bindgen_ty_4__bindgen_ty_2>() ,
+               8usize , concat ! (
+               "Size of: " , stringify ! (
+               rte_mbuf__bindgen_ty_4__bindgen_ty_2 ) ));
+    assert_eq! (::std::mem::align_of::<rte_mbuf__bindgen_ty_4__bindgen_ty_2>()
+                , 4usize , concat ! (
+                "Alignment of " , stringify ! (
+                rte_mbuf__bindgen_ty_4__bindgen_ty_2 ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_mbuf__bindgen_ty_4__bindgen_ty_2 ) )
+                . lo as * const _ as usize } , 0usize , concat ! (
+                "Alignment of field: " , stringify ! (
+                rte_mbuf__bindgen_ty_4__bindgen_ty_2 ) , "::" , stringify ! (
+                lo ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_mbuf__bindgen_ty_4__bindgen_ty_2 ) )
+                . hi as * const _ as usize } , 4usize , concat ! (
+                "Alignment of field: " , stringify ! (
+                rte_mbuf__bindgen_ty_4__bindgen_ty_2 ) , "::" , stringify ! (
+                hi ) ));
+}
+impl Clone for rte_mbuf__bindgen_ty_4__bindgen_ty_2 {
+    fn clone(&self) -> Self { *self }
 }
 #[test]
 fn bindgen_test_layout_rte_mbuf__bindgen_ty_4() {
     assert_eq!(::std::mem::size_of::<rte_mbuf__bindgen_ty_4>() , 8usize ,
                concat ! ( "Size of: " , stringify ! ( rte_mbuf__bindgen_ty_4 )
                ));
-    assert_eq! (::std::mem::align_of::<rte_mbuf__bindgen_ty_4>() , 8usize ,
+    assert_eq! (::std::mem::align_of::<rte_mbuf__bindgen_ty_4>() , 4usize ,
                 concat ! (
                 "Alignment of " , stringify ! ( rte_mbuf__bindgen_ty_4 ) ));
     assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_mbuf__bindgen_ty_4 ) ) . userdata as
-                * const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( rte_mbuf__bindgen_ty_4
-                ) , "::" , stringify ! ( userdata ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_mbuf__bindgen_ty_4 ) ) . udata64 as *
+                & ( * ( 0 as * const rte_mbuf__bindgen_ty_4 ) ) . rss as *
                 const _ as usize } , 0usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_mbuf__bindgen_ty_4
-                ) , "::" , stringify ! ( udata64 ) ));
+                ) , "::" , stringify ! ( rss ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_mbuf__bindgen_ty_4 ) ) . fdir as *
+                const _ as usize } , 0usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_mbuf__bindgen_ty_4
+                ) , "::" , stringify ! ( fdir ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_mbuf__bindgen_ty_4 ) ) . sched as *
+                const _ as usize } , 0usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_mbuf__bindgen_ty_4
+                ) , "::" , stringify ! ( sched ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_mbuf__bindgen_ty_4 ) ) . usr as *
+                const _ as usize } , 0usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_mbuf__bindgen_ty_4
+                ) , "::" , stringify ! ( usr ) ));
 }
 impl Clone for rte_mbuf__bindgen_ty_4 {
     fn clone(&self) -> Self { *self }
@@ -14142,32 +15080,63 @@ impl Clone for rte_mbuf__bindgen_ty_4 {
 #[repr(C)]
 #[derive(Copy)]
 pub union rte_mbuf__bindgen_ty_5 {
+    /// < Can be used for external metadata
+    pub userdata: *mut ::std::os::raw::c_void,
+    /// < Allow 8-byte userdata on 32-bit
+    pub udata64: u64,
+    _bindgen_union_align: u64,
+}
+#[test]
+fn bindgen_test_layout_rte_mbuf__bindgen_ty_5() {
+    assert_eq!(::std::mem::size_of::<rte_mbuf__bindgen_ty_5>() , 8usize ,
+               concat ! ( "Size of: " , stringify ! ( rte_mbuf__bindgen_ty_5 )
+               ));
+    assert_eq! (::std::mem::align_of::<rte_mbuf__bindgen_ty_5>() , 8usize ,
+                concat ! (
+                "Alignment of " , stringify ! ( rte_mbuf__bindgen_ty_5 ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_mbuf__bindgen_ty_5 ) ) . userdata as
+                * const _ as usize } , 0usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_mbuf__bindgen_ty_5
+                ) , "::" , stringify ! ( userdata ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_mbuf__bindgen_ty_5 ) ) . udata64 as *
+                const _ as usize } , 0usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_mbuf__bindgen_ty_5
+                ) , "::" , stringify ! ( udata64 ) ));
+}
+impl Clone for rte_mbuf__bindgen_ty_5 {
+    fn clone(&self) -> Self { *self }
+}
+#[repr(C)]
+#[derive(Copy)]
+pub union rte_mbuf__bindgen_ty_6 {
     /// < combined for easy fetch
     pub tx_offload: u64,
-    pub __bindgen_anon_1: rte_mbuf__bindgen_ty_5__bindgen_ty_1,
+    pub __bindgen_anon_1: rte_mbuf__bindgen_ty_6__bindgen_ty_1,
     _bindgen_union_align: u64,
 }
 #[repr(C)]
 #[derive(Debug, Copy)]
-pub struct rte_mbuf__bindgen_ty_5__bindgen_ty_1 {
+pub struct rte_mbuf__bindgen_ty_6__bindgen_ty_1 {
     pub _bitfield_1: [u16; 4usize],
     pub __bindgen_align: [u64; 0usize],
 }
 #[test]
-fn bindgen_test_layout_rte_mbuf__bindgen_ty_5__bindgen_ty_1() {
-    assert_eq!(::std::mem::size_of::<rte_mbuf__bindgen_ty_5__bindgen_ty_1>() ,
+fn bindgen_test_layout_rte_mbuf__bindgen_ty_6__bindgen_ty_1() {
+    assert_eq!(::std::mem::size_of::<rte_mbuf__bindgen_ty_6__bindgen_ty_1>() ,
                8usize , concat ! (
                "Size of: " , stringify ! (
-               rte_mbuf__bindgen_ty_5__bindgen_ty_1 ) ));
-    assert_eq! (::std::mem::align_of::<rte_mbuf__bindgen_ty_5__bindgen_ty_1>()
+               rte_mbuf__bindgen_ty_6__bindgen_ty_1 ) ));
+    assert_eq! (::std::mem::align_of::<rte_mbuf__bindgen_ty_6__bindgen_ty_1>()
                 , 8usize , concat ! (
                 "Alignment of " , stringify ! (
-                rte_mbuf__bindgen_ty_5__bindgen_ty_1 ) ));
+                rte_mbuf__bindgen_ty_6__bindgen_ty_1 ) ));
 }
-impl Clone for rte_mbuf__bindgen_ty_5__bindgen_ty_1 {
+impl Clone for rte_mbuf__bindgen_ty_6__bindgen_ty_1 {
     fn clone(&self) -> Self { *self }
 }
-impl rte_mbuf__bindgen_ty_5__bindgen_ty_1 {
+impl rte_mbuf__bindgen_ty_6__bindgen_ty_1 {
     #[inline]
     pub fn l2_len(&self) -> u64 {
         let mut unit_field_val: u64 = unsafe { ::std::mem::uninitialized() };
@@ -14414,20 +15383,20 @@ impl rte_mbuf__bindgen_ty_5__bindgen_ty_1 {
     }
 }
 #[test]
-fn bindgen_test_layout_rte_mbuf__bindgen_ty_5() {
-    assert_eq!(::std::mem::size_of::<rte_mbuf__bindgen_ty_5>() , 8usize ,
-               concat ! ( "Size of: " , stringify ! ( rte_mbuf__bindgen_ty_5 )
+fn bindgen_test_layout_rte_mbuf__bindgen_ty_6() {
+    assert_eq!(::std::mem::size_of::<rte_mbuf__bindgen_ty_6>() , 8usize ,
+               concat ! ( "Size of: " , stringify ! ( rte_mbuf__bindgen_ty_6 )
                ));
-    assert_eq! (::std::mem::align_of::<rte_mbuf__bindgen_ty_5>() , 8usize ,
+    assert_eq! (::std::mem::align_of::<rte_mbuf__bindgen_ty_6>() , 8usize ,
                 concat ! (
-                "Alignment of " , stringify ! ( rte_mbuf__bindgen_ty_5 ) ));
+                "Alignment of " , stringify ! ( rte_mbuf__bindgen_ty_6 ) ));
     assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_mbuf__bindgen_ty_5 ) ) . tx_offload
+                & ( * ( 0 as * const rte_mbuf__bindgen_ty_6 ) ) . tx_offload
                 as * const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( rte_mbuf__bindgen_ty_5
+                "Alignment of field: " , stringify ! ( rte_mbuf__bindgen_ty_6
                 ) , "::" , stringify ! ( tx_offload ) ));
 }
-impl Clone for rte_mbuf__bindgen_ty_5 {
+impl Clone for rte_mbuf__bindgen_ty_6 {
     fn clone(&self) -> Self { *self }
 }
 #[test]
@@ -14444,11 +15413,6 @@ fn bindgen_test_layout_rte_mbuf() {
                 usize } , 0usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_mbuf ) , "::" ,
                 stringify ! ( buf_addr ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_mbuf ) ) . buf_physaddr as * const _
-                as usize } , 8usize , concat ! (
-                "Alignment of field: " , stringify ! ( rte_mbuf ) , "::" ,
-                stringify ! ( buf_physaddr ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const rte_mbuf ) ) . rearm_data as * const _ as
                 usize } , 16usize , concat ! (
@@ -15217,7 +16181,7 @@ impl Clone for rte_avp_desc {
 #[derive(Debug, Copy)]
 pub struct rte_avp_memmap {
     pub addr: *mut ::std::os::raw::c_void,
-    pub phys_addr: phys_addr_t,
+    pub phys_addr: rte_iova_t,
     pub length: u64,
 }
 #[test]
@@ -15292,7 +16256,7 @@ impl Clone for rte_avp_memmap_info {
 #[derive(Debug, Copy)]
 pub struct rte_avp_mempool_info {
     pub addr: *mut ::std::os::raw::c_void,
-    pub phys_addr: phys_addr_t,
+    pub phys_addr: rte_iova_t,
     pub length: u64,
 }
 #[test]
@@ -15331,10 +16295,10 @@ pub struct rte_avp_device_info {
     pub version: u32,
     /// < Network device name for AVP
     pub ifname: [::std::os::raw::c_char; 32usize],
-    pub tx_phys: phys_addr_t,
-    pub rx_phys: phys_addr_t,
-    pub alloc_phys: phys_addr_t,
-    pub free_phys: phys_addr_t,
+    pub tx_phys: rte_iova_t,
+    pub rx_phys: rte_iova_t,
+    pub alloc_phys: rte_iova_t,
+    pub free_phys: rte_iova_t,
     /// < Supported feature bitmap
     pub features: u32,
     /// < Minimum supported receive/free queues
@@ -15356,12 +16320,12 @@ pub struct rte_avp_device_info {
     pub alloc_size: u32,
     /// < Size of each free queue
     pub free_size: u32,
-    pub req_phys: phys_addr_t,
-    pub resp_phys: phys_addr_t,
-    pub sync_phys: phys_addr_t,
+    pub req_phys: rte_iova_t,
+    pub resp_phys: rte_iova_t,
+    pub sync_phys: rte_iova_t,
     pub sync_va: *mut ::std::os::raw::c_void,
     pub mbuf_va: *mut ::std::os::raw::c_void,
-    pub mbuf_phys: phys_addr_t,
+    pub mbuf_phys: rte_iova_t,
     pub pool: [rte_avp_mempool_info; 8usize],
     pub ethaddr: [::std::os::raw::c_char; 6usize],
     /// < device mode, i.e guest, host, trace
@@ -15601,657 +16565,7 @@ extern "C" {
 /// - Zero on success
 /// - Negative value on error
     pub fn rte_stats_bitrate_calc(bitrate_data: *mut rte_stats_bitrates,
-                                  port_id: u8) -> ::std::os::raw::c_int;
-}
-#[repr(u32)]
-/// Device driver.
-#[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
-pub enum rte_kernel_driver {
-    RTE_KDRV_UNKNOWN = 0,
-    RTE_KDRV_IGB_UIO = 1,
-    RTE_KDRV_VFIO = 2,
-    RTE_KDRV_UIO_GENERIC = 3,
-    RTE_KDRV_NIC_UIO = 4,
-    RTE_KDRV_NONE = 5,
-}
-#[repr(u32)]
-/// Device policies.
-#[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
-pub enum rte_dev_policy { RTE_DEV_WHITELISTED = 0, RTE_DEV_BLACKLISTED = 1, }
-/// A generic memory resource representation.
-#[repr(C)]
-#[derive(Debug, Copy)]
-pub struct rte_mem_resource {
-    /// < Physical address, 0 if not resource.
-    pub phys_addr: u64,
-    /// < Length of the resource.
-    pub len: u64,
-    /// < Virtual address, NULL when not mapped.
-    pub addr: *mut ::std::os::raw::c_void,
-}
-#[test]
-fn bindgen_test_layout_rte_mem_resource() {
-    assert_eq!(::std::mem::size_of::<rte_mem_resource>() , 24usize , concat !
-               ( "Size of: " , stringify ! ( rte_mem_resource ) ));
-    assert_eq! (::std::mem::align_of::<rte_mem_resource>() , 8usize , concat !
-                ( "Alignment of " , stringify ! ( rte_mem_resource ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_mem_resource ) ) . phys_addr as *
-                const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( rte_mem_resource ) ,
-                "::" , stringify ! ( phys_addr ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_mem_resource ) ) . len as * const _
-                as usize } , 8usize , concat ! (
-                "Alignment of field: " , stringify ! ( rte_mem_resource ) ,
-                "::" , stringify ! ( len ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_mem_resource ) ) . addr as * const _
-                as usize } , 16usize , concat ! (
-                "Alignment of field: " , stringify ! ( rte_mem_resource ) ,
-                "::" , stringify ! ( addr ) ));
-}
-impl Clone for rte_mem_resource {
-    fn clone(&self) -> Self { *self }
-}
-/// A structure describing a device driver.
-#[repr(C)]
-#[derive(Debug, Copy)]
-pub struct rte_driver {
-    /// < Next in list.
-    pub next: rte_driver__bindgen_ty_1,
-    /// < Driver name.
-    pub name: *const ::std::os::raw::c_char,
-    /// < Driver alias.
-    pub alias: *const ::std::os::raw::c_char,
-}
-#[repr(C)]
-#[derive(Debug, Copy)]
-pub struct rte_driver__bindgen_ty_1 {
-    pub tqe_next: *mut rte_driver,
-    pub tqe_prev: *mut *mut rte_driver,
-}
-#[test]
-fn bindgen_test_layout_rte_driver__bindgen_ty_1() {
-    assert_eq!(::std::mem::size_of::<rte_driver__bindgen_ty_1>() , 16usize ,
-               concat ! (
-               "Size of: " , stringify ! ( rte_driver__bindgen_ty_1 ) ));
-    assert_eq! (::std::mem::align_of::<rte_driver__bindgen_ty_1>() , 8usize ,
-                concat ! (
-                "Alignment of " , stringify ! ( rte_driver__bindgen_ty_1 ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_driver__bindgen_ty_1 ) ) . tqe_next
-                as * const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                rte_driver__bindgen_ty_1 ) , "::" , stringify ! ( tqe_next )
-                ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_driver__bindgen_ty_1 ) ) . tqe_prev
-                as * const _ as usize } , 8usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                rte_driver__bindgen_ty_1 ) , "::" , stringify ! ( tqe_prev )
-                ));
-}
-impl Clone for rte_driver__bindgen_ty_1 {
-    fn clone(&self) -> Self { *self }
-}
-#[test]
-fn bindgen_test_layout_rte_driver() {
-    assert_eq!(::std::mem::size_of::<rte_driver>() , 32usize , concat ! (
-               "Size of: " , stringify ! ( rte_driver ) ));
-    assert_eq! (::std::mem::align_of::<rte_driver>() , 8usize , concat ! (
-                "Alignment of " , stringify ! ( rte_driver ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_driver ) ) . next as * const _ as
-                usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( rte_driver ) , "::" ,
-                stringify ! ( next ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_driver ) ) . name as * const _ as
-                usize } , 16usize , concat ! (
-                "Alignment of field: " , stringify ! ( rte_driver ) , "::" ,
-                stringify ! ( name ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_driver ) ) . alias as * const _ as
-                usize } , 24usize , concat ! (
-                "Alignment of field: " , stringify ! ( rte_driver ) , "::" ,
-                stringify ! ( alias ) ));
-}
-impl Clone for rte_driver {
-    fn clone(&self) -> Self { *self }
-}
-/// A structure describing a generic device.
-#[repr(C)]
-#[derive(Debug, Copy)]
-pub struct rte_device {
-    /// < Next device
-    pub next: rte_device__bindgen_ty_1,
-    /// < Device name
-    pub name: *const ::std::os::raw::c_char,
-    /// < Associated driver
-    pub driver: *const rte_driver,
-    /// < NUMA node connection
-    pub numa_node: ::std::os::raw::c_int,
-    /// < Device user arguments
-    pub devargs: *mut rte_devargs,
-}
-#[repr(C)]
-#[derive(Debug, Copy)]
-pub struct rte_device__bindgen_ty_1 {
-    pub tqe_next: *mut rte_device,
-    pub tqe_prev: *mut *mut rte_device,
-}
-#[test]
-fn bindgen_test_layout_rte_device__bindgen_ty_1() {
-    assert_eq!(::std::mem::size_of::<rte_device__bindgen_ty_1>() , 16usize ,
-               concat ! (
-               "Size of: " , stringify ! ( rte_device__bindgen_ty_1 ) ));
-    assert_eq! (::std::mem::align_of::<rte_device__bindgen_ty_1>() , 8usize ,
-                concat ! (
-                "Alignment of " , stringify ! ( rte_device__bindgen_ty_1 ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_device__bindgen_ty_1 ) ) . tqe_next
-                as * const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                rte_device__bindgen_ty_1 ) , "::" , stringify ! ( tqe_next )
-                ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_device__bindgen_ty_1 ) ) . tqe_prev
-                as * const _ as usize } , 8usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                rte_device__bindgen_ty_1 ) , "::" , stringify ! ( tqe_prev )
-                ));
-}
-impl Clone for rte_device__bindgen_ty_1 {
-    fn clone(&self) -> Self { *self }
-}
-#[test]
-fn bindgen_test_layout_rte_device() {
-    assert_eq!(::std::mem::size_of::<rte_device>() , 48usize , concat ! (
-               "Size of: " , stringify ! ( rte_device ) ));
-    assert_eq! (::std::mem::align_of::<rte_device>() , 8usize , concat ! (
-                "Alignment of " , stringify ! ( rte_device ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_device ) ) . next as * const _ as
-                usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( rte_device ) , "::" ,
-                stringify ! ( next ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_device ) ) . name as * const _ as
-                usize } , 16usize , concat ! (
-                "Alignment of field: " , stringify ! ( rte_device ) , "::" ,
-                stringify ! ( name ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_device ) ) . driver as * const _ as
-                usize } , 24usize , concat ! (
-                "Alignment of field: " , stringify ! ( rte_device ) , "::" ,
-                stringify ! ( driver ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_device ) ) . numa_node as * const _
-                as usize } , 32usize , concat ! (
-                "Alignment of field: " , stringify ! ( rte_device ) , "::" ,
-                stringify ! ( numa_node ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_device ) ) . devargs as * const _ as
-                usize } , 40usize , concat ! (
-                "Alignment of field: " , stringify ! ( rte_device ) , "::" ,
-                stringify ! ( devargs ) ));
-}
-impl Clone for rte_device {
-    fn clone(&self) -> Self { *self }
-}
-extern "C" {
-    /// Initialize a driver specified by name.
-///
-/// @param name
-/// The pointer to a driver name to be initialized.
-/// @param args
-/// The pointer to arguments used by driver initialization.
-/// @return
-/// 0 on success, negative on error
-    pub fn rte_vdev_init(name: *const ::std::os::raw::c_char,
-                         args: *const ::std::os::raw::c_char)
-     -> ::std::os::raw::c_int;
-}
-extern "C" {
-    /// Uninitalize a driver specified by name.
-///
-/// @param name
-/// The pointer to a driver name to be initialized.
-/// @return
-/// 0 on success, negative on error
-    pub fn rte_vdev_uninit(name: *const ::std::os::raw::c_char)
-     -> ::std::os::raw::c_int;
-}
-extern "C" {
-    /// Attach a device to a registered driver.
-///
-/// @param name
-/// The device name, that refers to a pci device (or some private
-/// way of designating a vdev device). Based on this device name, eal
-/// will identify a driver capable of handling it and pass it to the
-/// driver probing function.
-/// @param devargs
-/// Device arguments to be passed to the driver.
-/// @return
-/// 0 on success, negative on error.
-    pub fn rte_eal_dev_attach(name: *const ::std::os::raw::c_char,
-                              devargs: *const ::std::os::raw::c_char)
-     -> ::std::os::raw::c_int;
-}
-extern "C" {
-    /// Detach a device from its driver.
-///
-/// @param dev
-/// A pointer to a rte_device structure.
-/// @return
-/// 0 on success, negative on error.
-    pub fn rte_eal_dev_detach(dev: *mut rte_device) -> ::std::os::raw::c_int;
-}
-extern "C" {
-    /// @warning
-/// @b EXPERIMENTAL: this API may change without prior notice
-///
-/// Hotplug add a given device to a specific bus.
-///
-/// @param busname
-/// The bus name the device is added to.
-/// @param devname
-/// The device name. Based on this device name, eal will identify a driver
-/// capable of handling it and pass it to the driver probing function.
-/// @param devargs
-/// Device arguments to be passed to the driver.
-/// @return
-/// 0 on success, negative on error.
-    pub fn rte_eal_hotplug_add(busname: *const ::std::os::raw::c_char,
-                               devname: *const ::std::os::raw::c_char,
-                               devargs: *const ::std::os::raw::c_char)
-     -> ::std::os::raw::c_int;
-}
-extern "C" {
-    /// @warning
-/// @b EXPERIMENTAL: this API may change without prior notice
-///
-/// Hotplug remove a given device from a specific bus.
-///
-/// @param busname
-/// The bus name the device is removed from.
-/// @param devname
-/// The device name being removed.
-/// @return
-/// 0 on success, negative on error.
-    pub fn rte_eal_hotplug_remove(busname: *const ::std::os::raw::c_char,
-                                  devname: *const ::std::os::raw::c_char)
-     -> ::std::os::raw::c_int;
-}
-/// Device comparison function.
-///
-/// This type of function is used to compare an rte_device with arbitrary
-/// data.
-///
-/// @param dev
-/// Device handle.
-///
-/// @param data
-/// Data to compare against. The type of this parameter is determined by
-/// the kind of comparison performed by the function.
-///
-/// @return
-/// 0 if the device matches the data.
-/// !0 if the device does not match.
-/// <0 if ordering is possible and the device is lower than the data.
-/// >0 if ordering is possible and the device is greater than the data.
-pub type rte_dev_cmp_t =
-    ::std::option::Option<unsafe extern "C" fn(dev: *const rte_device,
-                                               data:
-                                                   *const ::std::os::raw::c_void)
-                              -> ::std::os::raw::c_int>;
-/// Double linked list of buses
-#[repr(C)]
-#[derive(Debug, Copy)]
-pub struct rte_bus_list {
-    pub tqh_first: *mut rte_bus,
-    pub tqh_last: *mut *mut rte_bus,
-}
-#[test]
-fn bindgen_test_layout_rte_bus_list() {
-    assert_eq!(::std::mem::size_of::<rte_bus_list>() , 16usize , concat ! (
-               "Size of: " , stringify ! ( rte_bus_list ) ));
-    assert_eq! (::std::mem::align_of::<rte_bus_list>() , 8usize , concat ! (
-                "Alignment of " , stringify ! ( rte_bus_list ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_bus_list ) ) . tqh_first as * const _
-                as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( rte_bus_list ) , "::" ,
-                stringify ! ( tqh_first ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_bus_list ) ) . tqh_last as * const _
-                as usize } , 8usize , concat ! (
-                "Alignment of field: " , stringify ! ( rte_bus_list ) , "::" ,
-                stringify ! ( tqh_last ) ));
-}
-impl Clone for rte_bus_list {
-    fn clone(&self) -> Self { *self }
-}
-/// Bus specific scan for devices attached on the bus.
-/// For each bus object, the scan would be responsible for finding devices and
-/// adding them to its private device list.
-///
-/// A bus should mandatorily implement this method.
-///
-/// @return
-/// 0 for successful scan
-/// <0 for unsuccessful scan with error value
-pub type rte_bus_scan_t =
-    ::std::option::Option<unsafe extern "C" fn() -> ::std::os::raw::c_int>;
-/// Implementation specific probe function which is responsible for linking
-/// devices on that bus with applicable drivers.
-///
-/// This is called while iterating over each registered bus.
-///
-/// @return
-/// 0 for successful probe
-/// !0 for any error while probing
-pub type rte_bus_probe_t =
-    ::std::option::Option<unsafe extern "C" fn() -> ::std::os::raw::c_int>;
-/// Device iterator to find a device on a bus.
-///
-/// This function returns an rte_device if one of those held by the bus
-/// matches the data passed as parameter.
-///
-/// If the comparison function returns zero this function should stop iterating
-/// over any more devices. To continue a search the device of a previous search
-/// can be passed via the start parameter.
-///
-/// @param cmp
-/// Comparison function.
-///
-/// @param data
-/// Data to compare each device against.
-///
-/// @param start
-/// starting point for the iteration
-///
-/// @return
-/// The first device matching the data, NULL if none exists.
-pub type rte_bus_find_device_t =
-    ::std::option::Option<unsafe extern "C" fn(start: *const rte_device,
-                                               cmp: rte_dev_cmp_t,
-                                               data:
-                                                   *const ::std::os::raw::c_void)
-                              -> *mut rte_device>;
-/// Implementation specific probe function which is responsible for linking
-/// devices on that bus with applicable drivers.
-///
-/// @param dev
-/// Device pointer that was returned by a previous call to find_device.
-///
-/// @return
-/// 0 on success.
-/// !0 on error.
-pub type rte_bus_plug_t =
-    ::std::option::Option<unsafe extern "C" fn(dev: *mut rte_device)
-                              -> ::std::os::raw::c_int>;
-/// Implementation specific remove function which is responsible for unlinking
-/// devices on that bus from assigned driver.
-///
-/// @param dev
-/// Device pointer that was returned by a previous call to find_device.
-///
-/// @return
-/// 0 on success.
-/// !0 on error.
-pub type rte_bus_unplug_t =
-    ::std::option::Option<unsafe extern "C" fn(dev: *mut rte_device)
-                              -> ::std::os::raw::c_int>;
-/// Bus specific parsing function.
-/// Validates the syntax used in the textual representation of a device,
-/// If the syntax is valid and ``addr`` is not NULL, writes the bus-specific
-/// device representation to ``addr``.
-///
-/// @param[in] name
-/// device textual description
-///
-/// @param[out] addr
-/// device information location address, into which parsed info
-/// should be written. If NULL, nothing should be written, which
-/// is not an error.
-///
-/// @return
-/// 0 if parsing was successful.
-/// !0 for any error.
-pub type rte_bus_parse_t =
-    ::std::option::Option<unsafe extern "C" fn(name:
-                                                   *const ::std::os::raw::c_char,
-                                               addr:
-                                                   *mut ::std::os::raw::c_void)
-                              -> ::std::os::raw::c_int>;
-#[repr(u32)]
-/// Bus scan policies
-#[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
-pub enum rte_bus_scan_mode {
-    RTE_BUS_SCAN_UNDEFINED = 0,
-    RTE_BUS_SCAN_WHITELIST = 1,
-    RTE_BUS_SCAN_BLACKLIST = 2,
-}
-/// A structure used to configure bus operations.
-#[repr(C)]
-#[derive(Debug, Copy)]
-pub struct rte_bus_conf {
-    /// < Scan policy.
-    pub scan_mode: rte_bus_scan_mode,
-}
-#[test]
-fn bindgen_test_layout_rte_bus_conf() {
-    assert_eq!(::std::mem::size_of::<rte_bus_conf>() , 4usize , concat ! (
-               "Size of: " , stringify ! ( rte_bus_conf ) ));
-    assert_eq! (::std::mem::align_of::<rte_bus_conf>() , 4usize , concat ! (
-                "Alignment of " , stringify ! ( rte_bus_conf ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_bus_conf ) ) . scan_mode as * const _
-                as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( rte_bus_conf ) , "::" ,
-                stringify ! ( scan_mode ) ));
-}
-impl Clone for rte_bus_conf {
-    fn clone(&self) -> Self { *self }
-}
-/// A structure describing a generic bus.
-#[repr(C)]
-#[derive(Debug, Copy)]
-pub struct rte_bus {
-    /// < Next bus object in linked list
-    pub next: rte_bus__bindgen_ty_1,
-    /// < Name of the bus
-    pub name: *const ::std::os::raw::c_char,
-    /// < Scan for devices attached to bus
-    pub scan: rte_bus_scan_t,
-    /// < Probe devices on bus
-    pub probe: rte_bus_probe_t,
-    /// < Find a device on the bus
-    pub find_device: rte_bus_find_device_t,
-    /// < Probe single device for drivers
-    pub plug: rte_bus_plug_t,
-    /// < Remove single device from driver
-    pub unplug: rte_bus_unplug_t,
-    /// < Parse a device name
-    pub parse: rte_bus_parse_t,
-    /// < Bus configuration
-    pub conf: rte_bus_conf,
-}
-#[repr(C)]
-#[derive(Debug, Copy)]
-pub struct rte_bus__bindgen_ty_1 {
-    pub tqe_next: *mut rte_bus,
-    pub tqe_prev: *mut *mut rte_bus,
-}
-#[test]
-fn bindgen_test_layout_rte_bus__bindgen_ty_1() {
-    assert_eq!(::std::mem::size_of::<rte_bus__bindgen_ty_1>() , 16usize ,
-               concat ! ( "Size of: " , stringify ! ( rte_bus__bindgen_ty_1 )
-               ));
-    assert_eq! (::std::mem::align_of::<rte_bus__bindgen_ty_1>() , 8usize ,
-                concat ! (
-                "Alignment of " , stringify ! ( rte_bus__bindgen_ty_1 ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_bus__bindgen_ty_1 ) ) . tqe_next as *
-                const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( rte_bus__bindgen_ty_1 )
-                , "::" , stringify ! ( tqe_next ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_bus__bindgen_ty_1 ) ) . tqe_prev as *
-                const _ as usize } , 8usize , concat ! (
-                "Alignment of field: " , stringify ! ( rte_bus__bindgen_ty_1 )
-                , "::" , stringify ! ( tqe_prev ) ));
-}
-impl Clone for rte_bus__bindgen_ty_1 {
-    fn clone(&self) -> Self { *self }
-}
-#[test]
-fn bindgen_test_layout_rte_bus() {
-    assert_eq!(::std::mem::size_of::<rte_bus>() , 80usize , concat ! (
-               "Size of: " , stringify ! ( rte_bus ) ));
-    assert_eq! (::std::mem::align_of::<rte_bus>() , 8usize , concat ! (
-                "Alignment of " , stringify ! ( rte_bus ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_bus ) ) . next as * const _ as usize
-                } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( rte_bus ) , "::" ,
-                stringify ! ( next ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_bus ) ) . name as * const _ as usize
-                } , 16usize , concat ! (
-                "Alignment of field: " , stringify ! ( rte_bus ) , "::" ,
-                stringify ! ( name ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_bus ) ) . scan as * const _ as usize
-                } , 24usize , concat ! (
-                "Alignment of field: " , stringify ! ( rte_bus ) , "::" ,
-                stringify ! ( scan ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_bus ) ) . probe as * const _ as usize
-                } , 32usize , concat ! (
-                "Alignment of field: " , stringify ! ( rte_bus ) , "::" ,
-                stringify ! ( probe ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_bus ) ) . find_device as * const _ as
-                usize } , 40usize , concat ! (
-                "Alignment of field: " , stringify ! ( rte_bus ) , "::" ,
-                stringify ! ( find_device ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_bus ) ) . plug as * const _ as usize
-                } , 48usize , concat ! (
-                "Alignment of field: " , stringify ! ( rte_bus ) , "::" ,
-                stringify ! ( plug ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_bus ) ) . unplug as * const _ as
-                usize } , 56usize , concat ! (
-                "Alignment of field: " , stringify ! ( rte_bus ) , "::" ,
-                stringify ! ( unplug ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_bus ) ) . parse as * const _ as usize
-                } , 64usize , concat ! (
-                "Alignment of field: " , stringify ! ( rte_bus ) , "::" ,
-                stringify ! ( parse ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_bus ) ) . conf as * const _ as usize
-                } , 72usize , concat ! (
-                "Alignment of field: " , stringify ! ( rte_bus ) , "::" ,
-                stringify ! ( conf ) ));
-}
-impl Clone for rte_bus {
-    fn clone(&self) -> Self { *self }
-}
-extern "C" {
-    /// Register a Bus handler.
-///
-/// @param bus
-/// A pointer to a rte_bus structure describing the bus
-/// to be registered.
-    pub fn rte_bus_register(bus: *mut rte_bus);
-}
-extern "C" {
-    /// Unregister a Bus handler.
-///
-/// @param bus
-/// A pointer to a rte_bus structure describing the bus
-/// to be unregistered.
-    pub fn rte_bus_unregister(bus: *mut rte_bus);
-}
-extern "C" {
-    /// Scan all the buses.
-///
-/// @return
-/// 0 in case of success in scanning all buses
-/// !0 in case of failure to scan
-    pub fn rte_bus_scan() -> ::std::os::raw::c_int;
-}
-extern "C" {
-    /// For each device on the buses, perform a driver 'match' and call the
-/// driver-specific probe for device initialization.
-///
-/// @return
-/// 0 for successful match/probe
-/// !0 otherwise
-    pub fn rte_bus_probe() -> ::std::os::raw::c_int;
-}
-extern "C" {
-    /// Dump information of all the buses registered with EAL.
-///
-/// @param f
-/// A valid and open output stream handle
-    pub fn rte_bus_dump(f: *mut FILE);
-}
-/// Bus comparison function.
-///
-/// @param bus
-/// Bus under test.
-///
-/// @param data
-/// Data to compare against.
-///
-/// @return
-/// 0 if the bus matches the data.
-/// !0 if the bus does not match.
-/// <0 if ordering is possible and the bus is lower than the data.
-/// >0 if ordering is possible and the bus is greater than the data.
-pub type rte_bus_cmp_t =
-    ::std::option::Option<unsafe extern "C" fn(bus: *const rte_bus,
-                                               data:
-                                                   *const ::std::os::raw::c_void)
-                              -> ::std::os::raw::c_int>;
-extern "C" {
-    /// Bus iterator to find a particular bus.
-///
-/// This function compares each registered bus to find one that matches
-/// the data passed as parameter.
-///
-/// If the comparison function returns zero this function will stop iterating
-/// over any more buses. To continue a search the bus of a previous search can
-/// be passed via the start parameter.
-///
-/// @param start
-/// Starting point for the iteration.
-///
-/// @param cmp
-/// Comparison function.
-///
-/// @param data
-/// Data to pass to comparison function.
-///
-/// @return
-/// A pointer to a rte_bus structure or NULL in case no bus matches
-    pub fn rte_bus_find(start: *const rte_bus, cmp: rte_bus_cmp_t,
-                        data: *const ::std::os::raw::c_void) -> *mut rte_bus;
-}
-extern "C" {
-    /// Find the registered bus for a particular device.
-    pub fn rte_bus_find_by_device(dev: *const rte_device) -> *mut rte_bus;
-}
-extern "C" {
-    /// Find the registered bus for a given name.
-    pub fn rte_bus_find_by_name(busname: *const ::std::os::raw::c_char)
-     -> *mut rte_bus;
+                                  port_id: u16) -> ::std::os::raw::c_int;
 }
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
@@ -16354,6 +16668,86 @@ extern "C" {
      -> *mut rte_cfgfile;
 }
 extern "C" {
+    /// Create new cfgfile instance with empty sections and entries
+///
+/// @param flags
+/// - CFG_FLAG_GLOBAL_SECTION
+/// Indicates that the file supports key value entries before the first
+/// defined section.  These entries can be accessed in the "GLOBAL"
+/// section.
+/// - CFG_FLAG_EMPTY_VALUES
+/// Indicates that file supports key value entries where the value can
+/// be zero length (e.g., "key=").
+/// @return
+/// Handle to cfgfile instance on success, NULL otherwise
+    pub fn rte_cfgfile_create(flags: ::std::os::raw::c_int)
+     -> *mut rte_cfgfile;
+}
+extern "C" {
+    /// Add section in cfgfile instance.
+///
+/// @param cfg
+/// Pointer to the cfgfile structure.
+/// @param sectionname
+/// Section name which will be add to cfgfile.
+/// @return
+/// 0 on success, -ENOMEM if can't add section
+    pub fn rte_cfgfile_add_section(cfg: *mut rte_cfgfile,
+                                   sectionname: *const ::std::os::raw::c_char)
+     -> ::std::os::raw::c_int;
+}
+extern "C" {
+    /// Add entry to specified section in cfgfile instance.
+///
+/// @param cfg
+/// Pointer to the cfgfile structure.
+/// @param sectionname
+/// Given section name to add an entry.
+/// @param entryname
+/// Entry name to add.
+/// @param entryvalue
+/// Entry value to add.
+/// @return
+/// 0 on success, -EEXIST if entry already exist, -EINVAL if bad argument
+    pub fn rte_cfgfile_add_entry(cfg: *mut rte_cfgfile,
+                                 sectionname: *const ::std::os::raw::c_char,
+                                 entryname: *const ::std::os::raw::c_char,
+                                 entryvalue: *const ::std::os::raw::c_char)
+     -> ::std::os::raw::c_int;
+}
+extern "C" {
+    /// Update value of specified entry name in given section in config file
+///
+/// @param cfg
+/// Config file
+/// @param sectionname
+/// Section name
+/// @param entryname
+/// Entry name to look for the value change
+/// @param entryvalue
+/// New entry value. Can be also an empty string if CFG_FLAG_EMPTY_VALUES = 1
+/// @return
+/// 0 on success, -EINVAL if bad argument
+    pub fn rte_cfgfile_set_entry(cfg: *mut rte_cfgfile,
+                                 sectionname: *const ::std::os::raw::c_char,
+                                 entryname: *const ::std::os::raw::c_char,
+                                 entryvalue: *const ::std::os::raw::c_char)
+     -> ::std::os::raw::c_int;
+}
+extern "C" {
+    /// Save object cfgfile to file on disc
+///
+/// @param cfg
+/// Config file structure
+/// @param filename
+/// File name to save data
+/// @return
+/// 0 on success, errno otherwise
+    pub fn rte_cfgfile_save(cfg: *mut rte_cfgfile,
+                            filename: *const ::std::os::raw::c_char)
+     -> ::std::os::raw::c_int;
+}
+extern "C" {
     /// Get number of sections in config file
 ///
 /// @param cfg
@@ -16417,6 +16811,28 @@ extern "C" {
     pub fn rte_cfgfile_section_num_entries(cfg: *mut rte_cfgfile,
                                            sectionname:
                                                *const ::std::os::raw::c_char)
+     -> ::std::os::raw::c_int;
+}
+extern "C" {
+    /// Get number of entries in given config file section
+///
+/// The index of a section is the same as the index of its name in the
+/// result of rte_cfgfile_sections. This API can be used when there are
+/// multiple sections with the same name.
+///
+/// @param cfg
+/// Config file
+/// @param sectionname
+/// Section name
+/// @param index
+/// Section index
+/// @return
+/// Number of entries in section on success, -1 otherwise
+    pub fn rte_cfgfile_section_num_entries_by_index(cfg: *mut rte_cfgfile,
+                                                    sectionname:
+                                                        *mut ::std::os::raw::c_char,
+                                                    index:
+                                                        ::std::os::raw::c_int)
      -> ::std::os::raw::c_int;
 }
 extern "C" {
@@ -17273,6 +17689,7 @@ pub struct rte_crypto_sym_op {
 pub union rte_crypto_sym_op__bindgen_ty_1 {
     pub session: *mut rte_cryptodev_sym_session,
     pub xform: *mut rte_crypto_sym_xform,
+    pub sec_session: *mut rte_security_session,
     _bindgen_union_align: u64,
 }
 #[test]
@@ -17297,6 +17714,12 @@ fn bindgen_test_layout_rte_crypto_sym_op__bindgen_ty_1() {
                 "Alignment of field: " , stringify ! (
                 rte_crypto_sym_op__bindgen_ty_1 ) , "::" , stringify ! ( xform
                 ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_crypto_sym_op__bindgen_ty_1 ) ) .
+                sec_session as * const _ as usize } , 0usize , concat ! (
+                "Alignment of field: " , stringify ! (
+                rte_crypto_sym_op__bindgen_ty_1 ) , "::" , stringify ! (
+                sec_session ) ));
 }
 impl Clone for rte_crypto_sym_op__bindgen_ty_1 {
     fn clone(&self) -> Self { *self }
@@ -17361,7 +17784,7 @@ impl Clone for rte_crypto_sym_op__bindgen_ty_2__bindgen_ty_1__bindgen_ty_1 {
 #[derive(Debug, Copy)]
 pub struct rte_crypto_sym_op__bindgen_ty_2__bindgen_ty_1__bindgen_ty_2 {
     pub data: *mut u8,
-    pub phys_addr: phys_addr_t,
+    pub phys_addr: rte_iova_t,
 }
 #[test]
 fn bindgen_test_layout_rte_crypto_sym_op__bindgen_ty_2__bindgen_ty_1__bindgen_ty_2() {
@@ -17402,7 +17825,7 @@ impl Clone for rte_crypto_sym_op__bindgen_ty_2__bindgen_ty_1__bindgen_ty_2 {
 pub struct rte_crypto_sym_op__bindgen_ty_2__bindgen_ty_1__bindgen_ty_3 {
     pub data: *mut u8,
     /// < physical address
-    pub phys_addr: phys_addr_t,
+    pub phys_addr: rte_iova_t,
 }
 #[test]
 fn bindgen_test_layout_rte_crypto_sym_op__bindgen_ty_2__bindgen_ty_1__bindgen_ty_3() {
@@ -17603,7 +18026,7 @@ impl Clone for
 #[derive(Debug, Copy)]
 pub struct rte_crypto_sym_op__bindgen_ty_2__bindgen_ty_2__bindgen_ty_2__bindgen_ty_2 {
     pub data: *mut u8,
-    pub phys_addr: phys_addr_t,
+    pub phys_addr: rte_iova_t,
 }
 #[test]
 fn bindgen_test_layout_rte_crypto_sym_op__bindgen_ty_2__bindgen_ty_2__bindgen_ty_2__bindgen_ty_2() {
@@ -17768,6 +18191,7 @@ pub enum rte_crypto_op_status {
 pub enum rte_crypto_op_sess_type {
     RTE_CRYPTO_OP_WITH_SESSION = 0,
     RTE_CRYPTO_OP_SESSIONLESS = 1,
+    RTE_CRYPTO_OP_SECURITY_SESSION = 2,
 }
 /// Cryptographic Operation.
 ///
@@ -17784,7 +18208,7 @@ pub struct rte_crypto_op {
     pub sess_type: u8,
     pub reserved: [u8; 5usize],
     pub mempool: *mut rte_mempool,
-    pub phys_addr: phys_addr_t,
+    pub phys_addr: rte_iova_t,
     pub __bindgen_anon_1: rte_crypto_op__bindgen_ty_1,
 }
 #[repr(C)]
@@ -17901,449 +18325,6 @@ extern "C" {
                                      priv_size: u16,
                                      socket_id: ::std::os::raw::c_int)
      -> *mut rte_mempool;
-}
-#[repr(u32)]
-/// Type of generic device
-#[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
-pub enum rte_devtype {
-    RTE_DEVTYPE_WHITELISTED_PCI = 0,
-    RTE_DEVTYPE_BLACKLISTED_PCI = 1,
-    RTE_DEVTYPE_VIRTUAL = 2,
-}
-/// Structure that stores a device given by the user with its arguments
-///
-/// A user device is a physical or a virtual device given by the user to
-/// the DPDK application at startup through command line arguments.
-///
-/// The structure stores the configuration of the device, its PCI
-/// identifier if it's a PCI device or the driver name if it's a virtual
-/// device.
-#[repr(C)]
-#[derive(Debug, Copy)]
-pub struct rte_devargs {
-    /// Next in list.
-    pub next: rte_devargs__bindgen_ty_1,
-    /// Type of device.
-    pub type_: rte_devtype,
-    /// Device policy.
-    pub policy: rte_dev_policy,
-    /// Bus handle for the device.
-    pub bus: *mut rte_bus,
-    /// Name of the device.
-    pub name: [::std::os::raw::c_char; 32usize],
-    /// Arguments string as given by user or "" for no argument.
-    pub args: *mut ::std::os::raw::c_char,
-}
-#[repr(C)]
-#[derive(Debug, Copy)]
-pub struct rte_devargs__bindgen_ty_1 {
-    pub tqe_next: *mut rte_devargs,
-    pub tqe_prev: *mut *mut rte_devargs,
-}
-#[test]
-fn bindgen_test_layout_rte_devargs__bindgen_ty_1() {
-    assert_eq!(::std::mem::size_of::<rte_devargs__bindgen_ty_1>() , 16usize ,
-               concat ! (
-               "Size of: " , stringify ! ( rte_devargs__bindgen_ty_1 ) ));
-    assert_eq! (::std::mem::align_of::<rte_devargs__bindgen_ty_1>() , 8usize ,
-                concat ! (
-                "Alignment of " , stringify ! ( rte_devargs__bindgen_ty_1 )
-                ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_devargs__bindgen_ty_1 ) ) . tqe_next
-                as * const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                rte_devargs__bindgen_ty_1 ) , "::" , stringify ! ( tqe_next )
-                ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_devargs__bindgen_ty_1 ) ) . tqe_prev
-                as * const _ as usize } , 8usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                rte_devargs__bindgen_ty_1 ) , "::" , stringify ! ( tqe_prev )
-                ));
-}
-impl Clone for rte_devargs__bindgen_ty_1 {
-    fn clone(&self) -> Self { *self }
-}
-#[test]
-fn bindgen_test_layout_rte_devargs() {
-    assert_eq!(::std::mem::size_of::<rte_devargs>() , 72usize , concat ! (
-               "Size of: " , stringify ! ( rte_devargs ) ));
-    assert_eq! (::std::mem::align_of::<rte_devargs>() , 8usize , concat ! (
-                "Alignment of " , stringify ! ( rte_devargs ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_devargs ) ) . next as * const _ as
-                usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( rte_devargs ) , "::" ,
-                stringify ! ( next ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_devargs ) ) . type_ as * const _ as
-                usize } , 16usize , concat ! (
-                "Alignment of field: " , stringify ! ( rte_devargs ) , "::" ,
-                stringify ! ( type_ ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_devargs ) ) . policy as * const _ as
-                usize } , 20usize , concat ! (
-                "Alignment of field: " , stringify ! ( rte_devargs ) , "::" ,
-                stringify ! ( policy ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_devargs ) ) . bus as * const _ as
-                usize } , 24usize , concat ! (
-                "Alignment of field: " , stringify ! ( rte_devargs ) , "::" ,
-                stringify ! ( bus ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_devargs ) ) . name as * const _ as
-                usize } , 32usize , concat ! (
-                "Alignment of field: " , stringify ! ( rte_devargs ) , "::" ,
-                stringify ! ( name ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_devargs ) ) . args as * const _ as
-                usize } , 64usize , concat ! (
-                "Alignment of field: " , stringify ! ( rte_devargs ) , "::" ,
-                stringify ! ( args ) ));
-}
-impl Clone for rte_devargs {
-    fn clone(&self) -> Self { *self }
-}
-/// user device double-linked queue type definition
-#[repr(C)]
-#[derive(Debug, Copy)]
-pub struct rte_devargs_list {
-    pub tqh_first: *mut rte_devargs,
-    pub tqh_last: *mut *mut rte_devargs,
-}
-#[test]
-fn bindgen_test_layout_rte_devargs_list() {
-    assert_eq!(::std::mem::size_of::<rte_devargs_list>() , 16usize , concat !
-               ( "Size of: " , stringify ! ( rte_devargs_list ) ));
-    assert_eq! (::std::mem::align_of::<rte_devargs_list>() , 8usize , concat !
-                ( "Alignment of " , stringify ! ( rte_devargs_list ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_devargs_list ) ) . tqh_first as *
-                const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( rte_devargs_list ) ,
-                "::" , stringify ! ( tqh_first ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_devargs_list ) ) . tqh_last as *
-                const _ as usize } , 8usize , concat ! (
-                "Alignment of field: " , stringify ! ( rte_devargs_list ) ,
-                "::" , stringify ! ( tqh_last ) ));
-}
-impl Clone for rte_devargs_list {
-    fn clone(&self) -> Self { *self }
-}
-extern "C" {
-    #[link_name = "devargs_list"]
-    pub static mut devargs_list: rte_devargs_list;
-}
-extern "C" {
-    /// Parse a devargs string.
-///
-/// For PCI devices, the format of arguments string is "PCI_ADDR" or
-/// "PCI_ADDR,key=val,key2=val2,...". Examples: "08:00.1", "0000:5:00.0",
-/// "04:00.0,arg=val".
-///
-/// For virtual devices, the format of arguments string is "DRIVER_NAME*"
-/// or "DRIVER_NAME*,key=val,key2=val2,...". Examples: "net_ring",
-/// "net_ring0", "net_pmdAnything,arg=0:arg2=1".
-///
-/// The function parses the arguments string to get driver name and driver
-/// arguments.
-///
-/// @param devargs_str
-/// The arguments as given by the user.
-/// @param drvname
-/// The pointer to the string to store parsed driver name.
-/// @param drvargs
-/// The pointer to the string to store parsed driver arguments.
-///
-/// @return
-/// - 0 on success
-/// - A negative value on error
-    pub fn rte_eal_parse_devargs_str(devargs_str:
-                                         *const ::std::os::raw::c_char,
-                                     drvname:
-                                         *mut *mut ::std::os::raw::c_char,
-                                     drvargs:
-                                         *mut *mut ::std::os::raw::c_char)
-     -> ::std::os::raw::c_int;
-}
-extern "C" {
-    /// Parse a device string.
-///
-/// Verify that a bus is capable of handling the device passed
-/// in argument. Store which bus will handle the device, its name
-/// and the eventual device parameters.
-///
-/// @param dev
-/// The device declaration string.
-/// @param da
-/// The devargs structure holding the device information.
-///
-/// @return
-/// - 0 on success.
-/// - Negative errno on error.
-    pub fn rte_eal_devargs_parse(dev: *const ::std::os::raw::c_char,
-                                 da: *mut rte_devargs)
-     -> ::std::os::raw::c_int;
-}
-extern "C" {
-    /// Insert an rte_devargs in the global list.
-///
-/// @param da
-/// The devargs structure to insert.
-///
-/// @return
-/// - 0 on success
-/// - Negative on error.
-    pub fn rte_eal_devargs_insert(da: *mut rte_devargs)
-     -> ::std::os::raw::c_int;
-}
-extern "C" {
-    /// Add a device to the user device list
-///
-/// For PCI devices, the format of arguments string is "PCI_ADDR" or
-/// "PCI_ADDR,key=val,key2=val2,...". Examples: "08:00.1", "0000:5:00.0",
-/// "04:00.0,arg=val".
-///
-/// For virtual devices, the format of arguments string is "DRIVER_NAME*"
-/// or "DRIVER_NAME*,key=val,key2=val2,...". Examples: "net_ring",
-/// "net_ring0", "net_pmdAnything,arg=0:arg2=1". The validity of the
-/// driver name is not checked by this function, it is done when probing
-/// the drivers.
-///
-/// @param devtype
-/// The type of the device.
-/// @param devargs_str
-/// The arguments as given by the user.
-///
-/// @return
-/// - 0 on success
-/// - A negative value on error
-    pub fn rte_eal_devargs_add(devtype: rte_devtype,
-                               devargs_str: *const ::std::os::raw::c_char)
-     -> ::std::os::raw::c_int;
-}
-extern "C" {
-    /// Remove a device from the user device list.
-/// Its resources are freed.
-/// If the devargs cannot be found, nothing happens.
-///
-/// @param busname
-/// bus name of the devargs to remove.
-///
-/// @param devname
-/// device name of the devargs to remove.
-///
-/// @return
-/// 0 on success.
-/// <0 on error.
-/// >0 if the devargs was not within the user device list.
-    pub fn rte_eal_devargs_remove(busname: *const ::std::os::raw::c_char,
-                                  devname: *const ::std::os::raw::c_char)
-     -> ::std::os::raw::c_int;
-}
-extern "C" {
-    /// Count the number of user devices of a specified type
-///
-/// @param devtype
-/// The type of the devices to counted.
-///
-/// @return
-/// The number of devices.
-    pub fn rte_eal_devargs_type_count(devtype: rte_devtype)
-     -> ::std::os::raw::c_uint;
-}
-extern "C" {
-    /// This function dumps the list of user device and their arguments.
-///
-/// @param f
-/// A pointer to a file for output
-    pub fn rte_eal_devargs_dump(f: *mut FILE);
-}
-#[repr(C)]
-#[derive(Debug, Copy)]
-pub struct rte_vdev_device {
-    /// < Next attached vdev
-    pub next: rte_vdev_device__bindgen_ty_1,
-    /// < Inherit core device
-    pub device: rte_device,
-}
-#[repr(C)]
-#[derive(Debug, Copy)]
-pub struct rte_vdev_device__bindgen_ty_1 {
-    pub tqe_next: *mut rte_vdev_device,
-    pub tqe_prev: *mut *mut rte_vdev_device,
-}
-#[test]
-fn bindgen_test_layout_rte_vdev_device__bindgen_ty_1() {
-    assert_eq!(::std::mem::size_of::<rte_vdev_device__bindgen_ty_1>() ,
-               16usize , concat ! (
-               "Size of: " , stringify ! ( rte_vdev_device__bindgen_ty_1 ) ));
-    assert_eq! (::std::mem::align_of::<rte_vdev_device__bindgen_ty_1>() ,
-                8usize , concat ! (
-                "Alignment of " , stringify ! ( rte_vdev_device__bindgen_ty_1
-                ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_vdev_device__bindgen_ty_1 ) ) .
-                tqe_next as * const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                rte_vdev_device__bindgen_ty_1 ) , "::" , stringify ! (
-                tqe_next ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_vdev_device__bindgen_ty_1 ) ) .
-                tqe_prev as * const _ as usize } , 8usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                rte_vdev_device__bindgen_ty_1 ) , "::" , stringify ! (
-                tqe_prev ) ));
-}
-impl Clone for rte_vdev_device__bindgen_ty_1 {
-    fn clone(&self) -> Self { *self }
-}
-#[test]
-fn bindgen_test_layout_rte_vdev_device() {
-    assert_eq!(::std::mem::size_of::<rte_vdev_device>() , 64usize , concat ! (
-               "Size of: " , stringify ! ( rte_vdev_device ) ));
-    assert_eq! (::std::mem::align_of::<rte_vdev_device>() , 8usize , concat !
-                ( "Alignment of " , stringify ! ( rte_vdev_device ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_vdev_device ) ) . next as * const _
-                as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( rte_vdev_device ) ,
-                "::" , stringify ! ( next ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_vdev_device ) ) . device as * const _
-                as usize } , 16usize , concat ! (
-                "Alignment of field: " , stringify ! ( rte_vdev_device ) ,
-                "::" , stringify ! ( device ) ));
-}
-impl Clone for rte_vdev_device {
-    fn clone(&self) -> Self { *self }
-}
-/// Double linked list of virtual device drivers.
-#[repr(C)]
-#[derive(Debug, Copy)]
-pub struct vdev_driver_list {
-    pub tqh_first: *mut rte_vdev_driver,
-    pub tqh_last: *mut *mut rte_vdev_driver,
-}
-#[test]
-fn bindgen_test_layout_vdev_driver_list() {
-    assert_eq!(::std::mem::size_of::<vdev_driver_list>() , 16usize , concat !
-               ( "Size of: " , stringify ! ( vdev_driver_list ) ));
-    assert_eq! (::std::mem::align_of::<vdev_driver_list>() , 8usize , concat !
-                ( "Alignment of " , stringify ! ( vdev_driver_list ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const vdev_driver_list ) ) . tqh_first as *
-                const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( vdev_driver_list ) ,
-                "::" , stringify ! ( tqh_first ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const vdev_driver_list ) ) . tqh_last as *
-                const _ as usize } , 8usize , concat ! (
-                "Alignment of field: " , stringify ! ( vdev_driver_list ) ,
-                "::" , stringify ! ( tqh_last ) ));
-}
-impl Clone for vdev_driver_list {
-    fn clone(&self) -> Self { *self }
-}
-/// Probe function called for each virtual device driver once.
-pub type rte_vdev_probe_t =
-    ::std::option::Option<unsafe extern "C" fn(dev: *mut rte_vdev_device)
-                              -> ::std::os::raw::c_int>;
-/// Remove function called for each virtual device driver once.
-pub type rte_vdev_remove_t =
-    ::std::option::Option<unsafe extern "C" fn(dev: *mut rte_vdev_device)
-                              -> ::std::os::raw::c_int>;
-/// A virtual device driver abstraction.
-#[repr(C)]
-#[derive(Debug, Copy)]
-pub struct rte_vdev_driver {
-    /// < Next in list.
-    pub next: rte_vdev_driver__bindgen_ty_1,
-    /// < Inherited general driver.
-    pub driver: rte_driver,
-    /// < Virtual device probe function.
-    pub probe: rte_vdev_probe_t,
-    /// < Virtual device remove function.
-    pub remove: rte_vdev_remove_t,
-}
-#[repr(C)]
-#[derive(Debug, Copy)]
-pub struct rte_vdev_driver__bindgen_ty_1 {
-    pub tqe_next: *mut rte_vdev_driver,
-    pub tqe_prev: *mut *mut rte_vdev_driver,
-}
-#[test]
-fn bindgen_test_layout_rte_vdev_driver__bindgen_ty_1() {
-    assert_eq!(::std::mem::size_of::<rte_vdev_driver__bindgen_ty_1>() ,
-               16usize , concat ! (
-               "Size of: " , stringify ! ( rte_vdev_driver__bindgen_ty_1 ) ));
-    assert_eq! (::std::mem::align_of::<rte_vdev_driver__bindgen_ty_1>() ,
-                8usize , concat ! (
-                "Alignment of " , stringify ! ( rte_vdev_driver__bindgen_ty_1
-                ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_vdev_driver__bindgen_ty_1 ) ) .
-                tqe_next as * const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                rte_vdev_driver__bindgen_ty_1 ) , "::" , stringify ! (
-                tqe_next ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_vdev_driver__bindgen_ty_1 ) ) .
-                tqe_prev as * const _ as usize } , 8usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                rte_vdev_driver__bindgen_ty_1 ) , "::" , stringify ! (
-                tqe_prev ) ));
-}
-impl Clone for rte_vdev_driver__bindgen_ty_1 {
-    fn clone(&self) -> Self { *self }
-}
-#[test]
-fn bindgen_test_layout_rte_vdev_driver() {
-    assert_eq!(::std::mem::size_of::<rte_vdev_driver>() , 64usize , concat ! (
-               "Size of: " , stringify ! ( rte_vdev_driver ) ));
-    assert_eq! (::std::mem::align_of::<rte_vdev_driver>() , 8usize , concat !
-                ( "Alignment of " , stringify ! ( rte_vdev_driver ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_vdev_driver ) ) . next as * const _
-                as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( rte_vdev_driver ) ,
-                "::" , stringify ! ( next ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_vdev_driver ) ) . driver as * const _
-                as usize } , 16usize , concat ! (
-                "Alignment of field: " , stringify ! ( rte_vdev_driver ) ,
-                "::" , stringify ! ( driver ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_vdev_driver ) ) . probe as * const _
-                as usize } , 48usize , concat ! (
-                "Alignment of field: " , stringify ! ( rte_vdev_driver ) ,
-                "::" , stringify ! ( probe ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_vdev_driver ) ) . remove as * const _
-                as usize } , 56usize , concat ! (
-                "Alignment of field: " , stringify ! ( rte_vdev_driver ) ,
-                "::" , stringify ! ( remove ) ));
-}
-impl Clone for rte_vdev_driver {
-    fn clone(&self) -> Self { *self }
-}
-extern "C" {
-    /// Register a virtual device driver.
-///
-/// @param driver
-/// A pointer to a rte_vdev_driver structure describing the driver
-/// to be registered.
-    pub fn rte_vdev_register(driver: *mut rte_vdev_driver);
-}
-extern "C" {
-    /// Unregister a virtual device driver.
-///
-/// @param driver
-/// A pointer to a rte_vdev_driver structure describing the driver
-/// to be unregistered.
-    pub fn rte_vdev_unregister(driver: *mut rte_vdev_driver);
 }
 extern "C" {
     #[link_name = "rte_cyptodev_names"]
@@ -19127,22 +19108,6 @@ impl Clone for rte_cryptodev_stats {
     fn clone(&self) -> Self { *self }
 }
 extern "C" {
-    /// @deprecated
-///
-/// Create a virtual crypto device
-///
-/// @param	name	Cryptodev PMD name of device to be created.
-/// @param	args	Options arguments for device.
-///
-/// @return
-/// - On successful creation of the cryptodev the device index is returned,
-/// which will be between 0 and rte_cryptodev_count().
-/// - In the case of a failure, returns -1.
-    pub fn rte_cryptodev_create_vdev(name: *const ::std::os::raw::c_char,
-                                     args: *const ::std::os::raw::c_char)
-     -> ::std::os::raw::c_int;
-}
-extern "C" {
     /// Get the device identifier for the named crypto device.
 ///
 /// @param	name	device name to select the device structure.
@@ -19152,6 +19117,18 @@ extern "C" {
 /// - Return -1 on failure to find named crypto device.
     pub fn rte_cryptodev_get_dev_id(name: *const ::std::os::raw::c_char)
      -> ::std::os::raw::c_int;
+}
+extern "C" {
+    /// Get the crypto device name given a device identifier.
+///
+/// @param dev_id
+/// The identifier of the device
+///
+/// @return
+/// - Returns crypto device name.
+/// - Returns NULL if crypto device is not present.
+    pub fn rte_cryptodev_name_get(dev_id: u8)
+     -> *const ::std::os::raw::c_char;
 }
 extern "C" {
     /// Get the total number of crypto devices that have been successfully
@@ -19363,6 +19340,11 @@ extern "C" {
 /// @param	dev_info	A pointer to a structure of type
 /// *rte_cryptodev_info* to be filled with the
 /// contextual information of the device.
+///
+/// @note The capabilities field of dev_info is set to point to the first
+/// element of an array of struct rte_cryptodev_capabilities. The element after
+/// the last valid element has it's op field set to
+/// RTE_CRYPTO_OP_TYPE_UNDEFINED.
     pub fn rte_cryptodev_info_get(dev_id: u8,
                                   dev_info: *mut rte_cryptodev_info);
 }
@@ -19460,8 +19442,9 @@ pub struct rte_cryptodev {
     pub device: *mut rte_device,
     pub driver_id: u8,
     pub link_intr_cbs: rte_cryptodev_cb_list,
+    pub security_ctx: *mut ::std::os::raw::c_void,
     pub _bitfield_1: u8,
-    pub __bindgen_padding_0: [u8; 55usize],
+    pub __bindgen_padding_0: [u8; 47usize],
 }
 #[test]
 fn bindgen_test_layout_rte_cryptodev() {
@@ -19507,6 +19490,11 @@ fn bindgen_test_layout_rte_cryptodev() {
                 const _ as usize } , 56usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_cryptodev ) , "::"
                 , stringify ! ( link_intr_cbs ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_cryptodev ) ) . security_ctx as *
+                const _ as usize } , 72usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_cryptodev ) , "::"
+                , stringify ! ( security_ctx ) ));
 }
 impl Clone for rte_cryptodev {
     fn clone(&self) -> Self { *self }
@@ -19552,6 +19540,10 @@ impl rte_cryptodev {
     pub fn new_bitfield_1(attached: u8) -> u8 {
         ({ 0 } | ((attached as u8 as u8) << 0usize) & (1u64 as u8))
     }
+}
+extern "C" {
+    pub fn rte_cryptodev_get_sec_ctx(dev_id: u8)
+     -> *mut ::std::os::raw::c_void;
 }
 /// The data part, with no function pointers, associated with each device.
 ///
@@ -19791,16 +19783,6 @@ extern "C" {
     pub fn rte_cryptodev_driver_name_get(driver_id: u8)
      -> *const ::std::os::raw::c_char;
 }
-extern "C" {
-    /// @internal
-/// Allocate Cryptodev driver.
-///
-/// @param driver
-/// Pointer to rte_driver.
-/// @return
-/// The driver type identifier
-    pub fn rte_cryptodev_allocate_driver(driver: *const rte_driver) -> u8;
-}
 /// Interrupt handle
 #[repr(C)]
 #[derive(Copy)]
@@ -19814,6 +19796,8 @@ pub struct rte_intr_handle {
     pub max_intr: u32,
     /// < number of available efd(event fd)
     pub nb_efd: u32,
+    /// < size of efd counter, used for vdev
+    pub efd_counter_size: u8,
     /// < intr vectors/efds mapping
     pub efds: [::std::os::raw::c_int; 32usize],
     pub elist: [rte_epoll_event; 32usize],
@@ -19825,8 +19809,7 @@ pub struct rte_intr_handle {
 pub union rte_intr_handle__bindgen_ty_1 {
     /// < VFIO device file descriptor
     pub vfio_dev_fd: ::std::os::raw::c_int,
-    /// < UIO config file descriptor
-    /// for uio_pci_generic
+    /// < UIO cfg file desc for uio_pci_generic
     pub uio_cfg_fd: ::std::os::raw::c_int,
     _bindgen_union_align: u32,
 }
@@ -19882,8 +19865,13 @@ fn bindgen_test_layout_rte_intr_handle() {
                 "Alignment of field: " , stringify ! ( rte_intr_handle ) ,
                 "::" , stringify ! ( nb_efd ) ));
     assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_intr_handle ) ) . efd_counter_size as
+                * const _ as usize } , 20usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_intr_handle ) ,
+                "::" , stringify ! ( efd_counter_size ) ));
+    assert_eq! (unsafe {
                 & ( * ( 0 as * const rte_intr_handle ) ) . efds as * const _
-                as usize } , 20usize , concat ! (
+                as usize } , 24usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_intr_handle ) ,
                 "::" , stringify ! ( efds ) ));
     assert_eq! (unsafe {
@@ -19905,6 +19893,7 @@ pub type rte_intr_callback_fn =
     ::std::option::Option<unsafe extern "C" fn(cb_arg:
                                                    *mut ::std::os::raw::c_void)>;
 #[repr(u32)]
+/// The interrupt source type, e.g. UIO, VFIO, ALARM etc.
 #[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
 pub enum rte_intr_handle_type {
     RTE_INTR_HANDLE_UNKNOWN = 0,
@@ -20206,282 +20195,12 @@ extern "C" {
     pub fn rte_intr_disable(intr_handle: *const rte_intr_handle)
      -> ::std::os::raw::c_int;
 }
-extern "C" {
-    /// Pathname of PCI devices directory.
-    pub fn pci_get_sysfs_path() -> *const ::std::os::raw::c_char;
-}
-/// A structure describing a PCI device.
-#[repr(C)]
-#[derive(Copy)]
-pub struct rte_pci_device {
-    /// < Next probed PCI device.
-    pub next: rte_pci_device__bindgen_ty_1,
-    /// < Inherit core device
-    pub device: rte_device,
-    /// < PCI location.
-    pub addr: rte_pci_addr,
-    /// < PCI ID.
-    pub id: rte_pci_id,
-    pub mem_resource: [rte_mem_resource; 6usize],
-    /// < Interrupt handle
-    pub intr_handle: rte_intr_handle,
-    /// < Associated driver
-    pub driver: *mut rte_pci_driver,
-    /// < sriov enable if not zero
-    pub max_vfs: u16,
-    /// < Kernel driver passthrough
-    pub kdrv: rte_kernel_driver,
-    /// < PCI location (ASCII)
-    pub name: [::std::os::raw::c_char; 18usize],
-}
-#[repr(C)]
-#[derive(Debug, Copy)]
-pub struct rte_pci_device__bindgen_ty_1 {
-    pub tqe_next: *mut rte_pci_device,
-    pub tqe_prev: *mut *mut rte_pci_device,
-}
-#[test]
-fn bindgen_test_layout_rte_pci_device__bindgen_ty_1() {
-    assert_eq!(::std::mem::size_of::<rte_pci_device__bindgen_ty_1>() , 16usize
-               , concat ! (
-               "Size of: " , stringify ! ( rte_pci_device__bindgen_ty_1 ) ));
-    assert_eq! (::std::mem::align_of::<rte_pci_device__bindgen_ty_1>() ,
-                8usize , concat ! (
-                "Alignment of " , stringify ! ( rte_pci_device__bindgen_ty_1 )
-                ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_pci_device__bindgen_ty_1 ) ) .
-                tqe_next as * const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                rte_pci_device__bindgen_ty_1 ) , "::" , stringify ! ( tqe_next
-                ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_pci_device__bindgen_ty_1 ) ) .
-                tqe_prev as * const _ as usize } , 8usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                rte_pci_device__bindgen_ty_1 ) , "::" , stringify ! ( tqe_prev
-                ) ));
-}
-impl Clone for rte_pci_device__bindgen_ty_1 {
-    fn clone(&self) -> Self { *self }
-}
-#[test]
-fn bindgen_test_layout_rte_pci_device() {
-    assert_eq!(::std::mem::size_of::<rte_pci_device>() , 1968usize , concat !
-               ( "Size of: " , stringify ! ( rte_pci_device ) ));
-    assert_eq! (::std::mem::align_of::<rte_pci_device>() , 8usize , concat ! (
-                "Alignment of " , stringify ! ( rte_pci_device ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_pci_device ) ) . next as * const _ as
-                usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( rte_pci_device ) , "::"
-                , stringify ! ( next ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_pci_device ) ) . device as * const _
-                as usize } , 16usize , concat ! (
-                "Alignment of field: " , stringify ! ( rte_pci_device ) , "::"
-                , stringify ! ( device ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_pci_device ) ) . addr as * const _ as
-                usize } , 64usize , concat ! (
-                "Alignment of field: " , stringify ! ( rte_pci_device ) , "::"
-                , stringify ! ( addr ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_pci_device ) ) . id as * const _ as
-                usize } , 72usize , concat ! (
-                "Alignment of field: " , stringify ! ( rte_pci_device ) , "::"
-                , stringify ! ( id ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_pci_device ) ) . mem_resource as *
-                const _ as usize } , 88usize , concat ! (
-                "Alignment of field: " , stringify ! ( rte_pci_device ) , "::"
-                , stringify ! ( mem_resource ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_pci_device ) ) . intr_handle as *
-                const _ as usize } , 232usize , concat ! (
-                "Alignment of field: " , stringify ! ( rte_pci_device ) , "::"
-                , stringify ! ( intr_handle ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_pci_device ) ) . driver as * const _
-                as usize } , 1928usize , concat ! (
-                "Alignment of field: " , stringify ! ( rte_pci_device ) , "::"
-                , stringify ! ( driver ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_pci_device ) ) . max_vfs as * const _
-                as usize } , 1936usize , concat ! (
-                "Alignment of field: " , stringify ! ( rte_pci_device ) , "::"
-                , stringify ! ( max_vfs ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_pci_device ) ) . kdrv as * const _ as
-                usize } , 1940usize , concat ! (
-                "Alignment of field: " , stringify ! ( rte_pci_device ) , "::"
-                , stringify ! ( kdrv ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_pci_device ) ) . name as * const _ as
-                usize } , 1944usize , concat ! (
-                "Alignment of field: " , stringify ! ( rte_pci_device ) , "::"
-                , stringify ! ( name ) ));
-}
-impl Clone for rte_pci_device {
-    fn clone(&self) -> Self { *self }
-}
-/// A structure describing a PCI driver.
-#[repr(C)]
-#[derive(Debug, Copy)]
-pub struct rte_pci_driver {
-    /// < Next in list.
-    pub next: rte_pci_driver__bindgen_ty_1,
-    /// < Inherit core driver.
-    pub driver: rte_driver,
-    /// < PCI bus reference.
-    pub bus: *mut rte_pci_bus,
-    /// < Device Probe function.
-    pub probe: pci_probe_t,
-    /// < Device Remove function.
-    pub remove: pci_remove_t,
-    /// < ID table, NULL terminated.
-    pub id_table: *const rte_pci_id,
-    /// < Flags contolling handling of device.
-    pub drv_flags: u32,
-}
-#[repr(C)]
-#[derive(Debug, Copy)]
-pub struct rte_pci_driver__bindgen_ty_1 {
-    pub tqe_next: *mut rte_pci_driver,
-    pub tqe_prev: *mut *mut rte_pci_driver,
-}
-#[test]
-fn bindgen_test_layout_rte_pci_driver__bindgen_ty_1() {
-    assert_eq!(::std::mem::size_of::<rte_pci_driver__bindgen_ty_1>() , 16usize
-               , concat ! (
-               "Size of: " , stringify ! ( rte_pci_driver__bindgen_ty_1 ) ));
-    assert_eq! (::std::mem::align_of::<rte_pci_driver__bindgen_ty_1>() ,
-                8usize , concat ! (
-                "Alignment of " , stringify ! ( rte_pci_driver__bindgen_ty_1 )
-                ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_pci_driver__bindgen_ty_1 ) ) .
-                tqe_next as * const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                rte_pci_driver__bindgen_ty_1 ) , "::" , stringify ! ( tqe_next
-                ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_pci_driver__bindgen_ty_1 ) ) .
-                tqe_prev as * const _ as usize } , 8usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                rte_pci_driver__bindgen_ty_1 ) , "::" , stringify ! ( tqe_prev
-                ) ));
-}
-impl Clone for rte_pci_driver__bindgen_ty_1 {
-    fn clone(&self) -> Self { *self }
-}
-#[test]
-fn bindgen_test_layout_rte_pci_driver() {
-    assert_eq!(::std::mem::size_of::<rte_pci_driver>() , 88usize , concat ! (
-               "Size of: " , stringify ! ( rte_pci_driver ) ));
-    assert_eq! (::std::mem::align_of::<rte_pci_driver>() , 8usize , concat ! (
-                "Alignment of " , stringify ! ( rte_pci_driver ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_pci_driver ) ) . next as * const _ as
-                usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( rte_pci_driver ) , "::"
-                , stringify ! ( next ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_pci_driver ) ) . driver as * const _
-                as usize } , 16usize , concat ! (
-                "Alignment of field: " , stringify ! ( rte_pci_driver ) , "::"
-                , stringify ! ( driver ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_pci_driver ) ) . bus as * const _ as
-                usize } , 48usize , concat ! (
-                "Alignment of field: " , stringify ! ( rte_pci_driver ) , "::"
-                , stringify ! ( bus ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_pci_driver ) ) . probe as * const _
-                as usize } , 56usize , concat ! (
-                "Alignment of field: " , stringify ! ( rte_pci_driver ) , "::"
-                , stringify ! ( probe ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_pci_driver ) ) . remove as * const _
-                as usize } , 64usize , concat ! (
-                "Alignment of field: " , stringify ! ( rte_pci_driver ) , "::"
-                , stringify ! ( remove ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_pci_driver ) ) . id_table as * const
-                _ as usize } , 72usize , concat ! (
-                "Alignment of field: " , stringify ! ( rte_pci_driver ) , "::"
-                , stringify ! ( id_table ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_pci_driver ) ) . drv_flags as * const
-                _ as usize } , 80usize , concat ! (
-                "Alignment of field: " , stringify ! ( rte_pci_driver ) , "::"
-                , stringify ! ( drv_flags ) ));
-}
-impl Clone for rte_pci_driver {
-    fn clone(&self) -> Self { *self }
-}
-/// List of PCI devices
-#[repr(C)]
-#[derive(Debug, Copy)]
-pub struct rte_pci_device_list {
-    pub tqh_first: *mut rte_pci_device,
-    pub tqh_last: *mut *mut rte_pci_device,
-}
-#[test]
-fn bindgen_test_layout_rte_pci_device_list() {
-    assert_eq!(::std::mem::size_of::<rte_pci_device_list>() , 16usize , concat
-               ! ( "Size of: " , stringify ! ( rte_pci_device_list ) ));
-    assert_eq! (::std::mem::align_of::<rte_pci_device_list>() , 8usize ,
-                concat ! (
-                "Alignment of " , stringify ! ( rte_pci_device_list ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_pci_device_list ) ) . tqh_first as *
-                const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( rte_pci_device_list ) ,
-                "::" , stringify ! ( tqh_first ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_pci_device_list ) ) . tqh_last as *
-                const _ as usize } , 8usize , concat ! (
-                "Alignment of field: " , stringify ! ( rte_pci_device_list ) ,
-                "::" , stringify ! ( tqh_last ) ));
-}
-impl Clone for rte_pci_device_list {
-    fn clone(&self) -> Self { *self }
-}
-/// List of PCI drivers
-#[repr(C)]
-#[derive(Debug, Copy)]
-pub struct rte_pci_driver_list {
-    pub tqh_first: *mut rte_pci_driver,
-    pub tqh_last: *mut *mut rte_pci_driver,
-}
-#[test]
-fn bindgen_test_layout_rte_pci_driver_list() {
-    assert_eq!(::std::mem::size_of::<rte_pci_driver_list>() , 16usize , concat
-               ! ( "Size of: " , stringify ! ( rte_pci_driver_list ) ));
-    assert_eq! (::std::mem::align_of::<rte_pci_driver_list>() , 8usize ,
-                concat ! (
-                "Alignment of " , stringify ! ( rte_pci_driver_list ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_pci_driver_list ) ) . tqh_first as *
-                const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( rte_pci_driver_list ) ,
-                "::" , stringify ! ( tqh_first ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_pci_driver_list ) ) . tqh_last as *
-                const _ as usize } , 8usize , concat ! (
-                "Alignment of field: " , stringify ! ( rte_pci_driver_list ) ,
-                "::" , stringify ! ( tqh_last ) ));
-}
-impl Clone for rte_pci_driver_list {
-    fn clone(&self) -> Self { *self }
-}
 /// A structure describing an ID for a PCI driver. Each driver provides a
 /// table of these IDs for each device that it supports.
 #[repr(C)]
 #[derive(Debug, Copy)]
 pub struct rte_pci_id {
-    /// < Class ID (class, subclass, pi) or RTE_CLASS_ANY_ID.
+    /// < Class ID or RTE_CLASS_ANY_ID.
     pub class_id: u32,
     /// < Vendor ID or PCI_ANY_ID.
     pub vendor_id: u16,
@@ -20570,51 +20289,6 @@ fn bindgen_test_layout_rte_pci_addr() {
 impl Clone for rte_pci_addr {
     fn clone(&self) -> Self { *self }
 }
-/// Initialisation function for the driver called during PCI probing.
-pub type pci_probe_t =
-    ::std::option::Option<unsafe extern "C" fn(arg1: *mut rte_pci_driver,
-                                               arg2: *mut rte_pci_device)
-                              -> ::std::os::raw::c_int>;
-/// Uninitialisation function for the driver called during hotplugging.
-pub type pci_remove_t =
-    ::std::option::Option<unsafe extern "C" fn(arg1: *mut rte_pci_device)
-                              -> ::std::os::raw::c_int>;
-/// Structure describing the PCI bus
-#[repr(C)]
-#[derive(Debug, Copy)]
-pub struct rte_pci_bus {
-    /// < Inherit the generic class
-    pub bus: rte_bus,
-    /// < List of PCI devices
-    pub device_list: rte_pci_device_list,
-    /// < List of PCI drivers
-    pub driver_list: rte_pci_driver_list,
-}
-#[test]
-fn bindgen_test_layout_rte_pci_bus() {
-    assert_eq!(::std::mem::size_of::<rte_pci_bus>() , 112usize , concat ! (
-               "Size of: " , stringify ! ( rte_pci_bus ) ));
-    assert_eq! (::std::mem::align_of::<rte_pci_bus>() , 8usize , concat ! (
-                "Alignment of " , stringify ! ( rte_pci_bus ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_pci_bus ) ) . bus as * const _ as
-                usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( rte_pci_bus ) , "::" ,
-                stringify ! ( bus ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_pci_bus ) ) . device_list as * const
-                _ as usize } , 80usize , concat ! (
-                "Alignment of field: " , stringify ! ( rte_pci_bus ) , "::" ,
-                stringify ! ( device_list ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_pci_bus ) ) . driver_list as * const
-                _ as usize } , 96usize , concat ! (
-                "Alignment of field: " , stringify ! ( rte_pci_bus ) , "::" ,
-                stringify ! ( driver_list ) ));
-}
-impl Clone for rte_pci_bus {
-    fn clone(&self) -> Self { *self }
-}
 /// A structure describing a PCI mapping.
 #[repr(C)]
 #[derive(Debug, Copy)]
@@ -20660,6 +20334,38 @@ fn bindgen_test_layout_pci_map() {
 impl Clone for pci_map {
     fn clone(&self) -> Self { *self }
 }
+#[repr(C)]
+#[derive(Debug, Copy)]
+pub struct pci_msix_table {
+    pub bar_index: ::std::os::raw::c_int,
+    pub offset: u32,
+    pub size: u32,
+}
+#[test]
+fn bindgen_test_layout_pci_msix_table() {
+    assert_eq!(::std::mem::size_of::<pci_msix_table>() , 12usize , concat ! (
+               "Size of: " , stringify ! ( pci_msix_table ) ));
+    assert_eq! (::std::mem::align_of::<pci_msix_table>() , 4usize , concat ! (
+                "Alignment of " , stringify ! ( pci_msix_table ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const pci_msix_table ) ) . bar_index as * const
+                _ as usize } , 0usize , concat ! (
+                "Alignment of field: " , stringify ! ( pci_msix_table ) , "::"
+                , stringify ! ( bar_index ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const pci_msix_table ) ) . offset as * const _
+                as usize } , 4usize , concat ! (
+                "Alignment of field: " , stringify ! ( pci_msix_table ) , "::"
+                , stringify ! ( offset ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const pci_msix_table ) ) . size as * const _ as
+                usize } , 8usize , concat ! (
+                "Alignment of field: " , stringify ! ( pci_msix_table ) , "::"
+                , stringify ! ( size ) ));
+}
+impl Clone for pci_msix_table {
+    fn clone(&self) -> Self { *self }
+}
 /// A structure describing a mapped PCI resource.
 /// For multi-process we need to reproduce all PCI mappings in secondary
 /// processes, so save them in a tailq.
@@ -20671,6 +20377,7 @@ pub struct mapped_pci_resource {
     pub path: [::std::os::raw::c_char; 4096usize],
     pub nb_maps: ::std::os::raw::c_int,
     pub maps: [pci_map; 6usize],
+    pub msix_table: pci_msix_table,
 }
 #[repr(C)]
 #[derive(Debug, Copy)]
@@ -20706,7 +20413,7 @@ impl Clone for mapped_pci_resource__bindgen_ty_1 {
 }
 #[test]
 fn bindgen_test_layout_mapped_pci_resource() {
-    assert_eq!(::std::mem::size_of::<mapped_pci_resource>() , 4368usize ,
+    assert_eq!(::std::mem::size_of::<mapped_pci_resource>() , 4384usize ,
                concat ! ( "Size of: " , stringify ! ( mapped_pci_resource )
                ));
     assert_eq! (::std::mem::align_of::<mapped_pci_resource>() , 8usize ,
@@ -20737,6 +20444,11 @@ fn bindgen_test_layout_mapped_pci_resource() {
                 _ as usize } , 4128usize , concat ! (
                 "Alignment of field: " , stringify ! ( mapped_pci_resource ) ,
                 "::" , stringify ! ( maps ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const mapped_pci_resource ) ) . msix_table as *
+                const _ as usize } , 4368usize , concat ! (
+                "Alignment of field: " , stringify ! ( mapped_pci_resource ) ,
+                "::" , stringify ! ( msix_table ) ));
 }
 impl Clone for mapped_pci_resource {
     fn clone(&self) -> Self { *self }
@@ -20770,49 +20482,101 @@ impl Clone for mapped_pci_res_list {
     fn clone(&self) -> Self { *self }
 }
 extern "C" {
-    /// Scan the content of the PCI bus, and the devices in the devices
-/// list
+    /// @deprecated
+/// Utility function to produce a PCI Bus-Device-Function value
+/// given a string representation. Assumes that the BDF is provided without
+/// a domain prefix (i.e. domain returned is always 0)
 ///
+/// @param input
+/// The input string to be parsed. Should have the format XX:XX.X
+/// @param dev_addr
+/// The PCI Bus-Device-Function address to be returned.
+/// Domain will always be returned as 0
 /// @return
-/// 0 on success, negative on error
-    pub fn rte_pci_scan() -> ::std::os::raw::c_int;
-}
-extern "C" {
-    /// Probe the PCI bus
-///
-/// @return
-/// - 0 on success.
-/// - !0 on error.
-    pub fn rte_pci_probe() -> ::std::os::raw::c_int;
-}
-extern "C" {
-    /// Map the PCI device resources in user space virtual memory address
-///
-/// Note that driver should not call this function when flag
-/// RTE_PCI_DRV_NEED_MAPPING is set, as EAL will do that for
-/// you when it's on.
-///
-/// @param dev
-/// A pointer to a rte_pci_device structure describing the device
-/// to use
-///
-/// @return
-/// 0 on success, negative on error and positive if no driver
-/// is found for the device.
-    pub fn rte_pci_map_device(dev: *mut rte_pci_device)
+/// 0 on success, negative on error.
+    pub fn eal_parse_pci_BDF(input: *const ::std::os::raw::c_char,
+                             dev_addr: *mut rte_pci_addr)
      -> ::std::os::raw::c_int;
 }
 extern "C" {
-    /// Unmap this device
+    /// @deprecated
+/// Utility function to produce a PCI Bus-Device-Function value
+/// given a string representation. Assumes that the BDF is provided including
+/// a domain prefix.
 ///
-/// @param dev
-/// A pointer to a rte_pci_device structure describing the device
-/// to use
-    pub fn rte_pci_unmap_device(dev: *mut rte_pci_device);
+/// @param input
+/// The input string to be parsed. Should have the format XXXX:XX:XX.X
+/// @param dev_addr
+/// The PCI Bus-Device-Function address to be returned
+/// @return
+/// 0 on success, negative on error.
+    pub fn eal_parse_pci_DomBDF(input: *const ::std::os::raw::c_char,
+                                dev_addr: *mut rte_pci_addr)
+     -> ::std::os::raw::c_int;
 }
 extern "C" {
-    /// @internal
-/// Map a particular resource from a file.
+    /// Utility function to write a pci device name, this device name can later be
+/// used to retrieve the corresponding rte_pci_addr using eal_parse_pci_*
+/// BDF helpers.
+///
+/// @param addr
+/// The PCI Bus-Device-Function address
+/// @param output
+/// The output buffer string
+/// @param size
+/// The output buffer size
+    pub fn rte_pci_device_name(addr: *const rte_pci_addr,
+                               output: *mut ::std::os::raw::c_char,
+                               size: usize);
+}
+extern "C" {
+    /// @deprecated
+/// Utility function to compare two PCI device addresses.
+///
+/// @param addr
+/// The PCI Bus-Device-Function address to compare
+/// @param addr2
+/// The PCI Bus-Device-Function address to compare
+/// @return
+/// 0 on equal PCI address.
+/// Positive on addr is greater than addr2.
+/// Negative on addr is less than addr2, or error.
+    pub fn rte_eal_compare_pci_addr(addr: *const rte_pci_addr,
+                                    addr2: *const rte_pci_addr)
+     -> ::std::os::raw::c_int;
+}
+extern "C" {
+    /// Utility function to compare two PCI device addresses.
+///
+/// @param addr
+/// The PCI Bus-Device-Function address to compare
+/// @param addr2
+/// The PCI Bus-Device-Function address to compare
+/// @return
+/// 0 on equal PCI address.
+/// Positive on addr is greater than addr2.
+/// Negative on addr is less than addr2, or error.
+    pub fn rte_pci_addr_cmp(addr: *const rte_pci_addr,
+                            addr2: *const rte_pci_addr)
+     -> ::std::os::raw::c_int;
+}
+extern "C" {
+    /// Utility function to parse a string into a PCI location.
+///
+/// @param str
+/// The string to parse
+/// @param addr
+/// The reference to the structure where the location
+/// is stored.
+/// @return
+/// 0 on success
+/// <0 otherwise
+    pub fn rte_pci_addr_parse(str: *const ::std::os::raw::c_char,
+                              addr: *mut rte_pci_addr)
+     -> ::std::os::raw::c_int;
+}
+extern "C" {
+    /// Map a particular resource from a file.
 ///
 /// @param requested_addr
 /// The starting address for the new mapping range.
@@ -20834,8 +20598,7 @@ extern "C" {
      -> *mut ::std::os::raw::c_void;
 }
 extern "C" {
-    /// @internal
-/// Unmap a particular resource.
+    /// Unmap a particular resource.
 ///
 /// @param requested_addr
 /// The address for the unmapping range.
@@ -20843,185 +20606,6 @@ extern "C" {
 /// The size for the unmapping range.
     pub fn pci_unmap_resource(requested_addr: *mut ::std::os::raw::c_void,
                               size: usize);
-}
-extern "C" {
-    /// Probe the single PCI device.
-///
-/// Scan the content of the PCI bus, and find the pci device specified by pci
-/// address, then call the probe() function for registered driver that has a
-/// matching entry in its id_table for discovered device.
-///
-/// @param addr
-/// The PCI Bus-Device-Function address to probe.
-/// @return
-/// - 0 on success.
-/// - Negative on error.
-    pub fn rte_pci_probe_one(addr: *const rte_pci_addr)
-     -> ::std::os::raw::c_int;
-}
-extern "C" {
-    /// Close the single PCI device.
-///
-/// Scan the content of the PCI bus, and find the pci device specified by pci
-/// address, then call the remove() function for registered driver that has a
-/// matching entry in its id_table for discovered device.
-///
-/// @param addr
-/// The PCI Bus-Device-Function address to close.
-/// @return
-/// - 0 on success.
-/// - Negative on error.
-    pub fn rte_pci_detach(addr: *const rte_pci_addr) -> ::std::os::raw::c_int;
-}
-extern "C" {
-    /// Dump the content of the PCI bus.
-///
-/// @param f
-/// A pointer to a file for output
-    pub fn rte_pci_dump(f: *mut FILE);
-}
-extern "C" {
-    /// Register a PCI driver.
-///
-/// @param driver
-/// A pointer to a rte_pci_driver structure describing the driver
-/// to be registered.
-    pub fn rte_pci_register(driver: *mut rte_pci_driver);
-}
-extern "C" {
-    /// Unregister a PCI driver.
-///
-/// @param driver
-/// A pointer to a rte_pci_driver structure describing the driver
-/// to be unregistered.
-    pub fn rte_pci_unregister(driver: *mut rte_pci_driver);
-}
-extern "C" {
-    /// Read PCI config space.
-///
-/// @param device
-/// A pointer to a rte_pci_device structure describing the device
-/// to use
-/// @param buf
-/// A data buffer where the bytes should be read into
-/// @param len
-/// The length of the data buffer.
-/// @param offset
-/// The offset into PCI config space
-    pub fn rte_pci_read_config(device: *const rte_pci_device,
-                               buf: *mut ::std::os::raw::c_void, len: usize,
-                               offset: off_t) -> ::std::os::raw::c_int;
-}
-extern "C" {
-    /// Write PCI config space.
-///
-/// @param device
-/// A pointer to a rte_pci_device structure describing the device
-/// to use
-/// @param buf
-/// A data buffer containing the bytes should be written
-/// @param len
-/// The length of the data buffer.
-/// @param offset
-/// The offset into PCI config space
-    pub fn rte_pci_write_config(device: *const rte_pci_device,
-                                buf: *const ::std::os::raw::c_void,
-                                len: usize, offset: off_t)
-     -> ::std::os::raw::c_int;
-}
-/// A structure used to access io resources for a pci device.
-/// rte_pci_ioport is arch, os, driver specific, and should not be used outside
-/// of pci ioport api.
-#[repr(C)]
-#[derive(Debug, Copy)]
-pub struct rte_pci_ioport {
-    pub dev: *mut rte_pci_device,
-    pub base: u64,
-    pub len: u64,
-}
-#[test]
-fn bindgen_test_layout_rte_pci_ioport() {
-    assert_eq!(::std::mem::size_of::<rte_pci_ioport>() , 24usize , concat ! (
-               "Size of: " , stringify ! ( rte_pci_ioport ) ));
-    assert_eq! (::std::mem::align_of::<rte_pci_ioport>() , 8usize , concat ! (
-                "Alignment of " , stringify ! ( rte_pci_ioport ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_pci_ioport ) ) . dev as * const _ as
-                usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( rte_pci_ioport ) , "::"
-                , stringify ! ( dev ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_pci_ioport ) ) . base as * const _ as
-                usize } , 8usize , concat ! (
-                "Alignment of field: " , stringify ! ( rte_pci_ioport ) , "::"
-                , stringify ! ( base ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_pci_ioport ) ) . len as * const _ as
-                usize } , 16usize , concat ! (
-                "Alignment of field: " , stringify ! ( rte_pci_ioport ) , "::"
-                , stringify ! ( len ) ));
-}
-impl Clone for rte_pci_ioport {
-    fn clone(&self) -> Self { *self }
-}
-extern "C" {
-    /// Initialize a rte_pci_ioport object for a pci device io resource.
-///
-/// This object is then used to gain access to those io resources (see below).
-///
-/// @param dev
-/// A pointer to a rte_pci_device structure describing the device
-/// to use.
-/// @param bar
-/// Index of the io pci resource we want to access.
-/// @param p
-/// The rte_pci_ioport object to be initialized.
-/// @return
-/// 0 on success, negative on error.
-    pub fn rte_pci_ioport_map(dev: *mut rte_pci_device,
-                              bar: ::std::os::raw::c_int,
-                              p: *mut rte_pci_ioport)
-     -> ::std::os::raw::c_int;
-}
-extern "C" {
-    /// Release any resources used in a rte_pci_ioport object.
-///
-/// @param p
-/// The rte_pci_ioport object to be uninitialized.
-/// @return
-/// 0 on success, negative on error.
-    pub fn rte_pci_ioport_unmap(p: *mut rte_pci_ioport)
-     -> ::std::os::raw::c_int;
-}
-extern "C" {
-    /// Read from a io pci resource.
-///
-/// @param p
-/// The rte_pci_ioport object from which we want to read.
-/// @param data
-/// A data buffer where the bytes should be read into
-/// @param len
-/// The length of the data buffer.
-/// @param offset
-/// The offset into the pci io resource.
-    pub fn rte_pci_ioport_read(p: *mut rte_pci_ioport,
-                               data: *mut ::std::os::raw::c_void, len: usize,
-                               offset: off_t);
-}
-extern "C" {
-    /// Write to a io pci resource.
-///
-/// @param p
-/// The rte_pci_ioport object to which we want to write.
-/// @param data
-/// A data buffer where the bytes should be read into
-/// @param len
-/// The length of the data buffer.
-/// @param offset
-/// The offset into the pci io resource.
-    pub fn rte_pci_ioport_write(p: *mut rte_pci_ioport,
-                                data: *const ::std::os::raw::c_void,
-                                len: usize, offset: off_t);
 }
 /// Initialisation function of a crypto driver invoked for each matching
 /// crypto PCI device detected during the PCI probing phase.
@@ -21073,6 +20657,67 @@ extern "C" {
                                                 cryptodev_pci_uninit_t)
      -> ::std::os::raw::c_int;
 }
+extern "C" {
+    #[link_name = "cryptodev_pmd_valid_params"]
+    pub static mut cryptodev_pmd_valid_params:
+               [*const ::std::os::raw::c_char; 4usize];
+}
+/// @internal
+/// Initialisation parameters for crypto devices
+#[repr(C)]
+#[derive(Copy)]
+pub struct rte_cryptodev_pmd_init_params {
+    pub name: [::std::os::raw::c_char; 64usize],
+    pub private_data_size: usize,
+    pub socket_id: ::std::os::raw::c_int,
+    pub max_nb_queue_pairs: ::std::os::raw::c_uint,
+    pub max_nb_sessions: ::std::os::raw::c_uint,
+}
+#[test]
+fn bindgen_test_layout_rte_cryptodev_pmd_init_params() {
+    assert_eq!(::std::mem::size_of::<rte_cryptodev_pmd_init_params>() ,
+               88usize , concat ! (
+               "Size of: " , stringify ! ( rte_cryptodev_pmd_init_params ) ));
+    assert_eq! (::std::mem::align_of::<rte_cryptodev_pmd_init_params>() ,
+                8usize , concat ! (
+                "Alignment of " , stringify ! ( rte_cryptodev_pmd_init_params
+                ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_cryptodev_pmd_init_params ) ) . name
+                as * const _ as usize } , 0usize , concat ! (
+                "Alignment of field: " , stringify ! (
+                rte_cryptodev_pmd_init_params ) , "::" , stringify ! ( name )
+                ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_cryptodev_pmd_init_params ) ) .
+                private_data_size as * const _ as usize } , 64usize , concat !
+                (
+                "Alignment of field: " , stringify ! (
+                rte_cryptodev_pmd_init_params ) , "::" , stringify ! (
+                private_data_size ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_cryptodev_pmd_init_params ) ) .
+                socket_id as * const _ as usize } , 72usize , concat ! (
+                "Alignment of field: " , stringify ! (
+                rte_cryptodev_pmd_init_params ) , "::" , stringify ! (
+                socket_id ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_cryptodev_pmd_init_params ) ) .
+                max_nb_queue_pairs as * const _ as usize } , 76usize , concat
+                ! (
+                "Alignment of field: " , stringify ! (
+                rte_cryptodev_pmd_init_params ) , "::" , stringify ! (
+                max_nb_queue_pairs ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_cryptodev_pmd_init_params ) ) .
+                max_nb_sessions as * const _ as usize } , 80usize , concat ! (
+                "Alignment of field: " , stringify ! (
+                rte_cryptodev_pmd_init_params ) , "::" , stringify ! (
+                max_nb_sessions ) ));
+}
+impl Clone for rte_cryptodev_pmd_init_params {
+    fn clone(&self) -> Self { *self }
+}
 /// Global structure used for maintaining state of allocated crypto devices
 #[repr(C)]
 #[derive(Copy)]
@@ -21115,6 +20760,71 @@ fn bindgen_test_layout_rte_cryptodev_global() {
                 , "::" , stringify ! ( max_devs ) ));
 }
 impl Clone for rte_cryptodev_global {
+    fn clone(&self) -> Self { *self }
+}
+#[repr(C)]
+#[derive(Debug, Copy)]
+pub struct cryptodev_driver {
+    /// < Next in list.
+    pub next: cryptodev_driver__bindgen_ty_1,
+    pub driver: *const rte_driver,
+    pub id: u8,
+}
+#[repr(C)]
+#[derive(Debug, Copy)]
+pub struct cryptodev_driver__bindgen_ty_1 {
+    pub tqe_next: *mut cryptodev_driver,
+    pub tqe_prev: *mut *mut cryptodev_driver,
+}
+#[test]
+fn bindgen_test_layout_cryptodev_driver__bindgen_ty_1() {
+    assert_eq!(::std::mem::size_of::<cryptodev_driver__bindgen_ty_1>() ,
+               16usize , concat ! (
+               "Size of: " , stringify ! ( cryptodev_driver__bindgen_ty_1 )
+               ));
+    assert_eq! (::std::mem::align_of::<cryptodev_driver__bindgen_ty_1>() ,
+                8usize , concat ! (
+                "Alignment of " , stringify ! ( cryptodev_driver__bindgen_ty_1
+                ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const cryptodev_driver__bindgen_ty_1 ) ) .
+                tqe_next as * const _ as usize } , 0usize , concat ! (
+                "Alignment of field: " , stringify ! (
+                cryptodev_driver__bindgen_ty_1 ) , "::" , stringify ! (
+                tqe_next ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const cryptodev_driver__bindgen_ty_1 ) ) .
+                tqe_prev as * const _ as usize } , 8usize , concat ! (
+                "Alignment of field: " , stringify ! (
+                cryptodev_driver__bindgen_ty_1 ) , "::" , stringify ! (
+                tqe_prev ) ));
+}
+impl Clone for cryptodev_driver__bindgen_ty_1 {
+    fn clone(&self) -> Self { *self }
+}
+#[test]
+fn bindgen_test_layout_cryptodev_driver() {
+    assert_eq!(::std::mem::size_of::<cryptodev_driver>() , 32usize , concat !
+               ( "Size of: " , stringify ! ( cryptodev_driver ) ));
+    assert_eq! (::std::mem::align_of::<cryptodev_driver>() , 8usize , concat !
+                ( "Alignment of " , stringify ! ( cryptodev_driver ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const cryptodev_driver ) ) . next as * const _
+                as usize } , 0usize , concat ! (
+                "Alignment of field: " , stringify ! ( cryptodev_driver ) ,
+                "::" , stringify ! ( next ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const cryptodev_driver ) ) . driver as * const
+                _ as usize } , 16usize , concat ! (
+                "Alignment of field: " , stringify ! ( cryptodev_driver ) ,
+                "::" , stringify ! ( driver ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const cryptodev_driver ) ) . id as * const _ as
+                usize } , 24usize , concat ! (
+                "Alignment of field: " , stringify ! ( cryptodev_driver ) ,
+                "::" , stringify ! ( id ) ));
+}
+impl Clone for cryptodev_driver {
     fn clone(&self) -> Self { *self }
 }
 extern "C" {
@@ -21494,6 +21204,61 @@ extern "C" {
      -> ::std::os::raw::c_int;
 }
 extern "C" {
+    /// @internal
+///
+/// PMD assist function to parse initialisation arguments for crypto driver
+/// when creating a new crypto PMD device instance.
+///
+/// PMD driver should set default values for that PMD before calling function,
+/// these default values will be over-written with successfully parsed values
+/// from args string.
+///
+/// @param	params	parsed PMD initialisation parameters
+/// @param	args	input argument string to parse
+///
+/// @return
+/// - 0 on success
+/// - errno on failure
+    pub fn rte_cryptodev_pmd_parse_input_args(params:
+                                                  *mut rte_cryptodev_pmd_init_params,
+                                              args:
+                                                  *const ::std::os::raw::c_char)
+     -> ::std::os::raw::c_int;
+}
+extern "C" {
+    /// @internal
+///
+/// PMD assist function to provide boiler plate code for crypto driver to create
+/// and allocate resources for a new crypto PMD device instance.
+///
+/// @param	name	crypto device name.
+/// @param	device	base device instance
+/// @param	params	PMD initialisation parameters
+///
+/// @return
+/// - crypto device instance on success
+/// - NULL on creation failure
+    pub fn rte_cryptodev_pmd_create(name: *const ::std::os::raw::c_char,
+                                    device: *mut rte_device,
+                                    params:
+                                        *mut rte_cryptodev_pmd_init_params)
+     -> *mut rte_cryptodev;
+}
+extern "C" {
+    /// @internal
+///
+/// PMD assist function to provide boiler plate code for crypto driver to
+/// destroy and free resources associated with a crypto PMD device instance.
+///
+/// @param	cryptodev	crypto device handle.
+///
+/// @return
+/// - 0 on success
+/// - errno on failure
+    pub fn rte_cryptodev_pmd_destroy(cryptodev: *mut rte_cryptodev)
+     -> ::std::os::raw::c_int;
+}
+extern "C" {
     /// Executes all the user application registered callbacks for the specific
 /// device.
 /// *
@@ -21514,6 +21279,20 @@ extern "C" {
                                              dev_name_prefix:
                                                  *const ::std::os::raw::c_char)
      -> ::std::os::raw::c_int;
+}
+extern "C" {
+    /// @internal
+/// Allocate Cryptodev driver.
+///
+/// @param crypto_drv
+/// Pointer to cryptodev_driver.
+/// @param drv
+/// Pointer to rte_driver.
+///
+/// @return
+/// The driver type identifier
+    pub fn rte_cryptodev_allocate_driver(crypto_drv: *mut cryptodev_driver,
+                                         drv: *const rte_driver) -> u8;
 }
 pub type rte_cryptodev_scheduler_slave_attach_t =
     ::std::option::Option<unsafe extern "C" fn(dev: *mut rte_cryptodev,
@@ -21911,6 +21690,449 @@ extern "C" {
     #[link_name = "multicore_scheduler"]
     pub static mut multicore_scheduler: *mut rte_cryptodev_scheduler;
 }
+#[repr(u32)]
+/// Type of generic device
+#[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
+pub enum rte_devtype {
+    RTE_DEVTYPE_WHITELISTED_PCI = 0,
+    RTE_DEVTYPE_BLACKLISTED_PCI = 1,
+    RTE_DEVTYPE_VIRTUAL = 2,
+}
+/// Structure that stores a device given by the user with its arguments
+///
+/// A user device is a physical or a virtual device given by the user to
+/// the DPDK application at startup through command line arguments.
+///
+/// The structure stores the configuration of the device, its PCI
+/// identifier if it's a PCI device or the driver name if it's a virtual
+/// device.
+#[repr(C)]
+#[derive(Copy)]
+pub struct rte_devargs {
+    /// Next in list.
+    pub next: rte_devargs__bindgen_ty_1,
+    /// Type of device.
+    pub type_: rte_devtype,
+    /// Device policy.
+    pub policy: rte_dev_policy,
+    /// Bus handle for the device.
+    pub bus: *mut rte_bus,
+    /// Name of the device.
+    pub name: [::std::os::raw::c_char; 64usize],
+    /// Arguments string as given by user or "" for no argument.
+    pub args: *mut ::std::os::raw::c_char,
+}
+#[repr(C)]
+#[derive(Debug, Copy)]
+pub struct rte_devargs__bindgen_ty_1 {
+    pub tqe_next: *mut rte_devargs,
+    pub tqe_prev: *mut *mut rte_devargs,
+}
+#[test]
+fn bindgen_test_layout_rte_devargs__bindgen_ty_1() {
+    assert_eq!(::std::mem::size_of::<rte_devargs__bindgen_ty_1>() , 16usize ,
+               concat ! (
+               "Size of: " , stringify ! ( rte_devargs__bindgen_ty_1 ) ));
+    assert_eq! (::std::mem::align_of::<rte_devargs__bindgen_ty_1>() , 8usize ,
+                concat ! (
+                "Alignment of " , stringify ! ( rte_devargs__bindgen_ty_1 )
+                ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_devargs__bindgen_ty_1 ) ) . tqe_next
+                as * const _ as usize } , 0usize , concat ! (
+                "Alignment of field: " , stringify ! (
+                rte_devargs__bindgen_ty_1 ) , "::" , stringify ! ( tqe_next )
+                ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_devargs__bindgen_ty_1 ) ) . tqe_prev
+                as * const _ as usize } , 8usize , concat ! (
+                "Alignment of field: " , stringify ! (
+                rte_devargs__bindgen_ty_1 ) , "::" , stringify ! ( tqe_prev )
+                ));
+}
+impl Clone for rte_devargs__bindgen_ty_1 {
+    fn clone(&self) -> Self { *self }
+}
+#[test]
+fn bindgen_test_layout_rte_devargs() {
+    assert_eq!(::std::mem::size_of::<rte_devargs>() , 104usize , concat ! (
+               "Size of: " , stringify ! ( rte_devargs ) ));
+    assert_eq! (::std::mem::align_of::<rte_devargs>() , 8usize , concat ! (
+                "Alignment of " , stringify ! ( rte_devargs ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_devargs ) ) . next as * const _ as
+                usize } , 0usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_devargs ) , "::" ,
+                stringify ! ( next ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_devargs ) ) . type_ as * const _ as
+                usize } , 16usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_devargs ) , "::" ,
+                stringify ! ( type_ ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_devargs ) ) . policy as * const _ as
+                usize } , 20usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_devargs ) , "::" ,
+                stringify ! ( policy ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_devargs ) ) . bus as * const _ as
+                usize } , 24usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_devargs ) , "::" ,
+                stringify ! ( bus ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_devargs ) ) . name as * const _ as
+                usize } , 32usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_devargs ) , "::" ,
+                stringify ! ( name ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_devargs ) ) . args as * const _ as
+                usize } , 96usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_devargs ) , "::" ,
+                stringify ! ( args ) ));
+}
+impl Clone for rte_devargs {
+    fn clone(&self) -> Self { *self }
+}
+/// user device double-linked queue type definition
+#[repr(C)]
+#[derive(Debug, Copy)]
+pub struct rte_devargs_list {
+    pub tqh_first: *mut rte_devargs,
+    pub tqh_last: *mut *mut rte_devargs,
+}
+#[test]
+fn bindgen_test_layout_rte_devargs_list() {
+    assert_eq!(::std::mem::size_of::<rte_devargs_list>() , 16usize , concat !
+               ( "Size of: " , stringify ! ( rte_devargs_list ) ));
+    assert_eq! (::std::mem::align_of::<rte_devargs_list>() , 8usize , concat !
+                ( "Alignment of " , stringify ! ( rte_devargs_list ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_devargs_list ) ) . tqh_first as *
+                const _ as usize } , 0usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_devargs_list ) ,
+                "::" , stringify ! ( tqh_first ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_devargs_list ) ) . tqh_last as *
+                const _ as usize } , 8usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_devargs_list ) ,
+                "::" , stringify ! ( tqh_last ) ));
+}
+impl Clone for rte_devargs_list {
+    fn clone(&self) -> Self { *self }
+}
+extern "C" {
+    #[link_name = "devargs_list"]
+    pub static mut devargs_list: rte_devargs_list;
+}
+extern "C" {
+    /// Parse a devargs string.
+///
+/// For PCI devices, the format of arguments string is "PCI_ADDR" or
+/// "PCI_ADDR,key=val,key2=val2,...". Examples: "08:00.1", "0000:5:00.0",
+/// "04:00.0,arg=val".
+///
+/// For virtual devices, the format of arguments string is "DRIVER_NAME*"
+/// or "DRIVER_NAME*,key=val,key2=val2,...". Examples: "net_ring",
+/// "net_ring0", "net_pmdAnything,arg=0:arg2=1".
+///
+/// The function parses the arguments string to get driver name and driver
+/// arguments.
+///
+/// @param devargs_str
+/// The arguments as given by the user.
+/// @param drvname
+/// The pointer to the string to store parsed driver name.
+/// @param drvargs
+/// The pointer to the string to store parsed driver arguments.
+///
+/// @return
+/// - 0 on success
+/// - A negative value on error
+    pub fn rte_eal_parse_devargs_str(devargs_str:
+                                         *const ::std::os::raw::c_char,
+                                     drvname:
+                                         *mut *mut ::std::os::raw::c_char,
+                                     drvargs:
+                                         *mut *mut ::std::os::raw::c_char)
+     -> ::std::os::raw::c_int;
+}
+extern "C" {
+    /// Parse a device string.
+///
+/// Verify that a bus is capable of handling the device passed
+/// in argument. Store which bus will handle the device, its name
+/// and the eventual device parameters.
+///
+/// @param dev
+/// The device declaration string.
+/// @param da
+/// The devargs structure holding the device information.
+///
+/// @return
+/// - 0 on success.
+/// - Negative errno on error.
+    pub fn rte_eal_devargs_parse(dev: *const ::std::os::raw::c_char,
+                                 da: *mut rte_devargs)
+     -> ::std::os::raw::c_int;
+}
+extern "C" {
+    /// Insert an rte_devargs in the global list.
+///
+/// @param da
+/// The devargs structure to insert.
+///
+/// @return
+/// - 0 on success
+/// - Negative on error.
+    pub fn rte_eal_devargs_insert(da: *mut rte_devargs)
+     -> ::std::os::raw::c_int;
+}
+extern "C" {
+    /// Add a device to the user device list
+///
+/// For PCI devices, the format of arguments string is "PCI_ADDR" or
+/// "PCI_ADDR,key=val,key2=val2,...". Examples: "08:00.1", "0000:5:00.0",
+/// "04:00.0,arg=val".
+///
+/// For virtual devices, the format of arguments string is "DRIVER_NAME*"
+/// or "DRIVER_NAME*,key=val,key2=val2,...". Examples: "net_ring",
+/// "net_ring0", "net_pmdAnything,arg=0:arg2=1". The validity of the
+/// driver name is not checked by this function, it is done when probing
+/// the drivers.
+///
+/// @param devtype
+/// The type of the device.
+/// @param devargs_str
+/// The arguments as given by the user.
+///
+/// @return
+/// - 0 on success
+/// - A negative value on error
+    pub fn rte_eal_devargs_add(devtype: rte_devtype,
+                               devargs_str: *const ::std::os::raw::c_char)
+     -> ::std::os::raw::c_int;
+}
+extern "C" {
+    /// Remove a device from the user device list.
+/// Its resources are freed.
+/// If the devargs cannot be found, nothing happens.
+///
+/// @param busname
+/// bus name of the devargs to remove.
+///
+/// @param devname
+/// device name of the devargs to remove.
+///
+/// @return
+/// 0 on success.
+/// <0 on error.
+/// >0 if the devargs was not within the user device list.
+    pub fn rte_eal_devargs_remove(busname: *const ::std::os::raw::c_char,
+                                  devname: *const ::std::os::raw::c_char)
+     -> ::std::os::raw::c_int;
+}
+extern "C" {
+    /// Count the number of user devices of a specified type
+///
+/// @param devtype
+/// The type of the devices to counted.
+///
+/// @return
+/// The number of devices.
+    pub fn rte_eal_devargs_type_count(devtype: rte_devtype)
+     -> ::std::os::raw::c_uint;
+}
+extern "C" {
+    /// This function dumps the list of user device and their arguments.
+///
+/// @param f
+/// A pointer to a file for output
+    pub fn rte_eal_devargs_dump(f: *mut FILE);
+}
+#[repr(C)]
+#[derive(Debug, Copy)]
+pub struct rte_vdev_device {
+    /// < Next attached vdev
+    pub next: rte_vdev_device__bindgen_ty_1,
+    /// < Inherit core device
+    pub device: rte_device,
+}
+#[repr(C)]
+#[derive(Debug, Copy)]
+pub struct rte_vdev_device__bindgen_ty_1 {
+    pub tqe_next: *mut rte_vdev_device,
+    pub tqe_prev: *mut *mut rte_vdev_device,
+}
+#[test]
+fn bindgen_test_layout_rte_vdev_device__bindgen_ty_1() {
+    assert_eq!(::std::mem::size_of::<rte_vdev_device__bindgen_ty_1>() ,
+               16usize , concat ! (
+               "Size of: " , stringify ! ( rte_vdev_device__bindgen_ty_1 ) ));
+    assert_eq! (::std::mem::align_of::<rte_vdev_device__bindgen_ty_1>() ,
+                8usize , concat ! (
+                "Alignment of " , stringify ! ( rte_vdev_device__bindgen_ty_1
+                ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_vdev_device__bindgen_ty_1 ) ) .
+                tqe_next as * const _ as usize } , 0usize , concat ! (
+                "Alignment of field: " , stringify ! (
+                rte_vdev_device__bindgen_ty_1 ) , "::" , stringify ! (
+                tqe_next ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_vdev_device__bindgen_ty_1 ) ) .
+                tqe_prev as * const _ as usize } , 8usize , concat ! (
+                "Alignment of field: " , stringify ! (
+                rte_vdev_device__bindgen_ty_1 ) , "::" , stringify ! (
+                tqe_prev ) ));
+}
+impl Clone for rte_vdev_device__bindgen_ty_1 {
+    fn clone(&self) -> Self { *self }
+}
+#[test]
+fn bindgen_test_layout_rte_vdev_device() {
+    assert_eq!(::std::mem::size_of::<rte_vdev_device>() , 64usize , concat ! (
+               "Size of: " , stringify ! ( rte_vdev_device ) ));
+    assert_eq! (::std::mem::align_of::<rte_vdev_device>() , 8usize , concat !
+                ( "Alignment of " , stringify ! ( rte_vdev_device ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_vdev_device ) ) . next as * const _
+                as usize } , 0usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_vdev_device ) ,
+                "::" , stringify ! ( next ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_vdev_device ) ) . device as * const _
+                as usize } , 16usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_vdev_device ) ,
+                "::" , stringify ! ( device ) ));
+}
+impl Clone for rte_vdev_device {
+    fn clone(&self) -> Self { *self }
+}
+/// Double linked list of virtual device drivers.
+#[repr(C)]
+#[derive(Debug, Copy)]
+pub struct vdev_driver_list {
+    pub tqh_first: *mut rte_vdev_driver,
+    pub tqh_last: *mut *mut rte_vdev_driver,
+}
+#[test]
+fn bindgen_test_layout_vdev_driver_list() {
+    assert_eq!(::std::mem::size_of::<vdev_driver_list>() , 16usize , concat !
+               ( "Size of: " , stringify ! ( vdev_driver_list ) ));
+    assert_eq! (::std::mem::align_of::<vdev_driver_list>() , 8usize , concat !
+                ( "Alignment of " , stringify ! ( vdev_driver_list ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const vdev_driver_list ) ) . tqh_first as *
+                const _ as usize } , 0usize , concat ! (
+                "Alignment of field: " , stringify ! ( vdev_driver_list ) ,
+                "::" , stringify ! ( tqh_first ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const vdev_driver_list ) ) . tqh_last as *
+                const _ as usize } , 8usize , concat ! (
+                "Alignment of field: " , stringify ! ( vdev_driver_list ) ,
+                "::" , stringify ! ( tqh_last ) ));
+}
+impl Clone for vdev_driver_list {
+    fn clone(&self) -> Self { *self }
+}
+/// Probe function called for each virtual device driver once.
+pub type rte_vdev_probe_t =
+    ::std::option::Option<unsafe extern "C" fn(dev: *mut rte_vdev_device)
+                              -> ::std::os::raw::c_int>;
+/// Remove function called for each virtual device driver once.
+pub type rte_vdev_remove_t =
+    ::std::option::Option<unsafe extern "C" fn(dev: *mut rte_vdev_device)
+                              -> ::std::os::raw::c_int>;
+/// A virtual device driver abstraction.
+#[repr(C)]
+#[derive(Debug, Copy)]
+pub struct rte_vdev_driver {
+    /// < Next in list.
+    pub next: rte_vdev_driver__bindgen_ty_1,
+    /// < Inherited general driver.
+    pub driver: rte_driver,
+    /// < Virtual device probe function.
+    pub probe: rte_vdev_probe_t,
+    /// < Virtual device remove function.
+    pub remove: rte_vdev_remove_t,
+}
+#[repr(C)]
+#[derive(Debug, Copy)]
+pub struct rte_vdev_driver__bindgen_ty_1 {
+    pub tqe_next: *mut rte_vdev_driver,
+    pub tqe_prev: *mut *mut rte_vdev_driver,
+}
+#[test]
+fn bindgen_test_layout_rte_vdev_driver__bindgen_ty_1() {
+    assert_eq!(::std::mem::size_of::<rte_vdev_driver__bindgen_ty_1>() ,
+               16usize , concat ! (
+               "Size of: " , stringify ! ( rte_vdev_driver__bindgen_ty_1 ) ));
+    assert_eq! (::std::mem::align_of::<rte_vdev_driver__bindgen_ty_1>() ,
+                8usize , concat ! (
+                "Alignment of " , stringify ! ( rte_vdev_driver__bindgen_ty_1
+                ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_vdev_driver__bindgen_ty_1 ) ) .
+                tqe_next as * const _ as usize } , 0usize , concat ! (
+                "Alignment of field: " , stringify ! (
+                rte_vdev_driver__bindgen_ty_1 ) , "::" , stringify ! (
+                tqe_next ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_vdev_driver__bindgen_ty_1 ) ) .
+                tqe_prev as * const _ as usize } , 8usize , concat ! (
+                "Alignment of field: " , stringify ! (
+                rte_vdev_driver__bindgen_ty_1 ) , "::" , stringify ! (
+                tqe_prev ) ));
+}
+impl Clone for rte_vdev_driver__bindgen_ty_1 {
+    fn clone(&self) -> Self { *self }
+}
+#[test]
+fn bindgen_test_layout_rte_vdev_driver() {
+    assert_eq!(::std::mem::size_of::<rte_vdev_driver>() , 64usize , concat ! (
+               "Size of: " , stringify ! ( rte_vdev_driver ) ));
+    assert_eq! (::std::mem::align_of::<rte_vdev_driver>() , 8usize , concat !
+                ( "Alignment of " , stringify ! ( rte_vdev_driver ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_vdev_driver ) ) . next as * const _
+                as usize } , 0usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_vdev_driver ) ,
+                "::" , stringify ! ( next ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_vdev_driver ) ) . driver as * const _
+                as usize } , 16usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_vdev_driver ) ,
+                "::" , stringify ! ( driver ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_vdev_driver ) ) . probe as * const _
+                as usize } , 48usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_vdev_driver ) ,
+                "::" , stringify ! ( probe ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_vdev_driver ) ) . remove as * const _
+                as usize } , 56usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_vdev_driver ) ,
+                "::" , stringify ! ( remove ) ));
+}
+impl Clone for rte_vdev_driver {
+    fn clone(&self) -> Self { *self }
+}
+extern "C" {
+    /// Register a virtual device driver.
+///
+/// @param driver
+/// A pointer to a rte_vdev_driver structure describing the driver
+/// to be registered.
+    pub fn rte_vdev_register(driver: *mut rte_vdev_driver);
+}
+extern "C" {
+    /// Unregister a virtual device driver.
+///
+/// @param driver
+/// A pointer to a rte_vdev_driver structure describing the driver
+/// to be unregistered.
+    pub fn rte_vdev_unregister(driver: *mut rte_vdev_driver);
+}
 extern "C" {
     #[link_name = "cryptodev_vdev_valid_params"]
     pub static mut cryptodev_vdev_valid_params:
@@ -22160,7 +22382,7 @@ extern "C" {
 /// @param alg_type
 /// Call the legacy API, or use the new burst API. legacy uses 32-bit
 /// flow ID, and works on a single packet at a time. Latest uses 15-
-/// bit flow ID and works on up to 8 packets at a time to worers.
+/// bit flow ID and works on up to 8 packets at a time to workers.
 /// @return
 /// The newly created distributor instance
     pub fn rte_distributor_create(name: *const ::std::os::raw::c_char,
@@ -24802,13 +25024,18 @@ pub struct rte_eth_rxmode {
     pub max_rx_pkt_len: u32,
     /// < hdr buf size (header_split enabled).
     pub split_hdr_size: u16,
+    /// Per-port Rx offloads to be set using DEV_RX_OFFLOAD_* flags.
+    /// Only offloads set on rx_offload_capa field on rte_eth_dev_info
+    /// structure are allowed to be set.
+    pub offloads: u64,
     pub _bitfield_1: [u8; 2usize],
+    pub __bindgen_padding_0: [u16; 3usize],
 }
 #[test]
 fn bindgen_test_layout_rte_eth_rxmode() {
-    assert_eq!(::std::mem::size_of::<rte_eth_rxmode>() , 12usize , concat ! (
+    assert_eq!(::std::mem::size_of::<rte_eth_rxmode>() , 32usize , concat ! (
                "Size of: " , stringify ! ( rte_eth_rxmode ) ));
-    assert_eq! (::std::mem::align_of::<rte_eth_rxmode>() , 4usize , concat ! (
+    assert_eq! (::std::mem::align_of::<rte_eth_rxmode>() , 8usize , concat ! (
                 "Alignment of " , stringify ! ( rte_eth_rxmode ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const rte_eth_rxmode ) ) . mq_mode as * const _
@@ -24825,6 +25052,11 @@ fn bindgen_test_layout_rte_eth_rxmode() {
                 const _ as usize } , 8usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_eth_rxmode ) , "::"
                 , stringify ! ( split_hdr_size ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_eth_rxmode ) ) . offloads as * const
+                _ as usize } , 16usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_eth_rxmode ) , "::"
+                , stringify ! ( offloads ) ));
 }
 impl Clone for rte_eth_rxmode {
     fn clone(&self) -> Self { *self }
@@ -25155,11 +25387,120 @@ impl rte_eth_rxmode {
         }
     }
     #[inline]
+    pub fn hw_timestamp(&self) -> u16 {
+        let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
+        unsafe {
+            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
+                                                *const u8,
+                                            &mut unit_field_val as *mut u16 as
+                                                *mut u8,
+                                            ::std::mem::size_of::<u16>())
+        };
+        let mask = 512u64 as u16;
+        let val = (unit_field_val & mask) >> 9usize;
+        unsafe { ::std::mem::transmute(val as u16) }
+    }
+    #[inline]
+    pub fn set_hw_timestamp(&mut self, val: u16) {
+        let mask = 512u64 as u16;
+        let val = val as u16 as u16;
+        let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
+        unsafe {
+            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
+                                                *const u8,
+                                            &mut unit_field_val as *mut u16 as
+                                                *mut u8,
+                                            ::std::mem::size_of::<u16>())
+        };
+        unit_field_val &= !mask;
+        unit_field_val |= (val << 9usize) & mask;
+        unsafe {
+            ::std::ptr::copy_nonoverlapping(&unit_field_val as *const _ as
+                                                *const u8,
+                                            &mut self._bitfield_1 as *mut _ as
+                                                *mut u8,
+                                            ::std::mem::size_of::<u16>());
+        }
+    }
+    #[inline]
+    pub fn security(&self) -> u16 {
+        let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
+        unsafe {
+            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
+                                                *const u8,
+                                            &mut unit_field_val as *mut u16 as
+                                                *mut u8,
+                                            ::std::mem::size_of::<u16>())
+        };
+        let mask = 1024u64 as u16;
+        let val = (unit_field_val & mask) >> 10usize;
+        unsafe { ::std::mem::transmute(val as u16) }
+    }
+    #[inline]
+    pub fn set_security(&mut self, val: u16) {
+        let mask = 1024u64 as u16;
+        let val = val as u16 as u16;
+        let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
+        unsafe {
+            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
+                                                *const u8,
+                                            &mut unit_field_val as *mut u16 as
+                                                *mut u8,
+                                            ::std::mem::size_of::<u16>())
+        };
+        unit_field_val &= !mask;
+        unit_field_val |= (val << 10usize) & mask;
+        unsafe {
+            ::std::ptr::copy_nonoverlapping(&unit_field_val as *const _ as
+                                                *const u8,
+                                            &mut self._bitfield_1 as *mut _ as
+                                                *mut u8,
+                                            ::std::mem::size_of::<u16>());
+        }
+    }
+    #[inline]
+    pub fn ignore_offload_bitfield(&self) -> u16 {
+        let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
+        unsafe {
+            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
+                                                *const u8,
+                                            &mut unit_field_val as *mut u16 as
+                                                *mut u8,
+                                            ::std::mem::size_of::<u16>())
+        };
+        let mask = 2048u64 as u16;
+        let val = (unit_field_val & mask) >> 11usize;
+        unsafe { ::std::mem::transmute(val as u16) }
+    }
+    #[inline]
+    pub fn set_ignore_offload_bitfield(&mut self, val: u16) {
+        let mask = 2048u64 as u16;
+        let val = val as u16 as u16;
+        let mut unit_field_val: u16 = unsafe { ::std::mem::uninitialized() };
+        unsafe {
+            ::std::ptr::copy_nonoverlapping(&self._bitfield_1 as *const _ as
+                                                *const u8,
+                                            &mut unit_field_val as *mut u16 as
+                                                *mut u8,
+                                            ::std::mem::size_of::<u16>())
+        };
+        unit_field_val &= !mask;
+        unit_field_val |= (val << 11usize) & mask;
+        unsafe {
+            ::std::ptr::copy_nonoverlapping(&unit_field_val as *const _ as
+                                                *const u8,
+                                            &mut self._bitfield_1 as *mut _ as
+                                                *mut u8,
+                                            ::std::mem::size_of::<u16>());
+        }
+    }
+    #[inline]
     pub fn new_bitfield_1(header_split: u16, hw_ip_checksum: u16,
                           hw_vlan_filter: u16, hw_vlan_strip: u16,
                           hw_vlan_extend: u16, jumbo_frame: u16,
                           hw_strip_crc: u16, enable_scatter: u16,
-                          enable_lro: u16) -> u16 {
+                          enable_lro: u16, hw_timestamp: u16, security: u16,
+                          ignore_offload_bitfield: u16) -> u16 {
         ({
              ({
                   ({
@@ -25168,33 +25509,60 @@ impl rte_eth_rxmode {
                                  ({
                                       ({
                                            ({
-                                                ({ 0 } |
-                                                     ((header_split as u16 as
-                                                           u16) << 0usize) &
-                                                         (1u64 as u16))
+                                                ({
+                                                     ({
+                                                          ({
+                                                               ({ 0 } |
+                                                                    ((header_split
+                                                                          as
+                                                                          u16
+                                                                          as
+                                                                          u16)
+                                                                         <<
+                                                                         0usize)
+                                                                        &
+                                                                        (1u64
+                                                                             as
+                                                                             u16))
+                                                           } |
+                                                               ((hw_ip_checksum
+                                                                     as u16 as
+                                                                     u16) <<
+                                                                    1usize) &
+                                                                   (2u64 as
+                                                                        u16))
+                                                      } |
+                                                          ((hw_vlan_filter as
+                                                                u16 as u16) <<
+                                                               2usize) &
+                                                              (4u64 as u16))
+                                                 } |
+                                                     ((hw_vlan_strip as u16 as
+                                                           u16) << 3usize) &
+                                                         (8u64 as u16))
                                             } |
-                                                ((hw_ip_checksum as u16 as
-                                                      u16) << 1usize) &
-                                                    (2u64 as u16))
+                                                ((hw_vlan_extend as u16 as
+                                                      u16) << 4usize) &
+                                                    (16u64 as u16))
                                        } |
-                                           ((hw_vlan_filter as u16 as u16) <<
-                                                2usize) & (4u64 as u16))
+                                           ((jumbo_frame as u16 as u16) <<
+                                                5usize) & (32u64 as u16))
                                   } |
-                                      ((hw_vlan_strip as u16 as u16) <<
-                                           3usize) & (8u64 as u16))
+                                      ((hw_strip_crc as u16 as u16) << 6usize)
+                                          & (64u64 as u16))
                              } |
-                                 ((hw_vlan_extend as u16 as u16) << 4usize) &
-                                     (16u64 as u16))
+                                 ((enable_scatter as u16 as u16) << 7usize) &
+                                     (128u64 as u16))
                         } |
-                            ((jumbo_frame as u16 as u16) << 5usize) &
-                                (32u64 as u16))
+                            ((enable_lro as u16 as u16) << 8usize) &
+                                (256u64 as u16))
                    } |
-                       ((hw_strip_crc as u16 as u16) << 6usize) &
-                           (64u64 as u16))
-              } |
-                  ((enable_scatter as u16 as u16) << 7usize) &
-                      (128u64 as u16))
-         } | ((enable_lro as u16 as u16) << 8usize) & (256u64 as u16))
+                       ((hw_timestamp as u16 as u16) << 9usize) &
+                           (512u64 as u16))
+              } | ((security as u16 as u16) << 10usize) & (1024u64 as u16))
+         } |
+             ((ignore_offload_bitfield as u16 as u16) << 11usize) &
+                 (2048u64 as u16))
     }
 }
 #[repr(u32)]
@@ -25738,15 +26106,19 @@ impl Clone for rte_eth_vmdq_rx_conf {
 pub struct rte_eth_txmode {
     /// < TX multi-queues mode.
     pub mq_mode: rte_eth_tx_mq_mode,
+    /// Per-port Tx offloads to be set using DEV_TX_OFFLOAD_* flags.
+    /// Only offloads set on tx_offload_capa field on rte_eth_dev_info
+    /// structure are allowed to be set.
+    pub offloads: u64,
     pub pvid: u16,
     pub _bitfield_1: u8,
-    pub __bindgen_padding_0: u8,
+    pub __bindgen_padding_0: [u8; 5usize],
 }
 #[test]
 fn bindgen_test_layout_rte_eth_txmode() {
-    assert_eq!(::std::mem::size_of::<rte_eth_txmode>() , 8usize , concat ! (
+    assert_eq!(::std::mem::size_of::<rte_eth_txmode>() , 24usize , concat ! (
                "Size of: " , stringify ! ( rte_eth_txmode ) ));
-    assert_eq! (::std::mem::align_of::<rte_eth_txmode>() , 4usize , concat ! (
+    assert_eq! (::std::mem::align_of::<rte_eth_txmode>() , 8usize , concat ! (
                 "Alignment of " , stringify ! ( rte_eth_txmode ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const rte_eth_txmode ) ) . mq_mode as * const _
@@ -25754,8 +26126,13 @@ fn bindgen_test_layout_rte_eth_txmode() {
                 "Alignment of field: " , stringify ! ( rte_eth_txmode ) , "::"
                 , stringify ! ( mq_mode ) ));
     assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_eth_txmode ) ) . offloads as * const
+                _ as usize } , 8usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_eth_txmode ) , "::"
+                , stringify ! ( offloads ) ));
+    assert_eq! (unsafe {
                 & ( * ( 0 as * const rte_eth_txmode ) ) . pvid as * const _ as
-                usize } , 4usize , concat ! (
+                usize } , 16usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_eth_txmode ) , "::"
                 , stringify ! ( pvid ) ));
 }
@@ -25898,12 +26275,16 @@ pub struct rte_eth_rxconf {
     pub rx_drop_en: u8,
     /// < Do not start queue with rte_eth_dev_start().
     pub rx_deferred_start: u8,
+    /// Per-queue Rx offloads to be set using DEV_RX_OFFLOAD_* flags.
+    /// Only offloads set on rx_queue_offload_capa or rx_offload_capa
+    /// fields on rte_eth_dev_info structure are allowed to be set.
+    pub offloads: u64,
 }
 #[test]
 fn bindgen_test_layout_rte_eth_rxconf() {
-    assert_eq!(::std::mem::size_of::<rte_eth_rxconf>() , 8usize , concat ! (
+    assert_eq!(::std::mem::size_of::<rte_eth_rxconf>() , 16usize , concat ! (
                "Size of: " , stringify ! ( rte_eth_rxconf ) ));
-    assert_eq! (::std::mem::align_of::<rte_eth_rxconf>() , 2usize , concat ! (
+    assert_eq! (::std::mem::align_of::<rte_eth_rxconf>() , 8usize , concat ! (
                 "Alignment of " , stringify ! ( rte_eth_rxconf ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const rte_eth_rxconf ) ) . rx_thresh as * const
@@ -25925,6 +26306,11 @@ fn bindgen_test_layout_rte_eth_rxconf() {
                 * const _ as usize } , 7usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_eth_rxconf ) , "::"
                 , stringify ! ( rx_deferred_start ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_eth_rxconf ) ) . offloads as * const
+                _ as usize } , 8usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_eth_rxconf ) , "::"
+                , stringify ! ( offloads ) ));
 }
 impl Clone for rte_eth_rxconf {
     fn clone(&self) -> Self { *self }
@@ -25944,12 +26330,16 @@ pub struct rte_eth_txconf {
     pub txq_flags: u32,
     /// < Do not start queue with rte_eth_dev_start().
     pub tx_deferred_start: u8,
+    /// Per-queue Tx offloads to be set  using DEV_TX_OFFLOAD_* flags.
+    /// Only offloads set on tx_queue_offload_capa or tx_offload_capa
+    /// fields on rte_eth_dev_info structure are allowed to be set.
+    pub offloads: u64,
 }
 #[test]
 fn bindgen_test_layout_rte_eth_txconf() {
-    assert_eq!(::std::mem::size_of::<rte_eth_txconf>() , 16usize , concat ! (
+    assert_eq!(::std::mem::size_of::<rte_eth_txconf>() , 24usize , concat ! (
                "Size of: " , stringify ! ( rte_eth_txconf ) ));
-    assert_eq! (::std::mem::align_of::<rte_eth_txconf>() , 4usize , concat ! (
+    assert_eq! (::std::mem::align_of::<rte_eth_txconf>() , 8usize , concat ! (
                 "Alignment of " , stringify ! ( rte_eth_txconf ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const rte_eth_txconf ) ) . tx_thresh as * const
@@ -25976,6 +26366,11 @@ fn bindgen_test_layout_rte_eth_txconf() {
                 * const _ as usize } , 12usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_eth_txconf ) , "::"
                 , stringify ! ( tx_deferred_start ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_eth_txconf ) ) . offloads as * const
+                _ as usize } , 16usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_eth_txconf ) , "::"
+                , stringify ! ( offloads ) ));
 }
 impl Clone for rte_eth_txconf {
     fn clone(&self) -> Self { *self }
@@ -26416,7 +26811,7 @@ pub struct rte_eth_conf {
     /// for details. The possible values of this field
     /// are defined in implementation of each driver.
     pub lpbk_mode: u32,
-    /// < Port RX filtering configuration (union).
+    /// < Port RX filtering configuration.
     pub rx_adv_conf: rte_eth_conf__bindgen_ty_1,
     /// < Port TX DCB configuration (union).
     pub tx_adv_conf: rte_eth_conf__bindgen_ty_2,
@@ -26515,7 +26910,7 @@ impl Clone for rte_eth_conf__bindgen_ty_2 {
 }
 #[test]
 fn bindgen_test_layout_rte_eth_conf() {
-    assert_eq!(::std::mem::size_of::<rte_eth_conf>() , 2944usize , concat ! (
+    assert_eq!(::std::mem::size_of::<rte_eth_conf>() , 2984usize , concat ! (
                "Size of: " , stringify ! ( rte_eth_conf ) ));
     assert_eq! (::std::mem::align_of::<rte_eth_conf>() , 8usize , concat ! (
                 "Alignment of " , stringify ! ( rte_eth_conf ) ));
@@ -26526,46 +26921,161 @@ fn bindgen_test_layout_rte_eth_conf() {
                 stringify ! ( link_speeds ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const rte_eth_conf ) ) . rxmode as * const _ as
-                usize } , 4usize , concat ! (
+                usize } , 8usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_eth_conf ) , "::" ,
                 stringify ! ( rxmode ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const rte_eth_conf ) ) . txmode as * const _ as
-                usize } , 16usize , concat ! (
+                usize } , 40usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_eth_conf ) , "::" ,
                 stringify ! ( txmode ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const rte_eth_conf ) ) . lpbk_mode as * const _
-                as usize } , 24usize , concat ! (
+                as usize } , 64usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_eth_conf ) , "::" ,
                 stringify ! ( lpbk_mode ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const rte_eth_conf ) ) . rx_adv_conf as * const
-                _ as usize } , 32usize , concat ! (
+                _ as usize } , 72usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_eth_conf ) , "::" ,
                 stringify ! ( rx_adv_conf ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const rte_eth_conf ) ) . tx_adv_conf as * const
-                _ as usize } , 2152usize , concat ! (
+                _ as usize } , 2192usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_eth_conf ) , "::" ,
                 stringify ! ( tx_adv_conf ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const rte_eth_conf ) ) . dcb_capability_en as *
-                const _ as usize } , 2164usize , concat ! (
+                const _ as usize } , 2204usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_eth_conf ) , "::" ,
                 stringify ! ( dcb_capability_en ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const rte_eth_conf ) ) . fdir_conf as * const _
-                as usize } , 2168usize , concat ! (
+                as usize } , 2208usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_eth_conf ) , "::" ,
                 stringify ! ( fdir_conf ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const rte_eth_conf ) ) . intr_conf as * const _
-                as usize } , 2940usize , concat ! (
+                as usize } , 2980usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_eth_conf ) , "::" ,
                 stringify ! ( intr_conf ) ));
 }
 impl Clone for rte_eth_conf {
+    fn clone(&self) -> Self { *self }
+}
+/// A structure describing a PCI device.
+#[repr(C)]
+#[derive(Copy)]
+pub struct rte_pci_device {
+    /// < Next probed PCI device.
+    pub next: rte_pci_device__bindgen_ty_1,
+    /// < Inherit core device
+    pub device: rte_device,
+    /// < PCI location.
+    pub addr: rte_pci_addr,
+    /// < PCI ID.
+    pub id: rte_pci_id,
+    pub mem_resource: [rte_mem_resource; 6usize],
+    /// < Interrupt handle
+    pub intr_handle: rte_intr_handle,
+    /// < Associated driver
+    pub driver: *mut rte_pci_driver,
+    /// < sriov enable if not zero
+    pub max_vfs: u16,
+    /// < Kernel driver passthrough
+    pub kdrv: rte_kernel_driver,
+    /// < PCI location (ASCII)
+    pub name: [::std::os::raw::c_char; 18usize],
+}
+#[repr(C)]
+#[derive(Debug, Copy)]
+pub struct rte_pci_device__bindgen_ty_1 {
+    pub tqe_next: *mut rte_pci_device,
+    pub tqe_prev: *mut *mut rte_pci_device,
+}
+#[test]
+fn bindgen_test_layout_rte_pci_device__bindgen_ty_1() {
+    assert_eq!(::std::mem::size_of::<rte_pci_device__bindgen_ty_1>() , 16usize
+               , concat ! (
+               "Size of: " , stringify ! ( rte_pci_device__bindgen_ty_1 ) ));
+    assert_eq! (::std::mem::align_of::<rte_pci_device__bindgen_ty_1>() ,
+                8usize , concat ! (
+                "Alignment of " , stringify ! ( rte_pci_device__bindgen_ty_1 )
+                ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_pci_device__bindgen_ty_1 ) ) .
+                tqe_next as * const _ as usize } , 0usize , concat ! (
+                "Alignment of field: " , stringify ! (
+                rte_pci_device__bindgen_ty_1 ) , "::" , stringify ! ( tqe_next
+                ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_pci_device__bindgen_ty_1 ) ) .
+                tqe_prev as * const _ as usize } , 8usize , concat ! (
+                "Alignment of field: " , stringify ! (
+                rte_pci_device__bindgen_ty_1 ) , "::" , stringify ! ( tqe_prev
+                ) ));
+}
+impl Clone for rte_pci_device__bindgen_ty_1 {
+    fn clone(&self) -> Self { *self }
+}
+#[test]
+fn bindgen_test_layout_rte_pci_device() {
+    assert_eq!(::std::mem::size_of::<rte_pci_device>() , 1968usize , concat !
+               ( "Size of: " , stringify ! ( rte_pci_device ) ));
+    assert_eq! (::std::mem::align_of::<rte_pci_device>() , 8usize , concat ! (
+                "Alignment of " , stringify ! ( rte_pci_device ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_pci_device ) ) . next as * const _ as
+                usize } , 0usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_pci_device ) , "::"
+                , stringify ! ( next ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_pci_device ) ) . device as * const _
+                as usize } , 16usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_pci_device ) , "::"
+                , stringify ! ( device ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_pci_device ) ) . addr as * const _ as
+                usize } , 64usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_pci_device ) , "::"
+                , stringify ! ( addr ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_pci_device ) ) . id as * const _ as
+                usize } , 72usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_pci_device ) , "::"
+                , stringify ! ( id ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_pci_device ) ) . mem_resource as *
+                const _ as usize } , 88usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_pci_device ) , "::"
+                , stringify ! ( mem_resource ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_pci_device ) ) . intr_handle as *
+                const _ as usize } , 232usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_pci_device ) , "::"
+                , stringify ! ( intr_handle ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_pci_device ) ) . driver as * const _
+                as usize } , 1928usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_pci_device ) , "::"
+                , stringify ! ( driver ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_pci_device ) ) . max_vfs as * const _
+                as usize } , 1936usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_pci_device ) , "::"
+                , stringify ! ( max_vfs ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_pci_device ) ) . kdrv as * const _ as
+                usize } , 1940usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_pci_device ) , "::"
+                , stringify ! ( kdrv ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_pci_device ) ) . name as * const _ as
+                usize } , 1944usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_pci_device ) , "::"
+                , stringify ! ( name ) ));
+}
+impl Clone for rte_pci_device {
     fn clone(&self) -> Self { *self }
 }
 /// Ethernet device information
@@ -26594,10 +27104,10 @@ pub struct rte_eth_dev_info {
     pub max_vfs: u16,
     /// < Maximum number of VMDq pools.
     pub max_vmdq_pools: u16,
-    /// < Device RX offload capabilities.
-    pub rx_offload_capa: u32,
-    /// < Device TX offload capabilities.
-    pub tx_offload_capa: u32,
+    pub rx_offload_capa: u64,
+    pub tx_offload_capa: u64,
+    pub rx_queue_offload_capa: u64,
+    pub tx_queue_offload_capa: u64,
     pub reta_size: u16,
     /// < Hash key size in bytes
     pub hash_key_size: u8,
@@ -26626,7 +27136,7 @@ pub struct rte_eth_dev_info {
 }
 #[test]
 fn bindgen_test_layout_rte_eth_dev_info() {
-    assert_eq!(::std::mem::size_of::<rte_eth_dev_info>() , 128usize , concat !
+    assert_eq!(::std::mem::size_of::<rte_eth_dev_info>() , 176usize , concat !
                ( "Size of: " , stringify ! ( rte_eth_dev_info ) ));
     assert_eq! (::std::mem::align_of::<rte_eth_dev_info>() , 8usize , concat !
                 ( "Alignment of " , stringify ! ( rte_eth_dev_info ) ));
@@ -26687,78 +27197,90 @@ fn bindgen_test_layout_rte_eth_dev_info() {
                 "::" , stringify ! ( max_vmdq_pools ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const rte_eth_dev_info ) ) . rx_offload_capa as
-                * const _ as usize } , 44usize , concat ! (
+                * const _ as usize } , 48usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_eth_dev_info ) ,
                 "::" , stringify ! ( rx_offload_capa ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const rte_eth_dev_info ) ) . tx_offload_capa as
-                * const _ as usize } , 48usize , concat ! (
+                * const _ as usize } , 56usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_eth_dev_info ) ,
                 "::" , stringify ! ( tx_offload_capa ) ));
     assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_eth_dev_info ) ) .
+                rx_queue_offload_capa as * const _ as usize } , 64usize ,
+                concat ! (
+                "Alignment of field: " , stringify ! ( rte_eth_dev_info ) ,
+                "::" , stringify ! ( rx_queue_offload_capa ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_eth_dev_info ) ) .
+                tx_queue_offload_capa as * const _ as usize } , 72usize ,
+                concat ! (
+                "Alignment of field: " , stringify ! ( rte_eth_dev_info ) ,
+                "::" , stringify ! ( tx_queue_offload_capa ) ));
+    assert_eq! (unsafe {
                 & ( * ( 0 as * const rte_eth_dev_info ) ) . reta_size as *
-                const _ as usize } , 52usize , concat ! (
+                const _ as usize } , 80usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_eth_dev_info ) ,
                 "::" , stringify ! ( reta_size ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const rte_eth_dev_info ) ) . hash_key_size as *
-                const _ as usize } , 54usize , concat ! (
+                const _ as usize } , 82usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_eth_dev_info ) ,
                 "::" , stringify ! ( hash_key_size ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const rte_eth_dev_info ) ) .
-                flow_type_rss_offloads as * const _ as usize } , 56usize ,
+                flow_type_rss_offloads as * const _ as usize } , 88usize ,
                 concat ! (
                 "Alignment of field: " , stringify ! ( rte_eth_dev_info ) ,
                 "::" , stringify ! ( flow_type_rss_offloads ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const rte_eth_dev_info ) ) . default_rxconf as
-                * const _ as usize } , 64usize , concat ! (
+                * const _ as usize } , 96usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_eth_dev_info ) ,
                 "::" , stringify ! ( default_rxconf ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const rte_eth_dev_info ) ) . default_txconf as
-                * const _ as usize } , 72usize , concat ! (
+                * const _ as usize } , 112usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_eth_dev_info ) ,
                 "::" , stringify ! ( default_txconf ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const rte_eth_dev_info ) ) . vmdq_queue_base as
-                * const _ as usize } , 88usize , concat ! (
+                * const _ as usize } , 136usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_eth_dev_info ) ,
                 "::" , stringify ! ( vmdq_queue_base ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const rte_eth_dev_info ) ) . vmdq_queue_num as
-                * const _ as usize } , 90usize , concat ! (
+                * const _ as usize } , 138usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_eth_dev_info ) ,
                 "::" , stringify ! ( vmdq_queue_num ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const rte_eth_dev_info ) ) . vmdq_pool_base as
-                * const _ as usize } , 92usize , concat ! (
+                * const _ as usize } , 140usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_eth_dev_info ) ,
                 "::" , stringify ! ( vmdq_pool_base ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const rte_eth_dev_info ) ) . rx_desc_lim as *
-                const _ as usize } , 94usize , concat ! (
+                const _ as usize } , 142usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_eth_dev_info ) ,
                 "::" , stringify ! ( rx_desc_lim ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const rte_eth_dev_info ) ) . tx_desc_lim as *
-                const _ as usize } , 104usize , concat ! (
+                const _ as usize } , 152usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_eth_dev_info ) ,
                 "::" , stringify ! ( tx_desc_lim ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const rte_eth_dev_info ) ) . speed_capa as *
-                const _ as usize } , 116usize , concat ! (
+                const _ as usize } , 164usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_eth_dev_info ) ,
                 "::" , stringify ! ( speed_capa ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const rte_eth_dev_info ) ) . nb_rx_queues as *
-                const _ as usize } , 120usize , concat ! (
+                const _ as usize } , 168usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_eth_dev_info ) ,
                 "::" , stringify ! ( nb_rx_queues ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const rte_eth_dev_info ) ) . nb_tx_queues as *
-                const _ as usize } , 122usize , concat ! (
+                const _ as usize } , 170usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_eth_dev_info ) ,
                 "::" , stringify ! ( nb_tx_queues ) ));
 }
@@ -26778,7 +27300,7 @@ pub struct rte_eth_rxq_info {
     pub scattered_rx: u8,
     /// < configured number of RXDs.
     pub nb_desc: u16,
-    pub __bindgen_padding_0: [u32; 11usize],
+    pub __bindgen_padding_0: [u32; 9usize],
 }
 #[test]
 fn bindgen_test_layout_rte_eth_rxq_info() {
@@ -26796,12 +27318,12 @@ fn bindgen_test_layout_rte_eth_rxq_info() {
                 "::" , stringify ! ( conf ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const rte_eth_rxq_info ) ) . scattered_rx as *
-                const _ as usize } , 16usize , concat ! (
+                const _ as usize } , 24usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_eth_rxq_info ) ,
                 "::" , stringify ! ( scattered_rx ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const rte_eth_rxq_info ) ) . nb_desc as * const
-                _ as usize } , 18usize , concat ! (
+                _ as usize } , 26usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_eth_rxq_info ) ,
                 "::" , stringify ! ( nb_desc ) ));
 }
@@ -26809,7 +27331,7 @@ impl Clone for rte_eth_rxq_info {
     fn clone(&self) -> Self { *self }
 }
 /// Ethernet device TX queue information structure.
-/// Used to retieve information about configured queue.
+/// Used to retrieve information about configured queue.
 #[repr(C)]
 #[derive(Copy)]
 pub struct rte_eth_txq_info {
@@ -26817,7 +27339,7 @@ pub struct rte_eth_txq_info {
     pub conf: rte_eth_txconf,
     /// < configured number of TXDs.
     pub nb_desc: u16,
-    pub __bindgen_padding_0: [u16; 23usize],
+    pub __bindgen_padding_0: [u16; 19usize],
 }
 #[test]
 fn bindgen_test_layout_rte_eth_txq_info() {
@@ -26830,7 +27352,7 @@ fn bindgen_test_layout_rte_eth_txq_info() {
                 "::" , stringify ! ( conf ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const rte_eth_txq_info ) ) . nb_desc as * const
-                _ as usize } , 16usize , concat ! (
+                _ as usize } , 24usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_eth_txq_info ) ,
                 "::" , stringify ! ( nb_desc ) ));
 }
@@ -27080,7 +27602,9 @@ pub struct rte_eth_dev {
     pub pre_tx_burst_cbs: [*mut rte_eth_rxtx_callback; 1024usize],
     /// < Flag indicating the port state
     pub state: rte_eth_dev_state,
-    pub __bindgen_padding_0: [u32; 13usize],
+    /// < Context for security ops
+    pub security_ctx: *mut ::std::os::raw::c_void,
+    pub __bindgen_padding_0: [u64; 5usize],
 }
 #[test]
 fn bindgen_test_layout_rte_eth_dev() {
@@ -27141,6 +27665,11 @@ fn bindgen_test_layout_rte_eth_dev() {
                 usize } , 16456usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_eth_dev ) , "::" ,
                 stringify ! ( state ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_eth_dev ) ) . security_ctx as * const
+                _ as usize } , 16464usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_eth_dev ) , "::" ,
+                stringify ! ( security_ctx ) ));
 }
 impl Clone for rte_eth_dev {
     fn clone(&self) -> Self { *self }
@@ -27194,6 +27723,10 @@ pub type eth_dev_set_link_down_t =
                               -> ::std::os::raw::c_int>;
 pub type eth_dev_close_t =
     ::std::option::Option<unsafe extern "C" fn(dev: *mut rte_eth_dev)>;
+pub type eth_dev_reset_t =
+    ::std::option::Option<unsafe extern "C" fn(dev: *mut rte_eth_dev)
+                              -> ::std::os::raw::c_int>;
+/// <@internal Function used to reset a configured Ethernet device.
 pub type eth_promiscuous_enable_t =
     ::std::option::Option<unsafe extern "C" fn(dev: *mut rte_eth_dev)>;
 pub type eth_promiscuous_disable_t =
@@ -27209,8 +27742,8 @@ pub type eth_link_update_t =
                               -> ::std::os::raw::c_int>;
 pub type eth_stats_get_t =
     ::std::option::Option<unsafe extern "C" fn(dev: *mut rte_eth_dev,
-                                               igb_stats:
-                                                   *mut rte_eth_stats)>;
+                                               igb_stats: *mut rte_eth_stats)
+                              -> ::std::os::raw::c_int>;
 pub type eth_stats_reset_t =
     ::std::option::Option<unsafe extern "C" fn(dev: *mut rte_eth_dev)>;
 pub type eth_xstats_get_t =
@@ -27340,7 +27873,8 @@ pub type vlan_tpid_set_t =
                               -> ::std::os::raw::c_int>;
 pub type vlan_offload_set_t =
     ::std::option::Option<unsafe extern "C" fn(dev: *mut rte_eth_dev,
-                                               mask: ::std::os::raw::c_int)>;
+                                               mask: ::std::os::raw::c_int)
+                              -> ::std::os::raw::c_int>;
 pub type vlan_pvid_set_t =
     ::std::option::Option<unsafe extern "C" fn(dev: *mut rte_eth_dev,
                                                vlan_id: u16,
@@ -27519,10 +28053,20 @@ pub type eth_tm_ops_get_t =
                                                ops:
                                                    *mut ::std::os::raw::c_void)
                               -> ::std::os::raw::c_int>;
+pub type eth_mtr_ops_get_t =
+    ::std::option::Option<unsafe extern "C" fn(dev: *mut rte_eth_dev,
+                                               ops:
+                                                   *mut ::std::os::raw::c_void)
+                              -> ::std::os::raw::c_int>;
 pub type eth_get_dcb_info =
     ::std::option::Option<unsafe extern "C" fn(dev: *mut rte_eth_dev,
                                                dcb_info:
                                                    *mut rte_eth_dcb_info)
+                              -> ::std::os::raw::c_int>;
+pub type eth_pool_ops_supported_t =
+    ::std::option::Option<unsafe extern "C" fn(dev: *mut rte_eth_dev,
+                                               pool:
+                                                   *const ::std::os::raw::c_char)
                               -> ::std::os::raw::c_int>;
 /// @internal A structure containing the functions exported by an Ethernet driver.
 #[repr(C)]
@@ -27540,6 +28084,8 @@ pub struct eth_dev_ops {
     pub dev_set_link_down: eth_dev_set_link_down_t,
     /// < Close device.
     pub dev_close: eth_dev_close_t,
+    /// < Reset device.
+    pub dev_reset: eth_dev_reset_t,
     /// < Get device link state.
     pub link_update: eth_link_update_t,
     /// < Promiscuous ON.
@@ -27679,10 +28225,12 @@ pub struct eth_dev_ops {
     pub xstats_get_by_id: eth_xstats_get_by_id_t,
     pub xstats_get_names_by_id: eth_xstats_get_names_by_id_t,
     pub tm_ops_get: eth_tm_ops_get_t,
+    pub mtr_ops_get: eth_mtr_ops_get_t,
+    pub pool_ops_supported: eth_pool_ops_supported_t,
 }
 #[test]
 fn bindgen_test_layout_eth_dev_ops() {
-    assert_eq!(::std::mem::size_of::<eth_dev_ops>() , 648usize , concat ! (
+    assert_eq!(::std::mem::size_of::<eth_dev_ops>() , 672usize , concat ! (
                "Size of: " , stringify ! ( eth_dev_ops ) ));
     assert_eq! (::std::mem::align_of::<eth_dev_ops>() , 8usize , concat ! (
                 "Alignment of " , stringify ! ( eth_dev_ops ) ));
@@ -27717,383 +28265,398 @@ fn bindgen_test_layout_eth_dev_ops() {
                 "Alignment of field: " , stringify ! ( eth_dev_ops ) , "::" ,
                 stringify ! ( dev_close ) ));
     assert_eq! (unsafe {
+                & ( * ( 0 as * const eth_dev_ops ) ) . dev_reset as * const _
+                as usize } , 48usize , concat ! (
+                "Alignment of field: " , stringify ! ( eth_dev_ops ) , "::" ,
+                stringify ! ( dev_reset ) ));
+    assert_eq! (unsafe {
                 & ( * ( 0 as * const eth_dev_ops ) ) . link_update as * const
-                _ as usize } , 48usize , concat ! (
+                _ as usize } , 56usize , concat ! (
                 "Alignment of field: " , stringify ! ( eth_dev_ops ) , "::" ,
                 stringify ! ( link_update ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const eth_dev_ops ) ) . promiscuous_enable as *
-                const _ as usize } , 56usize , concat ! (
+                const _ as usize } , 64usize , concat ! (
                 "Alignment of field: " , stringify ! ( eth_dev_ops ) , "::" ,
                 stringify ! ( promiscuous_enable ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const eth_dev_ops ) ) . promiscuous_disable as
-                * const _ as usize } , 64usize , concat ! (
+                * const _ as usize } , 72usize , concat ! (
                 "Alignment of field: " , stringify ! ( eth_dev_ops ) , "::" ,
                 stringify ! ( promiscuous_disable ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const eth_dev_ops ) ) . allmulticast_enable as
-                * const _ as usize } , 72usize , concat ! (
+                * const _ as usize } , 80usize , concat ! (
                 "Alignment of field: " , stringify ! ( eth_dev_ops ) , "::" ,
                 stringify ! ( allmulticast_enable ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const eth_dev_ops ) ) . allmulticast_disable as
-                * const _ as usize } , 80usize , concat ! (
+                * const _ as usize } , 88usize , concat ! (
                 "Alignment of field: " , stringify ! ( eth_dev_ops ) , "::" ,
                 stringify ! ( allmulticast_disable ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const eth_dev_ops ) ) . mac_addr_remove as *
-                const _ as usize } , 88usize , concat ! (
+                const _ as usize } , 96usize , concat ! (
                 "Alignment of field: " , stringify ! ( eth_dev_ops ) , "::" ,
                 stringify ! ( mac_addr_remove ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const eth_dev_ops ) ) . mac_addr_add as * const
-                _ as usize } , 96usize , concat ! (
+                _ as usize } , 104usize , concat ! (
                 "Alignment of field: " , stringify ! ( eth_dev_ops ) , "::" ,
                 stringify ! ( mac_addr_add ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const eth_dev_ops ) ) . mac_addr_set as * const
-                _ as usize } , 104usize , concat ! (
+                _ as usize } , 112usize , concat ! (
                 "Alignment of field: " , stringify ! ( eth_dev_ops ) , "::" ,
                 stringify ! ( mac_addr_set ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const eth_dev_ops ) ) . set_mc_addr_list as *
-                const _ as usize } , 112usize , concat ! (
+                const _ as usize } , 120usize , concat ! (
                 "Alignment of field: " , stringify ! ( eth_dev_ops ) , "::" ,
                 stringify ! ( set_mc_addr_list ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const eth_dev_ops ) ) . mtu_set as * const _ as
-                usize } , 120usize , concat ! (
+                usize } , 128usize , concat ! (
                 "Alignment of field: " , stringify ! ( eth_dev_ops ) , "::" ,
                 stringify ! ( mtu_set ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const eth_dev_ops ) ) . stats_get as * const _
-                as usize } , 128usize , concat ! (
+                as usize } , 136usize , concat ! (
                 "Alignment of field: " , stringify ! ( eth_dev_ops ) , "::" ,
                 stringify ! ( stats_get ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const eth_dev_ops ) ) . stats_reset as * const
-                _ as usize } , 136usize , concat ! (
+                _ as usize } , 144usize , concat ! (
                 "Alignment of field: " , stringify ! ( eth_dev_ops ) , "::" ,
                 stringify ! ( stats_reset ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const eth_dev_ops ) ) . xstats_get as * const _
-                as usize } , 144usize , concat ! (
+                as usize } , 152usize , concat ! (
                 "Alignment of field: " , stringify ! ( eth_dev_ops ) , "::" ,
                 stringify ! ( xstats_get ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const eth_dev_ops ) ) . xstats_reset as * const
-                _ as usize } , 152usize , concat ! (
+                _ as usize } , 160usize , concat ! (
                 "Alignment of field: " , stringify ! ( eth_dev_ops ) , "::" ,
                 stringify ! ( xstats_reset ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const eth_dev_ops ) ) . xstats_get_names as *
-                const _ as usize } , 160usize , concat ! (
+                const _ as usize } , 168usize , concat ! (
                 "Alignment of field: " , stringify ! ( eth_dev_ops ) , "::" ,
                 stringify ! ( xstats_get_names ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const eth_dev_ops ) ) . queue_stats_mapping_set
-                as * const _ as usize } , 168usize , concat ! (
+                as * const _ as usize } , 176usize , concat ! (
                 "Alignment of field: " , stringify ! ( eth_dev_ops ) , "::" ,
                 stringify ! ( queue_stats_mapping_set ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const eth_dev_ops ) ) . dev_infos_get as *
-                const _ as usize } , 176usize , concat ! (
+                const _ as usize } , 184usize , concat ! (
                 "Alignment of field: " , stringify ! ( eth_dev_ops ) , "::" ,
                 stringify ! ( dev_infos_get ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const eth_dev_ops ) ) . rxq_info_get as * const
-                _ as usize } , 184usize , concat ! (
+                _ as usize } , 192usize , concat ! (
                 "Alignment of field: " , stringify ! ( eth_dev_ops ) , "::" ,
                 stringify ! ( rxq_info_get ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const eth_dev_ops ) ) . txq_info_get as * const
-                _ as usize } , 192usize , concat ! (
+                _ as usize } , 200usize , concat ! (
                 "Alignment of field: " , stringify ! ( eth_dev_ops ) , "::" ,
                 stringify ! ( txq_info_get ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const eth_dev_ops ) ) . fw_version_get as *
-                const _ as usize } , 200usize , concat ! (
+                const _ as usize } , 208usize , concat ! (
                 "Alignment of field: " , stringify ! ( eth_dev_ops ) , "::" ,
                 stringify ! ( fw_version_get ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const eth_dev_ops ) ) .
-                dev_supported_ptypes_get as * const _ as usize } , 208usize ,
+                dev_supported_ptypes_get as * const _ as usize } , 216usize ,
                 concat ! (
                 "Alignment of field: " , stringify ! ( eth_dev_ops ) , "::" ,
                 stringify ! ( dev_supported_ptypes_get ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const eth_dev_ops ) ) . vlan_filter_set as *
-                const _ as usize } , 216usize , concat ! (
+                const _ as usize } , 224usize , concat ! (
                 "Alignment of field: " , stringify ! ( eth_dev_ops ) , "::" ,
                 stringify ! ( vlan_filter_set ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const eth_dev_ops ) ) . vlan_tpid_set as *
-                const _ as usize } , 224usize , concat ! (
+                const _ as usize } , 232usize , concat ! (
                 "Alignment of field: " , stringify ! ( eth_dev_ops ) , "::" ,
                 stringify ! ( vlan_tpid_set ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const eth_dev_ops ) ) . vlan_strip_queue_set as
-                * const _ as usize } , 232usize , concat ! (
+                * const _ as usize } , 240usize , concat ! (
                 "Alignment of field: " , stringify ! ( eth_dev_ops ) , "::" ,
                 stringify ! ( vlan_strip_queue_set ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const eth_dev_ops ) ) . vlan_offload_set as *
-                const _ as usize } , 240usize , concat ! (
+                const _ as usize } , 248usize , concat ! (
                 "Alignment of field: " , stringify ! ( eth_dev_ops ) , "::" ,
                 stringify ! ( vlan_offload_set ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const eth_dev_ops ) ) . vlan_pvid_set as *
-                const _ as usize } , 248usize , concat ! (
+                const _ as usize } , 256usize , concat ! (
                 "Alignment of field: " , stringify ! ( eth_dev_ops ) , "::" ,
                 stringify ! ( vlan_pvid_set ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const eth_dev_ops ) ) . rx_queue_start as *
-                const _ as usize } , 256usize , concat ! (
+                const _ as usize } , 264usize , concat ! (
                 "Alignment of field: " , stringify ! ( eth_dev_ops ) , "::" ,
                 stringify ! ( rx_queue_start ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const eth_dev_ops ) ) . rx_queue_stop as *
-                const _ as usize } , 264usize , concat ! (
+                const _ as usize } , 272usize , concat ! (
                 "Alignment of field: " , stringify ! ( eth_dev_ops ) , "::" ,
                 stringify ! ( rx_queue_stop ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const eth_dev_ops ) ) . tx_queue_start as *
-                const _ as usize } , 272usize , concat ! (
+                const _ as usize } , 280usize , concat ! (
                 "Alignment of field: " , stringify ! ( eth_dev_ops ) , "::" ,
                 stringify ! ( tx_queue_start ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const eth_dev_ops ) ) . tx_queue_stop as *
-                const _ as usize } , 280usize , concat ! (
+                const _ as usize } , 288usize , concat ! (
                 "Alignment of field: " , stringify ! ( eth_dev_ops ) , "::" ,
                 stringify ! ( tx_queue_stop ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const eth_dev_ops ) ) . rx_queue_setup as *
-                const _ as usize } , 288usize , concat ! (
+                const _ as usize } , 296usize , concat ! (
                 "Alignment of field: " , stringify ! ( eth_dev_ops ) , "::" ,
                 stringify ! ( rx_queue_setup ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const eth_dev_ops ) ) . rx_queue_release as *
-                const _ as usize } , 296usize , concat ! (
+                const _ as usize } , 304usize , concat ! (
                 "Alignment of field: " , stringify ! ( eth_dev_ops ) , "::" ,
                 stringify ! ( rx_queue_release ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const eth_dev_ops ) ) . rx_queue_count as *
-                const _ as usize } , 304usize , concat ! (
+                const _ as usize } , 312usize , concat ! (
                 "Alignment of field: " , stringify ! ( eth_dev_ops ) , "::" ,
                 stringify ! ( rx_queue_count ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const eth_dev_ops ) ) . rx_descriptor_done as *
-                const _ as usize } , 312usize , concat ! (
+                const _ as usize } , 320usize , concat ! (
                 "Alignment of field: " , stringify ! ( eth_dev_ops ) , "::" ,
                 stringify ! ( rx_descriptor_done ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const eth_dev_ops ) ) . rx_descriptor_status as
-                * const _ as usize } , 320usize , concat ! (
+                * const _ as usize } , 328usize , concat ! (
                 "Alignment of field: " , stringify ! ( eth_dev_ops ) , "::" ,
                 stringify ! ( rx_descriptor_status ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const eth_dev_ops ) ) . tx_descriptor_status as
-                * const _ as usize } , 328usize , concat ! (
+                * const _ as usize } , 336usize , concat ! (
                 "Alignment of field: " , stringify ! ( eth_dev_ops ) , "::" ,
                 stringify ! ( tx_descriptor_status ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const eth_dev_ops ) ) . rx_queue_intr_enable as
-                * const _ as usize } , 336usize , concat ! (
+                * const _ as usize } , 344usize , concat ! (
                 "Alignment of field: " , stringify ! ( eth_dev_ops ) , "::" ,
                 stringify ! ( rx_queue_intr_enable ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const eth_dev_ops ) ) . rx_queue_intr_disable
-                as * const _ as usize } , 344usize , concat ! (
+                as * const _ as usize } , 352usize , concat ! (
                 "Alignment of field: " , stringify ! ( eth_dev_ops ) , "::" ,
                 stringify ! ( rx_queue_intr_disable ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const eth_dev_ops ) ) . tx_queue_setup as *
-                const _ as usize } , 352usize , concat ! (
+                const _ as usize } , 360usize , concat ! (
                 "Alignment of field: " , stringify ! ( eth_dev_ops ) , "::" ,
                 stringify ! ( tx_queue_setup ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const eth_dev_ops ) ) . tx_queue_release as *
-                const _ as usize } , 360usize , concat ! (
+                const _ as usize } , 368usize , concat ! (
                 "Alignment of field: " , stringify ! ( eth_dev_ops ) , "::" ,
                 stringify ! ( tx_queue_release ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const eth_dev_ops ) ) . tx_done_cleanup as *
-                const _ as usize } , 368usize , concat ! (
+                const _ as usize } , 376usize , concat ! (
                 "Alignment of field: " , stringify ! ( eth_dev_ops ) , "::" ,
                 stringify ! ( tx_done_cleanup ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const eth_dev_ops ) ) . dev_led_on as * const _
-                as usize } , 376usize , concat ! (
+                as usize } , 384usize , concat ! (
                 "Alignment of field: " , stringify ! ( eth_dev_ops ) , "::" ,
                 stringify ! ( dev_led_on ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const eth_dev_ops ) ) . dev_led_off as * const
-                _ as usize } , 384usize , concat ! (
+                _ as usize } , 392usize , concat ! (
                 "Alignment of field: " , stringify ! ( eth_dev_ops ) , "::" ,
                 stringify ! ( dev_led_off ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const eth_dev_ops ) ) . flow_ctrl_get as *
-                const _ as usize } , 392usize , concat ! (
+                const _ as usize } , 400usize , concat ! (
                 "Alignment of field: " , stringify ! ( eth_dev_ops ) , "::" ,
                 stringify ! ( flow_ctrl_get ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const eth_dev_ops ) ) . flow_ctrl_set as *
-                const _ as usize } , 400usize , concat ! (
+                const _ as usize } , 408usize , concat ! (
                 "Alignment of field: " , stringify ! ( eth_dev_ops ) , "::" ,
                 stringify ! ( flow_ctrl_set ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const eth_dev_ops ) ) . priority_flow_ctrl_set
-                as * const _ as usize } , 408usize , concat ! (
+                as * const _ as usize } , 416usize , concat ! (
                 "Alignment of field: " , stringify ! ( eth_dev_ops ) , "::" ,
                 stringify ! ( priority_flow_ctrl_set ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const eth_dev_ops ) ) . uc_hash_table_set as *
-                const _ as usize } , 416usize , concat ! (
+                const _ as usize } , 424usize , concat ! (
                 "Alignment of field: " , stringify ! ( eth_dev_ops ) , "::" ,
                 stringify ! ( uc_hash_table_set ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const eth_dev_ops ) ) . uc_all_hash_table_set
-                as * const _ as usize } , 424usize , concat ! (
+                as * const _ as usize } , 432usize , concat ! (
                 "Alignment of field: " , stringify ! ( eth_dev_ops ) , "::" ,
                 stringify ! ( uc_all_hash_table_set ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const eth_dev_ops ) ) . mirror_rule_set as *
-                const _ as usize } , 432usize , concat ! (
+                const _ as usize } , 440usize , concat ! (
                 "Alignment of field: " , stringify ! ( eth_dev_ops ) , "::" ,
                 stringify ! ( mirror_rule_set ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const eth_dev_ops ) ) . mirror_rule_reset as *
-                const _ as usize } , 440usize , concat ! (
+                const _ as usize } , 448usize , concat ! (
                 "Alignment of field: " , stringify ! ( eth_dev_ops ) , "::" ,
                 stringify ! ( mirror_rule_reset ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const eth_dev_ops ) ) . udp_tunnel_port_add as
-                * const _ as usize } , 448usize , concat ! (
+                * const _ as usize } , 456usize , concat ! (
                 "Alignment of field: " , stringify ! ( eth_dev_ops ) , "::" ,
                 stringify ! ( udp_tunnel_port_add ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const eth_dev_ops ) ) . udp_tunnel_port_del as
-                * const _ as usize } , 456usize , concat ! (
+                * const _ as usize } , 464usize , concat ! (
                 "Alignment of field: " , stringify ! ( eth_dev_ops ) , "::" ,
                 stringify ! ( udp_tunnel_port_del ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const eth_dev_ops ) ) . l2_tunnel_eth_type_conf
-                as * const _ as usize } , 464usize , concat ! (
+                as * const _ as usize } , 472usize , concat ! (
                 "Alignment of field: " , stringify ! ( eth_dev_ops ) , "::" ,
                 stringify ! ( l2_tunnel_eth_type_conf ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const eth_dev_ops ) ) . l2_tunnel_offload_set
-                as * const _ as usize } , 472usize , concat ! (
+                as * const _ as usize } , 480usize , concat ! (
                 "Alignment of field: " , stringify ! ( eth_dev_ops ) , "::" ,
                 stringify ! ( l2_tunnel_offload_set ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const eth_dev_ops ) ) . set_queue_rate_limit as
-                * const _ as usize } , 480usize , concat ! (
+                * const _ as usize } , 488usize , concat ! (
                 "Alignment of field: " , stringify ! ( eth_dev_ops ) , "::" ,
                 stringify ! ( set_queue_rate_limit ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const eth_dev_ops ) ) . rss_hash_update as *
-                const _ as usize } , 488usize , concat ! (
+                const _ as usize } , 496usize , concat ! (
                 "Alignment of field: " , stringify ! ( eth_dev_ops ) , "::" ,
                 stringify ! ( rss_hash_update ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const eth_dev_ops ) ) . rss_hash_conf_get as *
-                const _ as usize } , 496usize , concat ! (
+                const _ as usize } , 504usize , concat ! (
                 "Alignment of field: " , stringify ! ( eth_dev_ops ) , "::" ,
                 stringify ! ( rss_hash_conf_get ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const eth_dev_ops ) ) . reta_update as * const
-                _ as usize } , 504usize , concat ! (
+                _ as usize } , 512usize , concat ! (
                 "Alignment of field: " , stringify ! ( eth_dev_ops ) , "::" ,
                 stringify ! ( reta_update ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const eth_dev_ops ) ) . reta_query as * const _
-                as usize } , 512usize , concat ! (
+                as usize } , 520usize , concat ! (
                 "Alignment of field: " , stringify ! ( eth_dev_ops ) , "::" ,
                 stringify ! ( reta_query ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const eth_dev_ops ) ) . get_reg as * const _ as
-                usize } , 520usize , concat ! (
+                usize } , 528usize , concat ! (
                 "Alignment of field: " , stringify ! ( eth_dev_ops ) , "::" ,
                 stringify ! ( get_reg ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const eth_dev_ops ) ) . get_eeprom_length as *
-                const _ as usize } , 528usize , concat ! (
+                const _ as usize } , 536usize , concat ! (
                 "Alignment of field: " , stringify ! ( eth_dev_ops ) , "::" ,
                 stringify ! ( get_eeprom_length ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const eth_dev_ops ) ) . get_eeprom as * const _
-                as usize } , 536usize , concat ! (
+                as usize } , 544usize , concat ! (
                 "Alignment of field: " , stringify ! ( eth_dev_ops ) , "::" ,
                 stringify ! ( get_eeprom ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const eth_dev_ops ) ) . set_eeprom as * const _
-                as usize } , 544usize , concat ! (
+                as usize } , 552usize , concat ! (
                 "Alignment of field: " , stringify ! ( eth_dev_ops ) , "::" ,
                 stringify ! ( set_eeprom ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const eth_dev_ops ) ) . filter_ctrl as * const
-                _ as usize } , 552usize , concat ! (
+                _ as usize } , 560usize , concat ! (
                 "Alignment of field: " , stringify ! ( eth_dev_ops ) , "::" ,
                 stringify ! ( filter_ctrl ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const eth_dev_ops ) ) . get_dcb_info as * const
-                _ as usize } , 560usize , concat ! (
+                _ as usize } , 568usize , concat ! (
                 "Alignment of field: " , stringify ! ( eth_dev_ops ) , "::" ,
                 stringify ! ( get_dcb_info ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const eth_dev_ops ) ) . timesync_enable as *
-                const _ as usize } , 568usize , concat ! (
+                const _ as usize } , 576usize , concat ! (
                 "Alignment of field: " , stringify ! ( eth_dev_ops ) , "::" ,
                 stringify ! ( timesync_enable ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const eth_dev_ops ) ) . timesync_disable as *
-                const _ as usize } , 576usize , concat ! (
+                const _ as usize } , 584usize , concat ! (
                 "Alignment of field: " , stringify ! ( eth_dev_ops ) , "::" ,
                 stringify ! ( timesync_disable ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const eth_dev_ops ) ) .
-                timesync_read_rx_timestamp as * const _ as usize } , 584usize
+                timesync_read_rx_timestamp as * const _ as usize } , 592usize
                 , concat ! (
                 "Alignment of field: " , stringify ! ( eth_dev_ops ) , "::" ,
                 stringify ! ( timesync_read_rx_timestamp ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const eth_dev_ops ) ) .
-                timesync_read_tx_timestamp as * const _ as usize } , 592usize
+                timesync_read_tx_timestamp as * const _ as usize } , 600usize
                 , concat ! (
                 "Alignment of field: " , stringify ! ( eth_dev_ops ) , "::" ,
                 stringify ! ( timesync_read_tx_timestamp ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const eth_dev_ops ) ) . timesync_adjust_time as
-                * const _ as usize } , 600usize , concat ! (
+                * const _ as usize } , 608usize , concat ! (
                 "Alignment of field: " , stringify ! ( eth_dev_ops ) , "::" ,
                 stringify ! ( timesync_adjust_time ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const eth_dev_ops ) ) . timesync_read_time as *
-                const _ as usize } , 608usize , concat ! (
+                const _ as usize } , 616usize , concat ! (
                 "Alignment of field: " , stringify ! ( eth_dev_ops ) , "::" ,
                 stringify ! ( timesync_read_time ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const eth_dev_ops ) ) . timesync_write_time as
-                * const _ as usize } , 616usize , concat ! (
+                * const _ as usize } , 624usize , concat ! (
                 "Alignment of field: " , stringify ! ( eth_dev_ops ) , "::" ,
                 stringify ! ( timesync_write_time ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const eth_dev_ops ) ) . xstats_get_by_id as *
-                const _ as usize } , 624usize , concat ! (
+                const _ as usize } , 632usize , concat ! (
                 "Alignment of field: " , stringify ! ( eth_dev_ops ) , "::" ,
                 stringify ! ( xstats_get_by_id ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const eth_dev_ops ) ) . xstats_get_names_by_id
-                as * const _ as usize } , 632usize , concat ! (
+                as * const _ as usize } , 640usize , concat ! (
                 "Alignment of field: " , stringify ! ( eth_dev_ops ) , "::" ,
                 stringify ! ( xstats_get_names_by_id ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const eth_dev_ops ) ) . tm_ops_get as * const _
-                as usize } , 640usize , concat ! (
+                as usize } , 648usize , concat ! (
                 "Alignment of field: " , stringify ! ( eth_dev_ops ) , "::" ,
                 stringify ! ( tm_ops_get ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const eth_dev_ops ) ) . mtr_ops_get as * const
+                _ as usize } , 656usize , concat ! (
+                "Alignment of field: " , stringify ! ( eth_dev_ops ) , "::" ,
+                stringify ! ( mtr_ops_get ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const eth_dev_ops ) ) . pool_ops_supported as *
+                const _ as usize } , 664usize , concat ! (
+                "Alignment of field: " , stringify ! ( eth_dev_ops ) , "::" ,
+                stringify ! ( pool_ops_supported ) ));
 }
 impl Clone for eth_dev_ops {
     fn clone(&self) -> Self { *self }
@@ -28119,7 +28682,7 @@ impl Clone for eth_dev_ops {
 /// @return
 /// The number of packets returned to the user.
 pub type rte_rx_callback_fn =
-    ::std::option::Option<unsafe extern "C" fn(port: u8, queue: u16,
+    ::std::option::Option<unsafe extern "C" fn(port: u16, queue: u16,
                                                pkts: *mut *mut rte_mbuf,
                                                nb_pkts: u16, max_pkts: u16,
                                                user_param:
@@ -28144,7 +28707,7 @@ pub type rte_rx_callback_fn =
 /// @return
 /// The number of packets to be written to the NIC.
 pub type rte_tx_callback_fn =
-    ::std::option::Option<unsafe extern "C" fn(port: u8, queue: u16,
+    ::std::option::Option<unsafe extern "C" fn(port: u16, queue: u16,
                                                pkts: *mut *mut rte_mbuf,
                                                nb_pkts: u16,
                                                user_param:
@@ -28228,6 +28791,10 @@ pub enum rte_eth_dev_state {
     RTE_ETH_DEV_ATTACHED = 1,
     RTE_ETH_DEV_DEFERRED = 2,
 }
+extern "C" {
+    pub fn rte_eth_dev_get_sec_ctx(port_id: u8)
+     -> *mut ::std::os::raw::c_void;
+}
 #[repr(C)]
 #[derive(Debug, Copy)]
 pub struct rte_eth_dev_sriov {
@@ -28279,7 +28846,7 @@ impl Clone for rte_eth_dev_sriov {
 #[derive(Copy)]
 pub struct rte_eth_dev_data {
     /// < Unique identifier name
-    pub name: [::std::os::raw::c_char; 32usize],
+    pub name: [::std::os::raw::c_char; 64usize],
     /// < Array of pointers to RX queues.
     pub rx_queues: *mut *mut ::std::os::raw::c_void,
     /// < Array of pointers to TX queues.
@@ -28306,7 +28873,7 @@ pub struct rte_eth_dev_data {
     /// bitmap array of associating Ethernet MAC addresses to pools
     pub hash_mac_addrs: *mut ether_addr,
     /// < Device [external] port identifier.
-    pub port_id: u8,
+    pub port_id: u16,
     pub _bitfield_1: u8,
     pub rx_queue_state: [u8; 1024usize],
     /// Queues state: STARTED(1) / STOPPED(0)
@@ -28321,7 +28888,7 @@ pub struct rte_eth_dev_data {
 }
 #[test]
 fn bindgen_test_layout_rte_eth_dev_data() {
-    assert_eq!(::std::mem::size_of::<rte_eth_dev_data>() , 6656usize , concat
+    assert_eq!(::std::mem::size_of::<rte_eth_dev_data>() , 6728usize , concat
                ! ( "Size of: " , stringify ! ( rte_eth_dev_data ) ));
     assert_eq! (::std::mem::align_of::<rte_eth_dev_data>() , 8usize , concat !
                 ( "Alignment of " , stringify ! ( rte_eth_dev_data ) ));
@@ -28332,108 +28899,108 @@ fn bindgen_test_layout_rte_eth_dev_data() {
                 "::" , stringify ! ( name ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const rte_eth_dev_data ) ) . rx_queues as *
-                const _ as usize } , 32usize , concat ! (
+                const _ as usize } , 64usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_eth_dev_data ) ,
                 "::" , stringify ! ( rx_queues ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const rte_eth_dev_data ) ) . tx_queues as *
-                const _ as usize } , 40usize , concat ! (
+                const _ as usize } , 72usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_eth_dev_data ) ,
                 "::" , stringify ! ( tx_queues ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const rte_eth_dev_data ) ) . nb_rx_queues as *
-                const _ as usize } , 48usize , concat ! (
+                const _ as usize } , 80usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_eth_dev_data ) ,
                 "::" , stringify ! ( nb_rx_queues ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const rte_eth_dev_data ) ) . nb_tx_queues as *
-                const _ as usize } , 50usize , concat ! (
+                const _ as usize } , 82usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_eth_dev_data ) ,
                 "::" , stringify ! ( nb_tx_queues ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const rte_eth_dev_data ) ) . sriov as * const _
-                as usize } , 52usize , concat ! (
+                as usize } , 84usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_eth_dev_data ) ,
                 "::" , stringify ! ( sriov ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const rte_eth_dev_data ) ) . dev_private as *
-                const _ as usize } , 64usize , concat ! (
+                const _ as usize } , 96usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_eth_dev_data ) ,
                 "::" , stringify ! ( dev_private ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const rte_eth_dev_data ) ) . dev_link as *
-                const _ as usize } , 72usize , concat ! (
+                const _ as usize } , 104usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_eth_dev_data ) ,
                 "::" , stringify ! ( dev_link ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const rte_eth_dev_data ) ) . dev_conf as *
-                const _ as usize } , 80usize , concat ! (
+                const _ as usize } , 112usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_eth_dev_data ) ,
                 "::" , stringify ! ( dev_conf ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const rte_eth_dev_data ) ) . mtu as * const _
-                as usize } , 3024usize , concat ! (
+                as usize } , 3096usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_eth_dev_data ) ,
                 "::" , stringify ! ( mtu ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const rte_eth_dev_data ) ) . min_rx_buf_size as
-                * const _ as usize } , 3028usize , concat ! (
+                * const _ as usize } , 3100usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_eth_dev_data ) ,
                 "::" , stringify ! ( min_rx_buf_size ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const rte_eth_dev_data ) ) .
-                rx_mbuf_alloc_failed as * const _ as usize } , 3032usize ,
+                rx_mbuf_alloc_failed as * const _ as usize } , 3104usize ,
                 concat ! (
                 "Alignment of field: " , stringify ! ( rte_eth_dev_data ) ,
                 "::" , stringify ! ( rx_mbuf_alloc_failed ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const rte_eth_dev_data ) ) . mac_addrs as *
-                const _ as usize } , 3040usize , concat ! (
+                const _ as usize } , 3112usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_eth_dev_data ) ,
                 "::" , stringify ! ( mac_addrs ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const rte_eth_dev_data ) ) . mac_pool_sel as *
-                const _ as usize } , 3048usize , concat ! (
+                const _ as usize } , 3120usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_eth_dev_data ) ,
                 "::" , stringify ! ( mac_pool_sel ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const rte_eth_dev_data ) ) . hash_mac_addrs as
-                * const _ as usize } , 4072usize , concat ! (
+                * const _ as usize } , 4144usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_eth_dev_data ) ,
                 "::" , stringify ! ( hash_mac_addrs ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const rte_eth_dev_data ) ) . port_id as * const
-                _ as usize } , 4080usize , concat ! (
+                _ as usize } , 4152usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_eth_dev_data ) ,
                 "::" , stringify ! ( port_id ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const rte_eth_dev_data ) ) . rx_queue_state as
-                * const _ as usize } , 4082usize , concat ! (
+                * const _ as usize } , 4155usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_eth_dev_data ) ,
                 "::" , stringify ! ( rx_queue_state ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const rte_eth_dev_data ) ) . tx_queue_state as
-                * const _ as usize } , 5106usize , concat ! (
+                * const _ as usize } , 5179usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_eth_dev_data ) ,
                 "::" , stringify ! ( tx_queue_state ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const rte_eth_dev_data ) ) . dev_flags as *
-                const _ as usize } , 6132usize , concat ! (
+                const _ as usize } , 6204usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_eth_dev_data ) ,
                 "::" , stringify ! ( dev_flags ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const rte_eth_dev_data ) ) . kdrv as * const _
-                as usize } , 6136usize , concat ! (
+                as usize } , 6208usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_eth_dev_data ) ,
                 "::" , stringify ! ( kdrv ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const rte_eth_dev_data ) ) . numa_node as *
-                const _ as usize } , 6140usize , concat ! (
+                const _ as usize } , 6212usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_eth_dev_data ) ,
                 "::" , stringify ! ( numa_node ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const rte_eth_dev_data ) ) . vlan_filter_conf
-                as * const _ as usize } , 6144usize , concat ! (
+                as * const _ as usize } , 6216usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_eth_dev_data ) ,
                 "::" , stringify ! ( vlan_filter_conf ) ));
 }
@@ -28650,7 +29217,7 @@ extern "C" {
 /// The id of the next possible valid port.
 /// @return
 /// Next valid port id, RTE_MAX_ETHPORTS if there is none.
-    pub fn rte_eth_find_next(port_id: u8) -> u8;
+    pub fn rte_eth_find_next(port_id: u16) -> u16;
 }
 extern "C" {
     /// Get the total number of Ethernet devices that have been successfully
@@ -28663,7 +29230,7 @@ extern "C" {
 ///
 /// @return
 /// - The total number of usable Ethernet devices.
-    pub fn rte_eth_dev_count() -> u8;
+    pub fn rte_eth_dev_count() -> u16;
 }
 extern "C" {
     /// @internal
@@ -28724,7 +29291,7 @@ extern "C" {
 /// @return
 /// 0 on success and port_id is filled, negative on error
     pub fn rte_eth_dev_attach(devargs: *const ::std::os::raw::c_char,
-                              port_id: *mut u8) -> ::std::os::raw::c_int;
+                              port_id: *mut u16) -> ::std::os::raw::c_int;
 }
 extern "C" {
     /// Detach a Ethernet device specified by port identifier.
@@ -28738,7 +29305,7 @@ extern "C" {
 /// This buffer must be at least RTE_DEV_NAME_MAX_LEN long.
 /// @return
 /// 0 on success and devname is filled, negative on error
-    pub fn rte_eth_dev_detach(port_id: u8,
+    pub fn rte_eth_dev_detach(port_id: u16,
                               devname: *mut ::std::os::raw::c_char)
      -> ::std::os::raw::c_int;
 }
@@ -28774,6 +29341,9 @@ extern "C" {
 /// each statically configurable offload hardware feature provided by
 /// Ethernet devices, such as IP checksum or VLAN tag stripping for
 /// example.
+/// The Rx offload bitfield API is obsolete and will be deprecated.
+/// Applications should set the ignore_bitfield_offloads bit on *rxmode*
+/// structure and use offloads field to set per-port offloads instead.
 /// - the Receive Side Scaling (RSS) configuration when using multiple RX
 /// queues per port.
 ///
@@ -28783,7 +29353,7 @@ extern "C" {
 /// @return
 /// - 0: Success, device configured.
 /// - <0: Error code returned by the driver configuration function.
-    pub fn rte_eth_dev_configure(port_id: u8, nb_rx_queue: u16,
+    pub fn rte_eth_dev_configure(port_id: u16, nb_rx_queue: u16,
                                  nb_tx_queue: u16,
                                  eth_conf: *const rte_eth_conf)
      -> ::std::os::raw::c_int;
@@ -28827,6 +29397,8 @@ extern "C" {
 /// The *rx_conf* structure contains an *rx_thresh* structure with the values
 /// of the Prefetch, Host, and Write-Back threshold registers of the receive
 /// ring.
+/// In addition it contains the hardware offloads features to activate using
+/// the DEV_RX_OFFLOAD_* flags.
 /// @param mb_pool
 /// The pointer to the memory pool from which to allocate *rte_mbuf* network
 /// memory buffers to populate each descriptor of the receive ring.
@@ -28838,7 +29410,7 @@ extern "C" {
 /// - -ENOMEM: Unable to allocate the receive ring descriptors or to
 /// allocate network memory buffers from the memory pool when
 /// initializing receive descriptors.
-    pub fn rte_eth_rx_queue_setup(port_id: u8, rx_queue_id: u16,
+    pub fn rte_eth_rx_queue_setup(port_id: u16, rx_queue_id: u16,
                                   nb_rx_desc: u16,
                                   socket_id: ::std::os::raw::c_uint,
                                   rx_conf: *const rte_eth_rxconf,
@@ -28881,13 +29453,18 @@ extern "C" {
 /// - The *txq_flags* member contains flags to pass to the TX queue setup
 /// function to configure the behavior of the TX queue. This should be set
 /// to 0 if no special configuration is required.
+/// This API is obsolete and will be deprecated. Applications
+/// should set it to ETH_TXQ_FLAGS_IGNORE and use
+/// the offloads field below.
+/// - The *offloads* member contains Tx offloads to be enabled.
+/// Offloads which are not set cannot be used on the datapath.
 ///
 /// Note that setting *tx_free_thresh* or *tx_rs_thresh* value to 0 forces
 /// the transmit function to use default values.
 /// @return
 /// - 0: Success, the transmit queue is correctly set up.
 /// - -ENOMEM: Unable to allocate the transmit ring descriptors.
-    pub fn rte_eth_tx_queue_setup(port_id: u8, tx_queue_id: u16,
+    pub fn rte_eth_tx_queue_setup(port_id: u16, tx_queue_id: u16,
                                   nb_tx_desc: u16,
                                   socket_id: ::std::os::raw::c_uint,
                                   tx_conf: *const rte_eth_txconf)
@@ -28902,7 +29479,7 @@ extern "C" {
 /// The NUMA socket id to which the Ethernet device is connected or
 /// a default of zero if the socket could not be determined.
 /// -1 is returned is the port_id value is out of range.
-    pub fn rte_eth_dev_socket_id(port_id: u8) -> ::std::os::raw::c_int;
+    pub fn rte_eth_dev_socket_id(port_id: u16) -> ::std::os::raw::c_int;
 }
 extern "C" {
     /// Check if port_id of device is attached
@@ -28912,7 +29489,7 @@ extern "C" {
 /// @return
 /// - 0 if port is out of range or not attached
 /// - 1 if device is attached
-    pub fn rte_eth_dev_is_valid_port(port_id: u8) -> ::std::os::raw::c_int;
+    pub fn rte_eth_dev_is_valid_port(port_id: u16) -> ::std::os::raw::c_int;
 }
 extern "C" {
     /// Start specified RX queue of a port. It is used when rx_deferred_start
@@ -28928,7 +29505,7 @@ extern "C" {
 /// - 0: Success, the receive queue is started.
 /// - -EINVAL: The port_id or the queue_id out of range.
 /// - -ENOTSUP: The function not supported in PMD driver.
-    pub fn rte_eth_dev_rx_queue_start(port_id: u8, rx_queue_id: u16)
+    pub fn rte_eth_dev_rx_queue_start(port_id: u16, rx_queue_id: u16)
      -> ::std::os::raw::c_int;
 }
 extern "C" {
@@ -28944,7 +29521,7 @@ extern "C" {
 /// - 0: Success, the receive queue is stopped.
 /// - -EINVAL: The port_id or the queue_id out of range.
 /// - -ENOTSUP: The function not supported in PMD driver.
-    pub fn rte_eth_dev_rx_queue_stop(port_id: u8, rx_queue_id: u16)
+    pub fn rte_eth_dev_rx_queue_stop(port_id: u16, rx_queue_id: u16)
      -> ::std::os::raw::c_int;
 }
 extern "C" {
@@ -28961,7 +29538,7 @@ extern "C" {
 /// - 0: Success, the transmit queue is started.
 /// - -EINVAL: The port_id or the queue_id out of range.
 /// - -ENOTSUP: The function not supported in PMD driver.
-    pub fn rte_eth_dev_tx_queue_start(port_id: u8, tx_queue_id: u16)
+    pub fn rte_eth_dev_tx_queue_start(port_id: u16, tx_queue_id: u16)
      -> ::std::os::raw::c_int;
 }
 extern "C" {
@@ -28977,7 +29554,7 @@ extern "C" {
 /// - 0: Success, the transmit queue is stopped.
 /// - -EINVAL: The port_id or the queue_id out of range.
 /// - -ENOTSUP: The function not supported in PMD driver.
-    pub fn rte_eth_dev_tx_queue_stop(port_id: u8, tx_queue_id: u16)
+    pub fn rte_eth_dev_tx_queue_stop(port_id: u16, tx_queue_id: u16)
      -> ::std::os::raw::c_int;
 }
 extern "C" {
@@ -28994,7 +29571,7 @@ extern "C" {
 /// @return
 /// - 0: Success, Ethernet device started.
 /// - <0: Error code of the driver device start function.
-    pub fn rte_eth_dev_start(port_id: u8) -> ::std::os::raw::c_int;
+    pub fn rte_eth_dev_start(port_id: u16) -> ::std::os::raw::c_int;
 }
 extern "C" {
     /// Stop an Ethernet device. The device can be restarted with a call to
@@ -29002,7 +29579,7 @@ extern "C" {
 ///
 /// @param port_id
 /// The port identifier of the Ethernet device.
-    pub fn rte_eth_dev_stop(port_id: u8);
+    pub fn rte_eth_dev_stop(port_id: u16);
 }
 extern "C" {
     /// Link up an Ethernet device.
@@ -29015,7 +29592,7 @@ extern "C" {
 /// @return
 /// - 0: Success, Ethernet device linked up.
 /// - <0: Error code of the driver device link up function.
-    pub fn rte_eth_dev_set_link_up(port_id: u8) -> ::std::os::raw::c_int;
+    pub fn rte_eth_dev_set_link_up(port_id: u16) -> ::std::os::raw::c_int;
 }
 extern "C" {
     /// Link down an Ethernet device.
@@ -29025,7 +29602,7 @@ extern "C" {
 ///
 /// @param port_id
 /// The port identifier of the Ethernet device.
-    pub fn rte_eth_dev_set_link_down(port_id: u8) -> ::std::os::raw::c_int;
+    pub fn rte_eth_dev_set_link_down(port_id: u16) -> ::std::os::raw::c_int;
 }
 extern "C" {
     /// Close a stopped Ethernet device. The device cannot be restarted!
@@ -29034,21 +29611,59 @@ extern "C" {
 ///
 /// @param port_id
 /// The port identifier of the Ethernet device.
-    pub fn rte_eth_dev_close(port_id: u8);
+    pub fn rte_eth_dev_close(port_id: u16);
+}
+extern "C" {
+    /// Reset a Ethernet device and keep its port id.
+///
+/// When a port has to be reset passively, the DPDK application can invoke
+/// this function. For example when a PF is reset, all its VFs should also
+/// be reset. Normally a DPDK application can invoke this function when
+/// RTE_ETH_EVENT_INTR_RESET event is detected, but can also use it to start
+/// a port reset in other circumstances.
+///
+/// When this function is called, it first stops the port and then calls the
+/// PMD specific dev_uninit( ) and dev_init( ) to return the port to initial
+/// state, in which no Tx and Rx queues are setup, as if the port has been
+/// reset and not started. The port keeps the port id it had before the
+/// function call.
+///
+/// After calling rte_eth_dev_reset( ), the application should use
+/// rte_eth_dev_configure( ), rte_eth_rx_queue_setup( ),
+/// rte_eth_tx_queue_setup( ), and rte_eth_dev_start( )
+/// to reconfigure the device as appropriate.
+///
+/// Note: To avoid unexpected behavior, the application should stop calling
+/// Tx and Rx functions before calling rte_eth_dev_reset( ). For thread
+/// safety, all these controlling functions should be called from the same
+/// thread.
+///
+/// @param port_id
+/// The port identifier of the Ethernet device.
+///
+/// @return
+/// - (0) if successful.
+/// - (-EINVAL) if port identifier is invalid.
+/// - (-ENOTSUP) if hardware doesn't support this function.
+/// - (-EPERM) if not ran from the primary process.
+/// - (-EIO) if re-initialisation failed.
+/// - (-ENOMEM) if the reset failed due to OOM.
+/// - (-EAGAIN) if the reset temporarily failed and should be retried later.
+    pub fn rte_eth_dev_reset(port_id: u16) -> ::std::os::raw::c_int;
 }
 extern "C" {
     /// Enable receipt in promiscuous mode for an Ethernet device.
 ///
 /// @param port_id
 /// The port identifier of the Ethernet device.
-    pub fn rte_eth_promiscuous_enable(port_id: u8);
+    pub fn rte_eth_promiscuous_enable(port_id: u16);
 }
 extern "C" {
     /// Disable receipt in promiscuous mode for an Ethernet device.
 ///
 /// @param port_id
 /// The port identifier of the Ethernet device.
-    pub fn rte_eth_promiscuous_disable(port_id: u8);
+    pub fn rte_eth_promiscuous_disable(port_id: u16);
 }
 extern "C" {
     /// Return the value of promiscuous mode for an Ethernet device.
@@ -29059,21 +29674,21 @@ extern "C" {
 /// - (1) if promiscuous is enabled
 /// - (0) if promiscuous is disabled.
 /// - (-1) on error
-    pub fn rte_eth_promiscuous_get(port_id: u8) -> ::std::os::raw::c_int;
+    pub fn rte_eth_promiscuous_get(port_id: u16) -> ::std::os::raw::c_int;
 }
 extern "C" {
     /// Enable the receipt of any multicast frame by an Ethernet device.
 ///
 /// @param port_id
 /// The port identifier of the Ethernet device.
-    pub fn rte_eth_allmulticast_enable(port_id: u8);
+    pub fn rte_eth_allmulticast_enable(port_id: u16);
 }
 extern "C" {
     /// Disable the receipt of all multicast frames by an Ethernet device.
 ///
 /// @param port_id
 /// The port identifier of the Ethernet device.
-    pub fn rte_eth_allmulticast_disable(port_id: u8);
+    pub fn rte_eth_allmulticast_disable(port_id: u16);
 }
 extern "C" {
     /// Return the value of allmulticast mode for an Ethernet device.
@@ -29084,7 +29699,7 @@ extern "C" {
 /// - (1) if allmulticast is enabled
 /// - (0) if allmulticast is disabled.
 /// - (-1) on error
-    pub fn rte_eth_allmulticast_get(port_id: u8) -> ::std::os::raw::c_int;
+    pub fn rte_eth_allmulticast_get(port_id: u16) -> ::std::os::raw::c_int;
 }
 extern "C" {
     /// Retrieve the status (ON/OFF), the speed (in Mbps) and the mode (HALF-DUPLEX
@@ -29096,7 +29711,7 @@ extern "C" {
 /// @param link
 /// A pointer to an *rte_eth_link* structure to be filled with
 /// the status, the speed and the mode of the Ethernet device link.
-    pub fn rte_eth_link_get(port_id: u8, link: *mut rte_eth_link);
+    pub fn rte_eth_link_get(port_id: u16, link: *mut rte_eth_link);
 }
 extern "C" {
     /// Retrieve the status (ON/OFF), the speed (in Mbps) and the mode (HALF-DUPLEX
@@ -29108,7 +29723,7 @@ extern "C" {
 /// @param link
 /// A pointer to an *rte_eth_link* structure to be filled with
 /// the status, the speed and the mode of the Ethernet device link.
-    pub fn rte_eth_link_get_nowait(port_id: u8, link: *mut rte_eth_link);
+    pub fn rte_eth_link_get_nowait(port_id: u16, link: *mut rte_eth_link);
 }
 extern "C" {
     /// Retrieve the general I/O statistics of an Ethernet device.
@@ -29126,7 +29741,7 @@ extern "C" {
 /// - *oerrors*  with the total of failed transmitted packets.
 /// @return
 /// Zero if successful. Non-zero otherwise.
-    pub fn rte_eth_stats_get(port_id: u8, stats: *mut rte_eth_stats)
+    pub fn rte_eth_stats_get(port_id: u16, stats: *mut rte_eth_stats)
      -> ::std::os::raw::c_int;
 }
 extern "C" {
@@ -29134,7 +29749,11 @@ extern "C" {
 ///
 /// @param port_id
 /// The port identifier of the Ethernet device.
-    pub fn rte_eth_stats_reset(port_id: u8);
+/// @return
+/// - (0) if device notified to reset stats.
+/// - (-ENOTSUP) if hardware doesn't support.
+/// - (-ENODEV) if *port_id* invalid.
+    pub fn rte_eth_stats_reset(port_id: u16) -> ::std::os::raw::c_int;
 }
 extern "C" {
     /// Retrieve names of extended statistics of an Ethernet device.
@@ -29155,7 +29774,7 @@ extern "C" {
 /// be given to succeed. The entries in the table are not valid and
 /// shall not be used by the caller.
 /// - A negative value on error (invalid port id).
-    pub fn rte_eth_xstats_get_names(port_id: u8,
+    pub fn rte_eth_xstats_get_names(port_id: u16,
                                     xstats_names: *mut rte_eth_xstat_name,
                                     size: ::std::os::raw::c_uint)
      -> ::std::os::raw::c_int;
@@ -29181,7 +29800,7 @@ extern "C" {
 /// be given to succeed. The entries in the table are not valid and
 /// shall not be used by the caller.
 /// - A negative value on error (invalid port id).
-    pub fn rte_eth_xstats_get(port_id: u8, xstats: *mut rte_eth_xstat,
+    pub fn rte_eth_xstats_get(port_id: u16, xstats: *mut rte_eth_xstat,
                               n: ::std::os::raw::c_uint)
      -> ::std::os::raw::c_int;
 }
@@ -29206,7 +29825,7 @@ extern "C" {
 /// be given to succeed. The entries in the table are not valid and
 /// shall not be used by the caller.
 /// - A negative value on error (invalid port id).
-    pub fn rte_eth_xstats_get_names_by_id(port_id: u8,
+    pub fn rte_eth_xstats_get_names_by_id(port_id: u16,
                                           xstats_names:
                                               *mut rte_eth_xstat_name,
                                           size: ::std::os::raw::c_uint,
@@ -29221,23 +29840,23 @@ extern "C" {
 /// @param ids
 /// A pointer to an ids array passed by application. This tells which
 /// statistics values function should retrieve. This parameter
-/// can be set to NULL if n is 0. In this case function will retrieve
+/// can be set to NULL if size is 0. In this case function will retrieve
 /// all avalible statistics.
 /// @param values
 /// A pointer to a table to be filled with device statistics values.
-/// @param n
+/// @param size
 /// The size of the ids array (number of elements).
 /// @return
-/// - A positive value lower or equal to n: success. The return value
+/// - A positive value lower or equal to size: success. The return value
 /// is the number of entries filled in the stats table.
-/// - A positive value higher than n: error, the given statistics table
+/// - A positive value higher than size: error, the given statistics table
 /// is too small. The return value corresponds to the size that should
 /// be given to succeed. The entries in the table are not valid and
 /// shall not be used by the caller.
 /// - A negative value on error (invalid port id).
-    pub fn rte_eth_xstats_get_by_id(port_id: u8, ids: *const u64,
+    pub fn rte_eth_xstats_get_by_id(port_id: u16, ids: *const u64,
                                     values: *mut u64,
-                                    n: ::std::os::raw::c_uint)
+                                    size: ::std::os::raw::c_uint)
      -> ::std::os::raw::c_int;
 }
 extern "C" {
@@ -29256,7 +29875,7 @@ extern "C" {
 /// 0 on success
 /// -ENODEV for invalid port_id,
 /// -EINVAL if the xstat_name doesn't exist in port_id
-    pub fn rte_eth_xstats_get_id_by_name(port_id: u8,
+    pub fn rte_eth_xstats_get_id_by_name(port_id: u16,
                                          xstat_name:
                                              *const ::std::os::raw::c_char,
                                          id: *mut u64)
@@ -29267,7 +29886,7 @@ extern "C" {
 ///
 /// @param port_id
 /// The port identifier of the Ethernet device.
-    pub fn rte_eth_xstats_reset(port_id: u8);
+    pub fn rte_eth_xstats_reset(port_id: u16);
 }
 extern "C" {
     /// Set a mapping for the specified transmit queue to the specified per-queue
@@ -29285,7 +29904,7 @@ extern "C" {
 /// The value must be in the range [0, RTE_MAX_ETHPORT_QUEUE_STATS_MAPS - 1].
 /// @return
 /// Zero if successful. Non-zero otherwise.
-    pub fn rte_eth_dev_set_tx_queue_stats_mapping(port_id: u8,
+    pub fn rte_eth_dev_set_tx_queue_stats_mapping(port_id: u16,
                                                   tx_queue_id: u16,
                                                   stat_idx: u8)
      -> ::std::os::raw::c_int;
@@ -29306,7 +29925,7 @@ extern "C" {
 /// The value must be in the range [0, RTE_MAX_ETHPORT_QUEUE_STATS_MAPS - 1].
 /// @return
 /// Zero if successful. Non-zero otherwise.
-    pub fn rte_eth_dev_set_rx_queue_stats_mapping(port_id: u8,
+    pub fn rte_eth_dev_set_rx_queue_stats_mapping(port_id: u16,
                                                   rx_queue_id: u16,
                                                   stat_idx: u8)
      -> ::std::os::raw::c_int;
@@ -29319,7 +29938,7 @@ extern "C" {
 /// @param mac_addr
 /// A pointer to a structure of type *ether_addr* to be filled with
 /// the Ethernet address of the Ethernet device.
-    pub fn rte_eth_macaddr_get(port_id: u8, mac_addr: *mut ether_addr);
+    pub fn rte_eth_macaddr_get(port_id: u16, mac_addr: *mut ether_addr);
 }
 extern "C" {
     /// Retrieve the contextual information of an Ethernet device.
@@ -29329,7 +29948,8 @@ extern "C" {
 /// @param dev_info
 /// A pointer to a structure of type *rte_eth_dev_info* to be filled with
 /// the contextual information of the Ethernet device.
-    pub fn rte_eth_dev_info_get(port_id: u8, dev_info: *mut rte_eth_dev_info);
+    pub fn rte_eth_dev_info_get(port_id: u16,
+                                dev_info: *mut rte_eth_dev_info);
 }
 extern "C" {
     /// Retrieve the firmware version of a device.
@@ -29348,7 +29968,7 @@ extern "C" {
 /// - (-ENODEV) if *port_id* invalid.
 /// - (>0) if *fw_size* is not enough to store firmware version, return
 /// the size of the non truncated string.
-    pub fn rte_eth_dev_fw_version_get(port_id: u8,
+    pub fn rte_eth_dev_fw_version_get(port_id: u16,
                                       fw_version: *mut ::std::os::raw::c_char,
                                       fw_size: usize)
      -> ::std::os::raw::c_int;
@@ -29390,7 +30010,7 @@ extern "C" {
 /// only num entries will be filled into the ptypes array, but the full
 /// count of supported ptypes will be returned.
 /// - (-ENODEV) if *port_id* invalid.
-    pub fn rte_eth_dev_get_supported_ptypes(port_id: u8, ptype_mask: u32,
+    pub fn rte_eth_dev_get_supported_ptypes(port_id: u16, ptype_mask: u32,
                                             ptypes: *mut u32,
                                             num: ::std::os::raw::c_int)
      -> ::std::os::raw::c_int;
@@ -29405,7 +30025,7 @@ extern "C" {
 /// @return
 /// - (0) if successful.
 /// - (-ENODEV) if *port_id* invalid.
-    pub fn rte_eth_dev_get_mtu(port_id: u8, mtu: *mut u16)
+    pub fn rte_eth_dev_get_mtu(port_id: u16, mtu: *mut u16)
      -> ::std::os::raw::c_int;
 }
 extern "C" {
@@ -29421,7 +30041,7 @@ extern "C" {
 /// - (-ENODEV) if *port_id* invalid.
 /// - (-EINVAL) if *mtu* invalid.
 /// - (-EBUSY) if operation is not allowed when the port is running
-    pub fn rte_eth_dev_set_mtu(port_id: u8, mtu: u16)
+    pub fn rte_eth_dev_set_mtu(port_id: u16, mtu: u16)
      -> ::std::os::raw::c_int;
 }
 extern "C" {
@@ -29441,7 +30061,7 @@ extern "C" {
 /// - (-ENODEV) if *port_id* invalid.
 /// - (-ENOSYS) if VLAN filtering on *port_id* disabled.
 /// - (-EINVAL) if *vlan_id* > 4095.
-    pub fn rte_eth_dev_vlan_filter(port_id: u8, vlan_id: u16,
+    pub fn rte_eth_dev_vlan_filter(port_id: u16, vlan_id: u16,
                                    on: ::std::os::raw::c_int)
      -> ::std::os::raw::c_int;
 }
@@ -29463,7 +30083,7 @@ extern "C" {
 /// - (-ENOSUP) if hardware-assisted VLAN stripping not configured.
 /// - (-ENODEV) if *port_id* invalid.
 /// - (-EINVAL) if *rx_queue_id* invalid.
-    pub fn rte_eth_dev_set_vlan_strip_on_queue(port_id: u8, rx_queue_id: u16,
+    pub fn rte_eth_dev_set_vlan_strip_on_queue(port_id: u16, rx_queue_id: u16,
                                                on: ::std::os::raw::c_int)
      -> ::std::os::raw::c_int;
 }
@@ -29482,7 +30102,7 @@ extern "C" {
 /// - (0) if successful.
 /// - (-ENOSUP) if hardware-assisted VLAN TPID setup is not supported.
 /// - (-ENODEV) if *port_id* invalid.
-    pub fn rte_eth_dev_set_vlan_ether_type(port_id: u8,
+    pub fn rte_eth_dev_set_vlan_ether_type(port_id: u16,
                                            vlan_type: rte_vlan_type,
                                            tag_type: u16)
      -> ::std::os::raw::c_int;
@@ -29506,7 +30126,7 @@ extern "C" {
 /// - (0) if successful.
 /// - (-ENOSUP) if hardware-assisted VLAN filtering not configured.
 /// - (-ENODEV) if *port_id* invalid.
-    pub fn rte_eth_dev_set_vlan_offload(port_id: u8,
+    pub fn rte_eth_dev_set_vlan_offload(port_id: u16,
                                         offload_mask: ::std::os::raw::c_int)
      -> ::std::os::raw::c_int;
 }
@@ -29521,7 +30141,8 @@ extern "C" {
 /// ETH_VLAN_FILTER_OFFLOAD
 /// ETH_VLAN_EXTEND_OFFLOAD
 /// - (-ENODEV) if *port_id* invalid.
-    pub fn rte_eth_dev_get_vlan_offload(port_id: u8) -> ::std::os::raw::c_int;
+    pub fn rte_eth_dev_get_vlan_offload(port_id: u16)
+     -> ::std::os::raw::c_int;
 }
 extern "C" {
     /// Set port based TX VLAN insertion on or off.
@@ -29536,7 +30157,7 @@ extern "C" {
 /// @return
 /// - (0) if successful.
 /// - negative if failed.
-    pub fn rte_eth_dev_set_vlan_pvid(port_id: u8, pvid: u16,
+    pub fn rte_eth_dev_set_vlan_pvid(port_id: u16, pvid: u16,
                                      on: ::std::os::raw::c_int)
      -> ::std::os::raw::c_int;
 }
@@ -29685,7 +30306,7 @@ extern "C" {
 /// Success: >= 0
 /// 0-n: Number of packets freed. More packets may still remain in ring that
 /// are in use.
-    pub fn rte_eth_tx_done_cleanup(port_id: u8, queue_id: u16, free_cnt: u32)
+    pub fn rte_eth_tx_done_cleanup(port_id: u16, queue_id: u16, free_cnt: u32)
      -> ::std::os::raw::c_int;
 }
 #[repr(u32)]
@@ -29702,7 +30323,7 @@ pub enum rte_eth_event_type {
     RTE_ETH_EVENT_MAX = 7,
 }
 pub type rte_eth_dev_cb_fn =
-    ::std::option::Option<unsafe extern "C" fn(port_id: u8,
+    ::std::option::Option<unsafe extern "C" fn(port_id: u16,
                                                event: rte_eth_event_type,
                                                cb_arg:
                                                    *mut ::std::os::raw::c_void,
@@ -29724,7 +30345,7 @@ extern "C" {
 /// @return
 /// - On success, zero.
 /// - On failure, a negative value.
-    pub fn rte_eth_dev_callback_register(port_id: u8,
+    pub fn rte_eth_dev_callback_register(port_id: u16,
                                          event: rte_eth_event_type,
                                          cb_fn: rte_eth_dev_cb_fn,
                                          cb_arg: *mut ::std::os::raw::c_void)
@@ -29746,7 +30367,7 @@ extern "C" {
 /// @return
 /// - On success, zero.
 /// - On failure, a negative value.
-    pub fn rte_eth_dev_callback_unregister(port_id: u8,
+    pub fn rte_eth_dev_callback_unregister(port_id: u16,
                                            event: rte_eth_event_type,
                                            cb_fn: rte_eth_dev_cb_fn,
                                            cb_arg:
@@ -29797,7 +30418,7 @@ extern "C" {
 /// - (-ENOTSUP) if underlying hardware OR driver doesn't support
 /// that operation.
 /// - (-ENODEV) if *port_id* invalid.
-    pub fn rte_eth_dev_rx_intr_enable(port_id: u8, queue_id: u16)
+    pub fn rte_eth_dev_rx_intr_enable(port_id: u16, queue_id: u16)
      -> ::std::os::raw::c_int;
 }
 extern "C" {
@@ -29818,7 +30439,7 @@ extern "C" {
 /// - (-ENOTSUP) if underlying hardware OR driver doesn't support
 /// that operation.
 /// - (-ENODEV) if *port_id* invalid.
-    pub fn rte_eth_dev_rx_intr_disable(port_id: u8, queue_id: u16)
+    pub fn rte_eth_dev_rx_intr_disable(port_id: u16, queue_id: u16)
      -> ::std::os::raw::c_int;
 }
 extern "C" {
@@ -29837,7 +30458,7 @@ extern "C" {
 /// @return
 /// - On success, zero.
 /// - On failure, a negative value.
-    pub fn rte_eth_dev_rx_intr_ctl(port_id: u8, epfd: ::std::os::raw::c_int,
+    pub fn rte_eth_dev_rx_intr_ctl(port_id: u16, epfd: ::std::os::raw::c_int,
                                    op: ::std::os::raw::c_int,
                                    data: *mut ::std::os::raw::c_void)
      -> ::std::os::raw::c_int;
@@ -29862,7 +30483,7 @@ extern "C" {
 /// @return
 /// - On success, zero.
 /// - On failure, a negative value.
-    pub fn rte_eth_dev_rx_intr_ctl_q(port_id: u8, queue_id: u16,
+    pub fn rte_eth_dev_rx_intr_ctl_q(port_id: u16, queue_id: u16,
                                      epfd: ::std::os::raw::c_int,
                                      op: ::std::os::raw::c_int,
                                      data: *mut ::std::os::raw::c_void)
@@ -29879,7 +30500,7 @@ extern "C" {
 /// - (-ENOTSUP) if underlying hardware OR driver doesn't support
 /// that operation.
 /// - (-ENODEV) if *port_id* invalid.
-    pub fn rte_eth_led_on(port_id: u8) -> ::std::os::raw::c_int;
+    pub fn rte_eth_led_on(port_id: u16) -> ::std::os::raw::c_int;
 }
 extern "C" {
     /// Turn off the LED on the Ethernet device.
@@ -29892,7 +30513,7 @@ extern "C" {
 /// - (-ENOTSUP) if underlying hardware OR driver doesn't support
 /// that operation.
 /// - (-ENODEV) if *port_id* invalid.
-    pub fn rte_eth_led_off(port_id: u8) -> ::std::os::raw::c_int;
+    pub fn rte_eth_led_off(port_id: u16) -> ::std::os::raw::c_int;
 }
 extern "C" {
     /// Get current status of the Ethernet link flow control for Ethernet device
@@ -29905,7 +30526,7 @@ extern "C" {
 /// - (0) if successful.
 /// - (-ENOTSUP) if hardware doesn't support flow control.
 /// - (-ENODEV)  if *port_id* invalid.
-    pub fn rte_eth_dev_flow_ctrl_get(port_id: u8,
+    pub fn rte_eth_dev_flow_ctrl_get(port_id: u16,
                                      fc_conf: *mut rte_eth_fc_conf)
      -> ::std::os::raw::c_int;
 }
@@ -29922,7 +30543,7 @@ extern "C" {
 /// - (-ENODEV)  if *port_id* invalid.
 /// - (-EINVAL)  if bad parameter
 /// - (-EIO)     if flow control setup failure
-    pub fn rte_eth_dev_flow_ctrl_set(port_id: u8,
+    pub fn rte_eth_dev_flow_ctrl_set(port_id: u16,
                                      fc_conf: *mut rte_eth_fc_conf)
      -> ::std::os::raw::c_int;
 }
@@ -29940,7 +30561,7 @@ extern "C" {
 /// - (-ENODEV)  if *port_id* invalid.
 /// - (-EINVAL)  if bad parameter
 /// - (-EIO)     if flow control setup failure
-    pub fn rte_eth_dev_priority_flow_ctrl_set(port_id: u8,
+    pub fn rte_eth_dev_priority_flow_ctrl_set(port_id: u16,
                                               pfc_conf: *mut rte_eth_pfc_conf)
      -> ::std::os::raw::c_int;
 }
@@ -29961,7 +30582,7 @@ extern "C" {
 /// - (-ENODEV) if *port* is invalid.
 /// - (-ENOSPC) if no more MAC addresses can be added.
 /// - (-EINVAL) if MAC address is invalid.
-    pub fn rte_eth_dev_mac_addr_add(port: u8, mac_addr: *mut ether_addr,
+    pub fn rte_eth_dev_mac_addr_add(port: u16, mac_addr: *mut ether_addr,
                                     pool: u32) -> ::std::os::raw::c_int;
 }
 extern "C" {
@@ -29976,7 +30597,7 @@ extern "C" {
 /// - (-ENOTSUP) if hardware doesn't support.
 /// - (-ENODEV) if *port* invalid.
 /// - (-EADDRINUSE) if attempting to remove the default MAC address
-    pub fn rte_eth_dev_mac_addr_remove(port: u8, mac_addr: *mut ether_addr)
+    pub fn rte_eth_dev_mac_addr_remove(port: u16, mac_addr: *mut ether_addr)
      -> ::std::os::raw::c_int;
 }
 extern "C" {
@@ -29991,7 +30612,7 @@ extern "C" {
 /// - (-ENOTSUP) if hardware doesn't support.
 /// - (-ENODEV) if *port* invalid.
 /// - (-EINVAL) if MAC address is invalid.
-    pub fn rte_eth_dev_default_mac_addr_set(port: u8,
+    pub fn rte_eth_dev_default_mac_addr_set(port: u16,
                                             mac_addr: *mut ether_addr)
      -> ::std::os::raw::c_int;
 }
@@ -30009,7 +30630,7 @@ extern "C" {
 /// - (0) if successful.
 /// - (-ENOTSUP) if hardware doesn't support.
 /// - (-EINVAL) if bad parameter.
-    pub fn rte_eth_dev_rss_reta_update(port: u8,
+    pub fn rte_eth_dev_rss_reta_update(port: u16,
                                        reta_conf:
                                            *mut rte_eth_rss_reta_entry64,
                                        reta_size: u16)
@@ -30029,7 +30650,7 @@ extern "C" {
 /// - (0) if successful.
 /// - (-ENOTSUP) if hardware doesn't support.
 /// - (-EINVAL) if bad parameter.
-    pub fn rte_eth_dev_rss_reta_query(port: u8,
+    pub fn rte_eth_dev_rss_reta_query(port: u16,
                                       reta_conf:
                                           *mut rte_eth_rss_reta_entry64,
                                       reta_size: u16)
@@ -30052,7 +30673,7 @@ extern "C" {
 /// - (-ENOTSUP) if hardware doesn't support.
 /// - (-ENODEV) if *port_id* invalid.
 /// - (-EINVAL) if bad parameter.
-    pub fn rte_eth_dev_uc_hash_table_set(port: u8, addr: *mut ether_addr,
+    pub fn rte_eth_dev_uc_hash_table_set(port: u16, addr: *mut ether_addr,
                                          on: u8) -> ::std::os::raw::c_int;
 }
 extern "C" {
@@ -30071,7 +30692,7 @@ extern "C" {
 /// - (-ENOTSUP) if hardware doesn't support.
 /// - (-ENODEV) if *port_id* invalid.
 /// - (-EINVAL) if bad parameter.
-    pub fn rte_eth_dev_uc_all_hash_table_set(port: u8, on: u8)
+    pub fn rte_eth_dev_uc_all_hash_table_set(port: u16, on: u8)
      -> ::std::os::raw::c_int;
 }
 extern "C" {
@@ -30094,7 +30715,7 @@ extern "C" {
 /// - (-ENOTSUP) if hardware doesn't support this feature.
 /// - (-ENODEV) if *port_id* invalid.
 /// - (-EINVAL) if the mr_conf information is not correct.
-    pub fn rte_eth_mirror_rule_set(port_id: u8,
+    pub fn rte_eth_mirror_rule_set(port_id: u16,
                                    mirror_conf: *mut rte_eth_mirror_conf,
                                    rule_id: u8, on: u8)
      -> ::std::os::raw::c_int;
@@ -30111,7 +30732,7 @@ extern "C" {
 /// - (-ENOTSUP) if hardware doesn't support this feature.
 /// - (-ENODEV) if *port_id* invalid.
 /// - (-EINVAL) if bad parameter.
-    pub fn rte_eth_mirror_rule_reset(port_id: u8, rule_id: u8)
+    pub fn rte_eth_mirror_rule_reset(port_id: u16, rule_id: u8)
      -> ::std::os::raw::c_int;
 }
 extern "C" {
@@ -30128,7 +30749,7 @@ extern "C" {
 /// - (-ENOTSUP) if hardware doesn't support this feature.
 /// - (-ENODEV) if *port_id* invalid.
 /// - (-EINVAL) if bad parameter.
-    pub fn rte_eth_set_queue_rate_limit(port_id: u8, queue_idx: u16,
+    pub fn rte_eth_set_queue_rate_limit(port_id: u16, queue_idx: u16,
                                         tx_rate: u16)
      -> ::std::os::raw::c_int;
 }
@@ -30144,7 +30765,7 @@ extern "C" {
 /// - (-ENODEV) if port identifier is invalid.
 /// - (-ENOTSUP) if hardware doesn't support.
 /// - (-EINVAL) if bad parameter.
-    pub fn rte_eth_dev_rss_hash_update(port_id: u8,
+    pub fn rte_eth_dev_rss_hash_update(port_id: u16,
                                        rss_conf: *mut rte_eth_rss_conf)
      -> ::std::os::raw::c_int;
 }
@@ -30160,7 +30781,7 @@ extern "C" {
 /// - (0) if successful.
 /// - (-ENODEV) if port identifier is invalid.
 /// - (-ENOTSUP) if hardware doesn't support RSS.
-    pub fn rte_eth_dev_rss_hash_conf_get(port_id: u8,
+    pub fn rte_eth_dev_rss_hash_conf_get(port_id: u16,
                                          rss_conf: *mut rte_eth_rss_conf)
      -> ::std::os::raw::c_int;
 }
@@ -30180,7 +30801,7 @@ extern "C" {
 /// - (0) if successful.
 /// - (-ENODEV) if port identifier is invalid.
 /// - (-ENOTSUP) if hardware doesn't support tunnel type.
-    pub fn rte_eth_dev_udp_tunnel_port_add(port_id: u8,
+    pub fn rte_eth_dev_udp_tunnel_port_add(port_id: u16,
                                            tunnel_udp:
                                                *mut rte_eth_udp_tunnel)
      -> ::std::os::raw::c_int;
@@ -30202,7 +30823,7 @@ extern "C" {
 /// - (0) if successful.
 /// - (-ENODEV) if port identifier is invalid.
 /// - (-ENOTSUP) if hardware doesn't support tunnel type.
-    pub fn rte_eth_dev_udp_tunnel_port_delete(port_id: u8,
+    pub fn rte_eth_dev_udp_tunnel_port_delete(port_id: u16,
                                               tunnel_udp:
                                                   *mut rte_eth_udp_tunnel)
      -> ::std::os::raw::c_int;
@@ -30219,7 +30840,7 @@ extern "C" {
 /// - (0) if successful.
 /// - (-ENOTSUP) if hardware doesn't support this filter type.
 /// - (-ENODEV) if *port_id* invalid.
-    pub fn rte_eth_dev_filter_supported(port_id: u8,
+    pub fn rte_eth_dev_filter_supported(port_id: u16,
                                         filter_type: rte_filter_type)
      -> ::std::os::raw::c_int;
 }
@@ -30240,7 +30861,7 @@ extern "C" {
 /// - (-ENOTSUP) if hardware doesn't support.
 /// - (-ENODEV) if *port_id* invalid.
 /// - others depends on the specific operations implementation.
-    pub fn rte_eth_dev_filter_ctrl(port_id: u8, filter_type: rte_filter_type,
+    pub fn rte_eth_dev_filter_ctrl(port_id: u16, filter_type: rte_filter_type,
                                    filter_op: rte_filter_op,
                                    arg: *mut ::std::os::raw::c_void)
      -> ::std::os::raw::c_int;
@@ -30256,7 +30877,7 @@ extern "C" {
 /// - (0) if successful.
 /// - (-ENODEV) if port identifier is invalid.
 /// - (-ENOTSUP) if hardware doesn't support.
-    pub fn rte_eth_dev_get_dcb_info(port_id: u8,
+    pub fn rte_eth_dev_get_dcb_info(port_id: u16,
                                     dcb_info: *mut rte_eth_dcb_info)
      -> ::std::os::raw::c_int;
 }
@@ -30283,7 +30904,7 @@ extern "C" {
 /// @return
 /// NULL on error.
 /// On success, a pointer value which can later be used to remove the callback.
-    pub fn rte_eth_add_rx_callback(port_id: u8, queue_id: u16,
+    pub fn rte_eth_add_rx_callback(port_id: u16, queue_id: u16,
                                    fn_: rte_rx_callback_fn,
                                    user_param: *mut ::std::os::raw::c_void)
      -> *mut ::std::os::raw::c_void;
@@ -30312,7 +30933,7 @@ extern "C" {
 /// @return
 /// NULL on error.
 /// On success, a pointer value which can later be used to remove the callback.
-    pub fn rte_eth_add_first_rx_callback(port_id: u8, queue_id: u16,
+    pub fn rte_eth_add_first_rx_callback(port_id: u16, queue_id: u16,
                                          fn_: rte_rx_callback_fn,
                                          user_param:
                                              *mut ::std::os::raw::c_void)
@@ -30341,7 +30962,7 @@ extern "C" {
 /// @return
 /// NULL on error.
 /// On success, a pointer value which can later be used to remove the callback.
-    pub fn rte_eth_add_tx_callback(port_id: u8, queue_id: u16,
+    pub fn rte_eth_add_tx_callback(port_id: u16, queue_id: u16,
                                    fn_: rte_tx_callback_fn,
                                    user_param: *mut ::std::os::raw::c_void)
      -> *mut ::std::os::raw::c_void;
@@ -30375,7 +30996,7 @@ extern "C" {
 /// - -ENOTSUP: Callback support is not available.
 /// - -EINVAL:  The port_id or the queue_id is out of range, or the callback
 /// is NULL or not found for the port/queue.
-    pub fn rte_eth_remove_rx_callback(port_id: u8, queue_id: u16,
+    pub fn rte_eth_remove_rx_callback(port_id: u16, queue_id: u16,
                                       user_cb: *mut rte_eth_rxtx_callback)
      -> ::std::os::raw::c_int;
 }
@@ -30408,7 +31029,7 @@ extern "C" {
 /// - -ENOTSUP: Callback support is not available.
 /// - -EINVAL:  The port_id or the queue_id is out of range, or the callback
 /// is NULL or not found for the port/queue.
-    pub fn rte_eth_remove_tx_callback(port_id: u8, queue_id: u16,
+    pub fn rte_eth_remove_tx_callback(port_id: u16, queue_id: u16,
                                       user_cb: *mut rte_eth_rxtx_callback)
      -> ::std::os::raw::c_int;
 }
@@ -30428,7 +31049,7 @@ extern "C" {
 /// - 0: Success
 /// - -ENOTSUP: routine is not supported by the device PMD.
 /// - -EINVAL:  The port_id or the queue_id is out of range.
-    pub fn rte_eth_rx_queue_info_get(port_id: u8, queue_id: u16,
+    pub fn rte_eth_rx_queue_info_get(port_id: u16, queue_id: u16,
                                      qinfo: *mut rte_eth_rxq_info)
      -> ::std::os::raw::c_int;
 }
@@ -30448,7 +31069,7 @@ extern "C" {
 /// - 0: Success
 /// - -ENOTSUP: routine is not supported by the device PMD.
 /// - -EINVAL:  The port_id or the queue_id is out of range.
-    pub fn rte_eth_tx_queue_info_get(port_id: u8, queue_id: u16,
+    pub fn rte_eth_tx_queue_info_get(port_id: u16, queue_id: u16,
                                      qinfo: *mut rte_eth_txq_info)
      -> ::std::os::raw::c_int;
 }
@@ -30467,7 +31088,7 @@ extern "C" {
 /// - (-ENOTSUP) if hardware doesn't support.
 /// - (-ENODEV) if *port_id* invalid.
 /// - others depends on the specific operations implementation.
-    pub fn rte_eth_dev_get_reg_info(port_id: u8, info: *mut rte_dev_reg_info)
+    pub fn rte_eth_dev_get_reg_info(port_id: u16, info: *mut rte_dev_reg_info)
      -> ::std::os::raw::c_int;
 }
 extern "C" {
@@ -30480,7 +31101,7 @@ extern "C" {
 /// - (-ENOTSUP) if hardware doesn't support.
 /// - (-ENODEV) if *port_id* invalid.
 /// - others depends on the specific operations implementation.
-    pub fn rte_eth_dev_get_eeprom_length(port_id: u8)
+    pub fn rte_eth_dev_get_eeprom_length(port_id: u16)
      -> ::std::os::raw::c_int;
 }
 extern "C" {
@@ -30496,7 +31117,8 @@ extern "C" {
 /// - (-ENOTSUP) if hardware doesn't support.
 /// - (-ENODEV) if *port_id* invalid.
 /// - others depends on the specific operations implementation.
-    pub fn rte_eth_dev_get_eeprom(port_id: u8, info: *mut rte_dev_eeprom_info)
+    pub fn rte_eth_dev_get_eeprom(port_id: u16,
+                                  info: *mut rte_dev_eeprom_info)
      -> ::std::os::raw::c_int;
 }
 extern "C" {
@@ -30512,7 +31134,8 @@ extern "C" {
 /// - (-ENOTSUP) if hardware doesn't support.
 /// - (-ENODEV) if *port_id* invalid.
 /// - others depends on the specific operations implementation.
-    pub fn rte_eth_dev_set_eeprom(port_id: u8, info: *mut rte_dev_eeprom_info)
+    pub fn rte_eth_dev_set_eeprom(port_id: u16,
+                                  info: *mut rte_dev_eeprom_info)
      -> ::std::os::raw::c_int;
 }
 extern "C" {
@@ -30531,7 +31154,7 @@ extern "C" {
 /// - (-ENODEV) if *port_id* invalid.
 /// - (-ENOTSUP) if PMD of *port_id* doesn't support multicast filtering.
 /// - (-ENOSPC) if *port_id* has not enough multicast filtering resources.
-    pub fn rte_eth_dev_set_mc_addr_list(port_id: u8,
+    pub fn rte_eth_dev_set_mc_addr_list(port_id: u16,
                                         mc_addr_set: *mut ether_addr,
                                         nb_mc_addr: u32)
      -> ::std::os::raw::c_int;
@@ -30546,7 +31169,7 @@ extern "C" {
 /// - 0: Success.
 /// - -ENODEV: The port ID is invalid.
 /// - -ENOTSUP: The function is not supported by the Ethernet driver.
-    pub fn rte_eth_timesync_enable(port_id: u8) -> ::std::os::raw::c_int;
+    pub fn rte_eth_timesync_enable(port_id: u16) -> ::std::os::raw::c_int;
 }
 extern "C" {
     /// Disable IEEE1588/802.1AS timestamping for an Ethernet device.
@@ -30558,7 +31181,7 @@ extern "C" {
 /// - 0: Success.
 /// - -ENODEV: The port ID is invalid.
 /// - -ENOTSUP: The function is not supported by the Ethernet driver.
-    pub fn rte_eth_timesync_disable(port_id: u8) -> ::std::os::raw::c_int;
+    pub fn rte_eth_timesync_disable(port_id: u16) -> ::std::os::raw::c_int;
 }
 extern "C" {
     /// Read an IEEE1588/802.1AS RX timestamp from an Ethernet device.
@@ -30576,7 +31199,7 @@ extern "C" {
 /// - -EINVAL: No timestamp is available.
 /// - -ENODEV: The port ID is invalid.
 /// - -ENOTSUP: The function is not supported by the Ethernet driver.
-    pub fn rte_eth_timesync_read_rx_timestamp(port_id: u8,
+    pub fn rte_eth_timesync_read_rx_timestamp(port_id: u16,
                                               timestamp: *mut timespec,
                                               flags: u32)
      -> ::std::os::raw::c_int;
@@ -30594,7 +31217,7 @@ extern "C" {
 /// - -EINVAL: No timestamp is available.
 /// - -ENODEV: The port ID is invalid.
 /// - -ENOTSUP: The function is not supported by the Ethernet driver.
-    pub fn rte_eth_timesync_read_tx_timestamp(port_id: u8,
+    pub fn rte_eth_timesync_read_tx_timestamp(port_id: u16,
                                               timestamp: *mut timespec)
      -> ::std::os::raw::c_int;
 }
@@ -30613,7 +31236,7 @@ extern "C" {
 /// - 0: Success.
 /// - -ENODEV: The port ID is invalid.
 /// - -ENOTSUP: The function is not supported by the Ethernet driver.
-    pub fn rte_eth_timesync_adjust_time(port_id: u8, delta: i64)
+    pub fn rte_eth_timesync_adjust_time(port_id: u16, delta: i64)
      -> ::std::os::raw::c_int;
 }
 extern "C" {
@@ -30629,7 +31252,7 @@ extern "C" {
 ///
 /// @return
 /// - 0: Success.
-    pub fn rte_eth_timesync_read_time(port_id: u8, time: *mut timespec)
+    pub fn rte_eth_timesync_read_time(port_id: u16, time: *mut timespec)
      -> ::std::os::raw::c_int;
 }
 extern "C" {
@@ -30648,7 +31271,7 @@ extern "C" {
 /// - -EINVAL: No timestamp is available.
 /// - -ENODEV: The port ID is invalid.
 /// - -ENOTSUP: The function is not supported by the Ethernet driver.
-    pub fn rte_eth_timesync_write_time(port_id: u8, time: *const timespec)
+    pub fn rte_eth_timesync_write_time(port_id: u16, time: *const timespec)
      -> ::std::os::raw::c_int;
 }
 extern "C" {
@@ -30689,7 +31312,7 @@ extern "C" {
 /// - (0) if successful.
 /// - (-ENODEV) if port identifier is invalid.
 /// - (-ENOTSUP) if hardware doesn't support tunnel type.
-    pub fn rte_eth_dev_l2_tunnel_eth_type_conf(port_id: u8,
+    pub fn rte_eth_dev_l2_tunnel_eth_type_conf(port_id: u16,
                                                l2_tunnel:
                                                    *mut rte_eth_l2_tunnel_conf)
      -> ::std::os::raw::c_int;
@@ -30716,7 +31339,7 @@ extern "C" {
 /// - (0) if successful.
 /// - (-ENODEV) if port identifier is invalid.
 /// - (-ENOTSUP) if hardware doesn't support tunnel type.
-    pub fn rte_eth_dev_l2_tunnel_offload_set(port_id: u8,
+    pub fn rte_eth_dev_l2_tunnel_offload_set(port_id: u16,
                                              l2_tunnel:
                                                  *mut rte_eth_l2_tunnel_conf,
                                              mask: u32, en: u8)
@@ -30734,7 +31357,7 @@ extern "C" {
 /// - (0) if successful and port_id is filled.
 /// - (-ENODEV or -EINVAL) on failure.
     pub fn rte_eth_dev_get_port_by_name(name: *const ::std::os::raw::c_char,
-                                        port_id: *mut u8)
+                                        port_id: *mut u16)
      -> ::std::os::raw::c_int;
 }
 extern "C" {
@@ -30747,7 +31370,7 @@ extern "C" {
 /// @return
 /// - (0) if successful.
 /// - (-EINVAL) on failure.
-    pub fn rte_eth_dev_get_name_by_port(port_id: u8,
+    pub fn rte_eth_dev_get_name_by_port(port_id: u16,
                                         name: *mut ::std::os::raw::c_char)
      -> ::std::os::raw::c_int;
 }
@@ -30766,9 +31389,402 @@ extern "C" {
 /// @return
 /// - (0) if successful.
 /// - (-ENOTSUP, -ENODEV or -EINVAL) on failure.
-    pub fn rte_eth_dev_adjust_nb_rx_tx_desc(port_id: u8, nb_rx_desc: *mut u16,
+    pub fn rte_eth_dev_adjust_nb_rx_tx_desc(port_id: u16,
+                                            nb_rx_desc: *mut u16,
                                             nb_tx_desc: *mut u16)
      -> ::std::os::raw::c_int;
+}
+extern "C" {
+    /// Test if a port supports specific mempool ops.
+///
+/// @param port_id
+/// Port identifier of the Ethernet device.
+/// @param [in] pool
+/// The name of the pool operations to test.
+/// @return
+/// - 0: best mempool ops choice for this port.
+/// - 1: mempool ops are supported for this port.
+/// - -ENOTSUP: mempool ops not supported for this port.
+/// - -ENODEV: Invalid port Identifier.
+/// - -EINVAL: Pool param is null.
+    pub fn rte_eth_dev_pool_ops_supported(port_id: u16,
+                                          pool: *const ::std::os::raw::c_char)
+     -> ::std::os::raw::c_int;
+}
+extern "C" {
+    /// Pathname of PCI devices directory.
+    pub fn rte_pci_get_sysfs_path() -> *const ::std::os::raw::c_char;
+}
+/// A structure describing a PCI driver.
+#[repr(C)]
+#[derive(Debug, Copy)]
+pub struct rte_pci_driver {
+    /// < Next in list.
+    pub next: rte_pci_driver__bindgen_ty_1,
+    /// < Inherit core driver.
+    pub driver: rte_driver,
+    /// < PCI bus reference.
+    pub bus: *mut rte_pci_bus,
+    /// < Device Probe function.
+    pub probe: pci_probe_t,
+    /// < Device Remove function.
+    pub remove: pci_remove_t,
+    /// < ID table, NULL terminated.
+    pub id_table: *const rte_pci_id,
+    /// < Flags contolling handling of device.
+    pub drv_flags: u32,
+}
+#[repr(C)]
+#[derive(Debug, Copy)]
+pub struct rte_pci_driver__bindgen_ty_1 {
+    pub tqe_next: *mut rte_pci_driver,
+    pub tqe_prev: *mut *mut rte_pci_driver,
+}
+#[test]
+fn bindgen_test_layout_rte_pci_driver__bindgen_ty_1() {
+    assert_eq!(::std::mem::size_of::<rte_pci_driver__bindgen_ty_1>() , 16usize
+               , concat ! (
+               "Size of: " , stringify ! ( rte_pci_driver__bindgen_ty_1 ) ));
+    assert_eq! (::std::mem::align_of::<rte_pci_driver__bindgen_ty_1>() ,
+                8usize , concat ! (
+                "Alignment of " , stringify ! ( rte_pci_driver__bindgen_ty_1 )
+                ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_pci_driver__bindgen_ty_1 ) ) .
+                tqe_next as * const _ as usize } , 0usize , concat ! (
+                "Alignment of field: " , stringify ! (
+                rte_pci_driver__bindgen_ty_1 ) , "::" , stringify ! ( tqe_next
+                ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_pci_driver__bindgen_ty_1 ) ) .
+                tqe_prev as * const _ as usize } , 8usize , concat ! (
+                "Alignment of field: " , stringify ! (
+                rte_pci_driver__bindgen_ty_1 ) , "::" , stringify ! ( tqe_prev
+                ) ));
+}
+impl Clone for rte_pci_driver__bindgen_ty_1 {
+    fn clone(&self) -> Self { *self }
+}
+#[test]
+fn bindgen_test_layout_rte_pci_driver() {
+    assert_eq!(::std::mem::size_of::<rte_pci_driver>() , 88usize , concat ! (
+               "Size of: " , stringify ! ( rte_pci_driver ) ));
+    assert_eq! (::std::mem::align_of::<rte_pci_driver>() , 8usize , concat ! (
+                "Alignment of " , stringify ! ( rte_pci_driver ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_pci_driver ) ) . next as * const _ as
+                usize } , 0usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_pci_driver ) , "::"
+                , stringify ! ( next ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_pci_driver ) ) . driver as * const _
+                as usize } , 16usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_pci_driver ) , "::"
+                , stringify ! ( driver ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_pci_driver ) ) . bus as * const _ as
+                usize } , 48usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_pci_driver ) , "::"
+                , stringify ! ( bus ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_pci_driver ) ) . probe as * const _
+                as usize } , 56usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_pci_driver ) , "::"
+                , stringify ! ( probe ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_pci_driver ) ) . remove as * const _
+                as usize } , 64usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_pci_driver ) , "::"
+                , stringify ! ( remove ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_pci_driver ) ) . id_table as * const
+                _ as usize } , 72usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_pci_driver ) , "::"
+                , stringify ! ( id_table ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_pci_driver ) ) . drv_flags as * const
+                _ as usize } , 80usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_pci_driver ) , "::"
+                , stringify ! ( drv_flags ) ));
+}
+impl Clone for rte_pci_driver {
+    fn clone(&self) -> Self { *self }
+}
+/// List of PCI devices
+#[repr(C)]
+#[derive(Debug, Copy)]
+pub struct rte_pci_device_list {
+    pub tqh_first: *mut rte_pci_device,
+    pub tqh_last: *mut *mut rte_pci_device,
+}
+#[test]
+fn bindgen_test_layout_rte_pci_device_list() {
+    assert_eq!(::std::mem::size_of::<rte_pci_device_list>() , 16usize , concat
+               ! ( "Size of: " , stringify ! ( rte_pci_device_list ) ));
+    assert_eq! (::std::mem::align_of::<rte_pci_device_list>() , 8usize ,
+                concat ! (
+                "Alignment of " , stringify ! ( rte_pci_device_list ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_pci_device_list ) ) . tqh_first as *
+                const _ as usize } , 0usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_pci_device_list ) ,
+                "::" , stringify ! ( tqh_first ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_pci_device_list ) ) . tqh_last as *
+                const _ as usize } , 8usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_pci_device_list ) ,
+                "::" , stringify ! ( tqh_last ) ));
+}
+impl Clone for rte_pci_device_list {
+    fn clone(&self) -> Self { *self }
+}
+/// List of PCI drivers
+#[repr(C)]
+#[derive(Debug, Copy)]
+pub struct rte_pci_driver_list {
+    pub tqh_first: *mut rte_pci_driver,
+    pub tqh_last: *mut *mut rte_pci_driver,
+}
+#[test]
+fn bindgen_test_layout_rte_pci_driver_list() {
+    assert_eq!(::std::mem::size_of::<rte_pci_driver_list>() , 16usize , concat
+               ! ( "Size of: " , stringify ! ( rte_pci_driver_list ) ));
+    assert_eq! (::std::mem::align_of::<rte_pci_driver_list>() , 8usize ,
+                concat ! (
+                "Alignment of " , stringify ! ( rte_pci_driver_list ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_pci_driver_list ) ) . tqh_first as *
+                const _ as usize } , 0usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_pci_driver_list ) ,
+                "::" , stringify ! ( tqh_first ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_pci_driver_list ) ) . tqh_last as *
+                const _ as usize } , 8usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_pci_driver_list ) ,
+                "::" , stringify ! ( tqh_last ) ));
+}
+impl Clone for rte_pci_driver_list {
+    fn clone(&self) -> Self { *self }
+}
+/// Initialisation function for the driver called during PCI probing.
+pub type pci_probe_t =
+    ::std::option::Option<unsafe extern "C" fn(arg1: *mut rte_pci_driver,
+                                               arg2: *mut rte_pci_device)
+                              -> ::std::os::raw::c_int>;
+/// Uninitialisation function for the driver called during hotplugging.
+pub type pci_remove_t =
+    ::std::option::Option<unsafe extern "C" fn(arg1: *mut rte_pci_device)
+                              -> ::std::os::raw::c_int>;
+/// Structure describing the PCI bus
+#[repr(C)]
+#[derive(Debug, Copy)]
+pub struct rte_pci_bus {
+    /// < Inherit the generic class
+    pub bus: rte_bus,
+    /// < List of PCI devices
+    pub device_list: rte_pci_device_list,
+    /// < List of PCI drivers
+    pub driver_list: rte_pci_driver_list,
+}
+#[test]
+fn bindgen_test_layout_rte_pci_bus() {
+    assert_eq!(::std::mem::size_of::<rte_pci_bus>() , 120usize , concat ! (
+               "Size of: " , stringify ! ( rte_pci_bus ) ));
+    assert_eq! (::std::mem::align_of::<rte_pci_bus>() , 8usize , concat ! (
+                "Alignment of " , stringify ! ( rte_pci_bus ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_pci_bus ) ) . bus as * const _ as
+                usize } , 0usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_pci_bus ) , "::" ,
+                stringify ! ( bus ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_pci_bus ) ) . device_list as * const
+                _ as usize } , 88usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_pci_bus ) , "::" ,
+                stringify ! ( device_list ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_pci_bus ) ) . driver_list as * const
+                _ as usize } , 104usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_pci_bus ) , "::" ,
+                stringify ! ( driver_list ) ));
+}
+impl Clone for rte_pci_bus {
+    fn clone(&self) -> Self { *self }
+}
+extern "C" {
+    /// Map the PCI device resources in user space virtual memory address
+///
+/// Note that driver should not call this function when flag
+/// RTE_PCI_DRV_NEED_MAPPING is set, as EAL will do that for
+/// you when it's on.
+///
+/// @param dev
+/// A pointer to a rte_pci_device structure describing the device
+/// to use
+///
+/// @return
+/// 0 on success, negative on error and positive if no driver
+/// is found for the device.
+    pub fn rte_pci_map_device(dev: *mut rte_pci_device)
+     -> ::std::os::raw::c_int;
+}
+extern "C" {
+    /// Unmap this device
+///
+/// @param dev
+/// A pointer to a rte_pci_device structure describing the device
+/// to use
+    pub fn rte_pci_unmap_device(dev: *mut rte_pci_device);
+}
+extern "C" {
+    /// Dump the content of the PCI bus.
+///
+/// @param f
+/// A pointer to a file for output
+    pub fn rte_pci_dump(f: *mut FILE);
+}
+extern "C" {
+    /// Register a PCI driver.
+///
+/// @param driver
+/// A pointer to a rte_pci_driver structure describing the driver
+/// to be registered.
+    pub fn rte_pci_register(driver: *mut rte_pci_driver);
+}
+extern "C" {
+    /// Unregister a PCI driver.
+///
+/// @param driver
+/// A pointer to a rte_pci_driver structure describing the driver
+/// to be unregistered.
+    pub fn rte_pci_unregister(driver: *mut rte_pci_driver);
+}
+extern "C" {
+    /// Read PCI config space.
+///
+/// @param device
+/// A pointer to a rte_pci_device structure describing the device
+/// to use
+/// @param buf
+/// A data buffer where the bytes should be read into
+/// @param len
+/// The length of the data buffer.
+/// @param offset
+/// The offset into PCI config space
+    pub fn rte_pci_read_config(device: *const rte_pci_device,
+                               buf: *mut ::std::os::raw::c_void, len: usize,
+                               offset: off_t) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    /// Write PCI config space.
+///
+/// @param device
+/// A pointer to a rte_pci_device structure describing the device
+/// to use
+/// @param buf
+/// A data buffer containing the bytes should be written
+/// @param len
+/// The length of the data buffer.
+/// @param offset
+/// The offset into PCI config space
+    pub fn rte_pci_write_config(device: *const rte_pci_device,
+                                buf: *const ::std::os::raw::c_void,
+                                len: usize, offset: off_t)
+     -> ::std::os::raw::c_int;
+}
+/// A structure used to access io resources for a pci device.
+/// rte_pci_ioport is arch, os, driver specific, and should not be used outside
+/// of pci ioport api.
+#[repr(C)]
+#[derive(Debug, Copy)]
+pub struct rte_pci_ioport {
+    pub dev: *mut rte_pci_device,
+    pub base: u64,
+    pub len: u64,
+}
+#[test]
+fn bindgen_test_layout_rte_pci_ioport() {
+    assert_eq!(::std::mem::size_of::<rte_pci_ioport>() , 24usize , concat ! (
+               "Size of: " , stringify ! ( rte_pci_ioport ) ));
+    assert_eq! (::std::mem::align_of::<rte_pci_ioport>() , 8usize , concat ! (
+                "Alignment of " , stringify ! ( rte_pci_ioport ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_pci_ioport ) ) . dev as * const _ as
+                usize } , 0usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_pci_ioport ) , "::"
+                , stringify ! ( dev ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_pci_ioport ) ) . base as * const _ as
+                usize } , 8usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_pci_ioport ) , "::"
+                , stringify ! ( base ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_pci_ioport ) ) . len as * const _ as
+                usize } , 16usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_pci_ioport ) , "::"
+                , stringify ! ( len ) ));
+}
+impl Clone for rte_pci_ioport {
+    fn clone(&self) -> Self { *self }
+}
+extern "C" {
+    /// Initialize a rte_pci_ioport object for a pci device io resource.
+///
+/// This object is then used to gain access to those io resources (see below).
+///
+/// @param dev
+/// A pointer to a rte_pci_device structure describing the device
+/// to use.
+/// @param bar
+/// Index of the io pci resource we want to access.
+/// @param p
+/// The rte_pci_ioport object to be initialized.
+/// @return
+/// 0 on success, negative on error.
+    pub fn rte_pci_ioport_map(dev: *mut rte_pci_device,
+                              bar: ::std::os::raw::c_int,
+                              p: *mut rte_pci_ioport)
+     -> ::std::os::raw::c_int;
+}
+extern "C" {
+    /// Release any resources used in a rte_pci_ioport object.
+///
+/// @param p
+/// The rte_pci_ioport object to be uninitialized.
+/// @return
+/// 0 on success, negative on error.
+    pub fn rte_pci_ioport_unmap(p: *mut rte_pci_ioport)
+     -> ::std::os::raw::c_int;
+}
+extern "C" {
+    /// Read from a io pci resource.
+///
+/// @param p
+/// The rte_pci_ioport object from which we want to read.
+/// @param data
+/// A data buffer where the bytes should be read into
+/// @param len
+/// The length of the data buffer.
+/// @param offset
+/// The offset into the pci io resource.
+    pub fn rte_pci_ioport_read(p: *mut rte_pci_ioport,
+                               data: *mut ::std::os::raw::c_void, len: usize,
+                               offset: off_t);
+}
+extern "C" {
+    /// Write to a io pci resource.
+///
+/// @param p
+/// The rte_pci_ioport object to which we want to write.
+/// @param data
+/// A data buffer where the bytes should be read into
+/// @param len
+/// The length of the data buffer.
+/// @param offset
+/// The offset into the pci io resource.
+    pub fn rte_pci_ioport_write(p: *mut rte_pci_ioport,
+                                data: *const ::std::os::raw::c_void,
+                                len: usize, offset: off_t);
 }
 pub type eth_dev_pci_callback_t =
     ::std::option::Option<unsafe extern "C" fn(eth_dev: *mut rte_eth_dev)
@@ -31423,8 +32439,13 @@ pub struct vhost_device_ops {
                                                                      features:
                                                                          u64)
                                                     -> ::std::os::raw::c_int>,
+    pub new_connection: ::std::option::Option<unsafe extern "C" fn(vid:
+                                                                       ::std::os::raw::c_int)
+                                                  -> ::std::os::raw::c_int>,
+    pub destroy_connection: ::std::option::Option<unsafe extern "C" fn(vid:
+                                                                           ::std::os::raw::c_int)>,
     /// < Reserved for future extension
-    pub reserved: [*mut ::std::os::raw::c_void; 4usize],
+    pub reserved: [*mut ::std::os::raw::c_void; 2usize],
 }
 #[test]
 fn bindgen_test_layout_vhost_device_ops() {
@@ -31454,8 +32475,18 @@ fn bindgen_test_layout_vhost_device_ops() {
                 "Alignment of field: " , stringify ! ( vhost_device_ops ) ,
                 "::" , stringify ! ( features_changed ) ));
     assert_eq! (unsafe {
+                & ( * ( 0 as * const vhost_device_ops ) ) . new_connection as
+                * const _ as usize } , 32usize , concat ! (
+                "Alignment of field: " , stringify ! ( vhost_device_ops ) ,
+                "::" , stringify ! ( new_connection ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const vhost_device_ops ) ) . destroy_connection
+                as * const _ as usize } , 40usize , concat ! (
+                "Alignment of field: " , stringify ! ( vhost_device_ops ) ,
+                "::" , stringify ! ( destroy_connection ) ));
+    assert_eq! (unsafe {
                 & ( * ( 0 as * const vhost_device_ops ) ) . reserved as *
-                const _ as usize } , 32usize , concat ! (
+                const _ as usize } , 48usize , concat ! (
                 "Alignment of field: " , stringify ! ( vhost_device_ops ) ,
                 "::" , stringify ! ( reserved ) ));
 }
@@ -31830,7 +32861,7 @@ extern "C" {
 /// @return
 /// - On success, zero.
 /// - On failure, a negative value.
-    pub fn rte_eth_vhost_get_queue_event(port_id: u8,
+    pub fn rte_eth_vhost_get_queue_event(port_id: u16,
                                          event:
                                              *mut rte_eth_vhost_queue_event)
      -> ::std::os::raw::c_int;
@@ -31841,7 +32872,7 @@ extern "C" {
 /// @return
 /// - On success, the 'vid' associated with 'port_id'.
 /// - On failure, a negative value.
-    pub fn rte_eth_vhost_get_vid_from_port_id(port_id: u8)
+    pub fn rte_eth_vhost_get_vid_from_port_id(port_id: u16)
      -> ::std::os::raw::c_int;
 }
 extern "C" {
@@ -32002,6 +33033,21 @@ extern "C" {
                                   dev_info: *mut rte_event_dev_info)
      -> ::std::os::raw::c_int;
 }
+extern "C" {
+    /// Get an attribute from a device.
+///
+/// @param dev_id Eventdev id
+/// @param attr_id The attribute ID to retrieve
+/// @param[out] attr_value A pointer that will be filled in with the attribute
+/// value if successful.
+///
+/// @retval 0 Successfully retrieved attribute value
+/// -EINVAL Invalid device or  *attr_id* provided, or *attr_value*
+/// is NULL
+    pub fn rte_event_dev_attr_get(dev_id: u8, attr_id: u32,
+                                  attr_value: *mut u32)
+     -> ::std::os::raw::c_int;
+}
 /// Event device configuration structure
 #[repr(C)]
 #[derive(Debug, Copy)]
@@ -32099,8 +33145,8 @@ extern "C" {
 pub struct rte_event_queue_conf {
     pub nb_atomic_flows: u32,
     pub nb_atomic_order_sequences: u32,
-    /// < Queue cfg flags(EVENT_QUEUE_CFG_)
     pub event_queue_cfg: u32,
+    pub schedule_type: u8,
     pub priority: u8,
 }
 #[test]
@@ -32128,8 +33174,13 @@ fn bindgen_test_layout_rte_event_queue_conf() {
                 "Alignment of field: " , stringify ! ( rte_event_queue_conf )
                 , "::" , stringify ! ( event_queue_cfg ) ));
     assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_event_queue_conf ) ) . schedule_type
+                as * const _ as usize } , 12usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_event_queue_conf )
+                , "::" , stringify ! ( schedule_type ) ));
+    assert_eq! (unsafe {
                 & ( * ( 0 as * const rte_event_queue_conf ) ) . priority as *
-                const _ as usize } , 12usize , concat ! (
+                const _ as usize } , 13usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_event_queue_conf )
                 , "::" , stringify ! ( priority ) ));
 }
@@ -32184,27 +33235,23 @@ extern "C" {
      -> ::std::os::raw::c_int;
 }
 extern "C" {
-    /// Get the number of event queues on a specific event device
+    /// Get an attribute from a queue.
 ///
-/// @param dev_id
-/// Event device identifier.
-/// @return
-/// - The number of configured event queues
-    pub fn rte_event_queue_count(dev_id: u8) -> u8;
-}
-extern "C" {
-    /// Get the priority of the event queue on a specific event device
+/// @param dev_id Eventdev id
+/// @param queue_id Eventdev queue id
+/// @param attr_id The attribute ID to retrieve
+/// @param[out] attr_value A pointer that will be filled in with the attribute
+/// value if successful
 ///
-/// @param dev_id
-/// Event device identifier.
-/// @param queue_id
-/// Event queue identifier.
-/// @return
-/// - If the device has RTE_EVENT_DEV_CAP_QUEUE_QOS capability then the
-/// configured priority of the event queue in
-/// [RTE_EVENT_DEV_PRIORITY_HIGHEST, RTE_EVENT_DEV_PRIORITY_LOWEST] range
-/// else the value RTE_EVENT_DEV_PRIORITY_NORMAL
-    pub fn rte_event_queue_priority(dev_id: u8, queue_id: u8) -> u8;
+/// @retval 0 Successfully returned value
+/// -EINVAL invalid device, queue or attr_id provided, or attr_value
+/// was NULL
+/// -EOVERFLOW returned when attr_id is set to
+/// RTE_EVENT_QUEUE_ATTR_SCHEDULE_TYPE and event_queue_cfg is set to
+/// RTE_EVENT_QUEUE_CFG_ALL_TYPES
+    pub fn rte_event_queue_attr_get(dev_id: u8, queue_id: u8, attr_id: u32,
+                                    attr_value: *mut u32)
+     -> ::std::os::raw::c_int;
 }
 /// Event port configuration structure
 #[repr(C)]
@@ -32291,41 +33338,19 @@ extern "C" {
      -> ::std::os::raw::c_int;
 }
 extern "C" {
-    /// Get the number of dequeue queue depth configured for event port designated
-/// by its *port_id* on a specific event device
+    /// Get an attribute from a port.
 ///
-/// @param dev_id
-/// Event device identifier.
-/// @param port_id
-/// Event port identifier.
-/// @return
-/// - The number of configured dequeue queue depth
+/// @param dev_id Eventdev id
+/// @param port_id Eventdev port id
+/// @param attr_id The attribute ID to retrieve
+/// @param[out] attr_value A pointer that will be filled in with the attribute
+/// value if successful
 ///
-/// @see rte_event_dequeue_burst()
-    pub fn rte_event_port_dequeue_depth(dev_id: u8, port_id: u8) -> u8;
-}
-extern "C" {
-    /// Get the number of enqueue queue depth configured for event port designated
-/// by its *port_id* on a specific event device
-///
-/// @param dev_id
-/// Event device identifier.
-/// @param port_id
-/// Event port identifier.
-/// @return
-/// - The number of configured enqueue queue depth
-///
-/// @see rte_event_enqueue_burst()
-    pub fn rte_event_port_enqueue_depth(dev_id: u8, port_id: u8) -> u8;
-}
-extern "C" {
-    /// Get the number of ports on a specific event device
-///
-/// @param dev_id
-/// Event device identifier.
-/// @return
-/// - The number of configured ports
-    pub fn rte_event_port_count(dev_id: u8) -> u8;
+/// @retval 0 Successfully returned value
+/// -EINVAL Invalid device, port or attr_id, or attr_value was NULL
+    pub fn rte_event_port_attr_get(dev_id: u8, port_id: u8, attr_id: u32,
+                                   attr_value: *mut u32)
+     -> ::std::os::raw::c_int;
 }
 extern "C" {
     /// Start an event device.
@@ -32728,6 +33753,28 @@ fn bindgen_test_layout_rte_event() {
 impl Clone for rte_event {
     fn clone(&self) -> Self { *self }
 }
+extern "C" {
+    /// Retrieve the event device's ethdev Rx adapter capabilities for the
+/// specified ethernet port
+///
+/// @param dev_id
+/// The identifier of the device.
+///
+/// @param eth_port_id
+/// The identifier of the ethernet device.
+///
+/// @param[out] caps
+/// A pointer to memory filled with Rx event adapter capabilities.
+///
+/// @return
+/// - 0: Success, driver provides Rx event adapter capabilities for the
+/// ethernet device.
+/// - <0: Error code returned by the driver function.
+///
+    pub fn rte_event_eth_rx_adapter_caps_get(dev_id: u8, eth_port_id: u8,
+                                             caps: *mut u32)
+     -> ::std::os::raw::c_int;
+}
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct rte_eventdev_driver {
@@ -32761,10 +33808,17 @@ pub struct rte_eventdev_ops {
     pub xstats_get_names: eventdev_xstats_get_names_t,
     pub xstats_get_by_name: eventdev_xstats_get_by_name,
     pub xstats_reset: eventdev_xstats_reset_t,
+    pub eth_rx_adapter_caps_get: eventdev_eth_rx_adapter_caps_get_t,
+    pub eth_rx_adapter_queue_add: eventdev_eth_rx_adapter_queue_add_t,
+    pub eth_rx_adapter_queue_del: eventdev_eth_rx_adapter_queue_del_t,
+    pub eth_rx_adapter_start: eventdev_eth_rx_adapter_start_t,
+    pub eth_rx_adapter_stop: eventdev_eth_rx_adapter_stop_t,
+    pub eth_rx_adapter_stats_get: eventdev_eth_rx_adapter_stats_get,
+    pub eth_rx_adapter_stats_reset: eventdev_eth_rx_adapter_stats_reset,
 }
 #[test]
 fn bindgen_test_layout_rte_eventdev_ops() {
-    assert_eq!(::std::mem::size_of::<rte_eventdev_ops>() , 152usize , concat !
+    assert_eq!(::std::mem::size_of::<rte_eventdev_ops>() , 208usize , concat !
                ( "Size of: " , stringify ! ( rte_eventdev_ops ) ));
     assert_eq! (::std::mem::align_of::<rte_eventdev_ops>() , 8usize , concat !
                 ( "Alignment of " , stringify ! ( rte_eventdev_ops ) ));
@@ -32863,6 +33917,48 @@ fn bindgen_test_layout_rte_eventdev_ops() {
                 const _ as usize } , 144usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_eventdev_ops ) ,
                 "::" , stringify ! ( xstats_reset ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_eventdev_ops ) ) .
+                eth_rx_adapter_caps_get as * const _ as usize } , 152usize ,
+                concat ! (
+                "Alignment of field: " , stringify ! ( rte_eventdev_ops ) ,
+                "::" , stringify ! ( eth_rx_adapter_caps_get ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_eventdev_ops ) ) .
+                eth_rx_adapter_queue_add as * const _ as usize } , 160usize ,
+                concat ! (
+                "Alignment of field: " , stringify ! ( rte_eventdev_ops ) ,
+                "::" , stringify ! ( eth_rx_adapter_queue_add ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_eventdev_ops ) ) .
+                eth_rx_adapter_queue_del as * const _ as usize } , 168usize ,
+                concat ! (
+                "Alignment of field: " , stringify ! ( rte_eventdev_ops ) ,
+                "::" , stringify ! ( eth_rx_adapter_queue_del ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_eventdev_ops ) ) .
+                eth_rx_adapter_start as * const _ as usize } , 176usize ,
+                concat ! (
+                "Alignment of field: " , stringify ! ( rte_eventdev_ops ) ,
+                "::" , stringify ! ( eth_rx_adapter_start ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_eventdev_ops ) ) .
+                eth_rx_adapter_stop as * const _ as usize } , 184usize ,
+                concat ! (
+                "Alignment of field: " , stringify ! ( rte_eventdev_ops ) ,
+                "::" , stringify ! ( eth_rx_adapter_stop ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_eventdev_ops ) ) .
+                eth_rx_adapter_stats_get as * const _ as usize } , 192usize ,
+                concat ! (
+                "Alignment of field: " , stringify ! ( rte_eventdev_ops ) ,
+                "::" , stringify ! ( eth_rx_adapter_stats_get ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_eventdev_ops ) ) .
+                eth_rx_adapter_stats_reset as * const _ as usize } , 200usize
+                , concat ! (
+                "Alignment of field: " , stringify ! ( rte_eventdev_ops ) ,
+                "::" , stringify ! ( eth_rx_adapter_stats_reset ) ));
 }
 impl Clone for rte_eventdev_ops {
     fn clone(&self) -> Self { *self }
@@ -32871,7 +33967,6 @@ impl Clone for rte_eventdev_ops {
 #[repr(C)]
 #[derive(Copy)]
 pub struct rte_eventdev {
-    pub schedule: event_schedule_t,
     pub enqueue: event_enqueue_t,
     pub enqueue_burst: event_enqueue_burst_t,
     pub enqueue_new_burst: event_enqueue_burst_t,
@@ -32882,60 +33977,55 @@ pub struct rte_eventdev {
     pub dev_ops: *const rte_eventdev_ops,
     pub dev: *mut rte_device,
     pub _bitfield_1: u8,
-    pub __bindgen_padding_0: [u8; 47usize],
+    pub __bindgen_padding_0: [u8; 55usize],
 }
 #[test]
 fn bindgen_test_layout_rte_eventdev() {
     assert_eq!(::std::mem::size_of::<rte_eventdev>() , 128usize , concat ! (
                "Size of: " , stringify ! ( rte_eventdev ) ));
     assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_eventdev ) ) . schedule as * const _
-                as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( rte_eventdev ) , "::" ,
-                stringify ! ( schedule ) ));
-    assert_eq! (unsafe {
                 & ( * ( 0 as * const rte_eventdev ) ) . enqueue as * const _
-                as usize } , 8usize , concat ! (
+                as usize } , 0usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_eventdev ) , "::" ,
                 stringify ! ( enqueue ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const rte_eventdev ) ) . enqueue_burst as *
-                const _ as usize } , 16usize , concat ! (
+                const _ as usize } , 8usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_eventdev ) , "::" ,
                 stringify ! ( enqueue_burst ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const rte_eventdev ) ) . enqueue_new_burst as *
-                const _ as usize } , 24usize , concat ! (
+                const _ as usize } , 16usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_eventdev ) , "::" ,
                 stringify ! ( enqueue_new_burst ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const rte_eventdev ) ) . enqueue_forward_burst
-                as * const _ as usize } , 32usize , concat ! (
+                as * const _ as usize } , 24usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_eventdev ) , "::" ,
                 stringify ! ( enqueue_forward_burst ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const rte_eventdev ) ) . dequeue as * const _
-                as usize } , 40usize , concat ! (
+                as usize } , 32usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_eventdev ) , "::" ,
                 stringify ! ( dequeue ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const rte_eventdev ) ) . dequeue_burst as *
-                const _ as usize } , 48usize , concat ! (
+                const _ as usize } , 40usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_eventdev ) , "::" ,
                 stringify ! ( dequeue_burst ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const rte_eventdev ) ) . data as * const _ as
-                usize } , 56usize , concat ! (
+                usize } , 48usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_eventdev ) , "::" ,
                 stringify ! ( data ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const rte_eventdev ) ) . dev_ops as * const _
-                as usize } , 64usize , concat ! (
+                as usize } , 56usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_eventdev ) , "::" ,
                 stringify ! ( dev_ops ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const rte_eventdev ) ) . dev as * const _ as
-                usize } , 72usize , concat ! (
+                usize } , 64usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_eventdev ) , "::" ,
                 stringify ! ( dev ) ));
 }
@@ -32984,8 +34074,6 @@ impl rte_eventdev {
         ({ 0 } | ((attached as u8 as u8) << 0usize) & (1u64 as u8))
     }
 }
-pub type event_schedule_t =
-    ::std::option::Option<unsafe extern "C" fn(dev: *mut rte_eventdev)>;
 pub type event_enqueue_t =
     ::std::option::Option<unsafe extern "C" fn(port:
                                                    *mut ::std::os::raw::c_void,
@@ -33019,13 +34107,14 @@ pub struct rte_eventdev_data {
     pub nb_queues: u8,
     pub nb_ports: u8,
     pub ports: *mut *mut ::std::os::raw::c_void,
-    pub ports_dequeue_depth: *mut u8,
-    pub ports_enqueue_depth: *mut u8,
-    pub queues_prio: *mut u8,
+    pub ports_cfg: *mut rte_event_port_conf,
+    pub queues_cfg: *mut rte_event_queue_conf,
     pub links_map: *mut u16,
     pub dev_private: *mut ::std::os::raw::c_void,
     pub event_dev_cap: u32,
     pub dev_conf: rte_event_dev_config,
+    pub service_inited: u8,
+    pub service_id: u32,
     pub _bitfield_1: u8,
     pub name: [::std::os::raw::c_char; 64usize],
     pub __bindgen_padding_0: [u8; 39usize],
@@ -33060,42 +34149,45 @@ fn bindgen_test_layout_rte_eventdev_data() {
                 "Alignment of field: " , stringify ! ( rte_eventdev_data ) ,
                 "::" , stringify ! ( ports ) ));
     assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_eventdev_data ) ) .
-                ports_dequeue_depth as * const _ as usize } , 16usize , concat
-                ! (
+                & ( * ( 0 as * const rte_eventdev_data ) ) . ports_cfg as *
+                const _ as usize } , 16usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_eventdev_data ) ,
-                "::" , stringify ! ( ports_dequeue_depth ) ));
+                "::" , stringify ! ( ports_cfg ) ));
     assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_eventdev_data ) ) .
-                ports_enqueue_depth as * const _ as usize } , 24usize , concat
-                ! (
+                & ( * ( 0 as * const rte_eventdev_data ) ) . queues_cfg as *
+                const _ as usize } , 24usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_eventdev_data ) ,
-                "::" , stringify ! ( ports_enqueue_depth ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_eventdev_data ) ) . queues_prio as *
-                const _ as usize } , 32usize , concat ! (
-                "Alignment of field: " , stringify ! ( rte_eventdev_data ) ,
-                "::" , stringify ! ( queues_prio ) ));
+                "::" , stringify ! ( queues_cfg ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const rte_eventdev_data ) ) . links_map as *
-                const _ as usize } , 40usize , concat ! (
+                const _ as usize } , 32usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_eventdev_data ) ,
                 "::" , stringify ! ( links_map ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const rte_eventdev_data ) ) . dev_private as *
-                const _ as usize } , 48usize , concat ! (
+                const _ as usize } , 40usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_eventdev_data ) ,
                 "::" , stringify ! ( dev_private ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const rte_eventdev_data ) ) . event_dev_cap as
-                * const _ as usize } , 56usize , concat ! (
+                * const _ as usize } , 48usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_eventdev_data ) ,
                 "::" , stringify ! ( event_dev_cap ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const rte_eventdev_data ) ) . dev_conf as *
-                const _ as usize } , 60usize , concat ! (
+                const _ as usize } , 52usize , concat ! (
                 "Alignment of field: " , stringify ! ( rte_eventdev_data ) ,
                 "::" , stringify ! ( dev_conf ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_eventdev_data ) ) . service_inited as
+                * const _ as usize } , 80usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_eventdev_data ) ,
+                "::" , stringify ! ( service_inited ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_eventdev_data ) ) . service_id as *
+                const _ as usize } , 84usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_eventdev_data ) ,
+                "::" , stringify ! ( service_id ) ));
     assert_eq! (unsafe {
                 & ( * ( 0 as * const rte_eventdev_data ) ) . name as * const _
                 as usize } , 89usize , concat ! (
@@ -33311,6 +34403,23 @@ extern "C" {
 ///
     pub fn rte_event_port_links_get(dev_id: u8, port_id: u8, queues: *mut u8,
                                     priorities: *mut u8)
+     -> ::std::os::raw::c_int;
+}
+extern "C" {
+    /// Retrieve the service ID of the event dev. If the adapter doesn't use
+/// a rte_service function, this function returns -ESRCH.
+///
+/// @param dev_id
+/// The identifier of the device.
+///
+/// @param [out] service_id
+/// A pointer to a uint32_t, to be filled in with the service id.
+///
+/// @return
+/// - 0: Success
+/// - <0: Error code on failure, if the event dev doesn't use a rte_service
+/// function, this function returns -ESRCH.
+    pub fn rte_event_dev_service_id_get(dev_id: u8, service_id: *mut u32)
      -> ::std::os::raw::c_int;
 }
 extern "C" {
@@ -33786,6 +34895,164 @@ pub type eventdev_xstats_get_by_name =
                                                id:
                                                    *mut ::std::os::raw::c_uint)
                               -> u64>;
+/// Retrieve the event device's ethdev Rx adapter capabilities for the
+/// specified ethernet port
+///
+/// @param dev
+/// Event device pointer
+///
+/// @param eth_dev
+/// Ethernet device pointer
+///
+/// @param[out] caps
+/// A pointer to memory filled with Rx event adapter capabilities.
+///
+/// @return
+/// - 0: Success, driver provides Rx event adapter capabilities for the
+/// ethernet device.
+/// - <0: Error code returned by the driver function.
+///
+pub type eventdev_eth_rx_adapter_caps_get_t =
+    ::std::option::Option<unsafe extern "C" fn(dev: *const rte_eventdev,
+                                               eth_dev: *const rte_eth_dev,
+                                               caps: *mut u32)
+                              -> ::std::os::raw::c_int>;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct rte_event_eth_rx_adapter_queue_conf {
+    _unused: [u8; 0],
+}
+extern "C" {
+    #[link_name = "queue_conf"]
+    pub static mut queue_conf: *mut rte_event_eth_rx_adapter_queue_conf;
+}
+/// Add ethernet Rx queues to event device. This callback is invoked if
+/// the caps returned from rte_eventdev_eth_rx_adapter_caps_get(, eth_port_id)
+/// has RTE_EVENT_ETH_RX_ADAPTER_CAP_INTERNAL_PORT set.
+///
+/// @param dev
+/// Event device pointer
+///
+/// @param eth_dev
+/// Ethernet device pointer
+///
+/// @param rx_queue_id
+/// Ethernet device receive queue index
+///
+/// @param queue_conf
+/// Additional configuration structure
+///
+/// @return
+/// - 0: Success, ethernet receive queue added successfully.
+/// - <0: Error code returned by the driver function.
+///
+pub type eventdev_eth_rx_adapter_queue_add_t =
+    ::std::option::Option<unsafe extern "C" fn(dev: *const rte_eventdev,
+                                               eth_dev: *const rte_eth_dev,
+                                               rx_queue_id: i32,
+                                               queue_conf:
+                                                   *const rte_event_eth_rx_adapter_queue_conf)
+                              -> ::std::os::raw::c_int>;
+/// Delete ethernet Rx queues from event device. This callback is invoked if
+/// the caps returned from eventdev_eth_rx_adapter_caps_get(, eth_port_id)
+/// has RTE_EVENT_ETH_RX_ADAPTER_CAP_INTERNAL_PORT set.
+///
+/// @param dev
+/// Event device pointer
+///
+/// @param eth_dev
+/// Ethernet device pointer
+///
+/// @param rx_queue_id
+/// Ethernet device receive queue index
+///
+/// @return
+/// - 0: Success, ethernet receive queue deleted successfully.
+/// - <0: Error code returned by the driver function.
+///
+pub type eventdev_eth_rx_adapter_queue_del_t =
+    ::std::option::Option<unsafe extern "C" fn(dev: *const rte_eventdev,
+                                               eth_dev: *const rte_eth_dev,
+                                               rx_queue_id: i32)
+                              -> ::std::os::raw::c_int>;
+/// Start ethernet Rx adapter. This callback is invoked if
+/// the caps returned from eventdev_eth_rx_adapter_caps_get(.., eth_port_id)
+/// has RTE_EVENT_ETH_RX_ADAPTER_CAP_INTERNAL_PORT set and Rx queues
+/// from eth_port_id have been added to the event device.
+///
+/// @param dev
+/// Event device pointer
+///
+/// @param eth_dev
+/// Ethernet device pointer
+///
+/// @return
+/// - 0: Success, ethernet Rx adapter started successfully.
+/// - <0: Error code returned by the driver function.
+pub type eventdev_eth_rx_adapter_start_t =
+    ::std::option::Option<unsafe extern "C" fn(dev: *const rte_eventdev,
+                                               eth_dev: *const rte_eth_dev)
+                              -> ::std::os::raw::c_int>;
+/// Stop ethernet Rx adapter. This callback is invoked if
+/// the caps returned from eventdev_eth_rx_adapter_caps_get(..,eth_port_id)
+/// has RTE_EVENT_ETH_RX_ADAPTER_CAP_INTERNAL_PORT set and Rx queues
+/// from eth_port_id have been added to the event device.
+///
+/// @param dev
+/// Event device pointer
+///
+/// @param eth_dev
+/// Ethernet device pointer
+///
+/// @return
+/// - 0: Success, ethernet Rx adapter stopped successfully.
+/// - <0: Error code returned by the driver function.
+pub type eventdev_eth_rx_adapter_stop_t =
+    ::std::option::Option<unsafe extern "C" fn(dev: *const rte_eventdev,
+                                               eth_dev: *const rte_eth_dev)
+                              -> ::std::os::raw::c_int>;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct rte_event_eth_rx_adapter_stats {
+    _unused: [u8; 0],
+}
+extern "C" {
+    #[link_name = "stats"]
+    pub static mut stats: *mut rte_event_eth_rx_adapter_stats;
+}
+/// Retrieve ethernet Rx adapter statistics.
+///
+/// @param dev
+/// Event device pointer
+///
+/// @param eth_dev
+/// Ethernet device pointer
+///
+/// @param[out] stats
+/// Pointer to stats structure
+///
+/// @return
+/// Return 0 on success.
+pub type eventdev_eth_rx_adapter_stats_get =
+    ::std::option::Option<unsafe extern "C" fn(dev: *const rte_eventdev,
+                                               eth_dev: *const rte_eth_dev,
+                                               stats:
+                                                   *mut rte_event_eth_rx_adapter_stats)
+                              -> ::std::os::raw::c_int>;
+/// Reset ethernet Rx adapter statistics.
+///
+/// @param dev
+/// Event device pointer
+///
+/// @param eth_dev
+/// Ethernet device pointer
+///
+/// @return
+/// Return 0 on success.
+pub type eventdev_eth_rx_adapter_stats_reset =
+    ::std::option::Option<unsafe extern "C" fn(dev: *const rte_eventdev,
+                                               eth_dev: *const rte_eth_dev)
+                              -> ::std::os::raw::c_int>;
 extern "C" {
     /// Allocates a new eventdev slot for an event device and returns the pointer
 /// to that slot for the driver to use.
@@ -34433,6 +35700,35 @@ fn bindgen_test_layout_udp_hdr() {
 impl Clone for udp_hdr {
     fn clone(&self) -> Self { *self }
 }
+/// ESP Header
+#[repr(C, packed)]
+#[derive(Debug, Copy)]
+pub struct esp_hdr {
+    /// < Security Parameters Index
+    pub spi: u32,
+    /// < packet sequence number
+    pub seq: u32,
+}
+#[test]
+fn bindgen_test_layout_esp_hdr() {
+    assert_eq!(::std::mem::size_of::<esp_hdr>() , 8usize , concat ! (
+               "Size of: " , stringify ! ( esp_hdr ) ));
+    assert_eq! (::std::mem::align_of::<esp_hdr>() , 1usize , concat ! (
+                "Alignment of " , stringify ! ( esp_hdr ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const esp_hdr ) ) . spi as * const _ as usize }
+                , 0usize , concat ! (
+                "Alignment of field: " , stringify ! ( esp_hdr ) , "::" ,
+                stringify ! ( spi ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const esp_hdr ) ) . seq as * const _ as usize }
+                , 4usize , concat ! (
+                "Alignment of field: " , stringify ! ( esp_hdr ) , "::" ,
+                stringify ! ( seq ) ));
+}
+impl Clone for esp_hdr {
+    fn clone(&self) -> Self { *self }
+}
 /// Flow rule attributes.
 ///
 /// Priorities are set on two levels: per group and per rule within groups.
@@ -34655,6 +35951,10 @@ pub enum rte_flow_item_type {
     RTE_FLOW_ITEM_TYPE_MPLS = 19,
     RTE_FLOW_ITEM_TYPE_GRE = 20,
     RTE_FLOW_ITEM_TYPE_FUZZY = 21,
+    RTE_FLOW_ITEM_TYPE_GTP = 22,
+    RTE_FLOW_ITEM_TYPE_GTPC = 23,
+    RTE_FLOW_ITEM_TYPE_GTPU = 24,
+    RTE_FLOW_ITEM_TYPE_ESP = 25,
 }
 /// RTE_FLOW_ITEM_TYPE_ANY
 ///
@@ -35458,6 +36758,86 @@ extern "C" {
     #[link_name = "rte_flow_item_fuzzy_mask"]
     pub static rte_flow_item_fuzzy_mask: rte_flow_item_fuzzy;
 }
+/// RTE_FLOW_ITEM_TYPE_GTP.
+///
+/// Matches a GTPv1 header.
+#[repr(C)]
+#[derive(Debug, Copy)]
+pub struct rte_flow_item_gtp {
+    /// Version (3b), protocol type (1b), reserved (1b),
+    /// Extension header flag (1b),
+    /// Sequence number flag (1b),
+    /// N-PDU number flag (1b).
+    pub v_pt_rsv_flags: u8,
+    /// < Message type.
+    pub msg_type: u8,
+    /// < Message length.
+    pub msg_len: rte_be16_t,
+    /// < Tunnel endpoint identifier.
+    pub teid: rte_be32_t,
+}
+#[test]
+fn bindgen_test_layout_rte_flow_item_gtp() {
+    assert_eq!(::std::mem::size_of::<rte_flow_item_gtp>() , 8usize , concat !
+               ( "Size of: " , stringify ! ( rte_flow_item_gtp ) ));
+    assert_eq! (::std::mem::align_of::<rte_flow_item_gtp>() , 4usize , concat
+                ! ( "Alignment of " , stringify ! ( rte_flow_item_gtp ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_flow_item_gtp ) ) . v_pt_rsv_flags as
+                * const _ as usize } , 0usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_flow_item_gtp ) ,
+                "::" , stringify ! ( v_pt_rsv_flags ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_flow_item_gtp ) ) . msg_type as *
+                const _ as usize } , 1usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_flow_item_gtp ) ,
+                "::" , stringify ! ( msg_type ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_flow_item_gtp ) ) . msg_len as *
+                const _ as usize } , 2usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_flow_item_gtp ) ,
+                "::" , stringify ! ( msg_len ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_flow_item_gtp ) ) . teid as * const _
+                as usize } , 4usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_flow_item_gtp ) ,
+                "::" , stringify ! ( teid ) ));
+}
+impl Clone for rte_flow_item_gtp {
+    fn clone(&self) -> Self { *self }
+}
+extern "C" {
+    #[link_name = "rte_flow_item_gtp_mask"]
+    pub static rte_flow_item_gtp_mask: rte_flow_item_gtp;
+}
+/// RTE_FLOW_ITEM_TYPE_ESP
+///
+/// Matches an ESP header.
+#[repr(C)]
+#[derive(Debug, Copy)]
+pub struct rte_flow_item_esp {
+    /// < ESP header definition.
+    pub hdr: esp_hdr,
+}
+#[test]
+fn bindgen_test_layout_rte_flow_item_esp() {
+    assert_eq!(::std::mem::size_of::<rte_flow_item_esp>() , 8usize , concat !
+               ( "Size of: " , stringify ! ( rte_flow_item_esp ) ));
+    assert_eq! (::std::mem::align_of::<rte_flow_item_esp>() , 1usize , concat
+                ! ( "Alignment of " , stringify ! ( rte_flow_item_esp ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_flow_item_esp ) ) . hdr as * const _
+                as usize } , 0usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_flow_item_esp ) ,
+                "::" , stringify ! ( hdr ) ));
+}
+impl Clone for rte_flow_item_esp {
+    fn clone(&self) -> Self { *self }
+}
+extern "C" {
+    #[link_name = "rte_flow_item_esp_mask"]
+    pub static rte_flow_item_esp_mask: rte_flow_item_esp;
+}
 /// Matching pattern item definition.
 ///
 /// A pattern is formed by stacking items starting from the lowest protocol
@@ -35572,6 +36952,8 @@ pub enum rte_flow_action_type {
     RTE_FLOW_ACTION_TYPE_RSS = 9,
     RTE_FLOW_ACTION_TYPE_PF = 10,
     RTE_FLOW_ACTION_TYPE_VF = 11,
+    RTE_FLOW_ACTION_TYPE_METER = 12,
+    RTE_FLOW_ACTION_TYPE_SECURITY = 13,
 }
 /// RTE_FLOW_ACTION_TYPE_MARK
 ///
@@ -35993,6 +37375,86 @@ impl rte_flow_action_vf {
              ((reserved as u32 as u32) << 1usize) & (4294967294u64 as u32))
     }
 }
+/// RTE_FLOW_ACTION_TYPE_METER
+///
+/// Traffic metering and policing (MTR).
+///
+/// Packets matched by items of this type can be either dropped or passed to the
+/// next item with their color set by the MTR object.
+///
+/// Non-terminating by default.
+#[repr(C)]
+#[derive(Debug, Copy)]
+pub struct rte_flow_action_meter {
+    /// < MTR object ID created with rte_mtr_create().
+    pub mtr_id: u32,
+}
+#[test]
+fn bindgen_test_layout_rte_flow_action_meter() {
+    assert_eq!(::std::mem::size_of::<rte_flow_action_meter>() , 4usize ,
+               concat ! ( "Size of: " , stringify ! ( rte_flow_action_meter )
+               ));
+    assert_eq! (::std::mem::align_of::<rte_flow_action_meter>() , 4usize ,
+                concat ! (
+                "Alignment of " , stringify ! ( rte_flow_action_meter ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_flow_action_meter ) ) . mtr_id as *
+                const _ as usize } , 0usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_flow_action_meter )
+                , "::" , stringify ! ( mtr_id ) ));
+}
+impl Clone for rte_flow_action_meter {
+    fn clone(&self) -> Self { *self }
+}
+/// RTE_FLOW_ACTION_TYPE_SECURITY
+///
+/// Perform the security action on flows matched by the pattern items
+/// according to the configuration of the security session.
+///
+/// This action modifies the payload of matched flows. For INLINE_CRYPTO, the
+/// security protocol headers and IV are fully provided by the application as
+/// specified in the flow pattern. The payload of matching packets is
+/// encrypted on egress, and decrypted and authenticated on ingress.
+/// For INLINE_PROTOCOL, the security protocol is fully offloaded to HW,
+/// providing full encapsulation and decapsulation of packets in security
+/// protocols. The flow pattern specifies both the outer security header fields
+/// and the inner packet fields. The security session specified in the action
+/// must match the pattern parameters.
+///
+/// The security session specified in the action must be created on the same
+/// port as the flow action that is being specified.
+///
+/// The ingress/egress flow attribute should match that specified in the
+/// security session if the security session supports the definition of the
+/// direction.
+///
+/// Multiple flows can be configured to use the same security session.
+///
+/// Non-terminating by default.
+#[repr(C)]
+#[derive(Debug, Copy)]
+pub struct rte_flow_action_security {
+    /// < Pointer to security session structure.
+    pub security_session: *mut ::std::os::raw::c_void,
+}
+#[test]
+fn bindgen_test_layout_rte_flow_action_security() {
+    assert_eq!(::std::mem::size_of::<rte_flow_action_security>() , 8usize ,
+               concat ! (
+               "Size of: " , stringify ! ( rte_flow_action_security ) ));
+    assert_eq! (::std::mem::align_of::<rte_flow_action_security>() , 8usize ,
+                concat ! (
+                "Alignment of " , stringify ! ( rte_flow_action_security ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_flow_action_security ) ) .
+                security_session as * const _ as usize } , 0usize , concat ! (
+                "Alignment of field: " , stringify ! (
+                rte_flow_action_security ) , "::" , stringify ! (
+                security_session ) ));
+}
+impl Clone for rte_flow_action_security {
+    fn clone(&self) -> Self { *self }
+}
 /// Definition of a single action.
 ///
 /// A list of actions is terminated by a END action.
@@ -36144,7 +37606,7 @@ extern "C" {
 /// -EBUSY: action cannot be performed due to busy device resources, may
 /// succeed if the affected queues or even the entire port are in a stopped
 /// state (see rte_eth_dev_rx_queue_stop() and rte_eth_dev_stop()).
-    pub fn rte_flow_validate(port_id: u8, attr: *const rte_flow_attr,
+    pub fn rte_flow_validate(port_id: u16, attr: *const rte_flow_attr,
                              pattern: *const rte_flow_item,
                              actions: *const rte_flow_action,
                              error: *mut rte_flow_error)
@@ -36169,7 +37631,7 @@ extern "C" {
 /// A valid handle in case of success, NULL otherwise and rte_errno is set
 /// to the positive version of one of the error codes defined for
 /// rte_flow_validate().
-    pub fn rte_flow_create(port_id: u8, attr: *const rte_flow_attr,
+    pub fn rte_flow_create(port_id: u16, attr: *const rte_flow_attr,
                            pattern: *const rte_flow_item,
                            actions: *const rte_flow_action,
                            error: *mut rte_flow_error) -> *mut rte_flow;
@@ -36193,7 +37655,7 @@ extern "C" {
 ///
 /// @return
 /// 0 on success, a negative errno value otherwise and rte_errno is set.
-    pub fn rte_flow_destroy(port_id: u8, flow: *mut rte_flow,
+    pub fn rte_flow_destroy(port_id: u16, flow: *mut rte_flow,
                             error: *mut rte_flow_error)
      -> ::std::os::raw::c_int;
 }
@@ -36212,7 +37674,7 @@ extern "C" {
 ///
 /// @return
 /// 0 on success, a negative errno value otherwise and rte_errno is set.
-    pub fn rte_flow_flush(port_id: u8, error: *mut rte_flow_error)
+    pub fn rte_flow_flush(port_id: u16, error: *mut rte_flow_error)
      -> ::std::os::raw::c_int;
 }
 extern "C" {
@@ -36238,7 +37700,7 @@ extern "C" {
 ///
 /// @return
 /// 0 on success, a negative errno value otherwise and rte_errno is set.
-    pub fn rte_flow_query(port_id: u8, flow: *mut rte_flow,
+    pub fn rte_flow_query(port_id: u16, flow: *mut rte_flow,
                           action: rte_flow_action_type,
                           data: *mut ::std::os::raw::c_void,
                           error: *mut rte_flow_error)
@@ -36284,8 +37746,31 @@ extern "C" {
 ///
 /// @return
 /// 0 on success, a negative errno value otherwise and rte_errno is set.
-    pub fn rte_flow_isolate(port_id: u8, set: ::std::os::raw::c_int,
+    pub fn rte_flow_isolate(port_id: u16, set: ::std::os::raw::c_int,
                             error: *mut rte_flow_error)
+     -> ::std::os::raw::c_int;
+}
+extern "C" {
+    /// Initialize flow error structure.
+///
+/// @param[out] error
+/// Pointer to flow error structure (may be NULL).
+/// @param code
+/// Related error code (rte_errno).
+/// @param type
+/// Cause field and error types.
+/// @param cause
+/// Object responsible for the error.
+/// @param message
+/// Human-readable error message.
+///
+/// @return
+/// Negative error code (errno value) and rte_errno is set.
+    pub fn rte_flow_error_set(error: *mut rte_flow_error,
+                              code: ::std::os::raw::c_int,
+                              type_: rte_flow_error_type,
+                              cause: *const ::std::os::raw::c_void,
+                              message: *const ::std::os::raw::c_char)
      -> ::std::os::raw::c_int;
 }
 /// Generic flow representation.
@@ -36484,7 +37969,7 @@ extern "C" {
 /// The flow operations structure associated with port_id, NULL in case of
 /// error, in which case rte_errno is set and the error structure contains
 /// additional details.
-    pub fn rte_flow_ops_get(port_id: u8, error: *mut rte_flow_error)
+    pub fn rte_flow_ops_get(port_id: u16, error: *mut rte_flow_error)
      -> *const rte_flow_ops;
 }
 /// GRE Header
@@ -37489,7 +38974,7 @@ fn bindgen_test_layout_ip_frag() {
 impl Clone for ip_frag {
     fn clone(&self) -> Self { *self }
 }
-/// @internal <src addr, dst_addr, id> to uniquely indetify fragmented datagram.
+/// @internal <src addr, dst_addr, id> to uniquely identify fragmented datagram.
 #[repr(C)]
 #[derive(Debug, Copy)]
 pub struct ip_frag_key {
@@ -37743,7 +39228,7 @@ pub struct rte_ip_frag_tbl {
     pub max_entries: u32,
     /// < entries in use.
     pub use_entries: u32,
-    /// < hash assocaitivity.
+    /// < hash associativity.
     pub bucket_entries: u32,
     /// < total size of the table.
     pub nb_entries: u32,
@@ -37990,7 +39475,7 @@ extern "C" {
 /// @param ip_hdr
 /// Pointer to the IPV4 header inside the fragment.
 /// @return
-/// Pointer to mbuf for reassebled packet, or NULL if:
+/// Pointer to mbuf for reassembled packet, or NULL if:
 /// - an error occurred.
 /// - not all fragments of the packet are collected yet.
     pub fn rte_ipv4_frag_reassemble_packet(tbl: *mut rte_ip_frag_tbl,
@@ -38356,7 +39841,7 @@ extern "C" {
 ///
 /// @param job
 /// Job object.
-/// @param update_pedriod_cb
+/// @param update_period_cb
 /// Callback to set. If NULL restore default update function.
     pub fn rte_jobstats_set_update_period_function(job: *mut rte_jobstats,
                                                    update_period_cb:
@@ -38860,13 +40345,13 @@ pub struct rte_kni {
 #[repr(C)]
 #[derive(Debug, Copy)]
 pub struct rte_kni_ops {
-    pub port_id: u8,
-    pub change_mtu: ::std::option::Option<unsafe extern "C" fn(port_id: u8,
+    pub port_id: u16,
+    pub change_mtu: ::std::option::Option<unsafe extern "C" fn(port_id: u16,
                                                                new_mtu:
                                                                    ::std::os::raw::c_uint)
                                               -> ::std::os::raw::c_int>,
     pub config_network_if: ::std::option::Option<unsafe extern "C" fn(port_id:
-                                                                          u8,
+                                                                          u16,
                                                                       if_up:
                                                                           u8)
                                                      ->
@@ -39016,7 +40501,7 @@ extern "C" {
 /// elements for each KNI interface allocated.
 ///
 /// @param pktmbuf_pool
-/// The mempool for allocting mbufs for packets.
+/// The mempool for allocating mbufs for packets.
 /// @param conf
 /// The pointer to the configurations of the KNI device.
 /// @param ops
@@ -39123,7 +40608,7 @@ extern "C" {
 /// @param kni
 /// pointer to struct rte_kni.
 /// @param ops
-/// ponter to struct rte_kni_ops.
+/// pointer to struct rte_kni_ops.
 ///
 /// @return
 /// On success: 0
@@ -40771,14 +42256,6 @@ extern "C" {
                              hdr_lens: *mut rte_net_hdr_lens, layers: u32)
      -> u32;
 }
-#[repr(u32)]
-#[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
-pub enum rte_intr_mode {
-    RTE_INTR_MODE_NONE = 0,
-    RTE_INTR_MODE_LEGACY = 1,
-    RTE_INTR_MODE_MSI = 2,
-    RTE_INTR_MODE_MSIX = 3,
-}
 pub const RTE_PDUMP_FLAG_RX: _bindgen_ty_25 =
     _bindgen_ty_25::RTE_PDUMP_FLAG_RX;
 pub const RTE_PDUMP_FLAG_TX: _bindgen_ty_25 =
@@ -40842,7 +42319,7 @@ extern "C" {
 ///
 /// @return
 /// 0 on success, -1 on error, rte_errno is set accordingly.
-    pub fn rte_pdump_enable(port: u8, queue: u16, flags: u32,
+    pub fn rte_pdump_enable(port: u16, queue: u16, flags: u32,
                             ring: *mut rte_ring, mp: *mut rte_mempool,
                             filter: *mut ::std::os::raw::c_void)
      -> ::std::os::raw::c_int;
@@ -40862,7 +42339,7 @@ extern "C" {
 ///
 /// @return
 /// 0 on success, -1 on error, rte_errno is set accordingly.
-    pub fn rte_pdump_disable(port: u8, queue: u16, flags: u32)
+    pub fn rte_pdump_disable(port: u16, queue: u16, flags: u32)
      -> ::std::os::raw::c_int;
 }
 extern "C" {
@@ -42143,7 +43620,7 @@ extern "C" {
 /// @param keys
 /// Array containing table entry keys
 /// @param entries
-/// Array containung new contents for every table entry identified by key
+/// Array containing new contents for every table entry identified by key
 /// @param n_keys
 /// Number of keys to add
 /// @param key_found
@@ -42653,7 +44130,7 @@ extern "C" {
 /// - (0) if successful.
 /// - (-ENODEV) if *port* invalid.
 /// - (-EINVAL) if bad parameter.
-    pub fn rte_pmd_bnxt_set_vf_mac_anti_spoof(port: u8, vf: u16, on: u8)
+    pub fn rte_pmd_bnxt_set_vf_mac_anti_spoof(port: u16, vf: u16, on: u8)
      -> ::std::os::raw::c_int;
 }
 extern "C" {
@@ -42669,7 +44146,7 @@ extern "C" {
 /// - (0) if successful.
 /// - (-ENODEV) if *port* invalid.
 /// - (-EINVAL) if *vf* or *mac_addr* is invalid.
-    pub fn rte_pmd_bnxt_set_vf_mac_addr(port: u8, vf: u16,
+    pub fn rte_pmd_bnxt_set_vf_mac_addr(port: u16, vf: u16,
                                         mac_addr: *mut ether_addr)
      -> ::std::os::raw::c_int;
 }
@@ -42689,7 +44166,7 @@ extern "C" {
 /// - (-ENOTSUP) if hardware doesn't support this feature.
 /// - (-ENODEV) if *port* invalid.
 /// - (-EINVAL) if bad parameter.
-    pub fn rte_pmd_bnxt_set_vf_vlan_stripq(port: u8, vf: u16, on: u8)
+    pub fn rte_pmd_bnxt_set_vf_vlan_stripq(port: u16, vf: u16, on: u8)
      -> ::std::os::raw::c_int;
 }
 extern "C" {
@@ -42707,7 +44184,7 @@ extern "C" {
 /// - (0) if successful.
 /// - (-ENODEV) if *port* invalid.
 /// - (-EINVAL) if bad parameter.
-    pub fn rte_pmd_bnxt_set_vf_vlan_insert(port: u8, vf: u16, vlan_id: u16)
+    pub fn rte_pmd_bnxt_set_vf_vlan_insert(port: u16, vf: u16, vlan_id: u16)
      -> ::std::os::raw::c_int;
 }
 extern "C" {
@@ -42728,7 +44205,7 @@ extern "C" {
 /// - (-ENOTSUP) if hardware doesn't support.
 /// - (-ENODEV) if *port_id* invalid.
 /// - (-EINVAL) if bad parameter.
-    pub fn rte_pmd_bnxt_set_vf_vlan_filter(port: u8, vlan: u16, vf_mask: u64,
+    pub fn rte_pmd_bnxt_set_vf_vlan_filter(port: u16, vlan: u16, vf_mask: u64,
                                            vlan_on: u8)
      -> ::std::os::raw::c_int;
 }
@@ -42745,7 +44222,7 @@ extern "C" {
 /// - (0) if successful.
 /// - (-ENODEV) if *port* invalid.
 /// - (-EINVAL) if bad parameter.
-    pub fn rte_pmd_bnxt_set_tx_loopback(port: u8, on: u8)
+    pub fn rte_pmd_bnxt_set_tx_loopback(port: u16, on: u8)
      -> ::std::os::raw::c_int;
 }
 extern "C" {
@@ -42761,7 +44238,7 @@ extern "C" {
 /// - (0) if successful.
 /// - (-ENODEV) if *port* invalid.
 /// - (-EINVAL) if bad parameter.
-    pub fn rte_pmd_bnxt_set_all_queues_drop_en(port: u8, on: u8)
+    pub fn rte_pmd_bnxt_set_all_queues_drop_en(port: u16, on: u8)
      -> ::std::os::raw::c_int;
 }
 extern "C" {
@@ -42779,7 +44256,7 @@ extern "C" {
 /// - (0) if successful.
 /// - (-ENODEV) if *port* invalid.
 /// - (-EINVAL) if *vf* or *mac_addr* is invalid.
-    pub fn rte_pmd_bnxt_set_vf_rate_limit(port: u8, vf: u16, tx_rate: u16,
+    pub fn rte_pmd_bnxt_set_vf_rate_limit(port: u16, vf: u16, tx_rate: u16,
                                           q_msk: u64)
      -> ::std::os::raw::c_int;
 }
@@ -42797,7 +44274,7 @@ extern "C" {
 /// - (0) if successful.
 /// - (-ENODEV) if *port* invalid.
 /// - (-EINVAL) if bad parameter.
-    pub fn rte_pmd_bnxt_get_vf_stats(port: u8, vf_id: u16,
+    pub fn rte_pmd_bnxt_get_vf_stats(port: u16, vf_id: u16,
                                      stats: *mut rte_eth_stats)
      -> ::std::os::raw::c_int;
 }
@@ -42812,7 +44289,7 @@ extern "C" {
 /// - (0) if successful.
 /// - (-ENODEV) if *port* invalid.
 /// - (-EINVAL) if bad parameter.
-    pub fn rte_pmd_bnxt_reset_vf_stats(port: u8, vf_id: u16)
+    pub fn rte_pmd_bnxt_reset_vf_stats(port: u16, vf_id: u16)
      -> ::std::os::raw::c_int;
 }
 extern "C" {
@@ -42830,7 +44307,7 @@ extern "C" {
 /// - (0) if successful.
 /// - (-ENODEV) if *port* invalid.
 /// - (-EINVAL) if bad parameter.
-    pub fn rte_pmd_bnxt_set_vf_vlan_anti_spoof(port: u8, vf: u16, on: u8)
+    pub fn rte_pmd_bnxt_set_vf_vlan_anti_spoof(port: u16, vf: u16, on: u8)
      -> ::std::os::raw::c_int;
 }
 extern "C" {
@@ -42849,8 +44326,8 @@ extern "C" {
 /// - (0) if successful.
 /// - (-ENODEV) if *port_id* invalid.
 /// - (-EINVAL) if bad parameter.
-    pub fn rte_pmd_bnxt_set_vf_rxmode(port: u8, vf: u16, rx_mask: u16, on: u8)
-     -> ::std::os::raw::c_int;
+    pub fn rte_pmd_bnxt_set_vf_rxmode(port: u16, vf: u16, rx_mask: u16,
+                                      on: u8) -> ::std::os::raw::c_int;
 }
 extern "C" {
     /// Returns the number of default RX queues on a VF
@@ -42865,7 +44342,7 @@ extern "C" {
 /// - (-ENOTSUP) if on a function without VFs
 /// - (-ENOMEM) on an allocation failure
 /// - (-1) firmware interface error
-    pub fn rte_pmd_bnxt_get_vf_rx_status(port: u8, vf_id: u16)
+    pub fn rte_pmd_bnxt_get_vf_rx_status(port: u16, vf_id: u16)
      -> ::std::os::raw::c_int;
 }
 extern "C" {
@@ -42881,7 +44358,7 @@ extern "C" {
 /// - Positive Non-zero value - Error code from HWRM
 /// - (-EINVAL) invalid vf_id specified.
 /// - (-ENOTSUP) Ethernet device is not a PF
-    pub fn rte_pmd_bnxt_get_vf_tx_drop_count(port: u8, vf_id: u16,
+    pub fn rte_pmd_bnxt_get_vf_tx_drop_count(port: u16, vf_id: u16,
                                              count: *mut u64)
      -> ::std::os::raw::c_int;
 }
@@ -42899,7 +44376,7 @@ extern "C" {
 /// - (-EINVAL) invalid vf_id specified.
 /// - (-ENOTSUP) Ethernet device is not a PF
 /// - (-ENOMEM) on an allocation failure
-    pub fn rte_pmd_bnxt_mac_addr_add(port: u8, mac_addr: *mut ether_addr,
+    pub fn rte_pmd_bnxt_mac_addr_add(port: u16, mac_addr: *mut ether_addr,
                                      vf_id: u32) -> ::std::os::raw::c_int;
 }
 extern "C" {
@@ -42917,7 +44394,7 @@ extern "C" {
 /// - (0) if successful.
 /// - (-ENODEV) if *port* invalid.
 /// - (-EINVAL) if bad parameter.
-    pub fn rte_pmd_bnxt_set_vf_persist_stats(port: u8, vf: u16, on: u8)
+    pub fn rte_pmd_bnxt_set_vf_persist_stats(port: u16, vf: u16, on: u8)
      -> ::std::os::raw::c_int;
 }
 #[repr(u32)]
@@ -43008,7 +44485,26 @@ pub enum rte_pmd_i40e_package_info {
     RTE_PMD_I40E_PKG_INFO_HEADER = 1025,
     RTE_PMD_I40E_PKG_INFO_DEVID_NUM = 1026,
     RTE_PMD_I40E_PKG_INFO_DEVID_LIST = 1027,
+    RTE_PMD_I40E_PKG_INFO_PROTOCOL_NUM = 1028,
+    RTE_PMD_I40E_PKG_INFO_PROTOCOL_LIST = 1029,
+    RTE_PMD_I40E_PKG_INFO_PCTYPE_NUM = 1030,
+    RTE_PMD_I40E_PKG_INFO_PCTYPE_LIST = 1031,
+    RTE_PMD_I40E_PKG_INFO_PTYPE_NUM = 1032,
+    RTE_PMD_I40E_PKG_INFO_PTYPE_LIST = 1033,
     RTE_PMD_I40E_PKG_INFO_MAX = 4294967295,
+}
+#[repr(u32)]
+/// Option types of queue region.
+#[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
+pub enum rte_pmd_i40e_queue_region_op {
+    RTE_PMD_I40E_RSS_QUEUE_REGION_UNDEFINED = 0,
+    RTE_PMD_I40E_RSS_QUEUE_REGION_SET = 1,
+    RTE_PMD_I40E_RSS_QUEUE_REGION_FLOWTYPE_SET = 2,
+    RTE_PMD_I40E_RSS_QUEUE_REGION_USER_PRIORITY_SET = 3,
+    RTE_PMD_I40E_RSS_QUEUE_REGION_ALL_FLUSH_ON = 4,
+    RTE_PMD_I40E_RSS_QUEUE_REGION_ALL_FLUSH_OFF = 5,
+    RTE_PMD_I40E_RSS_QUEUE_REGION_INFO_GET = 6,
+    RTE_PMD_I40E_RSS_QUEUE_REGION_OP_MAX = 7,
 }
 /// Version for dynamic device personalization.
 /// Version in "major.minor.update.draft" format.
@@ -43168,6 +44664,64 @@ fn bindgen_test_layout_rte_pmd_i40e_profile_list() {
 impl Clone for rte_pmd_i40e_profile_list {
     fn clone(&self) -> Self { *self }
 }
+/// Protocols information stored in profile
+#[repr(C)]
+#[derive(Debug, Copy)]
+pub struct rte_pmd_i40e_proto_info {
+    pub proto_id: u8,
+    pub name: [::std::os::raw::c_char; 32usize],
+}
+#[test]
+fn bindgen_test_layout_rte_pmd_i40e_proto_info() {
+    assert_eq!(::std::mem::size_of::<rte_pmd_i40e_proto_info>() , 33usize ,
+               concat ! (
+               "Size of: " , stringify ! ( rte_pmd_i40e_proto_info ) ));
+    assert_eq! (::std::mem::align_of::<rte_pmd_i40e_proto_info>() , 1usize ,
+                concat ! (
+                "Alignment of " , stringify ! ( rte_pmd_i40e_proto_info ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_pmd_i40e_proto_info ) ) . proto_id as
+                * const _ as usize } , 0usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_pmd_i40e_proto_info
+                ) , "::" , stringify ! ( proto_id ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_pmd_i40e_proto_info ) ) . name as *
+                const _ as usize } , 1usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_pmd_i40e_proto_info
+                ) , "::" , stringify ! ( name ) ));
+}
+impl Clone for rte_pmd_i40e_proto_info {
+    fn clone(&self) -> Self { *self }
+}
+/// Packet classification/ packet type information stored in profile
+#[repr(C)]
+#[derive(Debug, Copy)]
+pub struct rte_pmd_i40e_ptype_info {
+    pub ptype_id: u8,
+    pub protocols: [u8; 6usize],
+}
+#[test]
+fn bindgen_test_layout_rte_pmd_i40e_ptype_info() {
+    assert_eq!(::std::mem::size_of::<rte_pmd_i40e_ptype_info>() , 7usize ,
+               concat ! (
+               "Size of: " , stringify ! ( rte_pmd_i40e_ptype_info ) ));
+    assert_eq! (::std::mem::align_of::<rte_pmd_i40e_ptype_info>() , 1usize ,
+                concat ! (
+                "Alignment of " , stringify ! ( rte_pmd_i40e_ptype_info ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_pmd_i40e_ptype_info ) ) . ptype_id as
+                * const _ as usize } , 0usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_pmd_i40e_ptype_info
+                ) , "::" , stringify ! ( ptype_id ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_pmd_i40e_ptype_info ) ) . protocols
+                as * const _ as usize } , 1usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_pmd_i40e_ptype_info
+                ) , "::" , stringify ! ( protocols ) ));
+}
+impl Clone for rte_pmd_i40e_ptype_info {
+    fn clone(&self) -> Self { *self }
+}
 #[repr(C)]
 #[derive(Debug, Copy)]
 pub struct rte_pmd_i40e_ptype_mapping {
@@ -43201,6 +44755,357 @@ fn bindgen_test_layout_rte_pmd_i40e_ptype_mapping() {
 impl Clone for rte_pmd_i40e_ptype_mapping {
     fn clone(&self) -> Self { *self }
 }
+/// Queue region related information.
+#[repr(C)]
+#[derive(Debug, Copy)]
+pub struct rte_pmd_i40e_queue_region_conf {
+    /// the region id for this configuration
+    pub region_id: u8,
+    /// the pctype or hardware flowtype of packet,
+    /// the specific index for each type has been defined
+    /// in file i40e_type.h as enum i40e_filter_pctype.
+    pub hw_flowtype: u8,
+    /// the start queue index for this region
+    pub queue_start_index: u8,
+    /// the total queue number of this queue region
+    pub queue_num: u8,
+    /// the packet's user priority for this region
+    pub user_priority: u8,
+}
+#[test]
+fn bindgen_test_layout_rte_pmd_i40e_queue_region_conf() {
+    assert_eq!(::std::mem::size_of::<rte_pmd_i40e_queue_region_conf>() ,
+               5usize , concat ! (
+               "Size of: " , stringify ! ( rte_pmd_i40e_queue_region_conf )
+               ));
+    assert_eq! (::std::mem::align_of::<rte_pmd_i40e_queue_region_conf>() ,
+                1usize , concat ! (
+                "Alignment of " , stringify ! ( rte_pmd_i40e_queue_region_conf
+                ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_pmd_i40e_queue_region_conf ) ) .
+                region_id as * const _ as usize } , 0usize , concat ! (
+                "Alignment of field: " , stringify ! (
+                rte_pmd_i40e_queue_region_conf ) , "::" , stringify ! (
+                region_id ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_pmd_i40e_queue_region_conf ) ) .
+                hw_flowtype as * const _ as usize } , 1usize , concat ! (
+                "Alignment of field: " , stringify ! (
+                rte_pmd_i40e_queue_region_conf ) , "::" , stringify ! (
+                hw_flowtype ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_pmd_i40e_queue_region_conf ) ) .
+                queue_start_index as * const _ as usize } , 2usize , concat !
+                (
+                "Alignment of field: " , stringify ! (
+                rte_pmd_i40e_queue_region_conf ) , "::" , stringify ! (
+                queue_start_index ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_pmd_i40e_queue_region_conf ) ) .
+                queue_num as * const _ as usize } , 3usize , concat ! (
+                "Alignment of field: " , stringify ! (
+                rte_pmd_i40e_queue_region_conf ) , "::" , stringify ! (
+                queue_num ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_pmd_i40e_queue_region_conf ) ) .
+                user_priority as * const _ as usize } , 4usize , concat ! (
+                "Alignment of field: " , stringify ! (
+                rte_pmd_i40e_queue_region_conf ) , "::" , stringify ! (
+                user_priority ) ));
+}
+impl Clone for rte_pmd_i40e_queue_region_conf {
+    fn clone(&self) -> Self { *self }
+}
+#[repr(C)]
+#[derive(Copy)]
+pub struct rte_pmd_i40e_queue_region_info {
+    /// the region id for this configuration
+    pub region_id: u8,
+    /// the start queue index for this region
+    pub queue_start_index: u8,
+    /// the total queue number of this queue region
+    pub queue_num: u8,
+    /// the total number of user priority for this region
+    pub user_priority_num: u8,
+    /// the packet's user priority for this region
+    pub user_priority: [u8; 8usize],
+    /// the total number of flowtype for this region
+    pub flowtype_num: u8,
+    /// the pctype or hardware flowtype of packet,
+    /// the specific index for each type has been defined
+    /// in file i40e_type.h as enum i40e_filter_pctype.
+    pub hw_flowtype: [u8; 64usize],
+}
+#[test]
+fn bindgen_test_layout_rte_pmd_i40e_queue_region_info() {
+    assert_eq!(::std::mem::size_of::<rte_pmd_i40e_queue_region_info>() ,
+               77usize , concat ! (
+               "Size of: " , stringify ! ( rte_pmd_i40e_queue_region_info )
+               ));
+    assert_eq! (::std::mem::align_of::<rte_pmd_i40e_queue_region_info>() ,
+                1usize , concat ! (
+                "Alignment of " , stringify ! ( rte_pmd_i40e_queue_region_info
+                ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_pmd_i40e_queue_region_info ) ) .
+                region_id as * const _ as usize } , 0usize , concat ! (
+                "Alignment of field: " , stringify ! (
+                rte_pmd_i40e_queue_region_info ) , "::" , stringify ! (
+                region_id ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_pmd_i40e_queue_region_info ) ) .
+                queue_start_index as * const _ as usize } , 1usize , concat !
+                (
+                "Alignment of field: " , stringify ! (
+                rte_pmd_i40e_queue_region_info ) , "::" , stringify ! (
+                queue_start_index ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_pmd_i40e_queue_region_info ) ) .
+                queue_num as * const _ as usize } , 2usize , concat ! (
+                "Alignment of field: " , stringify ! (
+                rte_pmd_i40e_queue_region_info ) , "::" , stringify ! (
+                queue_num ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_pmd_i40e_queue_region_info ) ) .
+                user_priority_num as * const _ as usize } , 3usize , concat !
+                (
+                "Alignment of field: " , stringify ! (
+                rte_pmd_i40e_queue_region_info ) , "::" , stringify ! (
+                user_priority_num ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_pmd_i40e_queue_region_info ) ) .
+                user_priority as * const _ as usize } , 4usize , concat ! (
+                "Alignment of field: " , stringify ! (
+                rte_pmd_i40e_queue_region_info ) , "::" , stringify ! (
+                user_priority ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_pmd_i40e_queue_region_info ) ) .
+                flowtype_num as * const _ as usize } , 12usize , concat ! (
+                "Alignment of field: " , stringify ! (
+                rte_pmd_i40e_queue_region_info ) , "::" , stringify ! (
+                flowtype_num ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_pmd_i40e_queue_region_info ) ) .
+                hw_flowtype as * const _ as usize } , 13usize , concat ! (
+                "Alignment of field: " , stringify ! (
+                rte_pmd_i40e_queue_region_info ) , "::" , stringify ! (
+                hw_flowtype ) ));
+}
+impl Clone for rte_pmd_i40e_queue_region_info {
+    fn clone(&self) -> Self { *self }
+}
+#[repr(C)]
+#[derive(Copy)]
+pub struct rte_pmd_i40e_queue_regions {
+    /// the total number of queue region for this port
+    pub queue_region_number: u16,
+    pub region: [rte_pmd_i40e_queue_region_info; 8usize],
+}
+#[test]
+fn bindgen_test_layout_rte_pmd_i40e_queue_regions() {
+    assert_eq!(::std::mem::size_of::<rte_pmd_i40e_queue_regions>() , 618usize
+               , concat ! (
+               "Size of: " , stringify ! ( rte_pmd_i40e_queue_regions ) ));
+    assert_eq! (::std::mem::align_of::<rte_pmd_i40e_queue_regions>() , 2usize
+                , concat ! (
+                "Alignment of " , stringify ! ( rte_pmd_i40e_queue_regions )
+                ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_pmd_i40e_queue_regions ) ) .
+                queue_region_number as * const _ as usize } , 0usize , concat
+                ! (
+                "Alignment of field: " , stringify ! (
+                rte_pmd_i40e_queue_regions ) , "::" , stringify ! (
+                queue_region_number ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_pmd_i40e_queue_regions ) ) . region
+                as * const _ as usize } , 2usize , concat ! (
+                "Alignment of field: " , stringify ! (
+                rte_pmd_i40e_queue_regions ) , "::" , stringify ! ( region )
+                ));
+}
+impl Clone for rte_pmd_i40e_queue_regions {
+    fn clone(&self) -> Self { *self }
+}
+#[repr(u32)]
+/// Behavior will be taken if raw packet template is matched.
+#[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
+pub enum rte_pmd_i40e_pkt_template_behavior {
+    RTE_PMD_I40E_PKT_TEMPLATE_ACCEPT = 0,
+    RTE_PMD_I40E_PKT_TEMPLATE_REJECT = 1,
+    RTE_PMD_I40E_PKT_TEMPLATE_PASSTHRU = 2,
+}
+#[repr(u32)]
+/// Flow director report status
+/// It defines what will be reported if raw packet template is matched.
+#[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
+pub enum rte_pmd_i40e_pkt_template_status {
+    RTE_PMD_I40E_PKT_TEMPLATE_NO_REPORT_STATUS = 0,
+    RTE_PMD_I40E_PKT_TEMPLATE_REPORT_ID = 1,
+    RTE_PMD_I40E_PKT_TEMPLATE_REPORT_ID_FLEX_4 = 2,
+    RTE_PMD_I40E_PKT_TEMPLATE_REPORT_FLEX_8 = 3,
+}
+/// A structure used to define an action when raw packet template is matched.
+#[repr(C)]
+#[derive(Debug, Copy)]
+pub struct rte_pmd_i40e_pkt_template_action {
+    /// queue assigned to if raw packet template match
+    pub rx_queue: u16,
+    /// behavior will be taken
+    pub behavior: rte_pmd_i40e_pkt_template_behavior,
+    /// status report option
+    pub report_status: rte_pmd_i40e_pkt_template_status,
+    /// If report_status is RTE_PMD_I40E_PKT_TEMPLATE_REPORT_ID_FLEX_4 or
+    /// RTE_PMD_I40E_PKT_TEMPLATE_REPORT_FLEX_8, flex_off specifies
+    /// where the reported flex bytes start from in flexible payload.
+    pub flex_off: u8,
+}
+#[test]
+fn bindgen_test_layout_rte_pmd_i40e_pkt_template_action() {
+    assert_eq!(::std::mem::size_of::<rte_pmd_i40e_pkt_template_action>() ,
+               16usize , concat ! (
+               "Size of: " , stringify ! ( rte_pmd_i40e_pkt_template_action )
+               ));
+    assert_eq! (::std::mem::align_of::<rte_pmd_i40e_pkt_template_action>() ,
+                4usize , concat ! (
+                "Alignment of " , stringify ! (
+                rte_pmd_i40e_pkt_template_action ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_pmd_i40e_pkt_template_action ) ) .
+                rx_queue as * const _ as usize } , 0usize , concat ! (
+                "Alignment of field: " , stringify ! (
+                rte_pmd_i40e_pkt_template_action ) , "::" , stringify ! (
+                rx_queue ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_pmd_i40e_pkt_template_action ) ) .
+                behavior as * const _ as usize } , 4usize , concat ! (
+                "Alignment of field: " , stringify ! (
+                rte_pmd_i40e_pkt_template_action ) , "::" , stringify ! (
+                behavior ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_pmd_i40e_pkt_template_action ) ) .
+                report_status as * const _ as usize } , 8usize , concat ! (
+                "Alignment of field: " , stringify ! (
+                rte_pmd_i40e_pkt_template_action ) , "::" , stringify ! (
+                report_status ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_pmd_i40e_pkt_template_action ) ) .
+                flex_off as * const _ as usize } , 12usize , concat ! (
+                "Alignment of field: " , stringify ! (
+                rte_pmd_i40e_pkt_template_action ) , "::" , stringify ! (
+                flex_off ) ));
+}
+impl Clone for rte_pmd_i40e_pkt_template_action {
+    fn clone(&self) -> Self { *self }
+}
+/// A structure used to define the input for raw packet template.
+#[repr(C)]
+#[derive(Debug, Copy)]
+pub struct rte_pmd_i40e_pkt_template_input {
+    /// the pctype used for raw packet template
+    pub pctype: u16,
+    /// the buffer conatining raw packet template
+    pub packet: *mut ::std::os::raw::c_void,
+    /// the length of buffer with raw packet template
+    pub length: u32,
+}
+#[test]
+fn bindgen_test_layout_rte_pmd_i40e_pkt_template_input() {
+    assert_eq!(::std::mem::size_of::<rte_pmd_i40e_pkt_template_input>() ,
+               24usize , concat ! (
+               "Size of: " , stringify ! ( rte_pmd_i40e_pkt_template_input )
+               ));
+    assert_eq! (::std::mem::align_of::<rte_pmd_i40e_pkt_template_input>() ,
+                8usize , concat ! (
+                "Alignment of " , stringify ! (
+                rte_pmd_i40e_pkt_template_input ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_pmd_i40e_pkt_template_input ) ) .
+                pctype as * const _ as usize } , 0usize , concat ! (
+                "Alignment of field: " , stringify ! (
+                rte_pmd_i40e_pkt_template_input ) , "::" , stringify ! (
+                pctype ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_pmd_i40e_pkt_template_input ) ) .
+                packet as * const _ as usize } , 8usize , concat ! (
+                "Alignment of field: " , stringify ! (
+                rte_pmd_i40e_pkt_template_input ) , "::" , stringify ! (
+                packet ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_pmd_i40e_pkt_template_input ) ) .
+                length as * const _ as usize } , 16usize , concat ! (
+                "Alignment of field: " , stringify ! (
+                rte_pmd_i40e_pkt_template_input ) , "::" , stringify ! (
+                length ) ));
+}
+impl Clone for rte_pmd_i40e_pkt_template_input {
+    fn clone(&self) -> Self { *self }
+}
+/// A structure used to define the configuration parameters
+/// for raw packet template.
+#[repr(C)]
+#[derive(Debug, Copy)]
+pub struct rte_pmd_i40e_pkt_template_conf {
+    /// the input for raw packet template.
+    pub input: rte_pmd_i40e_pkt_template_input,
+    /// the action to be taken when raw packet template is matched
+    pub action: rte_pmd_i40e_pkt_template_action,
+    /// ID, an unique software index for the raw packet template filter
+    pub soft_id: u32,
+}
+#[test]
+fn bindgen_test_layout_rte_pmd_i40e_pkt_template_conf() {
+    assert_eq!(::std::mem::size_of::<rte_pmd_i40e_pkt_template_conf>() ,
+               48usize , concat ! (
+               "Size of: " , stringify ! ( rte_pmd_i40e_pkt_template_conf )
+               ));
+    assert_eq! (::std::mem::align_of::<rte_pmd_i40e_pkt_template_conf>() ,
+                8usize , concat ! (
+                "Alignment of " , stringify ! ( rte_pmd_i40e_pkt_template_conf
+                ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_pmd_i40e_pkt_template_conf ) ) .
+                input as * const _ as usize } , 0usize , concat ! (
+                "Alignment of field: " , stringify ! (
+                rte_pmd_i40e_pkt_template_conf ) , "::" , stringify ! ( input
+                ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_pmd_i40e_pkt_template_conf ) ) .
+                action as * const _ as usize } , 24usize , concat ! (
+                "Alignment of field: " , stringify ! (
+                rte_pmd_i40e_pkt_template_conf ) , "::" , stringify ! ( action
+                ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_pmd_i40e_pkt_template_conf ) ) .
+                soft_id as * const _ as usize } , 40usize , concat ! (
+                "Alignment of field: " , stringify ! (
+                rte_pmd_i40e_pkt_template_conf ) , "::" , stringify ! (
+                soft_id ) ));
+}
+impl Clone for rte_pmd_i40e_pkt_template_conf {
+    fn clone(&self) -> Self { *self }
+}
+extern "C" {
+    /// Add or remove raw packet template filter to Flow Director.
+///
+/// @param port
+/// The port identifier of the Ethernet device.
+/// @param conf
+/// Specifies configuration parameters of raw packet template filter.
+/// @param add
+/// Speicifes an action to be taken - add or remove raw packet template filter.
+/// @return
+/// - (0) if successful.
+/// - (-ENODEV) if *port* invalid.
+/// - (-EINVAL) if *conf* invalid.
+/// - (-ENOTSUP) not supported by firmware.
+    pub fn rte_pmd_i40e_flow_add_del_packet_template(port: u16,
+                                                     conf:
+                                                         *const rte_pmd_i40e_pkt_template_conf,
+                                                     add: u8)
+     -> ::std::os::raw::c_int;
+}
 extern "C" {
     /// Notify VF when PF link status changes.
 ///
@@ -43212,7 +45117,7 @@ extern "C" {
 /// - (0) if successful.
 /// - (-ENODEV) if *port* invalid.
 /// - (-EINVAL) if *vf* invalid.
-    pub fn rte_pmd_i40e_ping_vfs(port: u8, vf: u16) -> ::std::os::raw::c_int;
+    pub fn rte_pmd_i40e_ping_vfs(port: u16, vf: u16) -> ::std::os::raw::c_int;
 }
 extern "C" {
     /// Enable/Disable VF MAC anti spoofing.
@@ -43228,7 +45133,7 @@ extern "C" {
 /// - (0) if successful.
 /// - (-ENODEV) if *port* invalid.
 /// - (-EINVAL) if bad parameter.
-    pub fn rte_pmd_i40e_set_vf_mac_anti_spoof(port: u8, vf_id: u16, on: u8)
+    pub fn rte_pmd_i40e_set_vf_mac_anti_spoof(port: u16, vf_id: u16, on: u8)
      -> ::std::os::raw::c_int;
 }
 extern "C" {
@@ -43245,7 +45150,7 @@ extern "C" {
 /// - (0) if successful.
 /// - (-ENODEV) if *port* invalid.
 /// - (-EINVAL) if bad parameter.
-    pub fn rte_pmd_i40e_set_vf_vlan_anti_spoof(port: u8, vf_id: u16, on: u8)
+    pub fn rte_pmd_i40e_set_vf_vlan_anti_spoof(port: u16, vf_id: u16, on: u8)
      -> ::std::os::raw::c_int;
 }
 extern "C" {
@@ -43260,7 +45165,7 @@ extern "C" {
 /// - (0) if successful.
 /// - (-ENODEV) if *port* invalid.
 /// - (-EINVAL) if bad parameter.
-    pub fn rte_pmd_i40e_set_tx_loopback(port: u8, on: u8)
+    pub fn rte_pmd_i40e_set_tx_loopback(port: u16, on: u8)
      -> ::std::os::raw::c_int;
 }
 extern "C" {
@@ -43277,7 +45182,7 @@ extern "C" {
 /// - (0) if successful.
 /// - (-ENODEV) if *port* invalid.
 /// - (-EINVAL) if bad parameter.
-    pub fn rte_pmd_i40e_set_vf_unicast_promisc(port: u8, vf_id: u16, on: u8)
+    pub fn rte_pmd_i40e_set_vf_unicast_promisc(port: u16, vf_id: u16, on: u8)
      -> ::std::os::raw::c_int;
 }
 extern "C" {
@@ -43294,7 +45199,8 @@ extern "C" {
 /// - (0) if successful.
 /// - (-ENODEV) if *port* invalid.
 /// - (-EINVAL) if bad parameter.
-    pub fn rte_pmd_i40e_set_vf_multicast_promisc(port: u8, vf_id: u16, on: u8)
+    pub fn rte_pmd_i40e_set_vf_multicast_promisc(port: u16, vf_id: u16,
+                                                 on: u8)
      -> ::std::os::raw::c_int;
 }
 extern "C" {
@@ -43316,7 +45222,7 @@ extern "C" {
 /// - (0) if successful.
 /// - (-ENODEV) if *port* invalid.
 /// - (-EINVAL) if *vf* or *mac_addr* is invalid.
-    pub fn rte_pmd_i40e_set_vf_mac_addr(port: u8, vf_id: u16,
+    pub fn rte_pmd_i40e_set_vf_mac_addr(port: u16, vf_id: u16,
                                         mac_addr: *mut ether_addr)
      -> ::std::os::raw::c_int;
 }
@@ -43335,7 +45241,7 @@ extern "C" {
 /// - (0) if successful.
 /// - (-ENODEV) if *port* invalid.
 /// - (-EINVAL) if bad parameter.
-    pub fn rte_pmd_i40e_set_vf_vlan_stripq(port: u8, vf: u16, on: u8)
+    pub fn rte_pmd_i40e_set_vf_vlan_stripq(port: u16, vf: u16, on: u8)
      -> ::std::os::raw::c_int;
 }
 extern "C" {
@@ -43353,7 +45259,8 @@ extern "C" {
 /// - (0) if successful.
 /// - (-ENODEV) if *port* invalid.
 /// - (-EINVAL) if bad parameter.
-    pub fn rte_pmd_i40e_set_vf_vlan_insert(port: u8, vf_id: u16, vlan_id: u16)
+    pub fn rte_pmd_i40e_set_vf_vlan_insert(port: u16, vf_id: u16,
+                                           vlan_id: u16)
      -> ::std::os::raw::c_int;
 }
 extern "C" {
@@ -43371,7 +45278,7 @@ extern "C" {
 /// - (0) if successful.
 /// - (-ENODEV) if *port* invalid.
 /// - (-EINVAL) if bad parameter.
-    pub fn rte_pmd_i40e_set_vf_broadcast(port: u8, vf_id: u16, on: u8)
+    pub fn rte_pmd_i40e_set_vf_broadcast(port: u16, vf_id: u16, on: u8)
      -> ::std::os::raw::c_int;
 }
 extern "C" {
@@ -43389,7 +45296,7 @@ extern "C" {
 /// - (0) if successful.
 /// - (-ENODEV) if *port* invalid.
 /// - (-EINVAL) if bad parameter.
-    pub fn rte_pmd_i40e_set_vf_vlan_tag(port: u8, vf_id: u16, on: u8)
+    pub fn rte_pmd_i40e_set_vf_vlan_tag(port: u16, vf_id: u16, on: u8)
      -> ::std::os::raw::c_int;
 }
 extern "C" {
@@ -43410,7 +45317,7 @@ extern "C" {
 /// - (-ENODEV) if *port* invalid.
 /// - (-EINVAL) if bad parameter.
 /// - (-ENOTSUP) not supported by firmware.
-    pub fn rte_pmd_i40e_set_vf_vlan_filter(port: u8, vlan_id: u16,
+    pub fn rte_pmd_i40e_set_vf_vlan_filter(port: u16, vlan_id: u16,
                                            vf_mask: u64, on: u8)
      -> ::std::os::raw::c_int;
 }
@@ -43434,7 +45341,7 @@ extern "C" {
 /// - (0) if successful.
 /// - (-ENODEV) if *port* invalid.
 /// - (-EINVAL) if bad parameter.
-    pub fn rte_pmd_i40e_get_vf_stats(port: u8, vf_id: u16,
+    pub fn rte_pmd_i40e_get_vf_stats(port: u16, vf_id: u16,
                                      stats: *mut rte_eth_stats)
      -> ::std::os::raw::c_int;
 }
@@ -43449,7 +45356,7 @@ extern "C" {
 /// - (0) if successful.
 /// - (-ENODEV) if *port* invalid.
 /// - (-EINVAL) if bad parameter.
-    pub fn rte_pmd_i40e_reset_vf_stats(port: u8, vf_id: u16)
+    pub fn rte_pmd_i40e_reset_vf_stats(port: u16, vf_id: u16)
      -> ::std::os::raw::c_int;
 }
 extern "C" {
@@ -43473,7 +45380,7 @@ extern "C" {
 /// - (-ENODEV) if *port* invalid.
 /// - (-EINVAL) if bad parameter.
 /// - (-ENOTSUP) not supported by firmware.
-    pub fn rte_pmd_i40e_set_vf_max_bw(port: u8, vf_id: u16, bw: u32)
+    pub fn rte_pmd_i40e_set_vf_max_bw(port: u16, vf_id: u16, bw: u32)
      -> ::std::os::raw::c_int;
 }
 extern "C" {
@@ -43496,7 +45403,7 @@ extern "C" {
 /// - (-ENODEV) if *port* invalid.
 /// - (-EINVAL) if bad parameter.
 /// - (-ENOTSUP) not supported by firmware.
-    pub fn rte_pmd_i40e_set_vf_tc_bw_alloc(port: u8, vf_id: u16, tc_num: u8,
+    pub fn rte_pmd_i40e_set_vf_tc_bw_alloc(port: u16, vf_id: u16, tc_num: u8,
                                            bw_weight: *mut u8)
      -> ::std::os::raw::c_int;
 }
@@ -43519,7 +45426,7 @@ extern "C" {
 /// - (-ENODEV) if *port* invalid.
 /// - (-EINVAL) if bad parameter.
 /// - (-ENOTSUP) not supported by firmware.
-    pub fn rte_pmd_i40e_set_vf_tc_max_bw(port: u8, vf_id: u16, tc_no: u8,
+    pub fn rte_pmd_i40e_set_vf_tc_max_bw(port: u16, vf_id: u16, tc_no: u8,
                                          bw: u32) -> ::std::os::raw::c_int;
 }
 extern "C" {
@@ -43534,7 +45441,7 @@ extern "C" {
 /// - (-ENODEV) if *port* invalid.
 /// - (-EINVAL) if bad parameter.
 /// - (-ENOTSUP) not supported by firmware.
-    pub fn rte_pmd_i40e_set_tc_strict_prio(port: u8, tc_map: u8)
+    pub fn rte_pmd_i40e_set_tc_strict_prio(port: u16, tc_map: u8)
      -> ::std::os::raw::c_int;
 }
 extern "C" {
@@ -43555,7 +45462,7 @@ extern "C" {
 /// - (-EEXIST) if profile exists.
 /// - (-EACCES) if profile does not exist.
 /// - (-ENOTSUP) if operation not supported.
-    pub fn rte_pmd_i40e_process_ddp_package(port: u8, buff: *mut u8,
+    pub fn rte_pmd_i40e_process_ddp_package(port: u16, buff: *mut u8,
                                             size: u32,
                                             op: rte_pmd_i40e_package_op)
      -> ::std::os::raw::c_int;
@@ -43593,7 +45500,7 @@ extern "C" {
 /// - (0) if successful.
 /// - (-ENODEV) if *port* invalid.
 /// - (-EINVAL) if bad parameter.
-    pub fn rte_pmd_i40e_get_ddp_list(port: u8, buff: *mut u8, size: u32)
+    pub fn rte_pmd_i40e_get_ddp_list(port: u16, buff: *mut u8, size: u32)
      -> ::std::os::raw::c_int;
 }
 extern "C" {
@@ -43612,7 +45519,7 @@ extern "C" {
 /// keep other PTYPEs mapping unchanged.
 /// -(!0) overwrite referred PTYPE mapping,
 /// set other PTYPEs maps to PTYPE_UNKNOWN.
-    pub fn rte_pmd_i40e_ptype_mapping_update(port: u8,
+    pub fn rte_pmd_i40e_ptype_mapping_update(port: u16,
                                              mapping_items:
                                                  *mut rte_pmd_i40e_ptype_mapping,
                                              count: u16, exclusive: u8)
@@ -43624,7 +45531,7 @@ extern "C" {
 ///
 /// @param port
 /// pointer to port identifier of the device
-    pub fn rte_pmd_i40e_ptype_mapping_reset(port: u8)
+    pub fn rte_pmd_i40e_ptype_mapping_reset(port: u16)
      -> ::std::os::raw::c_int;
 }
 extern "C" {
@@ -43642,7 +45549,7 @@ extern "C" {
 /// @param valid_only
 /// -(0) return full mapping table.
 /// -(!0) only return mapping items which packet_type != RTE_PTYPE_UNKNOWN.
-    pub fn rte_pmd_i40e_ptype_mapping_get(port: u8,
+    pub fn rte_pmd_i40e_ptype_mapping_get(port: u16,
                                           mapping_items:
                                               *mut rte_pmd_i40e_ptype_mapping,
                                           size: u16, count: *mut u16,
@@ -43662,8 +45569,140 @@ extern "C" {
 /// -(!0) target is a mask to represent a group of software defined ptypes.
 /// @param pkt_type
 /// the new packet type to overwrite
-    pub fn rte_pmd_i40e_ptype_mapping_replace(port: u8, target: u32, mask: u8,
-                                              pkt_type: u32)
+    pub fn rte_pmd_i40e_ptype_mapping_replace(port: u16, target: u32,
+                                              mask: u8, pkt_type: u32)
+     -> ::std::os::raw::c_int;
+}
+extern "C" {
+    /// Add a VF MAC address.
+///
+/// Add more MAC address for VF. The existing MAC addresses
+/// are still effective.
+///
+/// @param port
+/// The port identifier of the Ethernet device.
+/// @param vf_id
+/// VF id.
+/// @param mac_addr
+/// VF MAC address.
+/// @return
+/// - (0) if successful.
+/// - (-ENODEV) if *port* invalid.
+/// - (-EINVAL) if *vf* or *mac_addr* is invalid.
+    pub fn rte_pmd_i40e_add_vf_mac_addr(port: u16, vf_id: u16,
+                                        mac_addr: *mut ether_addr)
+     -> ::std::os::raw::c_int;
+}
+#[repr(C)]
+#[derive(Debug, Copy)]
+pub struct rte_pmd_i40e_flow_type_mapping {
+    /// < software defined flow type
+    pub flow_type: u16,
+    /// < hardware defined pctype
+    pub pctype: u64,
+}
+#[test]
+fn bindgen_test_layout_rte_pmd_i40e_flow_type_mapping() {
+    assert_eq!(::std::mem::size_of::<rte_pmd_i40e_flow_type_mapping>() ,
+               16usize , concat ! (
+               "Size of: " , stringify ! ( rte_pmd_i40e_flow_type_mapping )
+               ));
+    assert_eq! (::std::mem::align_of::<rte_pmd_i40e_flow_type_mapping>() ,
+                8usize , concat ! (
+                "Alignment of " , stringify ! ( rte_pmd_i40e_flow_type_mapping
+                ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_pmd_i40e_flow_type_mapping ) ) .
+                flow_type as * const _ as usize } , 0usize , concat ! (
+                "Alignment of field: " , stringify ! (
+                rte_pmd_i40e_flow_type_mapping ) , "::" , stringify ! (
+                flow_type ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_pmd_i40e_flow_type_mapping ) ) .
+                pctype as * const _ as usize } , 8usize , concat ! (
+                "Alignment of field: " , stringify ! (
+                rte_pmd_i40e_flow_type_mapping ) , "::" , stringify ! ( pctype
+                ) ));
+}
+impl Clone for rte_pmd_i40e_flow_type_mapping {
+    fn clone(&self) -> Self { *self }
+}
+extern "C" {
+    /// Update hardware defined pctype to software defined flow type
+/// mapping table.
+///
+/// @param port
+/// pointer to port identifier of the device.
+/// @param mapping_items
+/// the base address of the mapping items array.
+/// @param count
+/// number of mapping items.
+/// @param exclusive
+/// the flag indicate different pctype mapping update method.
+/// -(0) only overwrite referred PCTYPE mapping,
+/// keep other PCTYPEs mapping unchanged.
+/// -(!0) overwrite referred PCTYPE mapping,
+/// set other PCTYPEs maps to PCTYPE_INVALID.
+    pub fn rte_pmd_i40e_flow_type_mapping_update(port: u16,
+                                                 mapping_items:
+                                                     *mut rte_pmd_i40e_flow_type_mapping,
+                                                 count: u16, exclusive: u8)
+     -> ::std::os::raw::c_int;
+}
+extern "C" {
+    /// Get software defined flow type to hardware defined pctype
+/// mapping items.
+///
+/// @param port
+/// pointer to port identifier of the device.
+/// @param mapping_items
+/// the base address of the array to store returned items.
+/// array should be allocated by caller with minimum size of
+/// RTE_PMD_I40E_FLOW_TYPE_MAX items
+    pub fn rte_pmd_i40e_flow_type_mapping_get(port: u16,
+                                              mapping_items:
+                                                  *mut rte_pmd_i40e_flow_type_mapping)
+     -> ::std::os::raw::c_int;
+}
+extern "C" {
+    /// Reset hardware defined pctype to software defined flow type
+/// mapping table to default.
+///
+/// @param port
+/// pointer to port identifier of the device
+    pub fn rte_pmd_i40e_flow_type_mapping_reset(port: u16)
+     -> ::std::os::raw::c_int;
+}
+extern "C" {
+    /// On the PF, find VF index based on VF MAC address
+///
+/// @param port
+/// pointer to port identifier of the device
+/// @param vf_mac
+/// the mac address of the vf to determine index of
+/// @return
+/// The index of vfid If successful.
+/// -EINVAL: vf mac address does not exist for this port
+/// -ENOTSUP: i40e not supported for this port.
+    pub fn rte_pmd_i40e_query_vfid_by_mac(port: u16,
+                                          vf_mac: *const ether_addr)
+     -> ::std::os::raw::c_int;
+}
+extern "C" {
+    /// Do RSS queue region configuration for that port as
+/// the command option type
+///
+/// @param port_id
+/// The port identifier of the Ethernet device.
+/// @param op_type
+/// Queue region operation type
+/// @param arg
+/// Queue region operation type specific data
+    pub fn rte_pmd_i40e_rss_queue_region_conf(port_id: u16,
+                                              op_type:
+                                                  rte_pmd_i40e_queue_region_op,
+                                              arg:
+                                                  *mut ::std::os::raw::c_void)
      -> ::std::os::raw::c_int;
 }
 extern "C" {
@@ -43677,7 +45716,7 @@ extern "C" {
 /// - (0) if successful.
 /// - (-ENODEV) if *port* invalid.
 /// - (-EINVAL) if *vf* invalid.
-    pub fn rte_pmd_ixgbe_ping_vf(port: u8, vf: u16) -> ::std::os::raw::c_int;
+    pub fn rte_pmd_ixgbe_ping_vf(port: u16, vf: u16) -> ::std::os::raw::c_int;
 }
 extern "C" {
     /// Set the VF MAC address.
@@ -43692,7 +45731,7 @@ extern "C" {
 /// - (0) if successful.
 /// - (-ENODEV) if *port* invalid.
 /// - (-EINVAL) if *vf* or *mac_addr* is invalid.
-    pub fn rte_pmd_ixgbe_set_vf_mac_addr(port: u8, vf: u16,
+    pub fn rte_pmd_ixgbe_set_vf_mac_addr(port: u16, vf: u16,
                                          mac_addr: *mut ether_addr)
      -> ::std::os::raw::c_int;
 }
@@ -43710,7 +45749,7 @@ extern "C" {
 /// - (0) if successful.
 /// - (-ENODEV) if *port* invalid.
 /// - (-EINVAL) if bad parameter.
-    pub fn rte_pmd_ixgbe_set_vf_vlan_anti_spoof(port: u8, vf: u16, on: u8)
+    pub fn rte_pmd_ixgbe_set_vf_vlan_anti_spoof(port: u16, vf: u16, on: u8)
      -> ::std::os::raw::c_int;
 }
 extern "C" {
@@ -43727,7 +45766,7 @@ extern "C" {
 /// - (0) if successful.
 /// - (-ENODEV) if *port* invalid.
 /// - (-EINVAL) if bad parameter.
-    pub fn rte_pmd_ixgbe_set_vf_mac_anti_spoof(port: u8, vf: u16, on: u8)
+    pub fn rte_pmd_ixgbe_set_vf_mac_anti_spoof(port: u16, vf: u16, on: u8)
      -> ::std::os::raw::c_int;
 }
 extern "C" {
@@ -43745,7 +45784,7 @@ extern "C" {
 /// - (0) if successful.
 /// - (-ENODEV) if *port* invalid.
 /// - (-EINVAL) if bad parameter.
-    pub fn rte_pmd_ixgbe_set_vf_vlan_insert(port: u8, vf: u16, vlan_id: u16)
+    pub fn rte_pmd_ixgbe_set_vf_vlan_insert(port: u16, vf: u16, vlan_id: u16)
      -> ::std::os::raw::c_int;
 }
 extern "C" {
@@ -43761,7 +45800,7 @@ extern "C" {
 /// - (0) if successful.
 /// - (-ENODEV) if *port* invalid.
 /// - (-EINVAL) if bad parameter.
-    pub fn rte_pmd_ixgbe_set_tx_loopback(port: u8, on: u8)
+    pub fn rte_pmd_ixgbe_set_tx_loopback(port: u16, on: u8)
      -> ::std::os::raw::c_int;
 }
 extern "C" {
@@ -43777,7 +45816,7 @@ extern "C" {
 /// - (0) if successful.
 /// - (-ENODEV) if *port* invalid.
 /// - (-EINVAL) if bad parameter.
-    pub fn rte_pmd_ixgbe_set_all_queues_drop_en(port: u8, on: u8)
+    pub fn rte_pmd_ixgbe_set_all_queues_drop_en(port: u16, on: u8)
      -> ::std::os::raw::c_int;
 }
 extern "C" {
@@ -43795,7 +45834,7 @@ extern "C" {
 /// - (0) if successful.
 /// - (-ENODEV) if *port* invalid.
 /// - (-EINVAL) if bad parameter.
-    pub fn rte_pmd_ixgbe_set_vf_split_drop_en(port: u8, vf: u16, on: u8)
+    pub fn rte_pmd_ixgbe_set_vf_split_drop_en(port: u16, vf: u16, on: u8)
      -> ::std::os::raw::c_int;
 }
 extern "C" {
@@ -43814,7 +45853,7 @@ extern "C" {
 /// - (-ENOTSUP) if hardware doesn't support this feature.
 /// - (-ENODEV) if *port* invalid.
 /// - (-EINVAL) if bad parameter.
-    pub fn rte_pmd_ixgbe_set_vf_vlan_stripq(port: u8, vf: u16, on: u8)
+    pub fn rte_pmd_ixgbe_set_vf_vlan_stripq(port: u16, vf: u16, on: u8)
      -> ::std::os::raw::c_int;
 }
 extern "C" {
@@ -43832,7 +45871,7 @@ extern "C" {
 /// - (0) if successful.
 /// - (-ENODEV) if *port* invalid.
 /// - (-ENOTSUP) if hardware doesn't support this feature.
-    pub fn rte_pmd_ixgbe_macsec_enable(port: u8, en: u8, rp: u8)
+    pub fn rte_pmd_ixgbe_macsec_enable(port: u16, en: u8, rp: u8)
      -> ::std::os::raw::c_int;
 }
 extern "C" {
@@ -43844,7 +45883,7 @@ extern "C" {
 /// - (0) if successful.
 /// - (-ENODEV) if *port* invalid.
 /// - (-ENOTSUP) if hardware doesn't support this feature.
-    pub fn rte_pmd_ixgbe_macsec_disable(port: u8) -> ::std::os::raw::c_int;
+    pub fn rte_pmd_ixgbe_macsec_disable(port: u16) -> ::std::os::raw::c_int;
 }
 extern "C" {
     /// Configure Tx SC (Secure Connection).
@@ -43857,7 +45896,7 @@ extern "C" {
 /// - (0) if successful.
 /// - (-ENODEV) if *port* invalid.
 /// - (-ENOTSUP) if hardware doesn't support this feature.
-    pub fn rte_pmd_ixgbe_macsec_config_txsc(port: u8, mac: *mut u8)
+    pub fn rte_pmd_ixgbe_macsec_config_txsc(port: u16, mac: *mut u8)
      -> ::std::os::raw::c_int;
 }
 extern "C" {
@@ -43873,7 +45912,7 @@ extern "C" {
 /// - (0) if successful.
 /// - (-ENODEV) if *port* invalid.
 /// - (-ENOTSUP) if hardware doesn't support this feature.
-    pub fn rte_pmd_ixgbe_macsec_config_rxsc(port: u8, mac: *mut u8, pi: u16)
+    pub fn rte_pmd_ixgbe_macsec_config_rxsc(port: u16, mac: *mut u8, pi: u16)
      -> ::std::os::raw::c_int;
 }
 extern "C" {
@@ -43894,7 +45933,7 @@ extern "C" {
 /// - (-ENODEV) if *port* invalid.
 /// - (-ENOTSUP) if hardware doesn't support this feature.
 /// - (-EINVAL) if bad parameter.
-    pub fn rte_pmd_ixgbe_macsec_select_txsa(port: u8, idx: u8, an: u8,
+    pub fn rte_pmd_ixgbe_macsec_select_txsa(port: u16, idx: u8, an: u8,
                                             pn: u32, key: *mut u8)
      -> ::std::os::raw::c_int;
 }
@@ -43916,7 +45955,7 @@ extern "C" {
 /// - (-ENODEV) if *port* invalid.
 /// - (-ENOTSUP) if hardware doesn't support this feature.
 /// - (-EINVAL) if bad parameter.
-    pub fn rte_pmd_ixgbe_macsec_select_rxsa(port: u8, idx: u8, an: u8,
+    pub fn rte_pmd_ixgbe_macsec_select_rxsa(port: u16, idx: u8, an: u8,
                                             pn: u32, key: *mut u8)
      -> ::std::os::raw::c_int;
 }
@@ -43941,7 +45980,7 @@ extern "C" {
 /// - (-ENOTSUP) if hardware doesn't support.
 /// - (-ENODEV) if *port_id* invalid.
 /// - (-EINVAL) if bad parameter.
-    pub fn rte_pmd_ixgbe_set_vf_rxmode(port: u8, vf: u16, rx_mask: u16,
+    pub fn rte_pmd_ixgbe_set_vf_rxmode(port: u16, vf: u16, rx_mask: u16,
                                        on: u8) -> ::std::os::raw::c_int;
 }
 extern "C" {
@@ -43959,7 +45998,7 @@ extern "C" {
 /// - (-ENOTSUP) if hardware doesn't support.
 /// - (-ENODEV) if *port_id* invalid.
 /// - (-EINVAL) if bad parameter.
-    pub fn rte_pmd_ixgbe_set_vf_rx(port: u8, vf: u16, on: u8)
+    pub fn rte_pmd_ixgbe_set_vf_rx(port: u16, vf: u16, on: u8)
      -> ::std::os::raw::c_int;
 }
 extern "C" {
@@ -43977,7 +46016,7 @@ extern "C" {
 /// - (-ENODEV) if *port_id* invalid.
 /// - (-ENOTSUP) if hardware doesn't support.
 /// - (-EINVAL) if bad parameter.
-    pub fn rte_pmd_ixgbe_set_vf_tx(port: u8, vf: u16, on: u8)
+    pub fn rte_pmd_ixgbe_set_vf_tx(port: u16, vf: u16, on: u8)
      -> ::std::os::raw::c_int;
 }
 extern "C" {
@@ -43998,8 +46037,8 @@ extern "C" {
 /// - (-ENOTSUP) if hardware doesn't support.
 /// - (-ENODEV) if *port_id* invalid.
 /// - (-EINVAL) if bad parameter.
-    pub fn rte_pmd_ixgbe_set_vf_vlan_filter(port: u8, vlan: u16, vf_mask: u64,
-                                            vlan_on: u8)
+    pub fn rte_pmd_ixgbe_set_vf_vlan_filter(port: u16, vlan: u16,
+                                            vf_mask: u64, vlan_on: u8)
      -> ::std::os::raw::c_int;
 }
 extern "C" {
@@ -44018,7 +46057,7 @@ extern "C" {
 /// - (-ENOTSUP) if hardware doesn't support this feature.
 /// - (-ENODEV) if *port_id* invalid.
 /// - (-EINVAL) if bad parameter.
-    pub fn rte_pmd_ixgbe_set_vf_rate_limit(port: u8, vf: u16, tx_rate: u16,
+    pub fn rte_pmd_ixgbe_set_vf_rate_limit(port: u16, vf: u16, tx_rate: u16,
                                            q_msk: u64)
      -> ::std::os::raw::c_int;
 }
@@ -44040,7 +46079,7 @@ extern "C" {
 /// - (-ENODEV) if *port* invalid.
 /// - (-EINVAL) if bad parameter.
 /// - (-ENOTSUP) not supported by firmware.
-    pub fn rte_pmd_ixgbe_set_tc_bw_alloc(port: u8, tc_num: u8,
+    pub fn rte_pmd_ixgbe_set_tc_bw_alloc(port: u16, tc_num: u8,
                                          bw_weight: *mut u8)
      -> ::std::os::raw::c_int;
 }
@@ -44054,7 +46093,7 @@ extern "C" {
 /// - (0) if successful.
 /// - (-ENOTSUP) if hardware doesn't support.
 /// - (-EINVAL) if bad parameter.
-    pub fn rte_pmd_ixgbe_bypass_init(port: u8) -> ::std::os::raw::c_int;
+    pub fn rte_pmd_ixgbe_bypass_init(port: u16) -> ::std::os::raw::c_int;
 }
 extern "C" {
     /// Return bypass state.
@@ -44070,7 +46109,7 @@ extern "C" {
 /// - (0) if successful.
 /// - (-ENOTSUP) if hardware doesn't support.
 /// - (-EINVAL) if bad parameter.
-    pub fn rte_pmd_ixgbe_bypass_state_show(port: u8, state: *mut u32)
+    pub fn rte_pmd_ixgbe_bypass_state_show(port: u16, state: *mut u32)
      -> ::std::os::raw::c_int;
 }
 extern "C" {
@@ -44087,7 +46126,7 @@ extern "C" {
 /// - (0) if successful.
 /// - (-ENOTSUP) if hardware doesn't support.
 /// - (-EINVAL) if bad parameter.
-    pub fn rte_pmd_ixgbe_bypass_state_set(port: u8, new_state: *mut u32)
+    pub fn rte_pmd_ixgbe_bypass_state_set(port: u16, new_state: *mut u32)
      -> ::std::os::raw::c_int;
 }
 extern "C" {
@@ -44111,7 +46150,7 @@ extern "C" {
 /// - (0) if successful.
 /// - (-ENOTSUP) if hardware doesn't support.
 /// - (-EINVAL) if bad parameter.
-    pub fn rte_pmd_ixgbe_bypass_event_show(port: u8, event: u32,
+    pub fn rte_pmd_ixgbe_bypass_event_show(port: u16, event: u32,
                                            state: *mut u32)
      -> ::std::os::raw::c_int;
 }
@@ -44136,7 +46175,7 @@ extern "C" {
 /// - (0) if successful.
 /// - (-ENOTSUP) if hardware doesn't support.
 /// - (-EINVAL) if bad parameter.
-    pub fn rte_pmd_ixgbe_bypass_event_store(port: u8, event: u32, state: u32)
+    pub fn rte_pmd_ixgbe_bypass_event_store(port: u16, event: u32, state: u32)
      -> ::std::os::raw::c_int;
 }
 extern "C" {
@@ -44158,7 +46197,7 @@ extern "C" {
 /// - (0) if successful.
 /// - (-ENOTSUP) if hardware doesn't support.
 /// - (-EINVAL) if bad parameter.
-    pub fn rte_pmd_ixgbe_bypass_wd_timeout_store(port: u8, timeout: u32)
+    pub fn rte_pmd_ixgbe_bypass_wd_timeout_store(port: u16, timeout: u32)
      -> ::std::os::raw::c_int;
 }
 extern "C" {
@@ -44172,7 +46211,7 @@ extern "C" {
 /// - (0) if successful.
 /// - (-ENOTSUP) if hardware doesn't support.
 /// - (-EINVAL) if bad parameter.
-    pub fn rte_pmd_ixgbe_bypass_ver_show(port: u8, ver: *mut u32)
+    pub fn rte_pmd_ixgbe_bypass_ver_show(port: u16, ver: *mut u32)
      -> ::std::os::raw::c_int;
 }
 extern "C" {
@@ -44194,7 +46233,7 @@ extern "C" {
 /// - (0) if successful.
 /// - (-ENOTSUP) if hardware doesn't support.
 /// - (-EINVAL) if bad parameter.
-    pub fn rte_pmd_ixgbe_bypass_wd_timeout_show(port: u8,
+    pub fn rte_pmd_ixgbe_bypass_wd_timeout_show(port: u16,
                                                 wd_timeout: *mut u32)
      -> ::std::os::raw::c_int;
 }
@@ -44207,7 +46246,7 @@ extern "C" {
 /// - (0) if successful.
 /// - (-ENOTSUP) if hardware doesn't support.
 /// - (-EINVAL) if bad parameter.
-    pub fn rte_pmd_ixgbe_bypass_wd_reset(port: u8) -> ::std::os::raw::c_int;
+    pub fn rte_pmd_ixgbe_bypass_wd_reset(port: u16) -> ::std::os::raw::c_int;
 }
 #[repr(u32)]
 /// Response sent back to ixgbe driver from user app after callback
@@ -44439,7 +46478,7 @@ extern "C" {
 #[derive(Debug, Copy)]
 pub struct rte_port_ethdev_reader_params {
     /// NIC RX port ID
-    pub port_id: u8,
+    pub port_id: u16,
     /// NIC RX queue ID
     pub queue_id: u16,
 }
@@ -44477,7 +46516,7 @@ extern "C" {
 #[derive(Debug, Copy)]
 pub struct rte_port_ethdev_writer_params {
     /// NIC RX port ID
-    pub port_id: u8,
+    pub port_id: u16,
     /// NIC RX queue ID
     pub queue_id: u16,
     /// Recommended burst size to NIC TX queue. The actual burst size can be
@@ -44524,7 +46563,7 @@ extern "C" {
 #[derive(Debug, Copy)]
 pub struct rte_port_ethdev_writer_nodrop_params {
     /// NIC RX port ID
-    pub port_id: u8,
+    pub port_id: u16,
     /// NIC RX queue ID
     pub queue_id: u16,
     /// Recommended burst size to NIC TX queue. The actual burst size can be
@@ -45831,6 +47870,18 @@ extern "C" {
     #[link_name = "rte_power_freq_min"]
     pub static mut rte_power_freq_min: rte_power_freq_change_t;
 }
+extern "C" {
+    #[link_name = "rte_power_turbo_status"]
+    pub static mut rte_power_turbo_status: rte_power_freq_change_t;
+}
+extern "C" {
+    #[link_name = "rte_power_freq_enable_turbo"]
+    pub static mut rte_power_freq_enable_turbo: rte_power_freq_change_t;
+}
+extern "C" {
+    #[link_name = "rte_power_freq_disable_turbo"]
+    pub static mut rte_power_freq_disable_turbo: rte_power_freq_change_t;
+}
 #[repr(C)]
 #[derive(Debug, Copy)]
 pub struct rte_reciprocal {
@@ -46136,9 +48187,9 @@ extern "C" {
 /// -1 on error
 /// On error case, rte_errno will be set appropriately:
 /// - ENOSPC - Cannot move existing mbufs from reorder buffer to accommodate
-/// ealry mbuf, but it can be accommodated by performing drain and then insert.
+/// early mbuf, but it can be accommodated by performing drain and then insert.
 /// - ERANGE - Too early or late mbuf which is vastly out of range of expected
-/// window should be ingnored without any handling.
+/// window should be ignored without any handling.
     pub fn rte_reorder_insert(b: *mut rte_reorder_buffer, mbuf: *mut rte_mbuf)
      -> ::std::os::raw::c_int;
 }
@@ -46163,64 +48214,6 @@ extern "C" {
                              max_mbufs: ::std::os::raw::c_uint)
      -> ::std::os::raw::c_uint;
 }
-/// @warning
-/// @b EXPERIMENTAL: this API may change without prior notice
-///
-/// The specification of a service.
-///
-/// This struct contains metadata about the service itself, the callback
-/// function to run one iteration of the service, a userdata pointer, flags etc.
-#[repr(C)]
-#[derive(Debug, Copy)]
-pub struct rte_service_spec {
-    /// The name of the service. This should be used by the application to
-    /// understand what purpose this service provides.
-    pub name: [::std::os::raw::c_char; 32usize],
-    /// The callback to invoke to run one iteration of the service.
-    pub callback: rte_service_func,
-    /// The userdata pointer provided to the service callback.
-    pub callback_userdata: *mut ::std::os::raw::c_void,
-    /// Flags to indicate the capabilities of this service. See defines in
-    /// the public header file for values of RTE_SERVICE_CAP_*
-    pub capabilities: u32,
-    /// NUMA socket ID that this service is affinitized to
-    pub socket_id: ::std::os::raw::c_int,
-}
-#[test]
-fn bindgen_test_layout_rte_service_spec() {
-    assert_eq!(::std::mem::size_of::<rte_service_spec>() , 56usize , concat !
-               ( "Size of: " , stringify ! ( rte_service_spec ) ));
-    assert_eq! (::std::mem::align_of::<rte_service_spec>() , 8usize , concat !
-                ( "Alignment of " , stringify ! ( rte_service_spec ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_service_spec ) ) . name as * const _
-                as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( rte_service_spec ) ,
-                "::" , stringify ! ( name ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_service_spec ) ) . callback as *
-                const _ as usize } , 32usize , concat ! (
-                "Alignment of field: " , stringify ! ( rte_service_spec ) ,
-                "::" , stringify ! ( callback ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_service_spec ) ) . callback_userdata
-                as * const _ as usize } , 40usize , concat ! (
-                "Alignment of field: " , stringify ! ( rte_service_spec ) ,
-                "::" , stringify ! ( callback_userdata ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_service_spec ) ) . capabilities as *
-                const _ as usize } , 48usize , concat ! (
-                "Alignment of field: " , stringify ! ( rte_service_spec ) ,
-                "::" , stringify ! ( capabilities ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_service_spec ) ) . socket_id as *
-                const _ as usize } , 52usize , concat ! (
-                "Alignment of field: " , stringify ! ( rte_service_spec ) ,
-                "::" , stringify ! ( socket_id ) ));
-}
-impl Clone for rte_service_spec {
-    fn clone(&self) -> Self { *self }
-}
 extern "C" {
     /// @warning
 /// @b EXPERIMENTAL: this API may change without prior notice
@@ -46237,34 +48230,28 @@ extern "C" {
     /// @warning
 /// @b EXPERIMENTAL: this API may change without prior notice
 ///
-/// Return the specification of a service by integer id.
+/// Return the id of a service by name.
 ///
-/// This function provides the specification of a service. This can be used by
-/// the application to understand what the service represents. The service
-/// must not be modified by the application directly, only passed to the various
-/// rte_service_* functions.
+/// This function provides the id of the service using the service name as
+/// lookup key. The service id is to be passed to other functions in the
+/// rte_service_* API.
 ///
-/// @param id The integer id of the service to retrieve
-/// @retval non-zero A valid pointer to the service_spec
-/// @retval NULL Invalid *id* provided.
-    pub fn rte_service_get_by_id(id: u32) -> *mut rte_service_spec;
-}
-extern "C" {
-    /// @warning
-/// @b EXPERIMENTAL: this API may change without prior notice
-///
-/// Return the specification of a service by name.
-///
-/// This function provides the specification of a service using the service name
-/// as lookup key. This can be used by the application to understand what the
-/// service represents. The service must not be modified by the application
-/// directly, only passed to the various rte_service_* functions.
+/// Example usage:
+/// @code
+/// uint32_t service_id;
+/// int32_t ret = rte_service_get_by_name("service_X", &service_id);
+/// if (ret) {
+/// // handle error
+/// }
+/// @endcode
 ///
 /// @param name The name of the service to retrieve
-/// @retval non-zero A valid pointer to the service_spec
-/// @retval NULL Invalid *name* provided.
-    pub fn rte_service_get_by_name(name: *const ::std::os::raw::c_char)
-     -> *mut rte_service_spec;
+/// @param[out] service_id A pointer to a uint32_t, to be filled in with the id.
+/// @retval 0 Success. The service id is provided in *service_id*.
+/// @retval -EINVAL Null *service_id* pointer provided
+/// @retval -ENODEV No such service registered
+    pub fn rte_service_get_by_name(name: *const ::std::os::raw::c_char,
+                                   service_id: *mut u32) -> i32;
 }
 extern "C" {
     /// @warning
@@ -46274,8 +48261,7 @@ extern "C" {
 ///
 /// @return A pointer to the name of the service. The returned pointer remains
 /// in ownership of the service, and the application must not free it.
-    pub fn rte_service_get_name(service: *const rte_service_spec)
-     -> *const ::std::os::raw::c_char;
+    pub fn rte_service_get_name(id: u32) -> *const ::std::os::raw::c_char;
 }
 extern "C" {
     /// @warning
@@ -46287,17 +48273,16 @@ extern "C" {
 /// See RTE_SERVICE_CAP_* defines for a list of valid capabilities.
 /// @retval 1 Capability supported by this service instance
 /// @retval 0 Capability not supported by this service instance
-    pub fn rte_service_probe_capability(service: *const rte_service_spec,
-                                        capability: u32) -> i32;
+    pub fn rte_service_probe_capability(id: u32, capability: u32) -> i32;
 }
 extern "C" {
     /// @warning
 /// @b EXPERIMENTAL: this API may change without prior notice
 ///
-/// Enable a core to run a service.
+/// Map or unmap a lcore to a service.
 ///
-/// Each core can be added or removed from running specific services. This
-/// functions adds *lcore* to the set of cores that will run *service*.
+/// Each core can be added or removed from running a specific service. This
+/// function enables or disables *lcore* to run *service_id*.
 ///
 /// If multiple cores are enabled on a service, an atomic is used to ensure that
 /// only one cores runs the service at a time. The exception to this is when
@@ -46305,75 +48290,115 @@ extern "C" {
 /// called RTE_SERVICE_CAP_MT_SAFE. With the multi-thread safe capability set,
 /// the service function can be run on multiple threads at the same time.
 ///
-/// @retval 0 lcore added successfully
+/// @param service_id the service to apply the lcore to
+/// @param lcore The lcore that will be mapped to service
+/// @param enable Zero to unmap or disable the core, non-zero to enable
+///
+/// @retval 0 lcore map updated successfully
 /// @retval -EINVAL An invalid service or lcore was provided.
-    pub fn rte_service_enable_on_lcore(service: *mut rte_service_spec,
-                                       lcore: u32) -> i32;
+    pub fn rte_service_map_lcore_set(service_id: u32, lcore: u32, enable: u32)
+     -> i32;
 }
 extern "C" {
     /// @warning
 /// @b EXPERIMENTAL: this API may change without prior notice
 ///
-/// Disable a core to run a service.
+/// Retrieve the mapping of an lcore to a service.
 ///
-/// Each core can be added or removed from running specific services. This
-/// functions removes *lcore* to the set of cores that will run *service*.
+/// @param service_id the service to apply the lcore to
+/// @param lcore The lcore that will be mapped to service
 ///
-/// @retval 0 Lcore removed successfully
+/// @retval 1 lcore is mapped to service
+/// @retval 0 lcore is not mapped to service
 /// @retval -EINVAL An invalid service or lcore was provided.
-    pub fn rte_service_disable_on_lcore(service: *mut rte_service_spec,
-                                        lcore: u32) -> i32;
+    pub fn rte_service_map_lcore_get(service_id: u32, lcore: u32) -> i32;
 }
 extern "C" {
     /// @warning
 /// @b EXPERIMENTAL: this API may change without prior notice
 ///
-/// Return if an lcore is enabled for the service.
+/// Set the runstate of the service.
 ///
-/// This function allows the application to query if *lcore* is currently set to
-/// run *service*.
+/// Each service is either running or stopped. Setting a non-zero runstate
+/// enables the service to run, while setting runstate zero disables it.
 ///
-/// @retval 1 Lcore enabled on this lcore
-/// @retval 0 Lcore disabled on this lcore
-/// @retval -EINVAL An invalid service or lcore was provided.
-    pub fn rte_service_get_enabled_on_lcore(service: *mut rte_service_spec,
-                                            lcore: u32) -> i32;
-}
-extern "C" {
-    /// @warning
-/// @b EXPERIMENTAL: this API may change without prior notice
+/// @param id The id of the service
+/// @param runstate The run state to apply to the service
 ///
-/// Enable *service* to run.
-///
-/// This function switches on a service during runtime.
 /// @retval 0 The service was successfully started
-    pub fn rte_service_start(service: *mut rte_service_spec) -> i32;
+/// @retval -EINVAL Invalid service id
+    pub fn rte_service_runstate_set(id: u32, runstate: u32) -> i32;
 }
 extern "C" {
     /// @warning
 /// @b EXPERIMENTAL: this API may change without prior notice
 ///
-/// Disable *service*.
+/// Get the runstate for the service with *id*. See *rte_service_runstate_set*
+/// for details of runstates. A service can call this function to ensure that
+/// the application has indicated that it will receive CPU cycles. Either a
+/// service-core is mapped (default case), or the application has explicitly
+/// disabled the check that a service-cores is mapped to the service and takes
+/// responsibility to run the service manually using the available function
+/// *rte_service_run_iter_on_app_lcore* to do so.
 ///
-/// Switch off a service, so it is not run until it is *rte_service_start* is
-/// called on it.
-/// @retval 0 Service successfully switched off
-    pub fn rte_service_stop(service: *mut rte_service_spec) -> i32;
+/// @retval 1 Service is running
+/// @retval 0 Service is stopped
+/// @retval -EINVAL Invalid service id
+    pub fn rte_service_runstate_get(id: u32) -> i32;
 }
 extern "C" {
     /// @warning
 /// @b EXPERIMENTAL: this API may change without prior notice
 ///
-/// Returns if *service* is currently running.
+/// Enable or disable the check for a service-core being mapped to the service.
+/// An application can disable the check when takes the responsibility to run a
+/// service itself using *rte_service_run_iter_on_app_lcore*.
 ///
-/// This function returns true if the service has been started using
-/// *rte_service_start*, AND a service core is mapped to the service. This
-/// function can be used to ensure that the service will be run.
+/// @param id The id of the service to set the check on
+/// @param enable When zero, the check is disabled. Non-zero enables the check.
 ///
-/// @retval 1 Service is currently running, and has a service lcore mapped
-/// @retval 0 Service is currently stopped, or no service lcore is mapped
-/// @retval -EINVAL Invalid service pointer provided
-    pub fn rte_service_is_running(service: *const rte_service_spec) -> i32;
+/// @retval 0 Success
+/// @retval -EINVAL Invalid service ID
+    pub fn rte_service_set_runstate_mapped_check(id: u32, enable: i32) -> i32;
+}
+extern "C" {
+    /// @warning
+/// @b EXPERIMENTAL: this API may change without prior notice
+///
+/// This function runs a service callback from a non-service lcore.
+///
+/// This function is designed to enable gradual porting to service cores, and
+/// to enable unit tests to verify a service behaves as expected.
+///
+/// When called, this function ensures that the service identified by *id* is
+/// safe to run on this lcore. Multi-thread safe services are invoked even if
+/// other cores are simultaneously running them as they are multi-thread safe.
+///
+/// Multi-thread unsafe services are handled depending on the variable
+/// *serialize_multithread_unsafe*:
+/// - When set, the function will check if a service is already being invoked
+/// on another lcore, refusing to run it and returning -EBUSY.
+/// - When zero, the application takes responsibility to ensure that the service
+/// indicated by *id* is not going to be invoked by another lcore. This setting
+/// avoids atomic operations, so is likely to be more performant.
+///
+/// @param id The ID of the service to run
+/// @param serialize_multithread_unsafe This parameter indicates to the service
+/// cores library if it is required to use atomics to serialize access
+/// to mult-thread unsafe services. As there is an overhead in using
+/// atomics, applications can choose to enable or disable this feature
+///
+/// Note that any thread calling this function MUST be a DPDK EAL thread, as
+/// the *rte_lcore_id* function is used to access internal data structures.
+///
+/// @retval 0 Service was run on the calling thread successfully
+/// @retval -EBUSY Another lcore is executing the service, and it is not a
+/// multi-thread safe service, so the service was not run on this lcore
+/// @retval -ENOEXEC Service is not in a run-able state
+/// @retval -EINVAL Invalid service id
+    pub fn rte_service_run_iter_on_app_lcore(id: u32,
+                                             serialize_multithread_unsafe:
+                                                 u32) -> i32;
 }
 extern "C" {
     /// @warning
@@ -46469,12 +48494,11 @@ extern "C" {
 /// Enable or disable statistics collection for *service*.
 ///
 /// This function enables per core, per-service cycle count collection.
-/// @param service The service to enable statistics gathering on.
+/// @param id The service to enable statistics gathering on.
 /// @param enable Zero to disable statistics, non-zero to enable.
 /// @retval 0 Success
 /// @retval -EINVAL Invalid service pointer passed
-    pub fn rte_service_set_stats_enable(service: *mut rte_service_spec,
-                                        enable: i32) -> i32;
+    pub fn rte_service_set_stats_enable(id: u32, enable: i32) -> i32;
 }
 extern "C" {
     /// @warning
@@ -46500,10 +48524,24 @@ extern "C" {
     /// @warning
 /// @b EXPERIMENTAL: this API may change without prior notice
 ///
-/// Dumps any information available about the service. If service is NULL,
-/// dumps info for all services.
-    pub fn rte_service_dump(f: *mut FILE, service: *mut rte_service_spec)
-     -> i32;
+/// Get the numer of services running on the supplied lcore.
+///
+/// @param lcore Id of the service core.
+/// @retval >=0 Number of services registered to this core.
+/// @retval -EINVAL Invalid lcore provided
+/// @retval -ENOTSUP The provided lcore is not a service core.
+    pub fn rte_service_lcore_count_services(lcore: u32) -> i32;
+}
+extern "C" {
+    /// @warning
+/// @b EXPERIMENTAL: this API may change without prior notice
+///
+/// Dumps any information available about the service. When id is UINT32_MAX,
+/// this function dumps info for all services.
+///
+/// @retval 0 Statistics have been successfully dumped
+/// @retval -EINVAL Invalid service id provided
+    pub fn rte_service_dump(f: *mut FILE, id: u32) -> i32;
 }
 /// @warning
 /// @b EXPERIMENTAL: this API may change without prior notice
@@ -46513,6 +48551,64 @@ pub type rte_service_func =
     ::std::option::Option<unsafe extern "C" fn(args:
                                                    *mut ::std::os::raw::c_void)
                               -> i32>;
+/// @warning
+/// @b EXPERIMENTAL: this API may change without prior notice
+///
+/// The specification of a service.
+///
+/// This struct contains metadata about the service itself, the callback
+/// function to run one iteration of the service, a userdata pointer, flags etc.
+#[repr(C)]
+#[derive(Debug, Copy)]
+pub struct rte_service_spec {
+    /// The name of the service. This should be used by the application to
+    /// understand what purpose this service provides.
+    pub name: [::std::os::raw::c_char; 32usize],
+    /// The callback to invoke to run one iteration of the service.
+    pub callback: rte_service_func,
+    /// The userdata pointer provided to the service callback.
+    pub callback_userdata: *mut ::std::os::raw::c_void,
+    /// Flags to indicate the capabilities of this service. See defines in
+    /// the public header file for values of RTE_SERVICE_CAP_*
+    pub capabilities: u32,
+    /// NUMA socket ID that this service is affinitized to
+    pub socket_id: ::std::os::raw::c_int,
+}
+#[test]
+fn bindgen_test_layout_rte_service_spec() {
+    assert_eq!(::std::mem::size_of::<rte_service_spec>() , 56usize , concat !
+               ( "Size of: " , stringify ! ( rte_service_spec ) ));
+    assert_eq! (::std::mem::align_of::<rte_service_spec>() , 8usize , concat !
+                ( "Alignment of " , stringify ! ( rte_service_spec ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_service_spec ) ) . name as * const _
+                as usize } , 0usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_service_spec ) ,
+                "::" , stringify ! ( name ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_service_spec ) ) . callback as *
+                const _ as usize } , 32usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_service_spec ) ,
+                "::" , stringify ! ( callback ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_service_spec ) ) . callback_userdata
+                as * const _ as usize } , 40usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_service_spec ) ,
+                "::" , stringify ! ( callback_userdata ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_service_spec ) ) . capabilities as *
+                const _ as usize } , 48usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_service_spec ) ,
+                "::" , stringify ! ( capabilities ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_service_spec ) ) . socket_id as *
+                const _ as usize } , 52usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_service_spec ) ,
+                "::" , stringify ! ( socket_id ) ));
+}
+impl Clone for rte_service_spec {
+    fn clone(&self) -> Self { *self }
+}
 extern "C" {
     /// @warning
 /// @b EXPERIMENTAL: this API may change without prior notice
@@ -46524,27 +48620,36 @@ extern "C" {
 ///
 /// For example the eventdev SW PMD requires CPU cycles to perform its
 /// scheduling. This can be achieved by registering it as a service, and the
-/// application can then assign CPU resources to it using
-/// *rte_service_set_coremask*.
+/// application can then assign CPU resources to that service.
+///
+/// Note that when a service component registers itself, it is not permitted to
+/// add or remove service-core threads, or modify lcore-to-service mappings. The
+/// only API that may be called by the service-component is
+/// *rte_service_component_runstate_set*, which indicates that the service
+/// component is ready to be executed.
 ///
 /// @param spec The specification of the service to register
+/// @param[out] service_id A pointer to a uint32_t, which will be filled in
+/// during registration of the service. It is set to the integers
+/// service number given to the service. This parameter may be NULL.
 /// @retval 0 Successfully registered the service.
 /// -EINVAL Attempted to register an invalid service (eg, no callback
 /// set)
-    pub fn rte_service_register(spec: *const rte_service_spec) -> i32;
+    pub fn rte_service_component_register(spec: *const rte_service_spec,
+                                          service_id: *mut u32) -> i32;
 }
 extern "C" {
     /// @warning
 /// @b EXPERIMENTAL: this API may change without prior notice
 ///
-/// Unregister a service.
+/// Unregister a service component.
 ///
 /// The service being removed must be stopped before calling this function.
 ///
 /// @retval 0 The service was successfully unregistered.
 /// @retval -EBUSY The service is currently running, stop the service before
 /// calling unregister. No action has been taken.
-    pub fn rte_service_unregister(service: *mut rte_service_spec) -> i32;
+    pub fn rte_service_component_unregister(id: u32) -> i32;
 }
 extern "C" {
     /// @warning
@@ -46562,6 +48667,22 @@ extern "C" {
 /// @retval -ENODEV Error in enabling service lcore on a service
 /// @retval -ENOEXEC Error when starting services
     pub fn rte_service_start_with_defaults() -> i32;
+}
+extern "C" {
+    /// @warning
+/// @b EXPERIMENTAL: this API may change without prior notice
+///
+/// Set the backend runstate of a component.
+///
+/// This function allows services to be registered at startup, but not yet
+/// enabled to run by default. When the service has been configured (via the
+/// usual method; eg rte_eventdev_configure, the service can mark itself as
+/// ready to run. The differentiation between backend runstate and
+/// service_runstate is that the backend runstate is set by the service
+/// component while the service runstate is reserved for application usage.
+///
+/// @retval 0 Success
+    pub fn rte_service_component_runstate_set(id: u32, runstate: u32) -> i32;
 }
 extern "C" {
     /// @warning
@@ -46749,94 +48870,81 @@ extern "C" {
 pub type rte_table_hash_op_hash =
     ::std::option::Option<unsafe extern "C" fn(key:
                                                    *mut ::std::os::raw::c_void,
+                                               key_mask:
+                                                   *mut ::std::os::raw::c_void,
                                                key_size: u32, seed: u64)
                               -> u64>;
-/// Hash tables with configurable key size
-///
-/// /
-/// /** Extendible bucket hash table parameters
+/// Hash table parameters
 #[repr(C)]
 #[derive(Debug, Copy)]
-pub struct rte_table_hash_ext_params {
+pub struct rte_table_hash_params {
+    /// Name
+    pub name: *const ::std::os::raw::c_char,
     /// Key size (number of bytes)
     pub key_size: u32,
-    /// Maximum number of keys
+    /// Byte offset within packet meta-data where the key is located
+    pub key_offset: u32,
+    /// Key mask
+    pub key_mask: *mut u8,
+    /// Number of keys
     pub n_keys: u32,
-    /// Number of hash table buckets. Each bucket stores up to 4 keys.
+    /// Number of buckets
     pub n_buckets: u32,
-    /// Number of hash table bucket extensions. Each bucket extension has
-    /// space for 4 keys and each bucket can have 0, 1 or more extensions.
-    pub n_buckets_ext: u32,
     /// Hash function
     pub f_hash: rte_table_hash_op_hash,
     /// Seed value for the hash function
     pub seed: u64,
-    /// Byte offset within packet meta-data where the 4-byte key signature
-    /// is located. Valid for pre-computed key signature tables, ignored for
-    /// do-sig tables.
-    pub signature_offset: u32,
-    /// Byte offset within packet meta-data where the key is located
-    pub key_offset: u32,
 }
 #[test]
-fn bindgen_test_layout_rte_table_hash_ext_params() {
-    assert_eq!(::std::mem::size_of::<rte_table_hash_ext_params>() , 40usize ,
-               concat ! (
-               "Size of: " , stringify ! ( rte_table_hash_ext_params ) ));
-    assert_eq! (::std::mem::align_of::<rte_table_hash_ext_params>() , 8usize ,
+fn bindgen_test_layout_rte_table_hash_params() {
+    assert_eq!(::std::mem::size_of::<rte_table_hash_params>() , 48usize ,
+               concat ! ( "Size of: " , stringify ! ( rte_table_hash_params )
+               ));
+    assert_eq! (::std::mem::align_of::<rte_table_hash_params>() , 8usize ,
                 concat ! (
-                "Alignment of " , stringify ! ( rte_table_hash_ext_params )
-                ));
+                "Alignment of " , stringify ! ( rte_table_hash_params ) ));
     assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_table_hash_ext_params ) ) . key_size
-                as * const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                rte_table_hash_ext_params ) , "::" , stringify ! ( key_size )
-                ));
+                & ( * ( 0 as * const rte_table_hash_params ) ) . name as *
+                const _ as usize } , 0usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_table_hash_params )
+                , "::" , stringify ! ( name ) ));
     assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_table_hash_ext_params ) ) . n_keys as
-                * const _ as usize } , 4usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                rte_table_hash_ext_params ) , "::" , stringify ! ( n_keys )
-                ));
+                & ( * ( 0 as * const rte_table_hash_params ) ) . key_size as *
+                const _ as usize } , 8usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_table_hash_params )
+                , "::" , stringify ! ( key_size ) ));
     assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_table_hash_ext_params ) ) . n_buckets
-                as * const _ as usize } , 8usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                rte_table_hash_ext_params ) , "::" , stringify ! ( n_buckets )
-                ));
+                & ( * ( 0 as * const rte_table_hash_params ) ) . key_offset as
+                * const _ as usize } , 12usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_table_hash_params )
+                , "::" , stringify ! ( key_offset ) ));
     assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_table_hash_ext_params ) ) .
-                n_buckets_ext as * const _ as usize } , 12usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                rte_table_hash_ext_params ) , "::" , stringify ! (
-                n_buckets_ext ) ));
+                & ( * ( 0 as * const rte_table_hash_params ) ) . key_mask as *
+                const _ as usize } , 16usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_table_hash_params )
+                , "::" , stringify ! ( key_mask ) ));
     assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_table_hash_ext_params ) ) . f_hash as
-                * const _ as usize } , 16usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                rte_table_hash_ext_params ) , "::" , stringify ! ( f_hash )
-                ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_table_hash_ext_params ) ) . seed as *
+                & ( * ( 0 as * const rte_table_hash_params ) ) . n_keys as *
                 const _ as usize } , 24usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                rte_table_hash_ext_params ) , "::" , stringify ! ( seed ) ));
+                "Alignment of field: " , stringify ! ( rte_table_hash_params )
+                , "::" , stringify ! ( n_keys ) ));
     assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_table_hash_ext_params ) ) .
-                signature_offset as * const _ as usize } , 32usize , concat !
-                (
-                "Alignment of field: " , stringify ! (
-                rte_table_hash_ext_params ) , "::" , stringify ! (
-                signature_offset ) ));
+                & ( * ( 0 as * const rte_table_hash_params ) ) . n_buckets as
+                * const _ as usize } , 28usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_table_hash_params )
+                , "::" , stringify ! ( n_buckets ) ));
     assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_table_hash_ext_params ) ) .
-                key_offset as * const _ as usize } , 36usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                rte_table_hash_ext_params ) , "::" , stringify ! ( key_offset
-                ) ));
+                & ( * ( 0 as * const rte_table_hash_params ) ) . f_hash as *
+                const _ as usize } , 32usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_table_hash_params )
+                , "::" , stringify ! ( f_hash ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const rte_table_hash_params ) ) . seed as *
+                const _ as usize } , 40usize , concat ! (
+                "Alignment of field: " , stringify ! ( rte_table_hash_params )
+                , "::" , stringify ! ( seed ) ));
 }
-impl Clone for rte_table_hash_ext_params {
+impl Clone for rte_table_hash_params {
     fn clone(&self) -> Self { *self }
 }
 extern "C" {
@@ -46844,653 +48952,36 @@ extern "C" {
     pub static mut rte_table_hash_ext_ops: rte_table_ops;
 }
 extern "C" {
-    #[link_name = "rte_table_hash_ext_dosig_ops"]
-    pub static mut rte_table_hash_ext_dosig_ops: rte_table_ops;
-}
-/// LRU hash table parameters
-#[repr(C)]
-#[derive(Debug, Copy)]
-pub struct rte_table_hash_lru_params {
-    /// Key size (number of bytes)
-    pub key_size: u32,
-    /// Maximum number of keys
-    pub n_keys: u32,
-    /// Number of hash table buckets. Each bucket stores up to 4 keys.
-    pub n_buckets: u32,
-    /// Hash function
-    pub f_hash: rte_table_hash_op_hash,
-    /// Seed value for the hash function
-    pub seed: u64,
-    /// Byte offset within packet meta-data where the 4-byte key signature
-    /// is located. Valid for pre-computed key signature tables, ignored for
-    /// do-sig tables.
-    pub signature_offset: u32,
-    /// Byte offset within packet meta-data where the key is located
-    pub key_offset: u32,
-}
-#[test]
-fn bindgen_test_layout_rte_table_hash_lru_params() {
-    assert_eq!(::std::mem::size_of::<rte_table_hash_lru_params>() , 40usize ,
-               concat ! (
-               "Size of: " , stringify ! ( rte_table_hash_lru_params ) ));
-    assert_eq! (::std::mem::align_of::<rte_table_hash_lru_params>() , 8usize ,
-                concat ! (
-                "Alignment of " , stringify ! ( rte_table_hash_lru_params )
-                ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_table_hash_lru_params ) ) . key_size
-                as * const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                rte_table_hash_lru_params ) , "::" , stringify ! ( key_size )
-                ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_table_hash_lru_params ) ) . n_keys as
-                * const _ as usize } , 4usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                rte_table_hash_lru_params ) , "::" , stringify ! ( n_keys )
-                ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_table_hash_lru_params ) ) . n_buckets
-                as * const _ as usize } , 8usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                rte_table_hash_lru_params ) , "::" , stringify ! ( n_buckets )
-                ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_table_hash_lru_params ) ) . f_hash as
-                * const _ as usize } , 16usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                rte_table_hash_lru_params ) , "::" , stringify ! ( f_hash )
-                ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_table_hash_lru_params ) ) . seed as *
-                const _ as usize } , 24usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                rte_table_hash_lru_params ) , "::" , stringify ! ( seed ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_table_hash_lru_params ) ) .
-                signature_offset as * const _ as usize } , 32usize , concat !
-                (
-                "Alignment of field: " , stringify ! (
-                rte_table_hash_lru_params ) , "::" , stringify ! (
-                signature_offset ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_table_hash_lru_params ) ) .
-                key_offset as * const _ as usize } , 36usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                rte_table_hash_lru_params ) , "::" , stringify ! ( key_offset
-                ) ));
-}
-impl Clone for rte_table_hash_lru_params {
-    fn clone(&self) -> Self { *self }
-}
-extern "C" {
-    #[link_name = "rte_table_hash_lru_ops"]
-    pub static mut rte_table_hash_lru_ops: rte_table_ops;
-}
-extern "C" {
-    #[link_name = "rte_table_hash_lru_dosig_ops"]
-    pub static mut rte_table_hash_lru_dosig_ops: rte_table_ops;
-}
-/// 8-byte key hash tables
-///
-/// /
-/// /** LRU hash table parameters
-#[repr(C)]
-#[derive(Debug, Copy)]
-pub struct rte_table_hash_key8_lru_params {
-    /// Maximum number of entries (and keys) in the table
-    pub n_entries: u32,
-    /// Hash function
-    pub f_hash: rte_table_hash_op_hash,
-    /// Seed for the hash function
-    pub seed: u64,
-    /// Byte offset within packet meta-data where the 4-byte key signature
-    /// is located. Valid for pre-computed key signature tables, ignored for
-    /// do-sig tables.
-    pub signature_offset: u32,
-    /// Byte offset within packet meta-data where the key is located
-    pub key_offset: u32,
-    /// Bit-mask to be AND-ed to the key on lookup
-    pub key_mask: *mut u8,
-}
-#[test]
-fn bindgen_test_layout_rte_table_hash_key8_lru_params() {
-    assert_eq!(::std::mem::size_of::<rte_table_hash_key8_lru_params>() ,
-               40usize , concat ! (
-               "Size of: " , stringify ! ( rte_table_hash_key8_lru_params )
-               ));
-    assert_eq! (::std::mem::align_of::<rte_table_hash_key8_lru_params>() ,
-                8usize , concat ! (
-                "Alignment of " , stringify ! ( rte_table_hash_key8_lru_params
-                ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_table_hash_key8_lru_params ) ) .
-                n_entries as * const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                rte_table_hash_key8_lru_params ) , "::" , stringify ! (
-                n_entries ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_table_hash_key8_lru_params ) ) .
-                f_hash as * const _ as usize } , 8usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                rte_table_hash_key8_lru_params ) , "::" , stringify ! ( f_hash
-                ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_table_hash_key8_lru_params ) ) . seed
-                as * const _ as usize } , 16usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                rte_table_hash_key8_lru_params ) , "::" , stringify ! ( seed )
-                ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_table_hash_key8_lru_params ) ) .
-                signature_offset as * const _ as usize } , 24usize , concat !
-                (
-                "Alignment of field: " , stringify ! (
-                rte_table_hash_key8_lru_params ) , "::" , stringify ! (
-                signature_offset ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_table_hash_key8_lru_params ) ) .
-                key_offset as * const _ as usize } , 28usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                rte_table_hash_key8_lru_params ) , "::" , stringify ! (
-                key_offset ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_table_hash_key8_lru_params ) ) .
-                key_mask as * const _ as usize } , 32usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                rte_table_hash_key8_lru_params ) , "::" , stringify ! (
-                key_mask ) ));
-}
-impl Clone for rte_table_hash_key8_lru_params {
-    fn clone(&self) -> Self { *self }
-}
-extern "C" {
-    #[link_name = "rte_table_hash_key8_lru_ops"]
-    pub static mut rte_table_hash_key8_lru_ops: rte_table_ops;
-}
-extern "C" {
-    #[link_name = "rte_table_hash_key8_lru_dosig_ops"]
-    pub static mut rte_table_hash_key8_lru_dosig_ops: rte_table_ops;
-}
-/// Extendible bucket hash table parameters
-#[repr(C)]
-#[derive(Debug, Copy)]
-pub struct rte_table_hash_key8_ext_params {
-    /// Maximum number of entries (and keys) in the table
-    pub n_entries: u32,
-    /// Number of entries (and keys) for hash table bucket extensions. Each
-    /// bucket is extended in increments of 4 keys.
-    pub n_entries_ext: u32,
-    /// Hash function
-    pub f_hash: rte_table_hash_op_hash,
-    /// Seed for the hash function
-    pub seed: u64,
-    /// Byte offset within packet meta-data where the 4-byte key signature
-    /// is located. Valid for pre-computed key signature tables, ignored for
-    /// do-sig tables.
-    pub signature_offset: u32,
-    /// Byte offset within packet meta-data where the key is located
-    pub key_offset: u32,
-    /// Bit-mask to be AND-ed to the key on lookup
-    pub key_mask: *mut u8,
-}
-#[test]
-fn bindgen_test_layout_rte_table_hash_key8_ext_params() {
-    assert_eq!(::std::mem::size_of::<rte_table_hash_key8_ext_params>() ,
-               40usize , concat ! (
-               "Size of: " , stringify ! ( rte_table_hash_key8_ext_params )
-               ));
-    assert_eq! (::std::mem::align_of::<rte_table_hash_key8_ext_params>() ,
-                8usize , concat ! (
-                "Alignment of " , stringify ! ( rte_table_hash_key8_ext_params
-                ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_table_hash_key8_ext_params ) ) .
-                n_entries as * const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                rte_table_hash_key8_ext_params ) , "::" , stringify ! (
-                n_entries ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_table_hash_key8_ext_params ) ) .
-                n_entries_ext as * const _ as usize } , 4usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                rte_table_hash_key8_ext_params ) , "::" , stringify ! (
-                n_entries_ext ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_table_hash_key8_ext_params ) ) .
-                f_hash as * const _ as usize } , 8usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                rte_table_hash_key8_ext_params ) , "::" , stringify ! ( f_hash
-                ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_table_hash_key8_ext_params ) ) . seed
-                as * const _ as usize } , 16usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                rte_table_hash_key8_ext_params ) , "::" , stringify ! ( seed )
-                ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_table_hash_key8_ext_params ) ) .
-                signature_offset as * const _ as usize } , 24usize , concat !
-                (
-                "Alignment of field: " , stringify ! (
-                rte_table_hash_key8_ext_params ) , "::" , stringify ! (
-                signature_offset ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_table_hash_key8_ext_params ) ) .
-                key_offset as * const _ as usize } , 28usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                rte_table_hash_key8_ext_params ) , "::" , stringify ! (
-                key_offset ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_table_hash_key8_ext_params ) ) .
-                key_mask as * const _ as usize } , 32usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                rte_table_hash_key8_ext_params ) , "::" , stringify ! (
-                key_mask ) ));
-}
-impl Clone for rte_table_hash_key8_ext_params {
-    fn clone(&self) -> Self { *self }
-}
-extern "C" {
     #[link_name = "rte_table_hash_key8_ext_ops"]
     pub static mut rte_table_hash_key8_ext_ops: rte_table_ops;
-}
-extern "C" {
-    #[link_name = "rte_table_hash_key8_ext_dosig_ops"]
-    pub static mut rte_table_hash_key8_ext_dosig_ops: rte_table_ops;
-}
-/// 16-byte key hash tables
-///
-/// /
-/// /** LRU hash table parameters
-#[repr(C)]
-#[derive(Debug, Copy)]
-pub struct rte_table_hash_key16_lru_params {
-    /// Maximum number of entries (and keys) in the table
-    pub n_entries: u32,
-    /// Hash function
-    pub f_hash: rte_table_hash_op_hash,
-    /// Seed for the hash function
-    pub seed: u64,
-    /// Byte offset within packet meta-data where the 4-byte key signature
-    /// is located. Valid for pre-computed key signature tables, ignored for
-    /// do-sig tables.
-    pub signature_offset: u32,
-    /// Byte offset within packet meta-data where the key is located
-    pub key_offset: u32,
-    /// Bit-mask to be AND-ed to the key on lookup
-    pub key_mask: *mut u8,
-}
-#[test]
-fn bindgen_test_layout_rte_table_hash_key16_lru_params() {
-    assert_eq!(::std::mem::size_of::<rte_table_hash_key16_lru_params>() ,
-               40usize , concat ! (
-               "Size of: " , stringify ! ( rte_table_hash_key16_lru_params )
-               ));
-    assert_eq! (::std::mem::align_of::<rte_table_hash_key16_lru_params>() ,
-                8usize , concat ! (
-                "Alignment of " , stringify ! (
-                rte_table_hash_key16_lru_params ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_table_hash_key16_lru_params ) ) .
-                n_entries as * const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                rte_table_hash_key16_lru_params ) , "::" , stringify ! (
-                n_entries ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_table_hash_key16_lru_params ) ) .
-                f_hash as * const _ as usize } , 8usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                rte_table_hash_key16_lru_params ) , "::" , stringify ! (
-                f_hash ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_table_hash_key16_lru_params ) ) .
-                seed as * const _ as usize } , 16usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                rte_table_hash_key16_lru_params ) , "::" , stringify ! ( seed
-                ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_table_hash_key16_lru_params ) ) .
-                signature_offset as * const _ as usize } , 24usize , concat !
-                (
-                "Alignment of field: " , stringify ! (
-                rte_table_hash_key16_lru_params ) , "::" , stringify ! (
-                signature_offset ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_table_hash_key16_lru_params ) ) .
-                key_offset as * const _ as usize } , 28usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                rte_table_hash_key16_lru_params ) , "::" , stringify ! (
-                key_offset ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_table_hash_key16_lru_params ) ) .
-                key_mask as * const _ as usize } , 32usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                rte_table_hash_key16_lru_params ) , "::" , stringify ! (
-                key_mask ) ));
-}
-impl Clone for rte_table_hash_key16_lru_params {
-    fn clone(&self) -> Self { *self }
-}
-extern "C" {
-    #[link_name = "rte_table_hash_key16_lru_ops"]
-    pub static mut rte_table_hash_key16_lru_ops: rte_table_ops;
-}
-extern "C" {
-    #[link_name = "rte_table_hash_key16_lru_dosig_ops"]
-    pub static mut rte_table_hash_key16_lru_dosig_ops: rte_table_ops;
-}
-/// Extendible bucket hash table parameters
-#[repr(C)]
-#[derive(Debug, Copy)]
-pub struct rte_table_hash_key16_ext_params {
-    /// Maximum number of entries (and keys) in the table
-    pub n_entries: u32,
-    /// Number of entries (and keys) for hash table bucket extensions. Each
-    /// bucket is extended in increments of 4 keys.
-    pub n_entries_ext: u32,
-    /// Hash function
-    pub f_hash: rte_table_hash_op_hash,
-    /// Seed for the hash function
-    pub seed: u64,
-    /// Byte offset within packet meta-data where the 4-byte key signature
-    /// is located. Valid for pre-computed key signature tables, ignored for
-    /// do-sig tables.
-    pub signature_offset: u32,
-    /// Byte offset within packet meta-data where the key is located
-    pub key_offset: u32,
-    /// Bit-mask to be AND-ed to the key on lookup
-    pub key_mask: *mut u8,
-}
-#[test]
-fn bindgen_test_layout_rte_table_hash_key16_ext_params() {
-    assert_eq!(::std::mem::size_of::<rte_table_hash_key16_ext_params>() ,
-               40usize , concat ! (
-               "Size of: " , stringify ! ( rte_table_hash_key16_ext_params )
-               ));
-    assert_eq! (::std::mem::align_of::<rte_table_hash_key16_ext_params>() ,
-                8usize , concat ! (
-                "Alignment of " , stringify ! (
-                rte_table_hash_key16_ext_params ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_table_hash_key16_ext_params ) ) .
-                n_entries as * const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                rte_table_hash_key16_ext_params ) , "::" , stringify ! (
-                n_entries ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_table_hash_key16_ext_params ) ) .
-                n_entries_ext as * const _ as usize } , 4usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                rte_table_hash_key16_ext_params ) , "::" , stringify ! (
-                n_entries_ext ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_table_hash_key16_ext_params ) ) .
-                f_hash as * const _ as usize } , 8usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                rte_table_hash_key16_ext_params ) , "::" , stringify ! (
-                f_hash ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_table_hash_key16_ext_params ) ) .
-                seed as * const _ as usize } , 16usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                rte_table_hash_key16_ext_params ) , "::" , stringify ! ( seed
-                ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_table_hash_key16_ext_params ) ) .
-                signature_offset as * const _ as usize } , 24usize , concat !
-                (
-                "Alignment of field: " , stringify ! (
-                rte_table_hash_key16_ext_params ) , "::" , stringify ! (
-                signature_offset ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_table_hash_key16_ext_params ) ) .
-                key_offset as * const _ as usize } , 28usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                rte_table_hash_key16_ext_params ) , "::" , stringify ! (
-                key_offset ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_table_hash_key16_ext_params ) ) .
-                key_mask as * const _ as usize } , 32usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                rte_table_hash_key16_ext_params ) , "::" , stringify ! (
-                key_mask ) ));
-}
-impl Clone for rte_table_hash_key16_ext_params {
-    fn clone(&self) -> Self { *self }
 }
 extern "C" {
     #[link_name = "rte_table_hash_key16_ext_ops"]
     pub static mut rte_table_hash_key16_ext_ops: rte_table_ops;
 }
 extern "C" {
-    #[link_name = "rte_table_hash_key16_ext_dosig_ops"]
-    pub static mut rte_table_hash_key16_ext_dosig_ops: rte_table_ops;
+    #[link_name = "rte_table_hash_key32_ext_ops"]
+    pub static mut rte_table_hash_key32_ext_ops: rte_table_ops;
 }
-/// 32-byte key hash tables
-///
-/// /
-/// /** LRU hash table parameters
-#[repr(C)]
-#[derive(Debug, Copy)]
-pub struct rte_table_hash_key32_lru_params {
-    /// Maximum number of entries (and keys) in the table
-    pub n_entries: u32,
-    /// Hash function
-    pub f_hash: rte_table_hash_op_hash,
-    /// Seed for the hash function
-    pub seed: u64,
-    /// Byte offset within packet meta-data where the 4-byte key signature
-    /// is located. Valid for pre-computed key signature tables, ignored for
-    /// do-sig tables.
-    pub signature_offset: u32,
-    /// Byte offset within packet meta-data where the key is located
-    pub key_offset: u32,
+extern "C" {
+    #[link_name = "rte_table_hash_lru_ops"]
+    pub static mut rte_table_hash_lru_ops: rte_table_ops;
 }
-#[test]
-fn bindgen_test_layout_rte_table_hash_key32_lru_params() {
-    assert_eq!(::std::mem::size_of::<rte_table_hash_key32_lru_params>() ,
-               32usize , concat ! (
-               "Size of: " , stringify ! ( rte_table_hash_key32_lru_params )
-               ));
-    assert_eq! (::std::mem::align_of::<rte_table_hash_key32_lru_params>() ,
-                8usize , concat ! (
-                "Alignment of " , stringify ! (
-                rte_table_hash_key32_lru_params ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_table_hash_key32_lru_params ) ) .
-                n_entries as * const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                rte_table_hash_key32_lru_params ) , "::" , stringify ! (
-                n_entries ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_table_hash_key32_lru_params ) ) .
-                f_hash as * const _ as usize } , 8usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                rte_table_hash_key32_lru_params ) , "::" , stringify ! (
-                f_hash ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_table_hash_key32_lru_params ) ) .
-                seed as * const _ as usize } , 16usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                rte_table_hash_key32_lru_params ) , "::" , stringify ! ( seed
-                ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_table_hash_key32_lru_params ) ) .
-                signature_offset as * const _ as usize } , 24usize , concat !
-                (
-                "Alignment of field: " , stringify ! (
-                rte_table_hash_key32_lru_params ) , "::" , stringify ! (
-                signature_offset ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_table_hash_key32_lru_params ) ) .
-                key_offset as * const _ as usize } , 28usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                rte_table_hash_key32_lru_params ) , "::" , stringify ! (
-                key_offset ) ));
+extern "C" {
+    #[link_name = "rte_table_hash_key8_lru_ops"]
+    pub static mut rte_table_hash_key8_lru_ops: rte_table_ops;
 }
-impl Clone for rte_table_hash_key32_lru_params {
-    fn clone(&self) -> Self { *self }
+extern "C" {
+    #[link_name = "rte_table_hash_key16_lru_ops"]
+    pub static mut rte_table_hash_key16_lru_ops: rte_table_ops;
 }
 extern "C" {
     #[link_name = "rte_table_hash_key32_lru_ops"]
     pub static mut rte_table_hash_key32_lru_ops: rte_table_ops;
 }
-/// Extendible bucket hash table parameters
-#[repr(C)]
-#[derive(Debug, Copy)]
-pub struct rte_table_hash_key32_ext_params {
-    /// Maximum number of entries (and keys) in the table
-    pub n_entries: u32,
-    /// Number of entries (and keys) for hash table bucket extensions. Each
-    /// bucket is extended in increments of 4 keys.
-    pub n_entries_ext: u32,
-    /// Hash function
-    pub f_hash: rte_table_hash_op_hash,
-    /// Seed for the hash function
-    pub seed: u64,
-    /// Byte offset within packet meta-data where the 4-byte key signature
-    /// is located. Valid for pre-computed key signature tables, ignored for
-    /// do-sig tables.
-    pub signature_offset: u32,
-    /// Byte offset within packet meta-data where the key is located
-    pub key_offset: u32,
-}
-#[test]
-fn bindgen_test_layout_rte_table_hash_key32_ext_params() {
-    assert_eq!(::std::mem::size_of::<rte_table_hash_key32_ext_params>() ,
-               32usize , concat ! (
-               "Size of: " , stringify ! ( rte_table_hash_key32_ext_params )
-               ));
-    assert_eq! (::std::mem::align_of::<rte_table_hash_key32_ext_params>() ,
-                8usize , concat ! (
-                "Alignment of " , stringify ! (
-                rte_table_hash_key32_ext_params ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_table_hash_key32_ext_params ) ) .
-                n_entries as * const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                rte_table_hash_key32_ext_params ) , "::" , stringify ! (
-                n_entries ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_table_hash_key32_ext_params ) ) .
-                n_entries_ext as * const _ as usize } , 4usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                rte_table_hash_key32_ext_params ) , "::" , stringify ! (
-                n_entries_ext ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_table_hash_key32_ext_params ) ) .
-                f_hash as * const _ as usize } , 8usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                rte_table_hash_key32_ext_params ) , "::" , stringify ! (
-                f_hash ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_table_hash_key32_ext_params ) ) .
-                seed as * const _ as usize } , 16usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                rte_table_hash_key32_ext_params ) , "::" , stringify ! ( seed
-                ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_table_hash_key32_ext_params ) ) .
-                signature_offset as * const _ as usize } , 24usize , concat !
-                (
-                "Alignment of field: " , stringify ! (
-                rte_table_hash_key32_ext_params ) , "::" , stringify ! (
-                signature_offset ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_table_hash_key32_ext_params ) ) .
-                key_offset as * const _ as usize } , 28usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                rte_table_hash_key32_ext_params ) , "::" , stringify ! (
-                key_offset ) ));
-}
-impl Clone for rte_table_hash_key32_ext_params {
-    fn clone(&self) -> Self { *self }
-}
 extern "C" {
-    #[link_name = "rte_table_hash_key32_ext_ops"]
-    pub static mut rte_table_hash_key32_ext_ops: rte_table_ops;
-}
-/// Cuckoo hash table parameters
-#[repr(C)]
-#[derive(Debug, Copy)]
-pub struct rte_table_hash_cuckoo_params {
-    /// Key size (number of bytes
-    pub key_size: u32,
-    /// Maximum number of hash table entries
-    pub n_keys: u32,
-    /// Hash function used to calculate hash
-    pub f_hash: rte_table_hash_op_hash,
-    /// Seed value or Init value used by f_hash
-    pub seed: u32,
-    /// Byte offset within packet meta-data where the 4-byte key signature
-    /// is located. Valid for pre-computed key signature tables, ignored for
-    /// do-sig tables.
-    pub signature_offset: u32,
-    /// Byte offset within packet meta-data where the key is located
-    pub key_offset: u32,
-    /// Hash table name
-    pub name: *const ::std::os::raw::c_char,
-}
-#[test]
-fn bindgen_test_layout_rte_table_hash_cuckoo_params() {
-    assert_eq!(::std::mem::size_of::<rte_table_hash_cuckoo_params>() , 40usize
-               , concat ! (
-               "Size of: " , stringify ! ( rte_table_hash_cuckoo_params ) ));
-    assert_eq! (::std::mem::align_of::<rte_table_hash_cuckoo_params>() ,
-                8usize , concat ! (
-                "Alignment of " , stringify ! ( rte_table_hash_cuckoo_params )
-                ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_table_hash_cuckoo_params ) ) .
-                key_size as * const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                rte_table_hash_cuckoo_params ) , "::" , stringify ! ( key_size
-                ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_table_hash_cuckoo_params ) ) . n_keys
-                as * const _ as usize } , 4usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                rte_table_hash_cuckoo_params ) , "::" , stringify ! ( n_keys )
-                ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_table_hash_cuckoo_params ) ) . f_hash
-                as * const _ as usize } , 8usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                rte_table_hash_cuckoo_params ) , "::" , stringify ! ( f_hash )
-                ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_table_hash_cuckoo_params ) ) . seed
-                as * const _ as usize } , 16usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                rte_table_hash_cuckoo_params ) , "::" , stringify ! ( seed )
-                ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_table_hash_cuckoo_params ) ) .
-                signature_offset as * const _ as usize } , 20usize , concat !
-                (
-                "Alignment of field: " , stringify ! (
-                rte_table_hash_cuckoo_params ) , "::" , stringify ! (
-                signature_offset ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_table_hash_cuckoo_params ) ) .
-                key_offset as * const _ as usize } , 24usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                rte_table_hash_cuckoo_params ) , "::" , stringify ! (
-                key_offset ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const rte_table_hash_cuckoo_params ) ) . name
-                as * const _ as usize } , 32usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                rte_table_hash_cuckoo_params ) , "::" , stringify ! ( name )
-                ));
-}
-impl Clone for rte_table_hash_cuckoo_params {
-    fn clone(&self) -> Self { *self }
-}
-extern "C" {
-    #[link_name = "rte_table_hash_cuckoo_dosig_ops"]
-    pub static mut rte_table_hash_cuckoo_dosig_ops: rte_table_ops;
+    #[link_name = "rte_table_hash_cuckoo_ops"]
+    pub static mut rte_table_hash_cuckoo_ops: rte_table_ops;
 }
 /// LPM table parameters
 #[repr(C)]
@@ -50033,7 +51524,7 @@ extern "C" {
 /// Error details. Filled in only on error, when not NULL.
 /// @return
 /// 0 on success, non-zero error code otherwise.
-    pub fn rte_tm_get_number_of_leaf_nodes(port_id: u8,
+    pub fn rte_tm_get_number_of_leaf_nodes(port_id: u16,
                                            n_leaf_nodes: *mut u32,
                                            error: *mut rte_tm_error)
      -> ::std::os::raw::c_int;
@@ -50056,7 +51547,7 @@ extern "C" {
 /// Error details. Filled in only on error, when not NULL.
 /// @return
 /// 0 on success, non-zero error code otherwise.
-    pub fn rte_tm_node_type_get(port_id: u8, node_id: u32,
+    pub fn rte_tm_node_type_get(port_id: u16, node_id: u32,
                                 is_leaf: *mut ::std::os::raw::c_int,
                                 error: *mut rte_tm_error)
      -> ::std::os::raw::c_int;
@@ -50072,7 +51563,8 @@ extern "C" {
 /// Error details. Filled in only on error, when not NULL.
 /// @return
 /// 0 on success, non-zero error code otherwise.
-    pub fn rte_tm_capabilities_get(port_id: u8, cap: *mut rte_tm_capabilities,
+    pub fn rte_tm_capabilities_get(port_id: u16,
+                                   cap: *mut rte_tm_capabilities,
                                    error: *mut rte_tm_error)
      -> ::std::os::raw::c_int;
 }
@@ -50090,7 +51582,7 @@ extern "C" {
 /// Error details. Filled in only on error, when not NULL.
 /// @return
 /// 0 on success, non-zero error code otherwise.
-    pub fn rte_tm_level_capabilities_get(port_id: u8, level_id: u32,
+    pub fn rte_tm_level_capabilities_get(port_id: u16, level_id: u32,
                                          cap: *mut rte_tm_level_capabilities,
                                          error: *mut rte_tm_error)
      -> ::std::os::raw::c_int;
@@ -50108,7 +51600,7 @@ extern "C" {
 /// Error details. Filled in only on error, when not NULL.
 /// @return
 /// 0 on success, non-zero error code otherwise.
-    pub fn rte_tm_node_capabilities_get(port_id: u8, node_id: u32,
+    pub fn rte_tm_node_capabilities_get(port_id: u16, node_id: u32,
                                         cap: *mut rte_tm_node_capabilities,
                                         error: *mut rte_tm_error)
      -> ::std::os::raw::c_int;
@@ -50131,7 +51623,7 @@ extern "C" {
 /// 0 on success, non-zero error code otherwise.
 ///
 /// @see struct rte_tm_capabilities::cman_wred_context_n_max
-    pub fn rte_tm_wred_profile_add(port_id: u8, wred_profile_id: u32,
+    pub fn rte_tm_wred_profile_add(port_id: u16, wred_profile_id: u32,
                                    profile: *mut rte_tm_wred_params,
                                    error: *mut rte_tm_error)
      -> ::std::os::raw::c_int;
@@ -50152,7 +51644,7 @@ extern "C" {
 /// 0 on success, non-zero error code otherwise.
 ///
 /// @see struct rte_tm_capabilities::cman_wred_context_n_max
-    pub fn rte_tm_wred_profile_delete(port_id: u8, wred_profile_id: u32,
+    pub fn rte_tm_wred_profile_delete(port_id: u16, wred_profile_id: u32,
                                       error: *mut rte_tm_error)
      -> ::std::os::raw::c_int;
 }
@@ -50181,7 +51673,7 @@ extern "C" {
 /// 0 on success, non-zero error code otherwise.
 ///
 /// @see struct rte_tm_capabilities::cman_wred_context_shared_n_max
-    pub fn rte_tm_shared_wred_context_add_update(port_id: u8,
+    pub fn rte_tm_shared_wred_context_add_update(port_id: u16,
                                                  shared_wred_context_id: u32,
                                                  wred_profile_id: u32,
                                                  error: *mut rte_tm_error)
@@ -50204,7 +51696,7 @@ extern "C" {
 /// 0 on success, non-zero error code otherwise.
 ///
 /// @see struct rte_tm_capabilities::cman_wred_context_shared_n_max
-    pub fn rte_tm_shared_wred_context_delete(port_id: u8,
+    pub fn rte_tm_shared_wred_context_delete(port_id: u16,
                                              shared_wred_context_id: u32,
                                              error: *mut rte_tm_error)
      -> ::std::os::raw::c_int;
@@ -50227,7 +51719,7 @@ extern "C" {
 /// 0 on success, non-zero error code otherwise.
 ///
 /// @see struct rte_tm_capabilities::shaper_n_max
-    pub fn rte_tm_shaper_profile_add(port_id: u8, shaper_profile_id: u32,
+    pub fn rte_tm_shaper_profile_add(port_id: u16, shaper_profile_id: u32,
                                      profile: *mut rte_tm_shaper_params,
                                      error: *mut rte_tm_error)
      -> ::std::os::raw::c_int;
@@ -50248,7 +51740,7 @@ extern "C" {
 /// 0 on success, non-zero error code otherwise.
 ///
 /// @see struct rte_tm_capabilities::shaper_n_max
-    pub fn rte_tm_shaper_profile_delete(port_id: u8, shaper_profile_id: u32,
+    pub fn rte_tm_shaper_profile_delete(port_id: u16, shaper_profile_id: u32,
                                         error: *mut rte_tm_error)
      -> ::std::os::raw::c_int;
 }
@@ -50275,7 +51767,8 @@ extern "C" {
 /// 0 on success, non-zero error code otherwise.
 ///
 /// @see struct rte_tm_capabilities::shaper_shared_n_max
-    pub fn rte_tm_shared_shaper_add_update(port_id: u8, shared_shaper_id: u32,
+    pub fn rte_tm_shared_shaper_add_update(port_id: u16,
+                                           shared_shaper_id: u32,
                                            shaper_profile_id: u32,
                                            error: *mut rte_tm_error)
      -> ::std::os::raw::c_int;
@@ -50296,7 +51789,7 @@ extern "C" {
 /// 0 on success, non-zero error code otherwise.
 ///
 /// @see struct rte_tm_capabilities::shaper_shared_n_max
-    pub fn rte_tm_shared_shaper_delete(port_id: u8, shared_shaper_id: u32,
+    pub fn rte_tm_shared_shaper_delete(port_id: u16, shared_shaper_id: u32,
                                        error: *mut rte_tm_error)
      -> ::std::os::raw::c_int;
 }
@@ -50362,7 +51855,7 @@ extern "C" {
 /// @see RTE_TM_UPDATE_NODE_ADD_DELETE
 /// @see RTE_TM_NODE_LEVEL_ID_ANY
 /// @see struct rte_tm_capabilities
-    pub fn rte_tm_node_add(port_id: u8, node_id: u32, parent_node_id: u32,
+    pub fn rte_tm_node_add(port_id: u16, node_id: u32, parent_node_id: u32,
                            priority: u32, weight: u32, level_id: u32,
                            params: *mut rte_tm_node_params,
                            error: *mut rte_tm_error) -> ::std::os::raw::c_int;
@@ -50389,7 +51882,7 @@ extern "C" {
 /// 0 on success, non-zero error code otherwise.
 ///
 /// @see RTE_TM_UPDATE_NODE_ADD_DELETE
-    pub fn rte_tm_node_delete(port_id: u8, node_id: u32,
+    pub fn rte_tm_node_delete(port_id: u16, node_id: u32,
                               error: *mut rte_tm_error)
      -> ::std::os::raw::c_int;
 }
@@ -50411,7 +51904,7 @@ extern "C" {
 ///
 /// @see rte_tm_node_resume()
 /// @see RTE_TM_UPDATE_NODE_SUSPEND_RESUME
-    pub fn rte_tm_node_suspend(port_id: u8, node_id: u32,
+    pub fn rte_tm_node_suspend(port_id: u16, node_id: u32,
                                error: *mut rte_tm_error)
      -> ::std::os::raw::c_int;
 }
@@ -50432,7 +51925,7 @@ extern "C" {
 ///
 /// @see rte_tm_node_suspend()
 /// @see RTE_TM_UPDATE_NODE_SUSPEND_RESUME
-    pub fn rte_tm_node_resume(port_id: u8, node_id: u32,
+    pub fn rte_tm_node_resume(port_id: u16, node_id: u32,
                               error: *mut rte_tm_error)
      -> ::std::os::raw::c_int;
 }
@@ -50471,7 +51964,7 @@ extern "C" {
 ///
 /// @see rte_tm_node_add()
 /// @see rte_tm_node_delete()
-    pub fn rte_tm_hierarchy_commit(port_id: u8,
+    pub fn rte_tm_hierarchy_commit(port_id: u16,
                                    clear_on_fail: ::std::os::raw::c_int,
                                    error: *mut rte_tm_error)
      -> ::std::os::raw::c_int;
@@ -50506,7 +51999,7 @@ extern "C" {
 ///
 /// @see RTE_TM_UPDATE_NODE_PARENT_KEEP_LEVEL
 /// @see RTE_TM_UPDATE_NODE_PARENT_CHANGE_LEVEL
-    pub fn rte_tm_node_parent_update(port_id: u8, node_id: u32,
+    pub fn rte_tm_node_parent_update(port_id: u16, node_id: u32,
                                      parent_node_id: u32, priority: u32,
                                      weight: u32, error: *mut rte_tm_error)
      -> ::std::os::raw::c_int;
@@ -50531,7 +52024,7 @@ extern "C" {
 /// 0 on success, non-zero error code otherwise.
 ///
 /// @see struct rte_tm_capabilities::shaper_private_n_max
-    pub fn rte_tm_node_shaper_update(port_id: u8, node_id: u32,
+    pub fn rte_tm_node_shaper_update(port_id: u16, node_id: u32,
                                      shaper_profile_id: u32,
                                      error: *mut rte_tm_error)
      -> ::std::os::raw::c_int;
@@ -50556,7 +52049,7 @@ extern "C" {
 /// 0 on success, non-zero error code otherwise.
 ///
 /// @see struct rte_tm_capabilities::shaper_shared_n_max
-    pub fn rte_tm_node_shared_shaper_update(port_id: u8, node_id: u32,
+    pub fn rte_tm_node_shared_shaper_update(port_id: u16, node_id: u32,
                                             shared_shaper_id: u32,
                                             add: ::std::os::raw::c_int,
                                             error: *mut rte_tm_error)
@@ -50581,7 +52074,7 @@ extern "C" {
 ///
 /// @see enum rte_tm_stats_type
 /// @see RTE_TM_UPDATE_NODE_STATS
-    pub fn rte_tm_node_stats_update(port_id: u8, node_id: u32,
+    pub fn rte_tm_node_stats_update(port_id: u16, node_id: u32,
                                     stats_mask: u64, error: *mut rte_tm_error)
      -> ::std::os::raw::c_int;
 }
@@ -50606,7 +52099,7 @@ extern "C" {
 ///
 /// @see RTE_TM_UPDATE_NODE_WFQ_WEIGHT_MODE
 /// @see RTE_TM_UPDATE_NODE_N_SP_PRIORITIES
-    pub fn rte_tm_node_wfq_weight_mode_update(port_id: u8, node_id: u32,
+    pub fn rte_tm_node_wfq_weight_mode_update(port_id: u16, node_id: u32,
                                               wfq_weight_mode:
                                                   *mut ::std::os::raw::c_int,
                                               n_sp_priorities: u32,
@@ -50628,7 +52121,7 @@ extern "C" {
 /// 0 on success, non-zero error code otherwise.
 ///
 /// @see RTE_TM_UPDATE_NODE_CMAN
-    pub fn rte_tm_node_cman_update(port_id: u8, node_id: u32,
+    pub fn rte_tm_node_cman_update(port_id: u16, node_id: u32,
                                    cman: rte_tm_cman_mode,
                                    error: *mut rte_tm_error)
      -> ::std::os::raw::c_int;
@@ -50650,7 +52143,7 @@ extern "C" {
 /// 0 on success, non-zero error code otherwise.
 ///
 /// @see struct rte_tm_capabilities::cman_wred_context_private_n_max
-    pub fn rte_tm_node_wred_context_update(port_id: u8, node_id: u32,
+    pub fn rte_tm_node_wred_context_update(port_id: u16, node_id: u32,
                                            wred_profile_id: u32,
                                            error: *mut rte_tm_error)
      -> ::std::os::raw::c_int;
@@ -50673,7 +52166,7 @@ extern "C" {
 /// 0 on success, non-zero error code otherwise.
 ///
 /// @see struct rte_tm_capabilities::cman_wred_context_shared_n_max
-    pub fn rte_tm_node_shared_wred_context_update(port_id: u8, node_id: u32,
+    pub fn rte_tm_node_shared_wred_context_update(port_id: u16, node_id: u32,
                                                   shared_wred_context_id: u32,
                                                   add: ::std::os::raw::c_int,
                                                   error: *mut rte_tm_error)
@@ -50703,7 +52196,7 @@ extern "C" {
 /// 0 on success, non-zero error code otherwise.
 ///
 /// @see enum rte_tm_stats_type
-    pub fn rte_tm_node_stats_read(port_id: u8, node_id: u32,
+    pub fn rte_tm_node_stats_read(port_id: u16, node_id: u32,
                                   stats: *mut rte_tm_node_stats,
                                   stats_mask: *mut u64,
                                   clear: ::std::os::raw::c_int,
@@ -50738,7 +52231,7 @@ extern "C" {
 /// 0 on success, non-zero error code otherwise.
 ///
 /// @see struct rte_tm_capabilities::mark_vlan_dei_supported
-    pub fn rte_tm_mark_vlan_dei(port_id: u8,
+    pub fn rte_tm_mark_vlan_dei(port_id: u16,
                                 mark_green: ::std::os::raw::c_int,
                                 mark_yellow: ::std::os::raw::c_int,
                                 mark_red: ::std::os::raw::c_int,
@@ -50787,7 +52280,7 @@ extern "C" {
 ///
 /// @see struct rte_tm_capabilities::mark_ip_ecn_tcp_supported
 /// @see struct rte_tm_capabilities::mark_ip_ecn_sctp_supported
-    pub fn rte_tm_mark_ip_ecn(port_id: u8, mark_green: ::std::os::raw::c_int,
+    pub fn rte_tm_mark_ip_ecn(port_id: u16, mark_green: ::std::os::raw::c_int,
                               mark_yellow: ::std::os::raw::c_int,
                               mark_red: ::std::os::raw::c_int,
                               error: *mut rte_tm_error)
@@ -50833,7 +52326,8 @@ extern "C" {
 /// 0 on success, non-zero error code otherwise.
 ///
 /// @see struct rte_tm_capabilities::mark_ip_dscp_supported
-    pub fn rte_tm_mark_ip_dscp(port_id: u8, mark_green: ::std::os::raw::c_int,
+    pub fn rte_tm_mark_ip_dscp(port_id: u16,
+                               mark_green: ::std::os::raw::c_int,
                                mark_yellow: ::std::os::raw::c_int,
                                mark_red: ::std::os::raw::c_int,
                                error: *mut rte_tm_error)
@@ -50992,7 +52486,7 @@ pub type rte_tm_node_stats_update_t =
 pub type rte_tm_node_wfq_weight_mode_update_t =
     ::std::option::Option<unsafe extern "C" fn(dev: *mut rte_eth_dev,
                                                node_id: u32,
-                                               wfq_weigth_mode:
+                                               wfq_weight_mode:
                                                    *mut ::std::os::raw::c_int,
                                                n_sp_priorities: u32,
                                                error: *mut rte_tm_error)
@@ -51294,8 +52788,119 @@ extern "C" {
 /// @return
 /// The traffic manager operations structure associated with port_id on
 /// success, NULL otherwise.
-    pub fn rte_tm_ops_get(port_id: u8, error: *mut rte_tm_error)
+    pub fn rte_tm_ops_get(port_id: u16, error: *mut rte_tm_error)
      -> *const rte_tm_ops;
+}
+/// A structure used to store memory information.
+#[repr(C)]
+#[derive(Copy)]
+pub struct memory_info {
+    pub name: [::std::os::raw::c_char; 256usize],
+    pub size: u64,
+}
+#[test]
+fn bindgen_test_layout_memory_info() {
+    assert_eq!(::std::mem::size_of::<memory_info>() , 264usize , concat ! (
+               "Size of: " , stringify ! ( memory_info ) ));
+    assert_eq! (::std::mem::align_of::<memory_info>() , 8usize , concat ! (
+                "Alignment of " , stringify ! ( memory_info ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const memory_info ) ) . name as * const _ as
+                usize } , 0usize , concat ! (
+                "Alignment of field: " , stringify ! ( memory_info ) , "::" ,
+                stringify ! ( name ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const memory_info ) ) . size as * const _ as
+                usize } , 256usize , concat ! (
+                "Alignment of field: " , stringify ! ( memory_info ) , "::" ,
+                stringify ! ( size ) ));
+}
+impl Clone for memory_info {
+    fn clone(&self) -> Self { *self }
+}
+/// A structure used to store memory segment information.
+#[repr(C)]
+#[derive(Copy)]
+pub struct memseg_info {
+    pub idx: u32,
+    pub pfn: u64,
+    pub size: u64,
+    pub mfn: [u64; 2048usize],
+}
+#[test]
+fn bindgen_test_layout_memseg_info() {
+    assert_eq!(::std::mem::size_of::<memseg_info>() , 16408usize , concat ! (
+               "Size of: " , stringify ! ( memseg_info ) ));
+    assert_eq! (::std::mem::align_of::<memseg_info>() , 8usize , concat ! (
+                "Alignment of " , stringify ! ( memseg_info ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const memseg_info ) ) . idx as * const _ as
+                usize } , 0usize , concat ! (
+                "Alignment of field: " , stringify ! ( memseg_info ) , "::" ,
+                stringify ! ( idx ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const memseg_info ) ) . pfn as * const _ as
+                usize } , 8usize , concat ! (
+                "Alignment of field: " , stringify ! ( memseg_info ) , "::" ,
+                stringify ! ( pfn ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const memseg_info ) ) . size as * const _ as
+                usize } , 16usize , concat ! (
+                "Alignment of field: " , stringify ! ( memseg_info ) , "::" ,
+                stringify ! ( size ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const memseg_info ) ) . mfn as * const _ as
+                usize } , 24usize , concat ! (
+                "Alignment of field: " , stringify ! ( memseg_info ) , "::" ,
+                stringify ! ( mfn ) ));
+}
+impl Clone for memseg_info {
+    fn clone(&self) -> Self { *self }
+}
+/// A structure used to store memory block information.
+#[repr(C)]
+#[derive(Debug, Copy)]
+pub struct memblock_info {
+    pub exchange_flag: u8,
+    pub used: u8,
+    pub vir_addr: u64,
+    pub pfn: u64,
+    pub mfn: u64,
+}
+#[test]
+fn bindgen_test_layout_memblock_info() {
+    assert_eq!(::std::mem::size_of::<memblock_info>() , 32usize , concat ! (
+               "Size of: " , stringify ! ( memblock_info ) ));
+    assert_eq! (::std::mem::align_of::<memblock_info>() , 8usize , concat ! (
+                "Alignment of " , stringify ! ( memblock_info ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const memblock_info ) ) . exchange_flag as *
+                const _ as usize } , 0usize , concat ! (
+                "Alignment of field: " , stringify ! ( memblock_info ) , "::"
+                , stringify ! ( exchange_flag ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const memblock_info ) ) . used as * const _ as
+                usize } , 1usize , concat ! (
+                "Alignment of field: " , stringify ! ( memblock_info ) , "::"
+                , stringify ! ( used ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const memblock_info ) ) . vir_addr as * const _
+                as usize } , 8usize , concat ! (
+                "Alignment of field: " , stringify ! ( memblock_info ) , "::"
+                , stringify ! ( vir_addr ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const memblock_info ) ) . pfn as * const _ as
+                usize } , 16usize , concat ! (
+                "Alignment of field: " , stringify ! ( memblock_info ) , "::"
+                , stringify ! ( pfn ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const memblock_info ) ) . mfn as * const _ as
+                usize } , 24usize , concat ! (
+                "Alignment of field: " , stringify ! ( memblock_info ) , "::"
+                , stringify ! ( mfn ) ));
+}
+impl Clone for memblock_info {
+    fn clone(&self) -> Self { *self }
 }
 pub type __builtin_va_list = [__va_list_tag; 1usize];
 #[repr(C)]
@@ -51350,5 +52955,13 @@ pub struct malloc_elem {
     pub _address: u8,
 }
 impl Clone for malloc_elem {
+    fn clone(&self) -> Self { *self }
+}
+#[repr(C)]
+#[derive(Debug, Copy)]
+pub struct rte_security_session {
+    pub _address: u8,
+}
+impl Clone for rte_security_session {
     fn clone(&self) -> Self { *self }
 }
