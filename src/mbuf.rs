@@ -6,7 +6,6 @@ use atomic;
 use std::os::raw::c_void;
 
 impl rte_mbuf {
-
     pub unsafe fn detach(&self) {
         // not implemented yet
     }
