@@ -2,7 +2,7 @@ extern crate dpdk;
 use std::os::raw::c_void;
 
 unsafe extern "C" fn hello_thread(_arg: *mut c_void) -> i32 {
-    println!("Hello! lcore {}",  dpdk::lcore::id());
+    println!("Hello! lcore {}", dpdk::lcore::id());
     0
 }
 
