@@ -40,9 +40,9 @@ pub unsafe fn mp_remote_launch(
 ) -> i32 {
     let cm;
     if call_master == true {
-        cm = ffi::rte_rmt_call_master_t_CALL_MASTER;
+        cm = ffi::rte_rmt_call_master_t::CALL_MASTER;
     } else {
-        cm = ffi::rte_rmt_call_master_t_SKIP_MASTER;
+        cm = ffi::rte_rmt_call_master_t::SKIP_MASTER;
     }
     ffi::rte_eal_mp_remote_launch(Some(callback), arg, cm)
 }
