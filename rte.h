@@ -32,11 +32,9 @@
 #include <rte_compat.h>
 #include <rte_cpuflags.h>
 #include <rte_cryptodev.h>
-#include <rte_cryptodev_pci.h>
 #include <rte_cryptodev_pmd.h>
 #include <rte_cryptodev_scheduler.h>
 #include <rte_cryptodev_scheduler_operations.h>
-#include <rte_cryptodev_vdev.h>
 #include <rte_crypto.h>
 #include <rte_crypto_sym.h>
 #include <rte_cycles.h>
@@ -110,7 +108,6 @@
 #include <rte_pmd_bnxt.h>
 #include <rte_pmd_i40e.h>
 #include <rte_pmd_ixgbe.h>
-#include <rte_pmd_octeontx_ssovf.h>
 #include <rte_port_ethdev.h>
 #include <rte_port_fd.h>
 #include <rte_port_frag.h>
@@ -151,12 +148,10 @@
 #include <rte_tm_driver.h>
 #include <rte_tm.h>
 #include <rte_udp.h>
-#include <rte_vdev.h>
 #include <rte_vect.h>
 #include <rte_version.h>
 #include <rte_vhost.h>
 
-#include <exec-env/rte_dom0_common.h>
 #include <exec-env/rte_kni_common.h>
 
 #include <generic/rte_atomic.h>
