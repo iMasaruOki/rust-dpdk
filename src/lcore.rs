@@ -19,7 +19,7 @@ pub unsafe fn is_enabled(lcore_id: u32) -> bool {
     }
     let role = (*ffi::rte_eal_get_configuration())
         .lcore_role[lcore_id as usize];
-    role == ffi::rte_lcore_role_t::ROLE_RTE
+    role == ffi::rte_lcore_role_t_ROLE_RTE
 }
 
 pub unsafe fn get_first(skip_master: bool) -> u32 {
