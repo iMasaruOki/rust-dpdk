@@ -19,7 +19,7 @@ fn main() {
     let mut child = Command::new("perl")
         .arg("-pi")
         .arg("-e")
-        .arg("s/(^.*link_name.*per_lcore__)/    #[thread_local]\n$1/")
+        .arg("s/(pub static mut per_lcore__lcore_id)/    #[thread_local] $1/")
         .arg(out_path.join("ffi.rs").as_os_str())
         .spawn()
         .expect("failed to execute perl");
