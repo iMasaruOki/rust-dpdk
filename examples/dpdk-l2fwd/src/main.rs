@@ -103,6 +103,7 @@ fn main() {
         let mut opts = Options::new();
         opts.optopt("p", "portmap", "set port bitmap", "PORTMAP");
         opts.optflag("d", "dump", "show packet mbuf dump");
+        opts.optflag("v", "version", "show version and exit");
 
         let exargs = dpdk::eal::init(std::env::args());
         if exargs.is_none() == true {
@@ -113,6 +114,12 @@ fn main() {
             Ok(m) => m,
             Err(f) => panic!(f.to_string()),
         };
+        if matches.opt_present("v") {
+            println!("dpdk-l2fwd {} with {}",
+                     env!("CARGO_PKG_VERSION"),
+                     dpdk::version::string());
+            return
+        }
         if matches.opt_present("d") {
             DUMP_FLAG = true;
         }
