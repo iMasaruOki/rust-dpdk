@@ -16,3 +16,4 @@ pub mod net;
 pub mod pktmbuf;
 pub mod ring;
 pub mod socket;
+pub mod version;
