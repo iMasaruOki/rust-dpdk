@@ -49,3 +49,7 @@ pub unsafe fn get_next(prev: u32, skip_master: bool, wrap: bool) -> u32 {
     }
     i
 }
+
+pub unsafe fn tsc_hz() -> u64 {
+    ffi::rte_get_tsc_hz()
+}

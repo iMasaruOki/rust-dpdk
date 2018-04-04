@@ -1,4 +1,4 @@
-# dpdk-l2fwd, rust-dpdk example like as dpdk/src/examples/l2fwd
+# rdtsc, read TSC sample program
 
 ## Requirement
 
@@ -14,10 +14,6 @@ cargo +nightly build
 ```
 ## Running
 
-Run ./target/debug/dpdk-l2fwd as root with DPDK l2fwd parameter.
-
-e.g.
-
 ```
-sudo ./target/debug/dpdk-l2fwd -cf -n2 -- -p3
+./run.sh
 ```
