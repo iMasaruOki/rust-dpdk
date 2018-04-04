@@ -2,7 +2,7 @@
 
 ## Requirement
 
-DPDK 17.11 built as shared library.
+Build DPDK 17.11 or later as shared library.
 Instruction, see ../../README.md
 
 ## Building
