@@ -1,11 +1,12 @@
 #![allow(bad_style,
          missing_copy_implementations,
          improper_ctypes)]
-#![feature(thread_local, core_intrinsics)]
+#![feature(thread_local, core_intrinsics, asm)]
 
 pub mod ffi;
 
 pub mod atomic;
+pub mod cycles;
 pub mod eal;
 pub mod eth;
 pub mod flow;
