@@ -11,7 +11,7 @@ pub unsafe fn get_ops(ops_index: usize) -> *const ffi::rte_mempool_ops {
 
 pub unsafe fn ops_enqueue_bulk(mp: *mut ffi::rte_mempool, obj_table: &[*mut c_void], len: usize) {
     let ops = get_ops((*mp).ops_index as usize);
-    (*ops).enqueue.unwrap()(mp, obj_table.as_ptr() as *const *const c_void, len as u32);
+    (*ops).enqueue.unwrap()(mp, obj_table.as_ptr() as *const *mut c_void, len as u32);
 }
 
 pub unsafe fn generic_put(
