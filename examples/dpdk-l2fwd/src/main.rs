@@ -81,11 +81,7 @@ unsafe extern "C" fn l2fwd_main_loop(arg: *mut c_void) -> i32 {
                     dump_mbuf(pkts[i]);
                 }
                 pkts[i].refcnt_update(1);
-                let sent = buffer.tx(out_port, 0, pkts[i]);
-                if sent < 1 {
-                    let new_refcnt = pkts[i].refcnt() - 1;
-                    pkts[i].refcnt_set(new_refcnt);
-                }
+                buffer.tx(out_port, 0, pkts[i]);
             }
             buffer.flush(out_port, 0);
         }
