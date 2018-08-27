@@ -151,7 +151,7 @@ fn main() {
         );
         assert!(pool.is_null() == false);
         let mut port_conf: ffi::rte_eth_conf = std::mem::zeroed();
-        port_conf.rxmode.set_hw_strip_crc(1);
+        port_conf.rxmode.offloads = ffi::DEV_RX_OFFLOAD_CRC_STRIP.into();
         for port in PORTS.lock().unwrap().clone() {
             let mut info: ffi::rte_eth_dev_info = std::mem::zeroed();
             port.info(&mut info);
