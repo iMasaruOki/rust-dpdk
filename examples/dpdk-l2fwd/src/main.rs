@@ -85,8 +85,8 @@ unsafe extern "C" fn l2fwd_main_loop(arg: *mut c_void) -> i32 {
             }
             buffer.flush(out_port, 0);
         }
-        for pkt in pkts.iter_mut() {
-            dpdk::pktmbuf::free(pkt);
+        for pkt in 0..nb_rx {
+            dpdk::pktmbuf::free(pkts[pkt as usize]);
         }
     }
     0
