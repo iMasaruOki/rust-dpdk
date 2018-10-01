@@ -36,7 +36,7 @@ pub unsafe fn flush(port: Port, error: *mut ffi::rte_flow_error) -> i32 {
 pub unsafe fn query(
     port: Port,
     flow: *mut ffi::rte_flow,
-    action: ffi::rte_flow_action_type,
+    action: *const ffi::rte_flow_action,
     data: *mut ::std::os::raw::c_void,
     error: *mut ffi::rte_flow_error,
 ) -> i32 {
