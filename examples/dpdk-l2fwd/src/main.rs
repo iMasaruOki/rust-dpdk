@@ -35,12 +35,12 @@ fn dump_packet_type(ptype: u32) {
         _ => print!("Other L3 ({}),", ptype & ffi::RTE_PTYPE_L3_MASK),
     }
     match ptype & ffi::RTE_PTYPE_L4_MASK {
-        ffi::RTE_PTYPE_L4_UDP => println!("UDP"),
-        ffi::RTE_PTYPE_L4_TCP => println!("TCP"),
-        ffi::RTE_PTYPE_L4_SCTP => println!("SCTP"),
-        ffi::RTE_PTYPE_L4_ICMP => println!("ICMP"),
-        ffi::RTE_PTYPE_L4_FRAG => println!("Fragment"),
-        _ => println!("Other L4 ({})", ptype & ffi::RTE_PTYPE_L4_MASK),
+        ffi::RTE_PTYPE_L4_UDP => print!("UDP, "),
+        ffi::RTE_PTYPE_L4_TCP => print!("TCP, "),
+        ffi::RTE_PTYPE_L4_SCTP => print!("SCTP, "),
+        ffi::RTE_PTYPE_L4_ICMP => print!("ICMP, "),
+        ffi::RTE_PTYPE_L4_FRAG => print!("Fragment, "),
+        _ => print!("Other L4 ({}), ", ptype & ffi::RTE_PTYPE_L4_MASK),
     }
 }
 
